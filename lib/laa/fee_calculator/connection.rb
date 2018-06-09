@@ -2,7 +2,7 @@ require 'singleton'
 
 module LAA
   module FeeCalculator
-  	class Connection
+    class Connection
 
       include Singleton
 
@@ -19,6 +19,6 @@ module LAA
       def ping
         # self.get('/')
       end
-  	end	 
+    end	 
   end
 end

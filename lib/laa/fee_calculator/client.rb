@@ -1,6 +1,6 @@
 module LAA
   module FeeCalculator
-  	class Client
+    class Client
       attr_reader :connection
 
       def initialize
@@ -11,6 +11,6 @@ module LAA
         connection.get('/')
         true
       end
-  	end	 
+    end	 
   end
 end
