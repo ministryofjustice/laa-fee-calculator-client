@@ -2,9 +2,9 @@ module LAA
   module FeeCalculator
   	class Client
       attr_reader :connection
-      
+
       def initialize
-        @connection = Connection.new
+        @connection = Connection.instance
       end
 
       def ping

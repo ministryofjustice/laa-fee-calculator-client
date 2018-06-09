@@ -1,15 +1,29 @@
 require 'laa/fee_calculator/version'
-# require 'laa/fee_calculator/configuration'
+require 'laa/fee_calculator/configuration'
 require 'laa/fee_calculator/connection'
 require 'laa/fee_calculator/client'
-# require 'laa/fee_calculator/errors'
 
 module LAA
   module FeeCalculator
     USER_AGENT = "LAA-FeeCalculator/#{VERSION}"
 
-    def self.client
-      Client.new
+    class << self      
+      def client
+        Client.new
+      end
+
+      attr_writer :configuration
+      def configuration
+        @configuration ||= Configuration.new
+      end
+
+      def configure
+        yield(configuration)
+      end
+
+      def reset
+        @configuration = Configuration.new
+      end
     end
   end
 end

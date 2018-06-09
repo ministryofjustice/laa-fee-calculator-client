@@ -1,6 +1,7 @@
 require "bundler/setup"
 require 'pry'
 require "laa/fee_calculator"
+require 'webmock/rspec'
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
