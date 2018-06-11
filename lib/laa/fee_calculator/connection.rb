@@ -19,6 +19,6 @@ module LAA
       def ping
         # self.get('/')
       end
-    end	 
+    end
   end
 end

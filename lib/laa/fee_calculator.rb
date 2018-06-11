@@ -7,7 +7,7 @@ module LAA
   module FeeCalculator
     USER_AGENT = "LAA-FeeCalculator/#{VERSION}"
 
-    class << self      
+    class << self
       def client
         Client.new
       end
