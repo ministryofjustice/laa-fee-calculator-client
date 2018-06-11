@@ -11,6 +11,6 @@ module LAA
         connection.get('/')
         true
       end
-    end	 
+    end
   end
 end

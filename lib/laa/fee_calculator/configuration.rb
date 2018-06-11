@@ -8,6 +8,6 @@ module LAA
       def initialize
         @host ||= host || DEV_LAA_FEE_CALCULATOR_API_V1
       end
-    end  
+    end
   end
 end
