@@ -3,11 +3,17 @@ require 'laa/fee_calculator/configuration'
 require 'laa/fee_calculator/connection'
 require 'laa/fee_calculator/client'
 
+
 module LAA
   module FeeCalculator
     USER_AGENT = "LAA-FeeCalculator/#{VERSION}"
 
     class << self
+      def root
+        spec = Gem::Specification.find_by_name("laa-fee-calculator-client")
+        spec.gem_dir
+      end
+
       def client
         Client.new
       end
@@ -18,7 +24,8 @@ module LAA
       end
 
       def configure
-        yield(configuration)
+        yield(configuration) if block_given?
+        configuration
       end
 
       def reset

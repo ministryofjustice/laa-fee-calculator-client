@@ -1,10 +1,18 @@
 require 'singleton'
+require 'faraday'
 
 module LAA
   module FeeCalculator
     class Connection
-
       include Singleton
+      extend Forwardable
+
+      attr_reader :conn
+      def_delegators :conn, :port, :headers, :url_prefix, :options, :ssl, :get
+
+      def initialize
+        @conn = Faraday.new(url: LAA::FeeCalculator.configuration.host, headers: default_headers)
+      end
 
       class << self
         def host
@@ -17,7 +25,13 @@ module LAA
       end
 
       def ping
-        # self.get('/')
+        get('/ping.json')
+      end
+
+      private
+
+      def default_headers
+        LAA::FeeCalculator.configuration.headers
       end
     end
   end
