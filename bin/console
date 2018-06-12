@@ -1,14 +1,20 @@
 #!/usr/bin/env ruby
 
 require "bundler/setup"
+require "pry-byebug"
 require "laa/fee_calculator"
 
 # You can add fixtures and/or initialization code here to make experimenting
 # with your gem easier. You can also use a different console, if you like.
 
 # (If you use this, don't forget to add pry to your Gemfile!)
-# require "pry"
+
 # Pry.start
+
+# configure for local development use
+LAA::FeeCalculator.configure do |config|
+  config.host = 'http://localhost:8000/api/v1'
+end
 
 require "irb"
 IRB.start(__FILE__)
