@@ -1,13 +1,13 @@
 RSpec.describe LAA::FeeCalculator do
   it "has a version number" do
-    expect(LAA::FeeCalculator::VERSION).not_to be nil
+    expect(described_class::VERSION).not_to be nil
   end
 
   describe ".client" do
     subject { described_class.client }
 
     it 'returns a client object' do
-      is_expected.to be_a LAA::FeeCalculator::Client
+      is_expected.to be_a described_class::Client
     end
   end
 
@@ -15,13 +15,13 @@ RSpec.describe LAA::FeeCalculator do
     subject { described_class.configuration }
 
     it 'returns configuration object' do
-      is_expected.to be_a LAA::FeeCalculator::Configuration
+      is_expected.to be_a described_class::Configuration
     end
   end
 
   describe '.configure' do
     it 'yields a config' do
-      expect { |block| described_class.configure(&block) }.to yield_with_args(kind_of(LAA::FeeCalculator::Configuration))
+      expect { |block| described_class.configure(&block) }.to yield_with_args(kind_of(described_class::Configuration))
     end
 
     context 'configuring host' do
@@ -34,11 +34,11 @@ RSpec.describe LAA::FeeCalculator do
       end
 
       it 'changes the host configuration' do
-        expect(LAA::FeeCalculator::configuration.host).to eql host
+        expect(described_class::configuration.host).to eql host
       end
 
       it 'changes the connection host' do
-        expect(LAA::FeeCalculator::Connection.instance.host).to eql host
+        expect(described_class::Connection.instance.host).to eql host
       end
     end
   end
@@ -53,15 +53,15 @@ RSpec.describe LAA::FeeCalculator do
     end
 
     it 'resets the configured host' do
-      expect(LAA::FeeCalculator::configuration.host).to eql host
-      LAA::FeeCalculator.reset
-      expect(LAA::FeeCalculator::configuration.host).to eql LAA::FeeCalculator::Configuration::DEV_LAA_FEE_CALCULATOR_API_V1
+      expect(described_class::configuration.host).to eql host
+      described_class.reset
+      expect(described_class::configuration.host).to eql described_class::Configuration::DEV_LAA_FEE_CALCULATOR_API_V1
     end
 
     it 'resets the connection host' do
-      expect(LAA::FeeCalculator::Connection.instance.host).to eql host
-      LAA::FeeCalculator.reset
-      expect(LAA::FeeCalculator::Connection.instance.host).to eql LAA::FeeCalculator::Configuration::DEV_LAA_FEE_CALCULATOR_API_V1
+      expect(described_class::Connection.instance.host).to eql host
+      described_class.reset
+      expect(described_class::Connection.instance.host).to eql described_class::Configuration::DEV_LAA_FEE_CALCULATOR_API_V1
     end
   end
 
@@ -114,9 +114,31 @@ RSpec.describe LAA::FeeCalculator do
       end
 
       describe 'an advocate type' do
-        subject {advocate_types.first }
+        subject { advocate_types.first }
         it { is_expected.to respond_to(:id) }
         it { is_expected.to respond_to(:name) }
+      end
+
+      context 'filterable' do
+        subject(:fee_scheme) { client.fee_schemes(1) }
+
+        specify 'by id' do
+          expect(fee_scheme.advocate_types('JRALONE')).to be_instance_of(OpenStruct)
+        end
+
+        context 'with options' do
+          specify 'by id' do
+            expect(fee_scheme.advocate_types(id: 'JRALONE')).to be_instance_of(OpenStruct)
+          end
+
+          specify 'returns nil when no matching objects' do
+            expect(fee_scheme.advocate_types(id: 'INVALID')).to be_nil
+          end
+
+          specify 'returns empty array when no objects for scheme' do
+            expect(client.fee_schemes(2).advocate_types).to be_empty
+          end
+        end
       end
     end
   end
