@@ -1,5 +1,6 @@
 require 'laa/fee_calculator/has_many_result'
 require "addressable/uri"
+
 class Hash
   # Returns a hash that includes everything but the given keys.
   #   hash = { a: true, b: false, c: nil}
@@ -25,7 +26,6 @@ end
 module LAA
   module FeeCalculator
     class Client
-      include HasManyResult
       extend Forwardable
 
       attr_reader :connection
@@ -35,8 +35,6 @@ module LAA
 
       def_delegators :connection, :host, :url_prefix, :port, :get, :ping
 
-      has_many_results :advocate_types
-
       def initialize
         @connection = Connection.instance
       end
@@ -44,16 +42,16 @@ module LAA
       def fee_schemes(id = nil, **options)
         uri = 'fee-schemes/'
         id = id || options.fetch(:id, nil)
-
         uri.concat("#{id.to_s}/") if id
         uri = Addressable::URI.parse(uri)
         uri.query_values = options.except(:id)
+
         json = get(uri).body
 
-        ostruct = JSON.parse(json, object_class: OpenStruct)
-        return ostruct unless ostruct.respond_to?(:results)
-        return ostruct.results.first if ostruct.results.size.eql?(1)
-        ostruct.results
+        fstruct = JSON.parse(json, object_class: FeeScheme)
+        return fstruct unless fstruct.respond_to?(:results)
+        return fstruct.results.first if fstruct.results.size.eql?(1)
+        fstruct.results
       rescue Faraday::ClientError => err
         # TODO: logging
         puts err
