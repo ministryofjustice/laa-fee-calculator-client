@@ -2,7 +2,7 @@ module LAA
   module FeeCalculator
     class Configuration
       DEV_LAA_FEE_CALCULATOR_API_V1 = 'https://laa-fee-calculator-dev.apps.non-production.k8s.integration.dsd.io/api/v1'.freeze
-      HEADERS = { 'Accept' => 'application/json' }.freeze
+      HEADERS = { 'Accept' => 'application/json', 'User-Agent' => USER_AGENT }.freeze
 
       attr_accessor :host, :headers
 

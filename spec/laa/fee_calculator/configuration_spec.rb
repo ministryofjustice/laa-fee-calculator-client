@@ -1,10 +1,9 @@
 RSpec.describe LAA::FeeCalculator::Configuration do
-
   describe '#host' do
     subject(:config) { described_class.new.host }
 
     it 'defaults to develpoment laa fee calculator api v1' do
-      is_expected.to eql LAA::FeeCalculator::Configuration::DEV_LAA_FEE_CALCULATOR_API_V1
+      is_expected.to eql described_class::DEV_LAA_FEE_CALCULATOR_API_V1
     end
   end
 
@@ -22,7 +21,11 @@ RSpec.describe LAA::FeeCalculator::Configuration do
     subject(:config) { described_class.new.headers }
 
     it 'defaults to JSON' do
-      is_expected.to eql({ 'Accept' => 'application/json' })
+      is_expected.to include('Accept' => 'application/json')
+    end
+
+    it 'includes user-agent' do
+      is_expected.to include('User-Agent' => "laa-fee-calculator-client/#{LAA::FeeCalculator::VERSION}")
     end
   end
 
