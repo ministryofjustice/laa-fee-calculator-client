@@ -1,4 +1,3 @@
-require 'laa/fee_calculator/has_many_result'
 require "addressable/uri"
 
 class Hash
@@ -54,7 +53,6 @@ module LAA
         fstruct.results
       rescue Faraday::ClientError => err
         # TODO: logging
-        puts err
       end
     end
   end
