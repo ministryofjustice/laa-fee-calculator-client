@@ -11,7 +11,10 @@ module LAA
       def_delegators :conn, :port, :headers, :url_prefix, :options, :ssl, :get
 
       def initialize
-        @conn = Faraday.new(url: LAA::FeeCalculator.configuration.host, headers: default_headers)
+        @conn = Faraday.new(url: LAA::FeeCalculator.configuration.host, headers: default_headers) do |conn|
+          conn.use Faraday::Response::RaiseError
+          conn.use Faraday::Adapter::NetHttp
+        end
       end
 
       class << self
@@ -31,6 +34,7 @@ module LAA
       private
 
       def default_headers
+        ap LAA::FeeCalculator.configuration.headers
         LAA::FeeCalculator.configuration.headers
       end
     end

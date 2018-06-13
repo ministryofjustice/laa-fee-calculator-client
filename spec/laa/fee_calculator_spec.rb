@@ -64,4 +64,44 @@ RSpec.describe LAA::FeeCalculator do
       expect(LAA::FeeCalculator::Connection.instance.host).to eql LAA::FeeCalculator::Configuration::DEV_LAA_FEE_CALCULATOR_API_V1
     end
   end
+
+  context 'intergration' do
+    subject(:client) { described_class.client }
+
+    context 'fee schemes' do
+      before { client.fee_scheme = 1 }
+
+      it 'returns array of 2 fee schemes' do
+        expect(client.fee_schemes).to include(instance_of(OpenStruct),instance_of(OpenStruct))
+      end
+
+      context 'filterable' do
+        specify 'by id' do
+            expect(client.fee_schemes(1)).to be_instance_of(OpenStruct)
+        end
+
+        context 'with options' do
+          specify 'by id' do
+            expect(client.fee_schemes(id: 1)).to be_instance_of(OpenStruct)
+          end
+
+          specify 'by supplier_type' do
+            expect(client.fee_schemes(supplier_type: 'ADVOCATE')).to be_instance_of(OpenStruct)
+          end
+
+          specify 'by case_date' do
+          expect(client.fee_schemes(case_date: '2018-01-01')).to match_array [instance_of(OpenStruct), instance_of(OpenStruct)]
+          end
+
+          specify 'by case_date and supplier_type' do
+            expect(client.fee_schemes(case_date: '2018-01-01', supplier_type: 'SOLICITOR')).to be_instance_of(OpenStruct)
+          end
+
+          specify 'returns nil when no matching objects' do
+            expect(client.fee_schemes(supplier_type: 'INVALID')).to be_nil
+          end
+        end
+      end
+    end
+  end
 end
