@@ -35,28 +35,4 @@ RSpec.describe LAA::FeeCalculator::Client do
       it { is_expected.to respond_to(:id) }
     end
   end
-
-  describe '#advocate_types' do
-    context 'scheme_pk lookup' do
-      it 'accepts a single arg of scheme pk (first)' do
-        expect(client.advocate_types(1)).to be_an Array
-      end
-
-      it 'accepts an options hash with a key for scheme pk (second)' do
-        expect(client.advocate_types(scheme_pk: 1)).to be_an Array
-      end
-
-      it 'uses a pre-set scheme pk (last)' do
-        client.fee_scheme = 1
-        expect(client.advocate_types).to be_an Array
-      end
-    end
-
-    context 'an advocate_type' do
-      subject { client.advocate_types(1).first }
-
-      it { is_expected.to respond_to(:id) }
-      it { is_expected.to respond_to(:name) }
-    end
-  end
 end

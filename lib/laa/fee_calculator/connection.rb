@@ -34,7 +34,6 @@ module LAA
       private
 
       def default_headers
-        ap LAA::FeeCalculator.configuration.headers
         LAA::FeeCalculator.configuration.headers
       end
     end
