@@ -8,6 +8,7 @@ module LAA
       def_delegators :connection, :get
 
       has_many :advocate_types
+      has_many :scenarios
 
       private
 

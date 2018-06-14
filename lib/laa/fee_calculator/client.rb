@@ -1,5 +1,7 @@
 require "addressable/uri"
 
+# FIXME: remove and use Enumerable#reject instead?
+#
 class Hash
   # Returns a hash that includes everything but the given keys.
   #   hash = { a: true, b: false, c: nil}
