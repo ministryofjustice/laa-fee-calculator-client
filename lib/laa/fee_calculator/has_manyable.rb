@@ -1,23 +1,4 @@
 require 'json'
-
-# TODO: possibly override Enumerable `find` to emulate AR
-# e.g. client.fee_schemes.find(1), client.fee_schemes.find(supplier_type: 'SOLICITOR')
-#
-# class OpenStructResult < OpenStruct
-#   alias :enum_find :find
-
-#   def find(id, options = {})
-#     enum_find do |el|
-#       return el if el.id.eql? unless options
-#       options.all? { |key, value| el.send(key).eql?(value) } if options
-#     end
-#   end
-# end
-
-# TODO: would be good if it worked like this
-# client.fee_scheme = 1
-# client.fee_schemes(1).advocate_types(1)
-
 module LAA
   module FeeCalculator
     module HasManyable

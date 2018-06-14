@@ -20,6 +20,7 @@ module LAA
       def configuration
         @configuration ||= Configuration.new
       end
+      alias config configuration
 
       def configure
         yield(configuration) if block_given?
