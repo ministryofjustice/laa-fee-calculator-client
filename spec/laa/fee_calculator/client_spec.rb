@@ -1,8 +1,6 @@
 RSpec.describe LAA::FeeCalculator::Client do
   subject(:client) { described_class.new }
 
-  it { is_expected.to be_kind_of described_class }
-
   it { is_expected.to respond_to :connection }
   it { is_expected.to respond_to :url_prefix }
   it { is_expected.to respond_to :host }
@@ -23,7 +21,7 @@ RSpec.describe LAA::FeeCalculator::Client do
       is_expected.to be_an Array
     end
 
-    context 'a fee scheme' do
+    context 'object' do
       subject(:fee_scheme) { fee_schemes.first }
       it { is_expected.to respond_to(:id) }
       it { is_expected.to respond_to(:supplier_type) }
