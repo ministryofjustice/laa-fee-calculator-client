@@ -1,0 +1,232 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:8000/api/v1/fee-schemes/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/0.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 14 Jun 2018 15:21:07 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.6.4
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET, HEAD, OPTIONS
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '276'
+    body:
+      encoding: UTF-8
+      string: '{"count":2,"next":null,"previous":null,"results":[{"id":1,"start_date":"2012-04-01","end_date":null,"supplier_type":"ADVOCATE","description":"AGFS
+        Fee Scheme 9"},{"id":2,"start_date":"2016-04-01","end_date":null,"supplier_type":"SOLICITOR","description":"LGFS
+        Fee Scheme 8"}]}'
+    http_version: 
+  recorded_at: Thu, 14 Jun 2018 15:21:07 GMT
+- request:
+    method: get
+    uri: http://localhost:8000/api/v1/fee-schemes/1/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/0.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 14 Jun 2018 15:21:07 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.6.4
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET, HEAD, OPTIONS
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '111'
+    body:
+      encoding: UTF-8
+      string: '{"id":1,"start_date":"2012-04-01","end_date":null,"supplier_type":"ADVOCATE","description":"AGFS
+        Fee Scheme 9"}'
+    http_version: 
+  recorded_at: Thu, 14 Jun 2018 15:21:07 GMT
+- request:
+    method: get
+    uri: http://localhost:8000/api/v1/fee-schemes/?supplier_type=ADVOCATE
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/0.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 14 Jun 2018 15:21:07 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.6.4
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET, HEAD, OPTIONS
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '163'
+    body:
+      encoding: UTF-8
+      string: '{"count":1,"next":null,"previous":null,"results":[{"id":1,"start_date":"2012-04-01","end_date":null,"supplier_type":"ADVOCATE","description":"AGFS
+        Fee Scheme 9"}]}'
+    http_version: 
+  recorded_at: Thu, 14 Jun 2018 15:21:07 GMT
+- request:
+    method: get
+    uri: http://localhost:8000/api/v1/fee-schemes/?case_date=2018-01-01
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/0.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 14 Jun 2018 15:21:07 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.6.4
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET, HEAD, OPTIONS
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '276'
+    body:
+      encoding: UTF-8
+      string: '{"count":2,"next":null,"previous":null,"results":[{"id":1,"start_date":"2012-04-01","end_date":null,"supplier_type":"ADVOCATE","description":"AGFS
+        Fee Scheme 9"},{"id":2,"start_date":"2016-04-01","end_date":null,"supplier_type":"SOLICITOR","description":"LGFS
+        Fee Scheme 8"}]}'
+    http_version: 
+  recorded_at: Thu, 14 Jun 2018 15:21:07 GMT
+- request:
+    method: get
+    uri: http://localhost:8000/api/v1/fee-schemes/?case_date=2018-01-01&supplier_type=SOLICITOR
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/0.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 14 Jun 2018 15:21:07 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.6.4
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET, HEAD, OPTIONS
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '164'
+    body:
+      encoding: UTF-8
+      string: '{"count":1,"next":null,"previous":null,"results":[{"id":2,"start_date":"2016-04-01","end_date":null,"supplier_type":"SOLICITOR","description":"LGFS
+        Fee Scheme 8"}]}'
+    http_version: 
+  recorded_at: Thu, 14 Jun 2018 15:21:07 GMT
+- request:
+    method: get
+    uri: http://localhost:8000/api/v1/fee-schemes/?supplier_type=INVALID
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/0.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Thu, 14 Jun 2018 15:21:07 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.6.4
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET, HEAD, OPTIONS
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '59'
+    body:
+      encoding: UTF-8
+      string: '["`supplier_type` should be one of: [ADVOCATE, SOLICITOR]"]'
+    http_version: 
+  recorded_at: Thu, 14 Jun 2018 15:21:07 GMT
+recorded_with: VCR 4.0.0

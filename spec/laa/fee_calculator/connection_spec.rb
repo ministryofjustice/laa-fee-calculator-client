@@ -48,10 +48,21 @@ RSpec.describe LAA::FeeCalculator::Connection do
   end
 
   describe '#get' do
-    subject { described_class.instance.get }
+    subject(:get) { described_class.instance.get(uri) }
+    let(:uri) { '/' }
 
-    it 'delegates to connection' do
+    it 'delegated to adapter connection' do
+      expect(described_class.instance.conn).to receive(:get)
+      get
     end
   end
 
+  describe '#ping', :vcr do
+    subject(:response) { described_class.instance.ping }
+
+    it 'responds with JSON', skip: 'not yet implmented in API - responds with 501' do
+      expect(response).to be_success
+      expect(JSON.parse(response.body)).not raise_error
+    end
+  end
 end
