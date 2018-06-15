@@ -10,6 +10,7 @@ module LAA
       has_many :advocate_types
       has_many :scenarios
       has_many :offence_classes
+      has_many :fee_types
 
       private
 
