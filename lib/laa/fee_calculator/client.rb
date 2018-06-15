@@ -42,8 +42,8 @@ module LAA
 
       def fee_schemes(id = nil, **options)
         uri = 'fee-schemes/'
-        id = id || options.fetch(:id, nil)
-        uri.concat("#{id.to_s}/") if id
+        id ||= options.fetch(:id, nil)
+        uri.concat(id.to_s, "/") if id
         uri = Addressable::URI.parse(uri)
         uri.query_values = options.except(:id)
 

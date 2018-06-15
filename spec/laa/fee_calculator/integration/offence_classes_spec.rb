@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe LAA::FeeCalculator, :vcr do
   subject(:client) { described_class.client }
 

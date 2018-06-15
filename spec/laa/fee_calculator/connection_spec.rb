@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe LAA::FeeCalculator::Connection do
   subject { described_class.instance }
 
@@ -27,7 +29,7 @@ RSpec.describe LAA::FeeCalculator::Connection do
       end
 
       it 'returns a uri string' do
-        expect{ URI.parse(host) }.to_not raise_error
+        expect { URI.parse(host) }.to_not raise_error
       end
     end
 
