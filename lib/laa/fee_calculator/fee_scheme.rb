@@ -11,6 +11,7 @@ module LAA
       has_many :scenarios
       has_many :offence_classes
       has_many :fee_types
+      has_many :units
 
       private
 
