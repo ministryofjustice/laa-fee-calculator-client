@@ -1,4 +1,4 @@
-RSpec.describe LAA::FeeCalculator::Client do
+RSpec.describe LAA::FeeCalculator::Client, :vcr do
   subject(:client) { described_class.new }
 
   it { is_expected.to respond_to :connection }

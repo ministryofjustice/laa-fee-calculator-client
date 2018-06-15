@@ -1,4 +1,4 @@
-RSpec.describe LAA::FeeCalculator do
+RSpec.describe LAA::FeeCalculator, :vcr do
   subject(:client) { described_class.client }
 
   context 'scenarios' do

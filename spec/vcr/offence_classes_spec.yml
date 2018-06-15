@@ -1,0 +1,162 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:8000/api/v1/fee-schemes/1/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/0.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 14 Jun 2018 15:21:29 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.6.4
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET, HEAD, OPTIONS
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '111'
+    body:
+      encoding: UTF-8
+      string: '{"id":1,"start_date":"2012-04-01","end_date":null,"supplier_type":"ADVOCATE","description":"AGFS
+        Fee Scheme 9"}'
+    http_version: 
+  recorded_at: Thu, 14 Jun 2018 15:21:29 GMT
+- request:
+    method: get
+    uri: http://localhost:8000/api/v1/fee-schemes/1/offence-classes/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/0.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 14 Jun 2018 15:21:29 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.6.4
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET, HEAD, OPTIONS
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '929'
+    body:
+      encoding: UTF-8
+      string: '{"count":11,"next":null,"previous":null,"results":[{"id":"A","name":"A","description":"Homicide
+        and related grave offences"},{"id":"B","name":"B","description":"Offences
+        involving serious violence or damage and serious drug offences"},{"id":"C","name":"C","description":"Lesser
+        offences involving violence or damage, and less serious drug offences"},{"id":"D","name":"D","description":"Serious
+        sexual offences and offences against children"},{"id":"E","name":"E","description":"Burglary,
+        etc"},{"id":"F","name":"F","description":"Other offences of dishonesty"},{"id":"G","name":"G","description":"Other
+        offences of dishonesty"},{"id":"H","name":"H","description":"Miscellaneous
+        other offences"},{"id":"I","name":"I","description":"Offences against public
+        justice and similar offences"},{"id":"J","name":"J","description":"Serious
+        sexual offences"},{"id":"K","name":"K","description":"Other offences of dishonesty
+        (high value)"}]}'
+    http_version: 
+  recorded_at: Thu, 14 Jun 2018 15:21:29 GMT
+- request:
+    method: get
+    uri: http://localhost:8000/api/v1/fee-schemes/1/offence-classes/A/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/0.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 14 Jun 2018 15:21:29 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.6.4
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET, HEAD, OPTIONS
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '73'
+    body:
+      encoding: UTF-8
+      string: '{"id":"A","name":"A","description":"Homicide and related grave offences"}'
+    http_version: 
+  recorded_at: Thu, 14 Jun 2018 15:21:29 GMT
+- request:
+    method: get
+    uri: http://localhost:8000/api/v1/fee-schemes/1/offence-classes/INVALID/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/0.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Thu, 14 Jun 2018 15:21:29 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.6.4
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET, HEAD, OPTIONS
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '23'
+    body:
+      encoding: UTF-8
+      string: '{"detail":"Not found."}'
+    http_version: 
+  recorded_at: Thu, 14 Jun 2018 15:21:29 GMT
+recorded_with: VCR 4.0.0
