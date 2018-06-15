@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe LAA::FeeCalculator do
   it "has a version number" do
     expect(described_class::VERSION).not_to be nil
@@ -42,7 +44,7 @@ RSpec.describe LAA::FeeCalculator do
       end
 
       it 'changes the host configuration' do
-        expect(described_class::configuration.host).to eql host
+        expect(described_class.configuration.host).to eql host
       end
 
       it 'changes the connection host' do
@@ -61,9 +63,9 @@ RSpec.describe LAA::FeeCalculator do
     end
 
     it 'resets the configured host' do
-      expect(described_class::configuration.host).to eql host
+      expect(described_class.configuration.host).to eql host
       described_class.reset
-      expect(described_class::configuration.host).to eql described_class::Configuration::DEV_LAA_FEE_CALCULATOR_API_V1
+      expect(described_class.configuration.host).to eql described_class::Configuration::DEV_LAA_FEE_CALCULATOR_API_V1
     end
 
     it 'resets the connection host' do

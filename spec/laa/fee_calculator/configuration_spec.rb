@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe LAA::FeeCalculator::Configuration do
   describe '#host' do
     subject(:config) { described_class.new.host }

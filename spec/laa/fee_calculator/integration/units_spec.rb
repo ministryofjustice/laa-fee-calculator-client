@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe LAA::FeeCalculator, :vcr do
   subject(:client) { described_class.client }
 
@@ -45,7 +47,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
         end
 
         specify 'returns nil when no matching objects' do
-          expect(fee_scheme.units(id: 10001)).to be_nil
+          expect(fee_scheme.units(id: 1001)).to be_nil
         end
 
         # TODO: check whether advocate_type has any impact on units returned

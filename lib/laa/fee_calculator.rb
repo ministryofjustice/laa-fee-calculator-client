@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'laa/fee_calculator/version'
 require 'laa/fee_calculator/configuration'
 require 'laa/fee_calculator/connection'
