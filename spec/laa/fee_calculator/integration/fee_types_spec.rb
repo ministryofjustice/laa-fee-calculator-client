@@ -35,7 +35,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
 
         # NOTE: there is only one is_basic: true
         specify 'by is_basic (a.k.a AGFS_FEE/advocate fee)' do
-          expect(fee_scheme.fee_types(is_basic: true)).to be_instance_of(OpenStruct)
+          expect(fee_scheme.fee_types(is_basic: true)).to match_array [instance_of(OpenStruct)]
         end
 
         specify 'by scenario (a.k.a case types)' do
@@ -51,11 +51,15 @@ RSpec.describe LAA::FeeCalculator, :vcr do
         end
 
         specify 'by fee_type_code' do
-          expect(fee_scheme.fee_types(fee_type_code: 'AGFS_FEE')).to be_instance_of(OpenStruct)
+          expect(fee_scheme.fee_types(fee_type_code: 'AGFS_FEE')).to match_array [instance_of(OpenStruct)]
         end
 
         specify 'returns nil when no matching objects' do
           expect(fee_scheme.fee_types(id: 1001)).to be_nil
+        end
+
+        specify 'returns empty arrat when no matching objects' do
+          expect(fee_scheme.fee_types(is_basic: true, scenario: 8)).to be_empty
         end
 
         # TODO: there do not seem to be any useful combinations
@@ -82,7 +86,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
 
           context 'when filter results in no items' do
             specify 'by is_basic and scenario' do
-              expect(fee_scheme.fee_types(is_basic: true, scenario: 8).size).to eql 0
+              expect(fee_scheme.fee_types(is_basic: true, scenario: 8)).to be_empty
             end
           end
         end

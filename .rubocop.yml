@@ -2,4 +2,8 @@ AllCops:
   DisplayCopNames: true
   TargetRubyVersion: 2.5
 
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+
 inherit_from: .rubocop_todo.yml

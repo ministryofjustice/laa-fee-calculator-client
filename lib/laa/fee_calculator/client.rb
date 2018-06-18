@@ -1,6 +1,6 @@
 require "addressable/uri"
 
-# FIXME: remove and use Enumerable#reject instead?
+# FIXME: remove and use Enumerable#reject instead? or add extension
 #
 class Hash
   # Returns a hash that includes everything but the given keys.
