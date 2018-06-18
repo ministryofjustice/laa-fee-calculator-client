@@ -14,6 +14,7 @@ module LAA
       has_many :offence_classes
       has_many :fee_types
       has_many :units
+      has_many :modifier_types
 
       private
 
