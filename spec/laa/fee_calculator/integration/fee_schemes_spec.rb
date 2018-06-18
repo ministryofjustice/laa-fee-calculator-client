@@ -42,6 +42,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
           expect(client.fee_schemes(case_date: '2018-01-01', supplier_type: 'SOLICITOR')).to be_instance_of(fee_scheme_class)
         end
 
+        # TODO: change to return empty array??
         specify 'returns nil when no matching objects' do
           expect(client.fee_schemes(supplier_type: 'INVALID')).to be_nil
         end

@@ -24,7 +24,7 @@ module LAA
             ostruct = JSON.parse(json, object_class: OpenStruct)
 
             return ostruct unless ostruct.respond_to?(:results)
-            return ostruct.results.first if ostruct.results.size.eql?(1)
+            # return ostruct.results.first if ostruct.results.size.eql?(1)
             ostruct.results
           rescue Faraday::ResourceNotFound => err
             # TODO: logging

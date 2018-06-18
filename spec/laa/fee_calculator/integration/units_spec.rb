@@ -71,9 +71,9 @@ RSpec.describe LAA::FeeCalculator, :vcr do
 
             # TODO: questionable whether we want to return an array of one here for consistency
             # and instead have a .find method that returns first or nil in a more active record type way
-            specify 'can return one item' do
-              expect(fee_scheme.units(scenario: 5, fee_type_code: 'AGFS_APPEAL_SEN')).to be_instance_of(OpenStruct)
-            end
+            # specify 'can return one item' do
+            #   expect(fee_scheme.units(scenario: 5, fee_type_code: 'AGFS_APPEAL_SEN')).to be_instance_of(OpenStruct)
+            # end
           end
         end
       end
