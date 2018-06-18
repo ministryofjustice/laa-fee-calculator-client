@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Joel Sugarman']
   spec.email         = ['joel.sugarman@digital.justice.gov.uk']
 
-  spec.summary       = 'Ruby client for the LAA fee calculator API)'
+  spec.summary       = 'Ruby client for the LAA fee calculator API'
   spec.description   = 'todo - longer description'
   spec.homepage      = 'https://github.com/jsugarman/laa-fee-calculator-client'
   spec.license       = 'MIT'
