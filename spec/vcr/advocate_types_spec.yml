@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 14 Jun 2018 15:19:11 GMT
+      - Tue, 19 Jun 2018 11:44:09 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.4
       Content-Type:
@@ -37,7 +37,7 @@ http_interactions:
       string: '{"id":1,"start_date":"2012-04-01","end_date":null,"supplier_type":"ADVOCATE","description":"AGFS
         Fee Scheme 9"}'
     http_version: 
-  recorded_at: Thu, 14 Jun 2018 15:19:11 GMT
+  recorded_at: Tue, 19 Jun 2018 11:44:09 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/advocate-types/
@@ -57,7 +57,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 14 Jun 2018 15:19:12 GMT
+      - Tue, 19 Jun 2018 11:44:09 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.4
       Content-Type:
@@ -76,7 +76,7 @@ http_interactions:
         alone"},{"id":"LEADJR","name":"Leading junior"},{"id":"LEDJR","name":"Led
         junior"},{"id":"QC","name":"QC"}]}'
     http_version: 
-  recorded_at: Thu, 14 Jun 2018 15:19:12 GMT
+  recorded_at: Tue, 19 Jun 2018 11:44:09 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/advocate-types/JRALONE/
@@ -96,7 +96,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 14 Jun 2018 15:19:12 GMT
+      - Tue, 19 Jun 2018 11:44:09 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.4
       Content-Type:
@@ -113,7 +113,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"id":"JRALONE","name":"Junior alone"}'
     http_version: 
-  recorded_at: Thu, 14 Jun 2018 15:19:12 GMT
+  recorded_at: Tue, 19 Jun 2018 11:44:09 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/advocate-types/INVALID/
@@ -133,7 +133,7 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Thu, 14 Jun 2018 15:19:12 GMT
+      - Tue, 19 Jun 2018 11:44:09 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.4
       Content-Type:
@@ -150,7 +150,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"detail":"Not found."}'
     http_version: 
-  recorded_at: Thu, 14 Jun 2018 15:19:12 GMT
+  recorded_at: Tue, 19 Jun 2018 11:44:09 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/2/
@@ -170,7 +170,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 14 Jun 2018 15:19:12 GMT
+      - Tue, 19 Jun 2018 11:44:09 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.4
       Content-Type:
@@ -188,7 +188,7 @@ http_interactions:
       string: '{"id":2,"start_date":"2016-04-01","end_date":null,"supplier_type":"SOLICITOR","description":"LGFS
         Fee Scheme 8"}'
     http_version: 
-  recorded_at: Thu, 14 Jun 2018 15:19:12 GMT
+  recorded_at: Tue, 19 Jun 2018 11:44:09 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/2/advocate-types/
@@ -208,7 +208,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 14 Jun 2018 15:19:12 GMT
+      - Tue, 19 Jun 2018 11:44:09 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.4
       Content-Type:
@@ -225,5 +225,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"count":0,"next":null,"previous":null,"results":[]}'
     http_version: 
-  recorded_at: Thu, 14 Jun 2018 15:19:12 GMT
+  recorded_at: Tue, 19 Jun 2018 11:44:09 GMT
 recorded_with: VCR 4.0.0
