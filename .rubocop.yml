@@ -10,5 +10,4 @@ Metrics/LineLength:
   Exclude:
     - '*.gemspec'
 
-
 inherit_from: .rubocop_todo.yml
