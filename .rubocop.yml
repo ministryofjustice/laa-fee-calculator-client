@@ -6,4 +6,9 @@ Metrics/BlockLength:
   Exclude:
     - 'spec/**/*'
 
+Metrics/LineLength:
+  Exclude:
+    - '*.gemspec'
+
+
 inherit_from: .rubocop_todo.yml

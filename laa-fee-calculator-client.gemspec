@@ -11,8 +11,8 @@ Gem::Specification.new do |spec|
   spec.email         = ['joel.sugarman@digital.justice.gov.uk']
 
   spec.summary       = 'Ruby client for the LAA fee calculator API'
-  spec.description   = 'todo - longer description'
-  spec.homepage      = 'https://github.com/jsugarman/laa-fee-calculator-client'
+  spec.description   = "Ruby client for the [ministryofjustice/laa-fee-calculator](https://github.com/ministryofjustice/laa-fee-calculator). It enables transparent calling of this API's endpoints, providing a simple interface for querying data, in particular, the primary function of the API, the `#calculate` endpoint."
+  spec.homepage      = 'https://github.com/ministryofjustice/laa-fee-calculator-client'
   spec.license       = 'MIT'
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
