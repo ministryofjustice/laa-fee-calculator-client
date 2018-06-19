@@ -17,15 +17,8 @@ module LAA
       has_many :modifier_types
 
       def calculate(**options)
-        uri = "fee-schemes/#{id}/calculate/"
-        uri = Addressable::URI.parse(uri)
-        uri.query_values = options.except(:id)
-
-        json = get(uri).body
-        JSON.parse(json)['amount']
-      rescue Faraday::ClientError => err
-        # TODO: logging
-
+        yield options if block_given?
+        LAA::FeeCalculator::Calculator.new(id, options).call
       end
 
       private

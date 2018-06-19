@@ -4,6 +4,7 @@ require 'laa/fee_calculator/version'
 require 'laa/fee_calculator/configuration'
 require 'laa/fee_calculator/connection'
 require 'laa/fee_calculator/fee_scheme'
+require 'laa/fee_calculator/calculator'
 require 'laa/fee_calculator/client'
 
 module LAA

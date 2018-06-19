@@ -18,6 +18,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
       it { is_expected.to respond_to(:end_date) }
       it { is_expected.to respond_to(:supplier_type) }
       it { is_expected.to respond_to(:description) }
+      it { is_expected.to respond_to(:calculate) }
     end
 
     context 'filterable' do
