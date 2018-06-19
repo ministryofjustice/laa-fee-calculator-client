@@ -1,0 +1,399 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:8000/api/v1/fee-schemes/1/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/0.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 19 Jun 2018 11:44:10 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.6.4
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET, HEAD, OPTIONS
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '111'
+    body:
+      encoding: UTF-8
+      string: '{"id":1,"start_date":"2012-04-01","end_date":null,"supplier_type":"ADVOCATE","description":"AGFS
+        Fee Scheme 9"}'
+    http_version: 
+  recorded_at: Tue, 19 Jun 2018 11:44:10 GMT
+- request:
+    method: get
+    uri: http://localhost:8000/api/v1/fee-schemes/1/modifier-types/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/0.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 19 Jun 2018 11:44:10 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.6.4
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET, HEAD, OPTIONS
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '500'
+    body:
+      encoding: UTF-8
+      string: '{"count":5,"next":null,"previous":null,"results":[{"id":1,"name":"NUMBER_OF_CASES","description":"Number
+        of cases","unit":"CASE"},{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
+        of defendants","unit":"DEFENDANT"},{"id":3,"name":"TRIAL_LENGTH","description":"Trial
+        length","unit":"DAY"},{"id":4,"name":"PAGES_OF_PROSECUTING_EVIDENCE","description":"Pages
+        of prosecuting evidence","unit":"PPE"},{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"}]}'
+    http_version: 
+  recorded_at: Tue, 19 Jun 2018 11:44:10 GMT
+- request:
+    method: get
+    uri: http://localhost:8000/api/v1/fee-schemes/1/modifier-types/1/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/0.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 19 Jun 2018 11:44:10 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.6.4
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET, HEAD, OPTIONS
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '79'
+    body:
+      encoding: UTF-8
+      string: '{"id":1,"name":"NUMBER_OF_CASES","description":"Number of cases","unit":"CASE"}'
+    http_version: 
+  recorded_at: Tue, 19 Jun 2018 11:44:10 GMT
+- request:
+    method: get
+    uri: http://localhost:8000/api/v1/fee-schemes/1/modifier-types/?scenario=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/0.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 19 Jun 2018 11:44:10 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.6.4
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET, HEAD, OPTIONS
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '406'
+    body:
+      encoding: UTF-8
+      string: '{"count":4,"next":null,"previous":null,"results":[{"id":1,"name":"NUMBER_OF_CASES","description":"Number
+        of cases","unit":"CASE"},{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
+        of defendants","unit":"DEFENDANT"},{"id":3,"name":"TRIAL_LENGTH","description":"Trial
+        length","unit":"DAY"},{"id":4,"name":"PAGES_OF_PROSECUTING_EVIDENCE","description":"Pages
+        of prosecuting evidence","unit":"PPE"}]}'
+    http_version: 
+  recorded_at: Tue, 19 Jun 2018 11:44:10 GMT
+- request:
+    method: get
+    uri: http://localhost:8000/api/v1/fee-schemes/1/modifier-types/?advocate_type=QC
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/0.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 19 Jun 2018 11:44:11 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.6.4
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET, HEAD, OPTIONS
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '500'
+    body:
+      encoding: UTF-8
+      string: '{"count":5,"next":null,"previous":null,"results":[{"id":1,"name":"NUMBER_OF_CASES","description":"Number
+        of cases","unit":"CASE"},{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
+        of defendants","unit":"DEFENDANT"},{"id":3,"name":"TRIAL_LENGTH","description":"Trial
+        length","unit":"DAY"},{"id":4,"name":"PAGES_OF_PROSECUTING_EVIDENCE","description":"Pages
+        of prosecuting evidence","unit":"PPE"},{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"}]}'
+    http_version: 
+  recorded_at: Tue, 19 Jun 2018 11:44:11 GMT
+- request:
+    method: get
+    uri: http://localhost:8000/api/v1/fee-schemes/1/modifier-types/?offence_class=A
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/0.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 19 Jun 2018 11:44:11 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.6.4
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET, HEAD, OPTIONS
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '500'
+    body:
+      encoding: UTF-8
+      string: '{"count":5,"next":null,"previous":null,"results":[{"id":1,"name":"NUMBER_OF_CASES","description":"Number
+        of cases","unit":"CASE"},{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
+        of defendants","unit":"DEFENDANT"},{"id":3,"name":"TRIAL_LENGTH","description":"Trial
+        length","unit":"DAY"},{"id":4,"name":"PAGES_OF_PROSECUTING_EVIDENCE","description":"Pages
+        of prosecuting evidence","unit":"PPE"},{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"}]}'
+    http_version: 
+  recorded_at: Tue, 19 Jun 2018 11:44:11 GMT
+- request:
+    method: get
+    uri: http://localhost:8000/api/v1/fee-schemes/1/modifier-types/?fee_type_code=AGFS_FEE
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/0.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 19 Jun 2018 11:44:11 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.6.4
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET, HEAD, OPTIONS
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '427'
+    body:
+      encoding: UTF-8
+      string: '{"count":4,"next":null,"previous":null,"results":[{"id":1,"name":"NUMBER_OF_CASES","description":"Number
+        of cases","unit":"CASE"},{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
+        of defendants","unit":"DEFENDANT"},{"id":4,"name":"PAGES_OF_PROSECUTING_EVIDENCE","description":"Pages
+        of prosecuting evidence","unit":"PPE"},{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"}]}'
+    http_version: 
+  recorded_at: Tue, 19 Jun 2018 11:44:11 GMT
+- request:
+    method: get
+    uri: http://localhost:8000/api/v1/fee-schemes/1/modifier-types/1001/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/0.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Tue, 19 Jun 2018 11:44:11 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.6.4
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET, HEAD, OPTIONS
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '23'
+    body:
+      encoding: UTF-8
+      string: '{"detail":"Not found."}'
+    http_version: 
+  recorded_at: Tue, 19 Jun 2018 11:44:11 GMT
+- request:
+    method: get
+    uri: http://localhost:8000/api/v1/fee-schemes/1/modifier-types/?fee_type_code=INVALID_CODE
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/0.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 19 Jun 2018 11:44:11 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.6.4
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET, HEAD, OPTIONS
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '52'
+    body:
+      encoding: UTF-8
+      string: '{"count":0,"next":null,"previous":null,"results":[]}'
+    http_version: 
+  recorded_at: Tue, 19 Jun 2018 11:44:11 GMT
+- request:
+    method: get
+    uri: http://localhost:8000/api/v1/fee-schemes/1/modifier-types/?fee_type_code=AGFS_APPEAL_CON&scenario=5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/0.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 19 Jun 2018 11:44:11 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.6.4
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET, HEAD, OPTIONS
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '226'
+    body:
+      encoding: UTF-8
+      string: '{"count":2,"next":null,"previous":null,"results":[{"id":1,"name":"NUMBER_OF_CASES","description":"Number
+        of cases","unit":"CASE"},{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
+        of defendants","unit":"DEFENDANT"}]}'
+    http_version: 
+  recorded_at: Tue, 19 Jun 2018 11:44:11 GMT
+recorded_with: VCR 4.0.0
