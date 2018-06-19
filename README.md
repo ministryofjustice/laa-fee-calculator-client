@@ -2,9 +2,8 @@
 
 # Legal Aid Agency Fee Calculator Client
 
-To experiment with the code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Ruby client for the [ministryofjustice/laa-fee-calculator](https://github.com/ministryofjustice/laa-fee-calculator). It enables transparent calling of this API's
+endpoints, providing a simple interface for querying data, in particular, the primary function of the API, the `#calculate` endpoint.
 
 ## Installation
 
@@ -59,7 +58,7 @@ end
 
 ##### Lookup endpoints
 
-Lookup endpoints (`advocate_types`, `offence_classes`, `scenarios`, `fee_types`) respond to a single argument for the id, or options hashes (where id can also be specified explicitly). Any option key specified, except `id:`, will be converted to a URI param in the resulting request. `id`s will become part of the URI path itself. Options specified should therefore be available on the [ministryofjustice/laa-fee-caclulator](https://github.com/ministryofjustice/laa-fee-calculator)
+Lookup endpoints (`advocate_types`, `offence_classes`, `scenarios`, `fee_types`, `modifier_types`, `units`) respond to a single argument for the id, or options hashes (where id can also be specified explicitly). Any option key specified, except `id:`, will be converted to a URI param in the resulting request. `id`s will become part of the URI path itself. Options specified should therefore be available on the [ministryofjustice/laa-fee-caclulator](https://github.com/ministryofjustice/laa-fee-calculator)
 
 ```ruby
 # instantiate a client
@@ -74,9 +73,8 @@ All other endpoints are queried based on fee scheme so you will need one of thes
 fee_scheme = client.fee_schemes(1)
 # or
 fee_scheme = client.fee_schemes(id: 1)
-# or
-
-# to retrieve a scheme base on criteria you can use the supplier_type (ADVOCATE | SOLICITOR) and case_date (the fee scheme applicable from that date)
+#
+# or to retrieve a scheme matching specific criteria you can use the supplier_type (ADVOCATE | SOLICITOR) and case_date (the fee scheme applicable from that date)
 fee_scheme = client.fee_schemes(supplier_type: 'ADVOCATE', case_date: '2017-01-01')
 
 ```
@@ -108,7 +106,18 @@ see the [Quick start](#quick-start)
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake` to run the tests.
+
+
+To experiment with the code:
+
+- clone the API's repo
+```bash
+git clone git@github.com:ministryofjustice/laa-fee-calculator.git
+```
+
+- setup and run the [API locally](https://github.com/ministryofjustice/laa-fee-calculator/blob/develop/docs/DEVELOPMENT.md)
+- run `bin/console` for an interactive prompt in this repo's directory.
 
 To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
