@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ministryofjustice/laa-fee-calculator-client.svg?branch=master)](https://travis-ci.org/ministryofjustice/laa-fee-calculator-client)
+
 # Laa Fee Calculator Client
 
 To experiment with the code, run `bin/console` for an interactive prompt.
