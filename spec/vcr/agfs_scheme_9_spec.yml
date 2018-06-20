@@ -445,4 +445,226 @@ http_interactions:
       string: '{"amount":39052.0}'
     http_version: 
   recorded_at: Tue, 19 Jun 2018 16:12:28 GMT
+- request:
+    method: get
+    uri: http://localhost:8000/api/v1/fee-schemes/1/calculate/?advocate_type=JRALONE&day=1&fee_type_code=AGFS_APPEAL_CON&number_of_cases=2&number_of_defendants=1&offence_class=E&scenario=5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/0.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 19 Jun 2018 17:21:26 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.6.4
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '16'
+    body:
+      encoding: UTF-8
+      string: '{"amount":156.0}'
+    http_version: 
+  recorded_at: Tue, 19 Jun 2018 17:21:26 GMT
+- request:
+    method: get
+    uri: http://localhost:8000/api/v1/fee-schemes/1/calculate/?advocate_type=JRALONE&day=1&fee_type_code=AGFS_APPEAL_CON&number_of_cases=5&number_of_defendants=1&offence_class=E&scenario=5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/0.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 19 Jun 2018 17:30:16 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.6.4
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '16'
+    body:
+      encoding: UTF-8
+      string: '{"amount":234.0}'
+    http_version: 
+  recorded_at: Tue, 19 Jun 2018 17:30:16 GMT
+- request:
+    method: get
+    uri: http://localhost:8000/api/v1/fee-schemes/1/calculate/?advocate_type=JRALONE&day=1&fee_type_code=AGFS_APPEAL_CON&number_of_cases=3&number_of_defendants=1&offence_class=E&scenario=5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/0.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 19 Jun 2018 17:31:07 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.6.4
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '16'
+    body:
+      encoding: UTF-8
+      string: '{"amount":182.0}'
+    http_version: 
+  recorded_at: Tue, 19 Jun 2018 17:31:07 GMT
+- request:
+    method: get
+    uri: http://localhost:8000/api/v1/fee-schemes/1/calculate/?advocate_type=JRALONE&day=1&fee_type_code=AGFS_APPEAL_CON&number_of_cases=4&number_of_defendants=1&offence_class=E&scenario=5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/0.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 19 Jun 2018 17:31:07 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.6.4
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '16'
+    body:
+      encoding: UTF-8
+      string: '{"amount":208.0}'
+    http_version: 
+  recorded_at: Tue, 19 Jun 2018 17:31:07 GMT
+- request:
+    method: get
+    uri: http://localhost:8000/api/v1/fee-schemes/1/calculate/?advocate_type=JRALONE&day=1&fee_type_code=AGFS_APPEAL_CON&number_of_cases=10&number_of_defendants=1&offence_class=E&scenario=5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/0.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 19 Jun 2018 17:31:07 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.6.4
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '16'
+    body:
+      encoding: UTF-8
+      string: '{"amount":364.0}'
+    http_version: 
+  recorded_at: Tue, 19 Jun 2018 17:31:07 GMT
+- request:
+    method: get
+    uri: http://localhost:8000/api/v1/fee-schemes/1/calculate/?advocate_type=JRALONE&day=1&fee_type_code=AGFS_APPEAL_CON&number_of_cases=100&number_of_defendants=1&offence_class=E&scenario=5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/0.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 19 Jun 2018 17:31:07 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.6.4
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '17'
+    body:
+      encoding: UTF-8
+      string: '{"amount":2704.0}'
+    http_version: 
+  recorded_at: Tue, 19 Jun 2018 17:31:07 GMT
 recorded_with: VCR 4.0.0

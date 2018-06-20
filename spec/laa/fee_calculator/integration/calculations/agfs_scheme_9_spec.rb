@@ -35,6 +35,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
 
           context 'advocate_types' do
             let(:quantity) { 1 }
+
             context 'Junior alone' do
               let(:advocate_type) { 'JRALONE' }
               it { is_expected.to eql(130.0) }
@@ -74,24 +75,31 @@ RSpec.describe LAA::FeeCalculator, :vcr do
           end
 
           context 'modifier-types' do
-            context 'number of defendants' do
-              let(:unit_cost) { 130.0 }
-              let(:quantity) { 1 }
+            let(:quantity) { 1 }
 
-              context "defendants 2 to 4 carry a 20\% uplift per unit" do
+            # NOTE: adds 20% for defendant 2 to 4 and 30% for defendant 5+ to the unit cost
+            # i.e. unit_cost + (unit_cost * (0.2 * [number_of_defendants-1,3].min) + (0.3 * [number_of_defendants-4,0].min))
+            #
+            context 'number of defendants' do
+              context 'defendant 1 carries no uplift' do
+                let(:number_of_defendants) { 1 }
+                it { is_expected.to eql 130.0 }
+              end
+
+              context "defendants 2 to 4 carry a 20\% uplift per defendant" do
                 context '2 defendants' do
                   let(:number_of_defendants) { 2 }
                   it { is_expected.to eql 156.0 }
                 end
 
-                context '4 defedants' do
+                context '4 defendants' do
                   let(:number_of_defendants) { 4 }
                   it { is_expected.to eql 208.0 }
                 end
               end
 
-              context "defendants 5+ carry a 30\% uplift per unit" do
-                context '5 defedants' do
+              context "defendants 5+ carry a 30\% uplift per defendant" do
+                context '5 defendants' do
                   let(:number_of_defendants) { 5 }
                   it { is_expected.to eql 247.0 }
                 end
@@ -101,6 +109,21 @@ RSpec.describe LAA::FeeCalculator, :vcr do
                 context '1000 defendants' do
                   let(:number_of_defendants) { 1000 }
                   it { is_expected.to be > 30_000 }
+                end
+              end
+            end
+
+            context 'number_of_cases' do
+              # NOTE: adds 20% to the unit cost per additional case
+              # i.e. unit_cost + (unit_cost*(0.2*(number_of_cases-1)))
+              #
+              context "cases 2+ carry a 20\% uplift per case" do
+                [1, 2, 3, 4, 5, 10, 100].each do |number_of_cases|
+                  context "#{number_of_cases} cases" do
+                    let(:amount) { 130 + (130 * (0.2 * (number_of_cases - 1))) }
+                    let(:number_of_cases) { number_of_cases }
+                    it { is_expected.to eql amount }
+                  end
                 end
               end
             end
