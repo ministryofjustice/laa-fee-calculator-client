@@ -18,7 +18,7 @@ module LAA
           define_method(association) do |id = nil, **options|
             id ||= options&.fetch(:id, nil)
             uri = self.send("#{association}_uri", self.id, id)
-            uri.query_values = options.except(:id)
+            uri.query_values = options.reject { |k, _v| k.eql?(:id) }
 
             json = get(uri).body
             ostruct = JSON.parse(json, object_class: OpenStruct)
