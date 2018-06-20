@@ -14,9 +14,7 @@ module LAA
       end
 
       def call
-        uri = "fee-schemes/#{scheme_pk}/calculate/"
-        uri = Addressable::URI.parse(uri)
-        uri.query_values = options.except(:id)
+        uri.query_values = options.reject { |k, _v| k.eql?(:id) }
         json = get(uri).body
         JSON.parse(json)['amount']
       rescue Faraday::ClientError => err
@@ -24,6 +22,10 @@ module LAA
       end
 
       private
+
+      def uri
+        @uri ||= Addressable::URI.parse("fee-schemes/#{scheme_pk}/calculate/")
+      end
 
       def connection
         @connection ||= Connection.instance
