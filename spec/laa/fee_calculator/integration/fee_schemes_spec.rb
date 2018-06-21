@@ -2,23 +2,25 @@
 
 RSpec.describe LAA::FeeCalculator, :vcr do
   subject(:client) { described_class.client }
-  before { client.fee_scheme = 1 }
 
   context 'fee schemes' do
+    subject(:fee_schemes) { client.fee_schemes }
     let(:fee_scheme_class) { described_class::FeeScheme }
 
-    it 'returns array of fee schemes' do
-      expect(client.fee_schemes).to include(instance_of(fee_scheme_class))
+    it 'returns array of FeeScheme objects' do
+      is_expected.to be_an Array
+      is_expected.to include(instance_of(fee_scheme_class))
     end
 
     describe 'object' do
-      subject { client.fee_schemes(1) }
+      subject { fee_schemes.first }
+      it { is_expected.to be_kind_of(OpenStruct) }
       it { is_expected.to respond_to(:id) }
       it { is_expected.to respond_to(:start_date) }
       it { is_expected.to respond_to(:end_date) }
-      it { is_expected.to respond_to(:supplier_type) }
+      it { is_expected.to respond_to(:type) }
       it { is_expected.to respond_to(:description) }
-      it { is_expected.to respond_to(:calculate) }
+      it { is_expected.to respond_to :calculate }
     end
 
     context 'filterable' do
@@ -32,7 +34,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
         end
 
         specify 'by supplier_type' do
-          expect(client.fee_schemes(supplier_type: 'ADVOCATE')).to be_instance_of(fee_scheme_class)
+          expect(client.fee_schemes(type: 'AGFS')).to include(instance_of(fee_scheme_class))
         end
 
         specify 'by case_date' do
@@ -40,12 +42,12 @@ RSpec.describe LAA::FeeCalculator, :vcr do
         end
 
         specify 'by case_date and supplier_type' do
-          expect(client.fee_schemes(case_date: '2018-01-01', supplier_type: 'SOLICITOR')).to be_instance_of(fee_scheme_class)
+          expect(client.fee_schemes(case_date: '2018-01-01', type: 'LGFS')).to be_instance_of(fee_scheme_class)
         end
 
         # TODO: change to return empty array??
         specify 'returns nil when no matching objects' do
-          expect(client.fee_schemes(supplier_type: 'INVALID')).to be_nil
+          expect(client.fee_schemes(type: 'INVALID')).to be_nil
         end
       end
     end
