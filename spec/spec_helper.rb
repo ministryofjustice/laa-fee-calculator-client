@@ -40,7 +40,8 @@ RSpec.configure do |config|
   end
 
   # uncomment to turn off VCR for testing actual/local api
-  # VCR.turn_off!
+  # or use `VCR_OFF=true rspec`
+  VCR.turn_off! if ENV['VCR_OFF']
 
   # record/use cassette named after the spec file, adding new interactions only
   config.around(:example, :vcr) do |example|
