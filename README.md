@@ -127,9 +127,36 @@ git clone git@github.com:ministryofjustice/laa-fee-calculator.git
 
 To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
+## Testing
+
+The test suite makes extensive use of the [VCR](https://github.com/vcr/vcr) gem to stub requests to the external API. Any examples within a `describe` block with a `:vcr` tag will automatically use (or generate) VCR cassettes via an `around` block - see `spec_helper.rb`. All cassettes are stored in the `spec/vcr` directory and automatically named after the spec that produced them. Only new episodes/requests are created.
+
+To recreate all cassettes:
+
+- run the [laa-fee-calculator](https://github.com/ministryofjustice/laa-fee-calculator) API locally
+- delete all files in `spec/vcr`
+- `$ rspec`
+
+Alternatively you can run tests against the local version of the API:
+
+```bash
+# run tests against local API
+$ VCR_OFF=true rspec
+```
+
+You can also test against a hosted API by modifying the following in the `spec_helper.rb`
+
+```ruby
+# run tests against a remote host
+LAA::FeeCalculator.configure do |config|
+  config.host = LAA::FeeCalculator::Configuration::DEV_LAA_FEE_CALCULATOR_API_V1
+end
+
+```
+
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/jsugarman/laa-fee-calculator-client.
+Bug reports and pull requests are welcome on GitHub at [ministryofjustice/laa-fee-calculator-client](https://github.com/ministryofjustice/laa-fee-calculator-client)
 
 ## License
 
