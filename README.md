@@ -70,12 +70,18 @@ client = LAA::FeeCalculator.client
 All other endpoints are queried based on fee scheme so you will need one of these first
 
 ```ruby
+# by id
 fee_scheme = client.fee_schemes(1)
 # or
 fee_scheme = client.fee_schemes(id: 1)
-#
-# or to retrieve a scheme matching specific criteria you can use the supplier_type (ADVOCATE | SOLICITOR) and case_date (the fee scheme applicable from that date)
-fee_scheme = client.fee_schemes(supplier_type: 'ADVOCATE', case_date: '2017-01-01')
+
+
+# by type and/or date came into force
+fee_scheme = client.fee_schemes(type: 'AGFS', case_date: '2018-01-01')
+# => AGFS scheme 9 object
+
+fee_scheme = client.fee_schemes(type: 'AGFS', case_date: '2018-04-01')
+# => AGFS scheme 10 object
 
 ```
 note: supplier type and its args are to be changed (20/06/2018) in API
