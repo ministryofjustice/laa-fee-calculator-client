@@ -19,20 +19,10 @@ RSpec.describe LAA::FeeCalculator::Client, :vcr do
   describe '#fee_schemes' do
     subject(:fee_schemes) { client.fee_schemes }
 
-    it 'returns array' do
+    # NOTE: see integration/fee_schemes_spec.rb for more fee scheme testing
+    it 'returns array of fee scheme objects' do
       is_expected.to be_an Array
-    end
-
-    context 'object' do
-      subject(:fee_scheme) { fee_schemes.first }
-      it { is_expected.to respond_to(:id) }
-      it { is_expected.to respond_to(:supplier_type) }
-      it { is_expected.to respond_to(:description) }
-    end
-
-    context 'accepts a scheme pk arg' do
-      subject(:fee_scheme) { client.fee_schemes(1) }
-      it { is_expected.to respond_to(:id) }
+      is_expected.to include(instance_of(LAA::FeeCalculator::FeeScheme))
     end
   end
 end

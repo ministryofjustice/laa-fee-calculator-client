@@ -11,6 +11,11 @@ RSpec.describe LAA::FeeCalculator, :vcr do
       is_expected.to include(instance_of(OpenStruct))
     end
 
+    it 'returns all modifier_types for scheme' do
+      names = %w[NUMBER_OF_CASES NUMBER_OF_DEFENDANTS TRIAL_LENGTH PAGES_OF_PROSECUTING_EVIDENCE RETRIAL_INTERVAL THIRD_CRACKED]
+      expect(modifier_types.map(&:name)).to match_array(names)
+    end
+
     describe 'object' do
       subject { modifier_types.first }
 
@@ -58,10 +63,6 @@ RSpec.describe LAA::FeeCalculator, :vcr do
 
         context 'combination of options' do
           let(:all) { fee_scheme.modifier_types }
-
-          specify 'without filters there are 5' do
-            expect(all.size).to eql 5
-          end
 
           context 'for an Appeal against conviction' do
             let(:modifier_types) { fee_scheme.modifier_types(scenario: 5, fee_type_code: 'AGFS_APPEAL_CON') }

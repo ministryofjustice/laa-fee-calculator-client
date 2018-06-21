@@ -7,7 +7,7 @@ RSpec.describe LAA::FeeCalculator::FeeScheme, :vcr do
       id: 1,
       start_date: '2012-04-01',
       end_date: nil,
-      supplier_type: 'ADVOCATE',
+      type: 'AGFS',
       description: 'AGFS Fee Scheme 9'
     }.to_json
   end
@@ -21,7 +21,6 @@ RSpec.describe LAA::FeeCalculator::FeeScheme, :vcr do
   let(:number_of_defendants) { 1 }
 
   it { is_expected.to be_kind_of(OpenStruct) }
-  it { is_expected.to respond_to :calculate }
 
   describe '#calculate' do
     subject(:calculate) do
@@ -36,7 +35,9 @@ RSpec.describe LAA::FeeCalculator::FeeScheme, :vcr do
       )
     end
 
-    it { is_expected.to be_kind_of(Float) }
+    it 'returns a decimal' do
+      is_expected.to be_kind_of(Float)
+    end
 
     it 'yields options to block' do
       expect { |block| fee_scheme.calculate(&block) }.to yield_with_args(instance_of(Hash))

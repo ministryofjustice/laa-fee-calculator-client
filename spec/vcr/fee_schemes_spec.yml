@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 19 Jun 2018 11:44:10 GMT
+      - Thu, 21 Jun 2018 09:53:55 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.4
       Content-Type:
@@ -31,14 +31,15 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Content-Length:
-      - '276'
+      - '357'
     body:
       encoding: UTF-8
-      string: '{"count":2,"next":null,"previous":null,"results":[{"id":1,"start_date":"2012-04-01","end_date":null,"supplier_type":"ADVOCATE","description":"AGFS
-        Fee Scheme 9"},{"id":2,"start_date":"2016-04-01","end_date":null,"supplier_type":"SOLICITOR","description":"LGFS
-        Fee Scheme 8"}]}'
+      string: '{"count":3,"next":null,"previous":null,"results":[{"id":1,"start_date":"2012-04-01","end_date":"2018-03-31","type":"AGFS","description":"AGFS
+        Fee Scheme 9"},{"id":2,"start_date":"2016-04-01","end_date":null,"type":"LGFS","description":"LGFS
+        Fee Scheme 8"},{"id":3,"start_date":"2018-04-01","end_date":null,"type":"AGFS","description":"AGFS
+        Fee Scheme 10"}]}'
     http_version: 
-  recorded_at: Tue, 19 Jun 2018 11:44:10 GMT
+  recorded_at: Thu, 21 Jun 2018 09:53:55 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/
@@ -58,7 +59,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 19 Jun 2018 11:44:10 GMT
+      - Thu, 21 Jun 2018 09:53:55 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.4
       Content-Type:
@@ -70,16 +71,16 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Content-Length:
-      - '111'
+      - '106'
     body:
       encoding: UTF-8
-      string: '{"id":1,"start_date":"2012-04-01","end_date":null,"supplier_type":"ADVOCATE","description":"AGFS
+      string: '{"id":1,"start_date":"2012-04-01","end_date":"2018-03-31","type":"AGFS","description":"AGFS
         Fee Scheme 9"}'
     http_version: 
-  recorded_at: Tue, 19 Jun 2018 11:44:10 GMT
+  recorded_at: Thu, 21 Jun 2018 09:53:55 GMT
 - request:
     method: get
-    uri: http://localhost:8000/api/v1/fee-schemes/?supplier_type=ADVOCATE
+    uri: http://localhost:8000/api/v1/fee-schemes/?type=AGFS
     body:
       encoding: US-ASCII
       string: ''
@@ -96,7 +97,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 19 Jun 2018 11:44:10 GMT
+      - Thu, 21 Jun 2018 09:53:55 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.4
       Content-Type:
@@ -108,13 +109,14 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Content-Length:
-      - '163'
+      - '258'
     body:
       encoding: UTF-8
-      string: '{"count":1,"next":null,"previous":null,"results":[{"id":1,"start_date":"2012-04-01","end_date":null,"supplier_type":"ADVOCATE","description":"AGFS
-        Fee Scheme 9"}]}'
+      string: '{"count":2,"next":null,"previous":null,"results":[{"id":1,"start_date":"2012-04-01","end_date":"2018-03-31","type":"AGFS","description":"AGFS
+        Fee Scheme 9"},{"id":3,"start_date":"2018-04-01","end_date":null,"type":"AGFS","description":"AGFS
+        Fee Scheme 10"}]}'
     http_version: 
-  recorded_at: Tue, 19 Jun 2018 11:44:10 GMT
+  recorded_at: Thu, 21 Jun 2018 09:53:55 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/?case_date=2018-01-01
@@ -134,7 +136,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 19 Jun 2018 11:44:10 GMT
+      - Thu, 21 Jun 2018 09:53:55 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.4
       Content-Type:
@@ -146,17 +148,17 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Content-Length:
-      - '276'
+      - '257'
     body:
       encoding: UTF-8
-      string: '{"count":2,"next":null,"previous":null,"results":[{"id":1,"start_date":"2012-04-01","end_date":null,"supplier_type":"ADVOCATE","description":"AGFS
-        Fee Scheme 9"},{"id":2,"start_date":"2016-04-01","end_date":null,"supplier_type":"SOLICITOR","description":"LGFS
+      string: '{"count":2,"next":null,"previous":null,"results":[{"id":1,"start_date":"2012-04-01","end_date":"2018-03-31","type":"AGFS","description":"AGFS
+        Fee Scheme 9"},{"id":2,"start_date":"2016-04-01","end_date":null,"type":"LGFS","description":"LGFS
         Fee Scheme 8"}]}'
     http_version: 
-  recorded_at: Tue, 19 Jun 2018 11:44:10 GMT
+  recorded_at: Thu, 21 Jun 2018 09:53:55 GMT
 - request:
     method: get
-    uri: http://localhost:8000/api/v1/fee-schemes/?case_date=2018-01-01&supplier_type=SOLICITOR
+    uri: http://localhost:8000/api/v1/fee-schemes/?case_date=2018-01-01&type=LGFS
     body:
       encoding: US-ASCII
       string: ''
@@ -173,7 +175,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 19 Jun 2018 11:44:10 GMT
+      - Thu, 21 Jun 2018 09:53:55 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.4
       Content-Type:
@@ -185,16 +187,16 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Content-Length:
-      - '164'
+      - '150'
     body:
       encoding: UTF-8
-      string: '{"count":1,"next":null,"previous":null,"results":[{"id":2,"start_date":"2016-04-01","end_date":null,"supplier_type":"SOLICITOR","description":"LGFS
+      string: '{"count":1,"next":null,"previous":null,"results":[{"id":2,"start_date":"2016-04-01","end_date":null,"type":"LGFS","description":"LGFS
         Fee Scheme 8"}]}'
     http_version: 
-  recorded_at: Tue, 19 Jun 2018 11:44:10 GMT
+  recorded_at: Thu, 21 Jun 2018 09:53:55 GMT
 - request:
     method: get
-    uri: http://localhost:8000/api/v1/fee-schemes/?supplier_type=INVALID
+    uri: http://localhost:8000/api/v1/fee-schemes/?type=INVALID
     body:
       encoding: US-ASCII
       string: ''
@@ -211,7 +213,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Tue, 19 Jun 2018 11:44:10 GMT
+      - Thu, 21 Jun 2018 09:53:55 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.4
       Content-Type:
@@ -223,10 +225,10 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Content-Length:
-      - '59'
+      - '46'
     body:
       encoding: UTF-8
-      string: '["`supplier_type` should be one of: [ADVOCATE, SOLICITOR]"]'
+      string: '["`base_type` should be one of: [AGFS, LGFS]"]'
     http_version: 
-  recorded_at: Tue, 19 Jun 2018 11:44:10 GMT
+  recorded_at: Thu, 21 Jun 2018 09:53:55 GMT
 recorded_with: VCR 4.0.0
