@@ -76,29 +76,60 @@ RSpec.describe LAA::FeeCalculator, :vcr do
               end
             end
 
-            # TODO: check API logic in line with PPE cut of regulations.
-            # http://www.legislation.gov.uk/uksi/2013/435/schedule/2/paragraph/5/made
-            # TODO: API does not seem to be accounting for trial length impact on PPE cut off
+            # check API logic in line with PPE cut of regulations.
+            # http://www.legislation.gov.uk/uksi/2016/313/schedule/1/made
             context 'ppe' do
               context 'PPE cut off for band A offence' do
                 let(:offence_class) { 'A' }
+                let(:basic_fee) { 1_467.58 }
 
-                [0, 1, 80].each do |quantity|
-                  context "#{quantity} ppe" do
-                    let(:ppe) { quantity }
+                context 'when trial lasts (1 to) 2 days' do
+                  let(:days) { 2 }
 
-                    it 'returns basic fee' do
-                      is_expected.to eql basic_fee
+                  [0, 80].each do |quantity|
+                    context "#{quantity} ppe" do
+                      let(:ppe) { quantity }
+
+                      it 'returns basic fee' do
+                        is_expected.to eql basic_fee
+                      end
+                    end
+                  end
+
+                  # NOTE: there are alot more ranges to cover - see regulations
+                  context '81+ ppe' do
+                    let(:ppe) { 81 }
+
+                    it 'returns basic fee + increment' do
+                      is_expected.to be > basic_fee
                     end
                   end
                 end
 
-                # TODO: there are more ranges to cover - see regulations
-                context '81+ ppe' do
-                  let(:ppe) { 81 }
+                # basic fees are incremented by an amount determined
+                # by trial length, according to regulations.
+                # see length of trial proxy table here:
+                # http://www.legislation.gov.uk/uksi/2016/313/schedule/1/made
+                context 'when trial lasts 3 days' do
+                  let(:days) { 3 }
+                  let(:basic_fee) { 1720.12 } # see regs
 
-                  it 'returns basic fee + increment' do
-                    is_expected.to be > basic_fee
+                  [0, 1, 95].each do |quantity|
+                    context "#{quantity} ppe" do
+                      let(:ppe) { quantity }
+
+                      it 'returns incremented basic fee' do
+                        is_expected.to eql basic_fee
+                      end
+                    end
+                  end
+
+                  context '96+ ppe' do
+                    let(:ppe) { 96 }
+
+                    it 'returns incremented basic fee plus ppe increment' do
+                      is_expected.to be > basic_fee
+                    end
                   end
                 end
               end
