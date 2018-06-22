@@ -1,0 +1,670 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:8000/api/v1/fee-schemes/?case_date=2018-01-01&type=LGFS
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/0.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 22 Jun 2018 07:25:51 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.6.4
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET, HEAD, OPTIONS
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '150'
+    body:
+      encoding: UTF-8
+      string: '{"count":1,"next":null,"previous":null,"results":[{"id":2,"start_date":"2016-04-01","end_date":null,"type":"LGFS","description":"LGFS
+        Fee Scheme 8"}]}'
+    http_version: 
+  recorded_at: Fri, 22 Jun 2018 07:25:51 GMT
+- request:
+    method: get
+    uri: http://localhost:8000/api/v1/fee-schemes/2/calculate/?day=1&fee_type_code=LIT_FEE&number_of_cases=1&number_of_defendants=1&offence_class=A&ppe=80&scenario=4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/0.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 22 Jun 2018 07:25:51 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.6.4
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '18'
+    body:
+      encoding: UTF-8
+      string: '{"amount":1467.58}'
+    http_version: 
+  recorded_at: Fri, 22 Jun 2018 07:25:51 GMT
+- request:
+    method: get
+    uri: http://localhost:8000/api/v1/fee-schemes/2/calculate/?day=2&fee_type_code=LIT_FEE&number_of_cases=1&number_of_defendants=1&offence_class=A&ppe=80&scenario=4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/0.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 22 Jun 2018 07:25:51 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.6.4
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '18'
+    body:
+      encoding: UTF-8
+      string: '{"amount":1467.58}'
+    http_version: 
+  recorded_at: Fri, 22 Jun 2018 07:25:51 GMT
+- request:
+    method: get
+    uri: http://localhost:8000/api/v1/fee-schemes/2/calculate/?day=3&fee_type_code=LIT_FEE&number_of_cases=1&number_of_defendants=1&offence_class=A&ppe=80&scenario=4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/0.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 22 Jun 2018 07:25:51 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.6.4
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '18'
+    body:
+      encoding: UTF-8
+      string: '{"amount":1720.12}'
+    http_version: 
+  recorded_at: Fri, 22 Jun 2018 07:25:51 GMT
+- request:
+    method: get
+    uri: http://localhost:8000/api/v1/fee-schemes/2/calculate/?day=200&fee_type_code=LIT_FEE&number_of_cases=1&number_of_defendants=1&offence_class=A&ppe=80&scenario=4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/0.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 22 Jun 2018 07:25:51 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.6.4
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '19'
+    body:
+      encoding: UTF-8
+      string: '{"amount":90159.18}'
+    http_version: 
+  recorded_at: Fri, 22 Jun 2018 07:25:51 GMT
+- request:
+    method: get
+    uri: http://localhost:8000/api/v1/fee-schemes/2/calculate/?day=201&fee_type_code=LIT_FEE&number_of_cases=1&number_of_defendants=1&offence_class=A&ppe=80&scenario=4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/0.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 22 Jun 2018 07:25:51 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.6.4
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '19'
+    body:
+      encoding: UTF-8
+      string: '{"amount":90159.18}'
+    http_version: 
+  recorded_at: Fri, 22 Jun 2018 07:25:51 GMT
+- request:
+    method: get
+    uri: http://localhost:8000/api/v1/fee-schemes/2/calculate/?day=1&fee_type_code=LIT_FEE&number_of_cases=1&number_of_defendants=1&offence_class=A&ppe=0&scenario=4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/0.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 22 Jun 2018 07:25:52 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.6.4
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '18'
+    body:
+      encoding: UTF-8
+      string: '{"amount":1467.58}'
+    http_version: 
+  recorded_at: Fri, 22 Jun 2018 07:25:52 GMT
+- request:
+    method: get
+    uri: http://localhost:8000/api/v1/fee-schemes/2/calculate/?day=1&fee_type_code=LIT_FEE&number_of_cases=1&number_of_defendants=1&offence_class=A&ppe=1&scenario=4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/0.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 22 Jun 2018 07:25:52 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.6.4
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '18'
+    body:
+      encoding: UTF-8
+      string: '{"amount":1467.58}'
+    http_version: 
+  recorded_at: Fri, 22 Jun 2018 07:25:52 GMT
+- request:
+    method: get
+    uri: http://localhost:8000/api/v1/fee-schemes/2/calculate/?day=1&fee_type_code=LIT_FEE&number_of_cases=1&number_of_defendants=1&offence_class=A&ppe=81&scenario=4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/0.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 22 Jun 2018 07:25:52 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.6.4
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '18'
+    body:
+      encoding: UTF-8
+      string: '{"amount":1484.16}'
+    http_version: 
+  recorded_at: Fri, 22 Jun 2018 07:25:52 GMT
+- request:
+    method: get
+    uri: http://localhost:8000/api/v1/fee-schemes/2/calculate/?day=1&fee_type_code=LIT_FEE&number_of_cases=1&number_of_defendants=1&offence_class=B&ppe=0&scenario=4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/0.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 22 Jun 2018 07:25:52 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.6.4
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '18'
+    body:
+      encoding: UTF-8
+      string: '{"amount":1097.66}'
+    http_version: 
+  recorded_at: Fri, 22 Jun 2018 07:25:52 GMT
+- request:
+    method: get
+    uri: http://localhost:8000/api/v1/fee-schemes/2/calculate/?day=1&fee_type_code=LIT_FEE&number_of_cases=1&number_of_defendants=1&offence_class=B&ppe=70&scenario=4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/0.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 22 Jun 2018 07:25:52 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.6.4
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '18'
+    body:
+      encoding: UTF-8
+      string: '{"amount":1097.66}'
+    http_version: 
+  recorded_at: Fri, 22 Jun 2018 07:25:52 GMT
+- request:
+    method: get
+    uri: http://localhost:8000/api/v1/fee-schemes/2/calculate/?day=1&fee_type_code=LIT_FEE&number_of_cases=1&number_of_defendants=1&offence_class=B&ppe=71&scenario=4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/0.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 22 Jun 2018 07:25:52 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.6.4
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '18'
+    body:
+      encoding: UTF-8
+      string: '{"amount":1110.47}'
+    http_version: 
+  recorded_at: Fri, 22 Jun 2018 07:25:52 GMT
+- request:
+    method: get
+    uri: http://localhost:8000/api/v1/fee-schemes/2/calculate/?day=1&fee_type_code=LIT_FEE&number_of_cases=1&number_of_defendants=2&offence_class=A&ppe=80&scenario=4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/0.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 22 Jun 2018 07:25:52 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.6.4
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '17'
+    body:
+      encoding: UTF-8
+      string: '{"amount":1761.1}'
+    http_version: 
+  recorded_at: Fri, 22 Jun 2018 07:25:52 GMT
+- request:
+    method: get
+    uri: http://localhost:8000/api/v1/fee-schemes/2/calculate/?day=1&fee_type_code=LIT_FEE&number_of_cases=1&number_of_defendants=3&offence_class=A&ppe=80&scenario=4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/0.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 22 Jun 2018 07:25:52 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.6.4
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '17'
+    body:
+      encoding: UTF-8
+      string: '{"amount":1761.1}'
+    http_version: 
+  recorded_at: Fri, 22 Jun 2018 07:25:52 GMT
+- request:
+    method: get
+    uri: http://localhost:8000/api/v1/fee-schemes/2/calculate/?day=1&fee_type_code=LIT_FEE&number_of_cases=1&number_of_defendants=4&offence_class=A&ppe=80&scenario=4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/0.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 22 Jun 2018 07:25:52 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.6.4
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '17'
+    body:
+      encoding: UTF-8
+      string: '{"amount":1761.1}'
+    http_version: 
+  recorded_at: Fri, 22 Jun 2018 07:25:52 GMT
+- request:
+    method: get
+    uri: http://localhost:8000/api/v1/fee-schemes/2/calculate/?day=1&fee_type_code=LIT_FEE&number_of_cases=1&number_of_defendants=5&offence_class=A&ppe=80&scenario=4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/0.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 22 Jun 2018 07:25:53 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.6.4
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '18'
+    body:
+      encoding: UTF-8
+      string: '{"amount":1907.85}'
+    http_version: 
+  recorded_at: Fri, 22 Jun 2018 07:25:53 GMT
+- request:
+    method: get
+    uri: http://localhost:8000/api/v1/fee-schemes/2/calculate/?day=1&fee_type_code=LIT_FEE&number_of_cases=1&number_of_defendants=10&offence_class=A&ppe=80&scenario=4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/0.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 22 Jun 2018 07:25:53 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.6.4
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '18'
+    body:
+      encoding: UTF-8
+      string: '{"amount":1907.85}'
+    http_version: 
+  recorded_at: Fri, 22 Jun 2018 07:25:53 GMT
+- request:
+    method: get
+    uri: http://localhost:8000/api/v1/fee-schemes/2/calculate/?day=1&fee_type_code=LIT_FEE&number_of_cases=1&number_of_defendants=100&offence_class=A&ppe=80&scenario=4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/0.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 22 Jun 2018 07:25:53 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.6.4
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '18'
+    body:
+      encoding: UTF-8
+      string: '{"amount":1907.85}'
+    http_version: 
+  recorded_at: Fri, 22 Jun 2018 07:25:53 GMT
+recorded_with: VCR 4.0.0
