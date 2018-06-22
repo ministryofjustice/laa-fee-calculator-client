@@ -127,7 +127,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
 
               context "defendant 2+ carry a 20\% uplift per defendant" do
                 [1, 2, 3, 4, 5, 10, 100].each do |number_of_defendants|
-                  context "#{number_of_defendants} cases" do
+                  context "#{number_of_defendants} defendants" do
                     let(:number_of_defendants) { number_of_defendants }
                     it { is_expected.to eql amount }
                   end
