@@ -1,0 +1,77 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:8000/api/v1/fee-schemes/?case_date=20181-01-01
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/0.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Sun, 24 Jun 2018 21:24:32 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.6.4
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET, HEAD, OPTIONS
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '50'
+    body:
+      encoding: UTF-8
+      string: '["`case_date` should be in the format YYYY-MM-DD"]'
+    http_version: 
+  recorded_at: Sun, 24 Jun 2018 21:24:32 GMT
+- request:
+    method: get
+    uri: http://localhost:8000/api/v1/fee-schemes/100/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/0.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Sun, 24 Jun 2018 21:24:32 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.6.4
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET, HEAD, OPTIONS
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '23'
+    body:
+      encoding: UTF-8
+      string: '{"detail":"Not found."}'
+    http_version: 
+  recorded_at: Sun, 24 Jun 2018 21:24:32 GMT
+recorded_with: VCR 4.0.0
