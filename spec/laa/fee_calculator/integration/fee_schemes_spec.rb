@@ -46,9 +46,9 @@ RSpec.describe LAA::FeeCalculator, :vcr do
         end
 
         # TODO: change to return empty array??
-        specify 'returns nil when no matching objects' do
-          expect(client.fee_schemes(type: 'INVALID')).to be_nil
-        end
+        # specify 'returns nil when no matching objects' do
+        #   expect(client.fee_schemes(type: 'INVALID')).to be_nil
+        # end
       end
     end
   end

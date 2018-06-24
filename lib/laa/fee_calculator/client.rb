@@ -29,8 +29,10 @@ module LAA
         return fstruct unless fstruct.respond_to?(:results)
         return fstruct.results.first if fstruct.results.size.eql?(1)
         fstruct.results
+      rescue Faraday::ResourceNotFound => err
+        raise LAA::FeeCalculator::ResourceNotFound.new(err.response)
       rescue Faraday::ClientError => err
-        # TODO: logging
+        raise LAA::FeeCalculator::ResponseError.new(err.response)
       end
     end
   end
