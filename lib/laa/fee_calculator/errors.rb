@@ -2,20 +2,17 @@
 
 module LAA
   module FeeCalculator
-    # base error class
+    # raised for failed response status between 400 and 599 and not handled
+    # by classes below
     class ClientError < StandardError
     end
 
-    # response error
-    # - handle empty results ie. results: []
-    # - handle error message response - 400, ["`case_date` should be in the format YYYY-MM-DD"]
-    # - handle everything else by passing the status and message along
-    # raised for failed response status between 300 and 599
+    # raised when API response is bad request: 400
+    # e.g. body ["`case_date` should be in the format YYYY-MM-DD"]
     class ResponseError < ClientError
       attr_reader :status, :headers, :body
 
-      # check body of response as the status
-      # may provide details of error
+      # check body of response provides details of error
       def initialize(response)
         @status = response.fetch(:status, nil)
         @headers = response.fetch(:headers, nil)
@@ -30,9 +27,9 @@ module LAA
       end
     end
 
-    # raised when:
-    # - empty results i.e. results: [] ??
-    # - API returns detail not found errors - 404, { "detail": "Not found." }
+    # raised when API response is not found: 404:
+    # e.g. body { "detail": "Not found." }
+    # TODO: consider raising for empty results i.e. results: [] ??
     class ResourceNotFound < ResponseError
       def to_s
         h = JSON.parse(body)
@@ -41,8 +38,5 @@ module LAA
         end
       end
     end
-
-    # TODO: request error??
-    # could raise for invalid params
   end
 end
