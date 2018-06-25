@@ -21,12 +21,10 @@ module LAA
             uri.query_values = options.reject { |k, _v| k.eql?(:id) }
 
             json = get(uri).body
-            ostruct = JSON.parse(json, object_class: OpenStruct)
 
+            ostruct = JSON.parse(json, object_class: OpenStruct)
             return ostruct unless ostruct.respond_to?(:results)
             ostruct.results
-          rescue Faraday::ResourceNotFound => err
-            # TODO: logging
           end
         end
       end

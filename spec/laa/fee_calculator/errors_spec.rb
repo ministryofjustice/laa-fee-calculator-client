@@ -25,9 +25,7 @@ RSpec.describe LAA::FeeCalculator::ResponseError do
 
   it { is_expected.to be_kind_of(LAA::FeeCalculator::ClientError) }
   it { is_expected.to respond_to(:message) }
-  it { is_expected.to respond_to(:status) }
-  it { is_expected.to respond_to(:headers) }
-  it { is_expected.to respond_to(:body) }
+  it { is_expected.to respond_to(:response) }
 
   it 'returns response body as message' do
     expect(error.message).to match(/`case_date` should be in the format YYYY-MM-DD/)
@@ -54,9 +52,7 @@ RSpec.describe LAA::FeeCalculator::ResourceNotFound do
 
   it { is_expected.to be_kind_of(LAA::FeeCalculator::ResponseError) }
   it { is_expected.to respond_to(:message) }
-  it { is_expected.to respond_to(:status) }
-  it { is_expected.to respond_to(:headers) }
-  it { is_expected.to respond_to(:body) }
+  it { is_expected.to respond_to(:response) }
 
   it 'returns parsed JSON response body as message' do
     expect(error.message).to match(/detail not found/i)
