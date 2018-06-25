@@ -19,9 +19,9 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 22 Jun 2018 07:25:53 GMT
+      - Mon, 25 Jun 2018 12:38:25 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.4
+      - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
       - application/json
       Vary:
@@ -37,7 +37,7 @@ http_interactions:
       string: '{"id":1,"start_date":"2012-04-01","end_date":"2018-03-31","type":"AGFS","description":"AGFS
         Fee Scheme 9"}'
     http_version: 
-  recorded_at: Fri, 22 Jun 2018 07:25:53 GMT
+  recorded_at: Mon, 25 Jun 2018 12:38:25 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/modifier-types/
@@ -57,9 +57,9 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 22 Jun 2018 07:25:53 GMT
+      - Mon, 25 Jun 2018 12:38:25 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.4
+      - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
       - application/json
       Vary:
@@ -80,7 +80,7 @@ http_interactions:
         months between trials","unit":"MONTH"},{"id":6,"name":"THIRD_CRACKED","description":"Third
         in which a trial cracked","unit":"THIRD"}]}'
     http_version: 
-  recorded_at: Fri, 22 Jun 2018 07:25:53 GMT
+  recorded_at: Mon, 25 Jun 2018 12:38:25 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/modifier-types/1/
@@ -100,9 +100,9 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 22 Jun 2018 07:25:53 GMT
+      - Mon, 25 Jun 2018 12:38:25 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.4
+      - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
       - application/json
       Vary:
@@ -117,7 +117,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"id":1,"name":"NUMBER_OF_CASES","description":"Number of cases","unit":"CASE"}'
     http_version: 
-  recorded_at: Fri, 22 Jun 2018 07:25:53 GMT
+  recorded_at: Mon, 25 Jun 2018 12:38:25 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/modifier-types/?scenario=1
@@ -137,9 +137,9 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 22 Jun 2018 07:25:54 GMT
+      - Mon, 25 Jun 2018 12:38:25 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.4
+      - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
       - application/json
       Vary:
@@ -158,7 +158,7 @@ http_interactions:
         length","unit":"DAY"},{"id":4,"name":"PAGES_OF_PROSECUTING_EVIDENCE","description":"Pages
         of prosecuting evidence","unit":"PPE"}]}'
     http_version: 
-  recorded_at: Fri, 22 Jun 2018 07:25:54 GMT
+  recorded_at: Mon, 25 Jun 2018 12:38:25 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/modifier-types/?advocate_type=QC
@@ -178,9 +178,9 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 22 Jun 2018 07:25:54 GMT
+      - Mon, 25 Jun 2018 12:38:25 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.4
+      - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
       - application/json
       Vary:
@@ -201,7 +201,7 @@ http_interactions:
         months between trials","unit":"MONTH"},{"id":6,"name":"THIRD_CRACKED","description":"Third
         in which a trial cracked","unit":"THIRD"}]}'
     http_version: 
-  recorded_at: Fri, 22 Jun 2018 07:25:54 GMT
+  recorded_at: Mon, 25 Jun 2018 12:38:25 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/modifier-types/?offence_class=A
@@ -221,9 +221,9 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 22 Jun 2018 07:25:54 GMT
+      - Mon, 25 Jun 2018 12:38:25 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.4
+      - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
       - application/json
       Vary:
@@ -244,7 +244,7 @@ http_interactions:
         months between trials","unit":"MONTH"},{"id":6,"name":"THIRD_CRACKED","description":"Third
         in which a trial cracked","unit":"THIRD"}]}'
     http_version: 
-  recorded_at: Fri, 22 Jun 2018 07:25:54 GMT
+  recorded_at: Mon, 25 Jun 2018 12:38:25 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/modifier-types/?fee_type_code=AGFS_FEE
@@ -264,9 +264,9 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 22 Jun 2018 07:25:54 GMT
+      - Mon, 25 Jun 2018 12:38:26 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.4
+      - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
       - application/json
       Vary:
@@ -286,7 +286,7 @@ http_interactions:
         months between trials","unit":"MONTH"},{"id":6,"name":"THIRD_CRACKED","description":"Third
         in which a trial cracked","unit":"THIRD"}]}'
     http_version: 
-  recorded_at: Fri, 22 Jun 2018 07:25:54 GMT
+  recorded_at: Mon, 25 Jun 2018 12:38:26 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/modifier-types/1001/
@@ -306,9 +306,9 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Fri, 22 Jun 2018 07:25:54 GMT
+      - Mon, 25 Jun 2018 12:38:26 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.4
+      - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
       - application/json
       Vary:
@@ -323,7 +323,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"detail":"Not found."}'
     http_version: 
-  recorded_at: Fri, 22 Jun 2018 07:25:54 GMT
+  recorded_at: Mon, 25 Jun 2018 12:38:26 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/modifier-types/?fee_type_code=INVALID_CODE
@@ -343,9 +343,9 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 22 Jun 2018 07:25:54 GMT
+      - Mon, 25 Jun 2018 12:38:26 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.4
+      - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
       - application/json
       Vary:
@@ -360,7 +360,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"count":0,"next":null,"previous":null,"results":[]}'
     http_version: 
-  recorded_at: Fri, 22 Jun 2018 07:25:54 GMT
+  recorded_at: Mon, 25 Jun 2018 12:38:26 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/modifier-types/?fee_type_code=AGFS_APPEAL_CON&scenario=5
@@ -380,9 +380,9 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 22 Jun 2018 07:25:54 GMT
+      - Mon, 25 Jun 2018 12:38:26 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.4
+      - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
       - application/json
       Vary:
@@ -399,5 +399,5 @@ http_interactions:
         of cases","unit":"CASE"},{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
         of defendants","unit":"DEFENDANT"}]}'
     http_version: 
-  recorded_at: Fri, 22 Jun 2018 07:25:54 GMT
+  recorded_at: Mon, 25 Jun 2018 12:38:26 GMT
 recorded_with: VCR 4.0.0

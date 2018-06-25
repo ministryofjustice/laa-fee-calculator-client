@@ -30,8 +30,8 @@ RSpec.describe LAA::FeeCalculator, :vcr do
           expect(fee_scheme.offence_classes(id: 'A')).to be_instance_of(OpenStruct)
         end
 
-        specify 'returns nil when no matching objects' do
-          expect(fee_scheme.offence_classes(id: 'INVALID')).to be_nil
+        specify 'raises ResourceNotFound when no matching objects' do
+          expect { fee_scheme.offence_classes(id: 'INVALID') }.to raise_error(described_class::ResourceNotFound, /detail not found/i)
         end
       end
     end

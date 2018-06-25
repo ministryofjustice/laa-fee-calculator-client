@@ -19,9 +19,9 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 22 Jun 2018 07:25:53 GMT
+      - Mon, 25 Jun 2018 12:38:25 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.4
+      - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
       - application/json
       Vary:
@@ -39,7 +39,7 @@ http_interactions:
         Fee Scheme 8"},{"id":3,"start_date":"2018-04-01","end_date":null,"type":"AGFS","description":"AGFS
         Fee Scheme 10"}]}'
     http_version: 
-  recorded_at: Fri, 22 Jun 2018 07:25:53 GMT
+  recorded_at: Mon, 25 Jun 2018 12:38:25 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/
@@ -59,9 +59,9 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 22 Jun 2018 07:25:53 GMT
+      - Mon, 25 Jun 2018 12:38:25 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.4
+      - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
       - application/json
       Vary:
@@ -77,7 +77,7 @@ http_interactions:
       string: '{"id":1,"start_date":"2012-04-01","end_date":"2018-03-31","type":"AGFS","description":"AGFS
         Fee Scheme 9"}'
     http_version: 
-  recorded_at: Fri, 22 Jun 2018 07:25:53 GMT
+  recorded_at: Mon, 25 Jun 2018 12:38:25 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/?type=AGFS
@@ -97,9 +97,9 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 22 Jun 2018 07:25:53 GMT
+      - Mon, 25 Jun 2018 12:38:25 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.4
+      - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
       - application/json
       Vary:
@@ -116,7 +116,7 @@ http_interactions:
         Fee Scheme 9"},{"id":3,"start_date":"2018-04-01","end_date":null,"type":"AGFS","description":"AGFS
         Fee Scheme 10"}]}'
     http_version: 
-  recorded_at: Fri, 22 Jun 2018 07:25:53 GMT
+  recorded_at: Mon, 25 Jun 2018 12:38:25 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/?case_date=2018-01-01
@@ -136,9 +136,9 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 22 Jun 2018 07:25:53 GMT
+      - Mon, 25 Jun 2018 12:38:25 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.4
+      - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
       - application/json
       Vary:
@@ -155,7 +155,7 @@ http_interactions:
         Fee Scheme 9"},{"id":2,"start_date":"2016-04-01","end_date":null,"type":"LGFS","description":"LGFS
         Fee Scheme 8"}]}'
     http_version: 
-  recorded_at: Fri, 22 Jun 2018 07:25:53 GMT
+  recorded_at: Mon, 25 Jun 2018 12:38:25 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/?case_date=2018-01-01&type=LGFS
@@ -175,9 +175,9 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 22 Jun 2018 07:25:53 GMT
+      - Mon, 25 Jun 2018 12:38:25 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.4
+      - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
       - application/json
       Vary:
@@ -193,42 +193,5 @@ http_interactions:
       string: '{"count":1,"next":null,"previous":null,"results":[{"id":2,"start_date":"2016-04-01","end_date":null,"type":"LGFS","description":"LGFS
         Fee Scheme 8"}]}'
     http_version: 
-  recorded_at: Fri, 22 Jun 2018 07:25:53 GMT
-- request:
-    method: get
-    uri: http://localhost:8000/api/v1/fee-schemes/?type=INVALID
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/json
-      User-Agent:
-      - laa-fee-calculator-client/0.1.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 400
-      message: Bad Request
-    headers:
-      Date:
-      - Fri, 22 Jun 2018 07:25:53 GMT
-      Server:
-      - WSGIServer/0.2 CPython/3.6.4
-      Content-Type:
-      - application/json
-      Vary:
-      - Accept, Cookie
-      Allow:
-      - GET, HEAD, OPTIONS
-      X-Frame-Options:
-      - SAMEORIGIN
-      Content-Length:
-      - '46'
-    body:
-      encoding: UTF-8
-      string: '["`base_type` should be one of: [AGFS, LGFS]"]'
-    http_version: 
-  recorded_at: Fri, 22 Jun 2018 07:25:53 GMT
+  recorded_at: Mon, 25 Jun 2018 12:38:25 GMT
 recorded_with: VCR 4.0.0

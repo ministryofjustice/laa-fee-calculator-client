@@ -46,8 +46,8 @@ RSpec.describe LAA::FeeCalculator, :vcr do
           expect(fee_scheme.units(fee_type_code: 'AGFS_FEE')).to include(instance_of(OpenStruct))
         end
 
-        specify 'returns nil when no matching objects' do
-          expect(fee_scheme.units(id: 1001)).to be_nil
+        specify 'raises ResourceNotFound when no matching objects' do
+          expect { fee_scheme.units(id: 1001) }.to raise_error(described_class::ResourceNotFound, /detail not found/i)
         end
 
         # TODO: check whether advocate_type has any impact on units returned

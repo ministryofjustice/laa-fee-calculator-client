@@ -2,6 +2,7 @@
 
 require 'laa/fee_calculator/version'
 require 'laa/fee_calculator/configuration'
+require 'laa/fee_calculator/raise_error'
 require 'laa/fee_calculator/connection'
 require 'laa/fee_calculator/fee_scheme'
 require 'laa/fee_calculator/calculator'
