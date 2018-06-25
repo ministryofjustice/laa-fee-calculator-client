@@ -19,9 +19,9 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 22 Jun 2018 07:25:53 GMT
+      - Mon, 25 Jun 2018 12:38:25 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.4
+      - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
       - application/json
       Vary:
@@ -37,7 +37,7 @@ http_interactions:
       string: '{"id":1,"start_date":"2012-04-01","end_date":"2018-03-31","type":"AGFS","description":"AGFS
         Fee Scheme 9"}'
     http_version: 
-  recorded_at: Fri, 22 Jun 2018 07:25:53 GMT
+  recorded_at: Mon, 25 Jun 2018 12:38:25 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/fee-types/
@@ -57,9 +57,9 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 22 Jun 2018 07:25:53 GMT
+      - Mon, 25 Jun 2018 12:38:25 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.4
+      - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
       - application/json
       Vary:
@@ -110,7 +110,7 @@ http_interactions:
         relating to admissibility of evidence (half day)","code":"AGFS_ADM_EVD_HF","is_basic":false,"aggregation":"sum"},{"id":91,"name":"Wasted
         preparation fee","code":"AGFS_WSTD_PREP","is_basic":false,"aggregation":"sum"}]}'
     http_version: 
-  recorded_at: Fri, 22 Jun 2018 07:25:53 GMT
+  recorded_at: Mon, 25 Jun 2018 12:38:25 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/fee-types/4/
@@ -130,9 +130,9 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 22 Jun 2018 07:25:53 GMT
+      - Mon, 25 Jun 2018 12:38:25 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.4
+      - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
       - application/json
       Vary:
@@ -147,7 +147,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"id":4,"name":"Plea and case management hearing","code":"AGFS_PLEA","is_basic":false,"aggregation":"sum"}'
     http_version: 
-  recorded_at: Fri, 22 Jun 2018 07:25:53 GMT
+  recorded_at: Mon, 25 Jun 2018 12:38:25 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/fee-types/?is_basic=true
@@ -167,9 +167,9 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 22 Jun 2018 07:25:53 GMT
+      - Mon, 25 Jun 2018 12:38:25 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.4
+      - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
       - application/json
       Vary:
@@ -185,7 +185,7 @@ http_interactions:
       string: '{"count":1,"next":null,"previous":null,"results":[{"id":34,"name":"Advocate
         fee","code":"AGFS_FEE","is_basic":true,"aggregation":"sum"}]}'
     http_version: 
-  recorded_at: Fri, 22 Jun 2018 07:25:53 GMT
+  recorded_at: Mon, 25 Jun 2018 12:38:25 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/fee-types/?scenario=1
@@ -205,9 +205,9 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 22 Jun 2018 07:25:53 GMT
+      - Mon, 25 Jun 2018 12:38:25 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.4
+      - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
       - application/json
       Vary:
@@ -258,7 +258,7 @@ http_interactions:
         relating to admissibility of evidence (half day)","code":"AGFS_ADM_EVD_HF","is_basic":false,"aggregation":"sum"},{"id":91,"name":"Wasted
         preparation fee","code":"AGFS_WSTD_PREP","is_basic":false,"aggregation":"sum"}]}'
     http_version: 
-  recorded_at: Fri, 22 Jun 2018 07:25:53 GMT
+  recorded_at: Mon, 25 Jun 2018 12:38:25 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/fee-types/?advocate_type=QC
@@ -278,9 +278,9 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 22 Jun 2018 07:25:53 GMT
+      - Mon, 25 Jun 2018 12:38:25 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.4
+      - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
       - application/json
       Vary:
@@ -331,7 +331,7 @@ http_interactions:
         relating to admissibility of evidence (half day)","code":"AGFS_ADM_EVD_HF","is_basic":false,"aggregation":"sum"},{"id":91,"name":"Wasted
         preparation fee","code":"AGFS_WSTD_PREP","is_basic":false,"aggregation":"sum"}]}'
     http_version: 
-  recorded_at: Fri, 22 Jun 2018 07:25:53 GMT
+  recorded_at: Mon, 25 Jun 2018 12:38:25 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/fee-types/?offence_class=A
@@ -351,9 +351,9 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 22 Jun 2018 07:25:53 GMT
+      - Mon, 25 Jun 2018 12:38:25 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.4
+      - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
       - application/json
       Vary:
@@ -404,7 +404,7 @@ http_interactions:
         relating to admissibility of evidence (half day)","code":"AGFS_ADM_EVD_HF","is_basic":false,"aggregation":"sum"},{"id":91,"name":"Wasted
         preparation fee","code":"AGFS_WSTD_PREP","is_basic":false,"aggregation":"sum"}]}'
     http_version: 
-  recorded_at: Fri, 22 Jun 2018 07:25:53 GMT
+  recorded_at: Mon, 25 Jun 2018 12:38:25 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/fee-types/?fee_type_code=AGFS_FEE
@@ -424,9 +424,9 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 22 Jun 2018 07:25:53 GMT
+      - Mon, 25 Jun 2018 12:38:25 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.4
+      - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
       - application/json
       Vary:
@@ -442,7 +442,7 @@ http_interactions:
       string: '{"count":1,"next":null,"previous":null,"results":[{"id":34,"name":"Advocate
         fee","code":"AGFS_FEE","is_basic":true,"aggregation":"sum"}]}'
     http_version: 
-  recorded_at: Fri, 22 Jun 2018 07:25:53 GMT
+  recorded_at: Mon, 25 Jun 2018 12:38:25 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/fee-types/1001/
@@ -462,9 +462,9 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Fri, 22 Jun 2018 07:25:53 GMT
+      - Mon, 25 Jun 2018 12:38:25 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.4
+      - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
       - application/json
       Vary:
@@ -479,7 +479,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"detail":"Not found."}'
     http_version: 
-  recorded_at: Fri, 22 Jun 2018 07:25:53 GMT
+  recorded_at: Mon, 25 Jun 2018 12:38:25 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/fee-types/?is_basic=true&scenario=8
@@ -499,9 +499,9 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 22 Jun 2018 07:25:53 GMT
+      - Mon, 25 Jun 2018 12:38:25 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.4
+      - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
       - application/json
       Vary:
@@ -516,7 +516,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"count":0,"next":null,"previous":null,"results":[]}'
     http_version: 
-  recorded_at: Fri, 22 Jun 2018 07:25:53 GMT
+  recorded_at: Mon, 25 Jun 2018 12:38:25 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/fee-types/?is_basic=false&scenario=8
@@ -536,9 +536,9 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 22 Jun 2018 07:25:53 GMT
+      - Mon, 25 Jun 2018 12:38:25 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.4
+      - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
       - application/json
       Vary:
@@ -586,7 +586,7 @@ http_interactions:
         relating to admissibility of evidence (half day)","code":"AGFS_ADM_EVD_HF","is_basic":false,"aggregation":"sum"},{"id":91,"name":"Wasted
         preparation fee","code":"AGFS_WSTD_PREP","is_basic":false,"aggregation":"sum"}]}'
     http_version: 
-  recorded_at: Fri, 22 Jun 2018 07:25:53 GMT
+  recorded_at: Mon, 25 Jun 2018 12:38:25 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/fee-types/?scenario=8
@@ -606,9 +606,9 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 22 Jun 2018 07:25:53 GMT
+      - Mon, 25 Jun 2018 12:38:25 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.4
+      - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
       - application/json
       Vary:
@@ -656,5 +656,5 @@ http_interactions:
         relating to admissibility of evidence (half day)","code":"AGFS_ADM_EVD_HF","is_basic":false,"aggregation":"sum"},{"id":91,"name":"Wasted
         preparation fee","code":"AGFS_WSTD_PREP","is_basic":false,"aggregation":"sum"}]}'
     http_version: 
-  recorded_at: Fri, 22 Jun 2018 07:25:53 GMT
+  recorded_at: Mon, 25 Jun 2018 12:38:25 GMT
 recorded_with: VCR 4.0.0
