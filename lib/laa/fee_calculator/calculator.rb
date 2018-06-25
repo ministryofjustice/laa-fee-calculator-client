@@ -17,8 +17,6 @@ module LAA
         uri.query_values = options.reject { |k, _v| k.eql?(:id) }
         json = get(uri).body
         JSON.parse(json)['amount']
-      rescue Faraday::ClientError => err
-        # TODO: logging
       end
 
       private
