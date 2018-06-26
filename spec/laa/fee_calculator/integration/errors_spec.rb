@@ -51,5 +51,144 @@ RSpec.describe LAA::FeeCalculator, :vcr do
       include_examples 'has manyable errors', :units
       include_examples 'has manyable errors', :modifier_types
     end
+
+    context 'calculate' do
+      let(:fee_scheme) { client.fee_schemes(type: 'AGFS', case_date: '2018-01-01') }
+
+      subject(:calculate) do
+        fee_scheme.calculate(
+          scenario: scenario,
+          offence_class: offence_class,
+          advocate_type: advocate_type,
+          fee_type_code: fee_type_code,
+          day: days,
+          number_of_cases: number_of_cases,
+          number_of_defendants: number_of_defendants
+        )
+      end
+
+      let(:scenario) { 5 } # Appeal against convicition
+      let(:advocate_type) { 'JRALONE' }
+      let(:offence_class) { 'E' }
+      let(:fee_type_code) { 'AGFS_APPEAL_CON' }
+      let(:days) { 1 }
+      let(:number_of_cases) { 1 }
+      let(:number_of_defendants) { 1 }
+
+      context 'when not supplied with required params' do
+        subject(:calculate) do
+          fee_scheme.calculate(
+            scenario: scenario,
+            # fee_type_code: fee_type_code, # not supplied
+            offence_class: offence_class,
+            advocate_type: advocate_type,
+            day: days,
+            number_of_cases: number_of_cases,
+            number_of_defendants: number_of_defendants
+          )
+        end
+
+        it 'raise ResponseError' do
+          expect { calculate }.to raise_error(LAA::FeeCalculator::ResponseError, /is a required field/)
+        end
+      end
+
+      context 'when not supplied with required param values' do
+        context 'fee_type_code' do
+          let(:fee_type_code) { nil }
+
+          it 'raises ResponseError with message taken from response body' do
+            expect { calculate }.to raise_error(LAA::FeeCalculator::ResponseError, /fee_type_code must match/)
+          end
+        end
+
+        context 'scenario' do
+          let(:scenario) { nil }
+
+          it 'raises ResponseError with message taken from response body' do
+            expect { calculate }.to raise_error(LAA::FeeCalculator::ClientError, /Value.*Error/i)
+          end
+        end
+
+        context 'offence_class' do
+          let(:offence_class) { nil }
+
+          it 'raises ResponseError with message taken from response body' do
+            expect { calculate }.to raise_error(LAA::FeeCalculator::ResponseError, /is not a valid offence/i)
+          end
+        end
+
+        context 'advocate_type' do
+          let(:advocate_type) { nil }
+
+          it 'raises ResponseError with message taken from response body' do
+            expect { calculate }.to raise_error(LAA::FeeCalculator::ResponseError, /is not a valid advocate/i)
+          end
+        end
+      end
+
+      # NOTE: there are required params like scenario, fee_type_code
+      # and sometimes "needed" params like offence_class, advocate_type
+      context 'when "required" params supplied with invalid value' do
+        context 'scenario' do
+          let(:scenario) { 100 }
+
+          it 'raises ResponseError with message taken from response body' do
+            expect { calculate }.to raise_error(LAA::FeeCalculator::ResponseError, /is not a valid Scenario/i)
+          end
+        end
+
+        context 'fee_type_code' do
+          let(:fee_type_code) { 'INVALID_FEE_TYPE_CODE' }
+
+          it 'raises ResponseError with message taken from response body' do
+            expect { calculate }.to raise_error(LAA::FeeCalculator::ResponseError, /fee_type_code must match a unique fee type/i)
+          end
+        end
+
+        context 'offence_class' do
+          let(:offence_class) { 'INVALID_OFFENCE_CLASS' }
+
+          it 'raises ResponseError with message taken from response body' do
+            expect { calculate }.to raise_error(LAA::FeeCalculator::ResponseError, /is not a valid offence/i)
+          end
+        end
+
+        context 'advocate_type' do
+          let(:advocate_type) { 'INVALID_ADVOCATE_TYPE' }
+
+          it 'raises ResponseError with message taken from response body' do
+            expect { calculate }.to raise_error(LAA::FeeCalculator::ResponseError, /is not a valid advocate/i)
+          end
+        end
+      end
+
+      context 'when supplied with unneeded or invalid params' do
+        subject(:calculate) do
+          fee_scheme.calculate(
+            scenario: scenario,
+            offence_class: offence_class,
+            advocate_type: advocate_type,
+            fee_type_code: fee_type_code,
+            day: days,
+            fixed: 2,
+            defendant: 2,
+            halfday: 2,
+            not_a_real_param: 'rubbish',
+            hour: 2,
+            number_of_cases: number_of_cases,
+            number_of_defendants: number_of_defendants
+          )
+        end
+
+        it 'does not raise error' do
+          expect { calculate }.not_to raise_error
+        end
+
+        it 'returns calculated amount' do
+          is_expected.to be > 0
+        end
+      end
+    end
   end
 end
