@@ -57,8 +57,10 @@ RSpec.describe LAA::FeeCalculator, :vcr do
           expect { fee_scheme.modifier_types(id: 1001) }.to raise_error(described_class::ResourceNotFound, /detail not found/i)
         end
 
-        specify 'returns empty array when filter results in no items' do
-          expect(fee_scheme.modifier_types(fee_type_code: 'INVALID_CODE')).to be_empty
+        specify 'raise ResponseError when invalid options supplied' do
+          expect do
+            fee_scheme.modifier_types(fee_type_code: 'INVALID_CODE')
+          end.to raise_client_error(LAA::FeeCalculator::ResponseError)
         end
 
         context 'combination of options' do

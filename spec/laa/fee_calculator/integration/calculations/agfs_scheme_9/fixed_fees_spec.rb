@@ -60,7 +60,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
               let(:advocate_type) { 'INVALID' }
 
               it 'raises ResponseError' do
-                expect { calculate }.to raise_error(described_class::ResponseError, /not a valid Advocate.*Type/i)
+                expect { calculate }.to raise_client_error(described_class::ResponseError, /not a valid .*advocate/i)
               end
             end
           end
