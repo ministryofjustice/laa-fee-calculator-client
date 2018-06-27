@@ -61,8 +61,10 @@ RSpec.describe LAA::FeeCalculator, :vcr do
           end
 
           context 'when filtering' do
-            specify 'can return an empty array' do
-              expect(fee_scheme.units(scenario: 15, fee_type_code: 'AGFS_APPEAL_SEN')).to be_empty
+            specify 'raises ResponseError for invalid option values' do
+              expect do
+                fee_scheme.units(scenario: 5, fee_type_code: 'INVALID_FEE_TYPE_CODE')
+              end.to raise_client_error(LAA::FeeCalculator::ResponseError)
             end
 
             specify 'can return a subset of items' do

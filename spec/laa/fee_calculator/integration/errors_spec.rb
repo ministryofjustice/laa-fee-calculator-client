@@ -5,21 +5,25 @@ RSpec.shared_examples 'has manyable errors' do |association|
 
   context "when #{association} not found" do
     it 'raises ResourceNotFound for not found, 404, with JSON response body from API' do
-      expect { fee_scheme.send(association.to_sym, id: 1000) }.to raise_error(described_class::ResourceNotFound, /detail not found/i)
+      expect do
+        fee_scheme.send(association.to_sym, id: 1000)
+      end.to raise_client_error(described_class::ResourceNotFound, /detail not found/i)
     end
   end
 
   context "when #{association} value error" do
-    it 'raises ClientError internal server errors, 500, with body as response' do
+    it 'raises ResponseError internal server errors, 400, with body as response' do
       expect do
         fee_scheme.send(association.to_sym, scenario: 'INVALID_DATATYPE')
-      end.to raise_error(described_class::ClientError, /Value.*Error/i)
+      end.to raise_client_error(described_class::ResponseError, /is not a valid .*scenario/i)
     end
   end
 
   context "when #{association} has no results" do
     it 'returns empty array' do
-      expect(fee_scheme.send(association.to_sym, scenario: '100')).to be_empty
+      expect do
+        fee_scheme.send(association.to_sym, scenario: '100')
+      end.to raise_client_error(LAA::FeeCalculator::ResponseError, /is not a valid .*scenario/i)
     end
   end
 end
@@ -33,7 +37,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
         it 'raises ResponseError for bad request, 400, with response body for message' do
           expect do
             client.fee_schemes(case_date: '20181-01-01')
-          end.to raise_error(described_class::ResponseError, /`case_date` should be in the format YYYY-MM-DD/)
+          end.to raise_client_error(described_class::ResponseError, /`case_date` should be in the format YYYY-MM-DD/)
         end
       end
 
@@ -41,7 +45,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
         it 'raises ResourceNotFound for not found - 404' do
           expect do
             client.fee_schemes(id: 100)
-          end.to raise_error(described_class::ResourceNotFound, /detail not found/i)
+          end.to raise_client_error(described_class::ResourceNotFound, /detail not found/i)
         end
       end
     end
@@ -89,7 +93,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
         end
 
         it 'raise ResponseError' do
-          expect { calculate }.to raise_error(LAA::FeeCalculator::ResponseError, /is a required field/)
+          expect { calculate }.to raise_client_error(LAA::FeeCalculator::ResponseError, /is a required field/i)
         end
       end
 
@@ -98,7 +102,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
           let(:fee_type_code) { nil }
 
           it 'raises ResponseError with message taken from response body' do
-            expect { calculate }.to raise_error(LAA::FeeCalculator::ResponseError, /fee_type_code must match/)
+            expect { calculate }.to raise_client_error(LAA::FeeCalculator::ResponseError, /is a required field/i)
           end
         end
 
@@ -106,23 +110,25 @@ RSpec.describe LAA::FeeCalculator, :vcr do
           let(:scenario) { nil }
 
           it 'raises ResponseError with message taken from response body' do
-            expect { calculate }.to raise_error(LAA::FeeCalculator::ClientError, /Value.*Error/i)
+            expect { calculate }.to raise_client_error(LAA::FeeCalculator::ResponseError, /is a required field/i)
           end
         end
 
         context 'offence_class' do
           let(:offence_class) { nil }
 
-          it 'raises ResponseError with message taken from response body' do
-            expect { calculate }.to raise_error(LAA::FeeCalculator::ResponseError, /is not a valid offence/i)
+          it 'does not raise error' do
+            expect { calculate }.to_not raise_client_error
+            is_expected.to be_kind_of(Float)
           end
         end
 
         context 'advocate_type' do
           let(:advocate_type) { nil }
 
-          it 'raises ResponseError with message taken from response body' do
-            expect { calculate }.to raise_error(LAA::FeeCalculator::ResponseError, /is not a valid advocate/i)
+          it 'does not raise error' do
+            expect { calculate }.to_not raise_client_error
+            is_expected.to be_kind_of(Float)
           end
         end
       end
@@ -134,7 +140,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
           let(:scenario) { 100 }
 
           it 'raises ResponseError with message taken from response body' do
-            expect { calculate }.to raise_error(LAA::FeeCalculator::ResponseError, /is not a valid Scenario/i)
+            expect { calculate }.to raise_client_error(LAA::FeeCalculator::ResponseError, /is not a valid .*scenario/i)
           end
         end
 
@@ -142,7 +148,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
           let(:fee_type_code) { 'INVALID_FEE_TYPE_CODE' }
 
           it 'raises ResponseError with message taken from response body' do
-            expect { calculate }.to raise_error(LAA::FeeCalculator::ResponseError, /fee_type_code must match a unique fee type/i)
+            expect { calculate }.to raise_client_error(LAA::FeeCalculator::ResponseError, /is not a valid .*fee.*type/i)
           end
         end
 
@@ -150,7 +156,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
           let(:offence_class) { 'INVALID_OFFENCE_CLASS' }
 
           it 'raises ResponseError with message taken from response body' do
-            expect { calculate }.to raise_error(LAA::FeeCalculator::ResponseError, /is not a valid offence/i)
+            expect { calculate }.to raise_client_error(LAA::FeeCalculator::ResponseError, /is not a valid .*offence/i)
           end
         end
 
@@ -158,7 +164,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
           let(:advocate_type) { 'INVALID_ADVOCATE_TYPE' }
 
           it 'raises ResponseError with message taken from response body' do
-            expect { calculate }.to raise_error(LAA::FeeCalculator::ResponseError, /is not a valid advocate/i)
+            expect { calculate }.to raise_client_error(LAA::FeeCalculator::ResponseError, /is not a valid .*advocate/i)
           end
         end
       end
@@ -182,7 +188,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
         end
 
         it 'does not raise error' do
-          expect { calculate }.not_to raise_error
+          expect { calculate }.not_to raise_client_error
         end
 
         it 'returns calculated amount' do
