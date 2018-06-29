@@ -7,29 +7,24 @@ require 'laa/fee_calculator/version'
 Gem::Specification.new do |spec|
   spec.name          = 'laa-fee-calculator-client'
   spec.version       = LAA::FeeCalculator::VERSION
-  spec.authors       = ['Joel Sugarman']
-  spec.email         = ['joel.sugarman@digital.justice.gov.uk']
-
-  spec.summary       = 'Ruby client for the LAA fee calculator API'
-  spec.description   = "Ruby client for the [ministryofjustice/laa-fee-calculator](https://github.com/ministryofjustice/laa-fee-calculator). It enables transparent calling of this API's endpoints, providing a simple interface for querying data, in particular, the primary function of the API, the `#calculate` endpoint."
+  spec.authors       = ['Joel Sugarman', 'Ministry of Justice']
+  spec.email         = ['joel.sugarman@digital.justice.gov.uk', 'tools@digital.justice.gov.uk']
+  spec.date          = '2018-06-29'
+  spec.summary       = 'Ruby client for the [LAA fee calculator API](https://github.com/ministryofjustice/laa-fee-calculator)'
+  spec.description   = "Ruby client for the [ministryofjustice/laa-fee-calculator](https://github.com/ministryofjustice/laa-fee-calculator). Simple interface for transparent calling of the [API](https://github.com/ministryofjustice/laa-fee-calculator) endpoints, providing a simple interface for querying data, in particular, the primary function of the API, the `#calculate` endpoint."
   spec.homepage      = 'https://github.com/ministryofjustice/laa-fee-calculator-client'
   spec.license       = 'MIT'
+  spec.extra_rdoc_files = ["LICENSE", "README.md"]
 
-  # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
-  # to allow pushing to a single host or delete this section to allow pushing to any host.
-  # if spec.respond_to?(:metadata)
-  #   spec.metadata["allowed_push_host"] = "todo -Set to 'http://mygemserver.com'"
-  # else
-  #   raise "RubyGems 2.0 or newer is required to protect against " \
-  #     "public gem pushes."
-  # end
-
-  spec.files         = `git ls-files -z`.split("\x0").reject do |f|
+  spec.files = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
   end
   spec.bindir        = 'exe'
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
+
+  # see bin/ruby_version_test
+  spec.required_ruby_version = '>= 2.4.0'
 
   spec.add_runtime_dependency 'addressable', '~> 2.3.7'
   spec.add_runtime_dependency 'faraday', '~> 0.9.2'
