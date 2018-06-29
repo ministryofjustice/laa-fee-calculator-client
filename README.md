@@ -1,4 +1,6 @@
 [![Build Status](https://travis-ci.org/ministryofjustice/laa-fee-calculator-client.svg?branch=master)](https://travis-ci.org/ministryofjustice/laa-fee-calculator-client)
+[![Gem Version](https://badge.fury.io/rb/laa-fee-calculator-client.svg)](https://badge.fury.io/rb/laa-fee-calculator-client)
+![](https://ruby-gem-downloads-badge.herokuapp.com/laa-fee-calculator-client?type=total)
 
 # Legal Aid Agency Fee Calculator Client
 
@@ -10,14 +12,14 @@ endpoints, providing a simple interface for querying data, in particular, the pr
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'laa-fee-calculator-client'
+gem 'laa-fee-calculator-client', '~> 0.1.1'
 ```
 
 And then execute:
 
     $ bundle
 
-Or install it yourself as:
+Or install it yourself:
 
     $ gem install laa-fee-calculator-client
 
@@ -82,9 +84,7 @@ fee_scheme = client.fee_schemes(type: 'AGFS', case_date: '2018-01-01')
 
 fee_scheme = client.fee_schemes(type: 'AGFS', case_date: '2018-04-01')
 # => AGFS scheme 10 object
-
 ```
-note: supplier type and its args are to be changed (20/06/2018) in API
 
 ###### Lookup data
 
@@ -166,29 +166,23 @@ Bug reports and pull requests are welcome on GitHub at [ministryofjustice/laa-fe
 
 3. Update the version in `lib/laa/fee_calculator/version` using [semantic versioning](https://guides.rubygems.org/patterns/#semantic-versioning).
 
-4. PR the change, code-review, merge etc.
+4. PR the change, code-review, merge.
 
-5. Pull master and tag it with the new version number:
+5. Pull master and run rake task below to publish
 
-    ```
-    $ git tag -a v0.1.1 -m "version 0.1.1 - description"
-    ```
+```bash
+$ rake release
+```
 
-    ```
-    $ git push origin v0.1.1
-    ```
+This rake task automates the following:
 
-6. Build the gem
-
-    ```
-    $ gem build laa-fee-calculator-client.gemspec
-    ```
-
-7. Publish to [Rubygems](https://rubygems.org)
-
-    ```
-    $ gem push laa-fee-calculator-client-[VERSION].gem
-    ```
+```bash
+$ git push -u origin <branch>
+$ git tag -a v0.1.1 -m "Version 0.1.1"
+$ git push origin v0.1.1
+$ gem build laa-fee-calculator-client.gemspec
+$ gem push laa-fee-calculator-client-[VERSION].gemspec
+```
 
 ## License
 
