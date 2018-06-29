@@ -10,8 +10,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Joel Sugarman', 'Ministry of Justice']
   spec.email         = ['joel.sugarman@digital.justice.gov.uk', 'tools@digital.justice.gov.uk']
   spec.date          = '2018-06-29'
-  spec.summary       = 'Ruby client for the [LAA fee calculator API](https://github.com/ministryofjustice/laa-fee-calculator)'
-  spec.description   = "Ruby client for the [ministryofjustice/laa-fee-calculator](https://github.com/ministryofjustice/laa-fee-calculator). Simple interface for transparent calling of the [API](https://github.com/ministryofjustice/laa-fee-calculator) endpoints, providing a simple interface for querying data, in particular, the primary function of the API, the `#calculate` endpoint."
+  spec.summary       = 'Ruby client for the Legal Aid Agency fee calculator API'
+  spec.description   = "Ruby client for the Ministry of Justices LAA fee calculator API. A simple interface for transparent calling of the API endpoints to query data and return calculated fee amounts."
   spec.homepage      = 'https://github.com/ministryofjustice/laa-fee-calculator-client'
   spec.license       = 'MIT'
   spec.extra_rdoc_files = ["LICENSE", "README.md"]
