@@ -158,6 +158,24 @@ end
 
 Bug reports and pull requests are welcome on GitHub at [ministryofjustice/laa-fee-calculator-client](https://github.com/ministryofjustice/laa-fee-calculator-client)
 
+## Publishing
+
+1. Make required changes, run specs (rerecord vcr cassettes if necessary), code-review, merge etc.
+
+2. Run `bin/ruby_version_test` to test against ruby versions (2.4+ support at present)
+
+3. Update the version in `lib/laa/fee_calculator/version`
+
+4. Build the gem
+```
+gem build laa-fee-calculator-client.gemspec
+```
+
+5. Publish to [Rubygems](https://rubygems.org)
+```
+gem push laa-fee-calculator-client-[VERSION].gem
+```
+
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
