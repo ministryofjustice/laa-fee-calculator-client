@@ -160,21 +160,35 @@ Bug reports and pull requests are welcome on GitHub at [ministryofjustice/laa-fe
 
 ## Publishing
 
-1. Make required changes, run specs (rerecord vcr cassettes if necessary), code-review, merge etc.
+1. Make required changes, run specs (rerecord vcr cassettes if necessary)
 
-2. Run `bin/ruby_version_test` to test against ruby versions (2.4+ support at present)
+2. Run `bin/ruby_version_test` to test against ruby versions (2.4+ supported at present)
 
-3. Update the version in `lib/laa/fee_calculator/version`
+3. Update the version in `lib/laa/fee_calculator/version` using [semantic versioning](https://guides.rubygems.org/patterns/#semantic-versioning).
 
-4. Build the gem
-```
-gem build laa-fee-calculator-client.gemspec
-```
+4. PR the change, code-review, merge etc.
 
-5. Publish to [Rubygems](https://rubygems.org)
-```
-gem push laa-fee-calculator-client-[VERSION].gem
-```
+5. Pull master and tag it with the new version number:
+
+    ```
+    $ git tag -a v0.1.1 -m "version 0.1.1 - description"
+    ```
+
+    ```
+    $ git push origin v0.1.1
+    ```
+
+6. Build the gem
+
+    ```
+    $ gem build laa-fee-calculator-client.gemspec
+    ```
+
+7. Publish to [Rubygems](https://rubygems.org)
+
+    ```
+    $ gem push laa-fee-calculator-client-[VERSION].gem
+    ```
 
 ## License
 
