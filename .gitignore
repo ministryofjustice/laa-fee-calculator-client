@@ -10,6 +10,9 @@
 # rspec failure tracking
 .rspec_status
 
-# generate gem and unpacked gem contents
+# generated gem/binary and any unpacked gem contents
 *.gem
 laa-fee-calculator-client*/
+
+# Gemfile.lock since it enforces precision that does not exist in the gem command
+Gemfile.lock
