@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+set -e
+
+rubies=("ruby-2.4.4" "ruby-2.5.0" "ruby-2.5.1")
+for i in "${rubies[@]}"
+do
+  echo "====================================================="
+  echo "$i: Start Test"
+  echo "====================================================="
+  if [[ $(rvm list | grep $i) ]]; then echo "$i already installed!"; else rvm install $i; fi
+  rvm $i exec gem install bundler
+  rvm $i exec bundle install
+  rvm $i exec bundle exec rspec spec
+  echo "====================================================="
+  echo "$i: End Test"
+  echo "====================================================="
+done
