@@ -10,7 +10,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.1.0
+      - laa-fee-calculator-client/0.1.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 27 Jun 2018 11:30:43 GMT
+      - Wed, 04 Jul 2018 13:13:48 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -37,7 +37,7 @@ http_interactions:
       string: '{"id":1,"start_date":"2012-04-01","end_date":"2018-03-31","type":"AGFS","description":"AGFS
         Fee Scheme 9"}'
     http_version: 
-  recorded_at: Wed, 27 Jun 2018 11:30:43 GMT
+  recorded_at: Wed, 04 Jul 2018 13:13:48 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/fee-types/
@@ -48,7 +48,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.1.0
+      - laa-fee-calculator-client/0.1.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -57,7 +57,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 27 Jun 2018 11:30:43 GMT
+      - Wed, 04 Jul 2018 13:13:48 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -110,7 +110,7 @@ http_interactions:
         relating to admissibility of evidence (half day)","code":"AGFS_ADM_EVD_HF","is_basic":false,"aggregation":"sum"},{"id":91,"name":"Wasted
         preparation fee","code":"AGFS_WSTD_PREP","is_basic":false,"aggregation":"sum"}]}'
     http_version: 
-  recorded_at: Wed, 27 Jun 2018 11:30:43 GMT
+  recorded_at: Wed, 04 Jul 2018 13:13:48 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/fee-types/4/
@@ -121,7 +121,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.1.0
+      - laa-fee-calculator-client/0.1.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -130,7 +130,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 27 Jun 2018 11:30:43 GMT
+      - Wed, 04 Jul 2018 13:13:48 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -147,7 +147,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"id":4,"name":"Plea and case management hearing","code":"AGFS_PLEA","is_basic":false,"aggregation":"sum"}'
     http_version: 
-  recorded_at: Wed, 27 Jun 2018 11:30:43 GMT
+  recorded_at: Wed, 04 Jul 2018 13:13:48 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/fee-types/?is_basic=true
@@ -158,7 +158,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.1.0
+      - laa-fee-calculator-client/0.1.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -167,7 +167,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 27 Jun 2018 11:30:43 GMT
+      - Wed, 04 Jul 2018 13:13:48 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -185,7 +185,7 @@ http_interactions:
       string: '{"count":1,"next":null,"previous":null,"results":[{"id":34,"name":"Advocate
         fee","code":"AGFS_FEE","is_basic":true,"aggregation":"sum"}]}'
     http_version: 
-  recorded_at: Wed, 27 Jun 2018 11:30:43 GMT
+  recorded_at: Wed, 04 Jul 2018 13:13:48 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/fee-types/?scenario=1
@@ -196,7 +196,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.1.0
+      - laa-fee-calculator-client/0.1.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -205,7 +205,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 27 Jun 2018 11:30:43 GMT
+      - Wed, 04 Jul 2018 13:13:48 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -258,7 +258,7 @@ http_interactions:
         relating to admissibility of evidence (half day)","code":"AGFS_ADM_EVD_HF","is_basic":false,"aggregation":"sum"},{"id":91,"name":"Wasted
         preparation fee","code":"AGFS_WSTD_PREP","is_basic":false,"aggregation":"sum"}]}'
     http_version: 
-  recorded_at: Wed, 27 Jun 2018 11:30:43 GMT
+  recorded_at: Wed, 04 Jul 2018 13:13:48 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/fee-types/?advocate_type=QC
@@ -269,7 +269,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.1.0
+      - laa-fee-calculator-client/0.1.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -278,7 +278,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 27 Jun 2018 11:30:43 GMT
+      - Wed, 04 Jul 2018 13:13:48 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -331,7 +331,7 @@ http_interactions:
         relating to admissibility of evidence (half day)","code":"AGFS_ADM_EVD_HF","is_basic":false,"aggregation":"sum"},{"id":91,"name":"Wasted
         preparation fee","code":"AGFS_WSTD_PREP","is_basic":false,"aggregation":"sum"}]}'
     http_version: 
-  recorded_at: Wed, 27 Jun 2018 11:30:43 GMT
+  recorded_at: Wed, 04 Jul 2018 13:13:48 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/fee-types/?offence_class=A
@@ -342,7 +342,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.1.0
+      - laa-fee-calculator-client/0.1.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -351,7 +351,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 27 Jun 2018 11:30:43 GMT
+      - Wed, 04 Jul 2018 13:13:48 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -404,7 +404,7 @@ http_interactions:
         relating to admissibility of evidence (half day)","code":"AGFS_ADM_EVD_HF","is_basic":false,"aggregation":"sum"},{"id":91,"name":"Wasted
         preparation fee","code":"AGFS_WSTD_PREP","is_basic":false,"aggregation":"sum"}]}'
     http_version: 
-  recorded_at: Wed, 27 Jun 2018 11:30:43 GMT
+  recorded_at: Wed, 04 Jul 2018 13:13:48 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/fee-types/?fee_type_code=AGFS_FEE
@@ -415,7 +415,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.1.0
+      - laa-fee-calculator-client/0.1.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -424,7 +424,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 27 Jun 2018 11:30:43 GMT
+      - Wed, 04 Jul 2018 13:13:48 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -442,7 +442,7 @@ http_interactions:
       string: '{"count":1,"next":null,"previous":null,"results":[{"id":34,"name":"Advocate
         fee","code":"AGFS_FEE","is_basic":true,"aggregation":"sum"}]}'
     http_version: 
-  recorded_at: Wed, 27 Jun 2018 11:30:43 GMT
+  recorded_at: Wed, 04 Jul 2018 13:13:48 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/fee-types/1001/
@@ -453,7 +453,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.1.0
+      - laa-fee-calculator-client/0.1.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -462,7 +462,7 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Wed, 27 Jun 2018 11:30:44 GMT
+      - Wed, 04 Jul 2018 13:13:48 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -479,7 +479,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"detail":"Not found."}'
     http_version: 
-  recorded_at: Wed, 27 Jun 2018 11:30:44 GMT
+  recorded_at: Wed, 04 Jul 2018 13:13:48 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/fee-types/?is_basic=true&scenario=8
@@ -490,7 +490,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.1.0
+      - laa-fee-calculator-client/0.1.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -499,7 +499,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 27 Jun 2018 11:30:44 GMT
+      - Wed, 04 Jul 2018 13:13:48 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -516,7 +516,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"count":0,"next":null,"previous":null,"results":[]}'
     http_version: 
-  recorded_at: Wed, 27 Jun 2018 11:30:44 GMT
+  recorded_at: Wed, 04 Jul 2018 13:13:48 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/fee-types/?is_basic=false&scenario=8
@@ -527,7 +527,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.1.0
+      - laa-fee-calculator-client/0.1.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -536,7 +536,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 27 Jun 2018 11:30:44 GMT
+      - Wed, 04 Jul 2018 13:13:49 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -586,7 +586,7 @@ http_interactions:
         relating to admissibility of evidence (half day)","code":"AGFS_ADM_EVD_HF","is_basic":false,"aggregation":"sum"},{"id":91,"name":"Wasted
         preparation fee","code":"AGFS_WSTD_PREP","is_basic":false,"aggregation":"sum"}]}'
     http_version: 
-  recorded_at: Wed, 27 Jun 2018 11:30:44 GMT
+  recorded_at: Wed, 04 Jul 2018 13:13:49 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/fee-types/?scenario=8
@@ -597,7 +597,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.1.0
+      - laa-fee-calculator-client/0.1.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -606,7 +606,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 27 Jun 2018 11:30:44 GMT
+      - Wed, 04 Jul 2018 13:13:49 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -656,5 +656,5 @@ http_interactions:
         relating to admissibility of evidence (half day)","code":"AGFS_ADM_EVD_HF","is_basic":false,"aggregation":"sum"},{"id":91,"name":"Wasted
         preparation fee","code":"AGFS_WSTD_PREP","is_basic":false,"aggregation":"sum"}]}'
     http_version: 
-  recorded_at: Wed, 27 Jun 2018 11:30:44 GMT
+  recorded_at: Wed, 04 Jul 2018 13:13:49 GMT
 recorded_with: VCR 4.0.0
