@@ -19,7 +19,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:47 GMT
+      - Thu, 05 Jul 2018 13:55:58 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -36,7 +36,7 @@ http_interactions:
       encoding: UTF-8
       string: '["`case_date` should be in the format YYYY-MM-DD"]'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:47 GMT
+  recorded_at: Thu, 05 Jul 2018 13:55:58 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/100/
@@ -56,7 +56,7 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:47 GMT
+      - Thu, 05 Jul 2018 13:55:58 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -73,7 +73,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"detail":"Not found."}'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:47 GMT
+  recorded_at: Thu, 05 Jul 2018 13:55:58 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/
@@ -93,7 +93,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:47 GMT
+      - Thu, 05 Jul 2018 13:55:58 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -113,7 +113,7 @@ http_interactions:
         Fee Scheme 8"},{"id":3,"start_date":"2018-04-01","end_date":null,"type":"AGFS","description":"AGFS
         Fee Scheme 10"}]}'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:47 GMT
+  recorded_at: Thu, 05 Jul 2018 13:55:58 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/fee-types/1000/
@@ -133,7 +133,7 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:47 GMT
+      - Thu, 05 Jul 2018 13:55:58 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -150,7 +150,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"detail":"Not found."}'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:47 GMT
+  recorded_at: Thu, 05 Jul 2018 13:55:58 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/fee-types/?scenario=INVALID_DATATYPE
@@ -170,7 +170,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:47 GMT
+      - Thu, 05 Jul 2018 13:55:58 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -187,7 +187,7 @@ http_interactions:
       encoding: UTF-8
       string: '["''INVALID_DATATYPE'' is not a valid `scenario`"]'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:47 GMT
+  recorded_at: Thu, 05 Jul 2018 13:55:58 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/fee-types/?scenario=100
@@ -207,7 +207,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:47 GMT
+      - Thu, 05 Jul 2018 13:55:58 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -224,7 +224,7 @@ http_interactions:
       encoding: UTF-8
       string: '["''100'' is not a valid `scenario`"]'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:47 GMT
+  recorded_at: Thu, 05 Jul 2018 13:55:58 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/units/1000/
@@ -244,7 +244,7 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:47 GMT
+      - Thu, 05 Jul 2018 13:55:59 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -261,7 +261,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"detail":"Not found."}'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:47 GMT
+  recorded_at: Thu, 05 Jul 2018 13:55:59 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/units/?scenario=INVALID_DATATYPE
@@ -281,7 +281,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:47 GMT
+      - Thu, 05 Jul 2018 13:55:59 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -298,7 +298,7 @@ http_interactions:
       encoding: UTF-8
       string: '["''INVALID_DATATYPE'' is not a valid `scenario`"]'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:47 GMT
+  recorded_at: Thu, 05 Jul 2018 13:55:59 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/units/?scenario=100
@@ -318,7 +318,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:47 GMT
+      - Thu, 05 Jul 2018 13:55:59 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -335,7 +335,7 @@ http_interactions:
       encoding: UTF-8
       string: '["''100'' is not a valid `scenario`"]'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:47 GMT
+  recorded_at: Thu, 05 Jul 2018 13:55:59 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/modifier-types/1000/
@@ -355,7 +355,7 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:47 GMT
+      - Thu, 05 Jul 2018 13:55:59 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -372,7 +372,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"detail":"Not found."}'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:47 GMT
+  recorded_at: Thu, 05 Jul 2018 13:55:59 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/modifier-types/?scenario=INVALID_DATATYPE
@@ -392,7 +392,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:47 GMT
+      - Thu, 05 Jul 2018 13:55:59 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -409,7 +409,7 @@ http_interactions:
       encoding: UTF-8
       string: '["''INVALID_DATATYPE'' is not a valid `scenario`"]'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:47 GMT
+  recorded_at: Thu, 05 Jul 2018 13:55:59 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/modifier-types/?scenario=100
@@ -429,7 +429,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:48 GMT
+      - Thu, 05 Jul 2018 13:55:59 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -446,7 +446,7 @@ http_interactions:
       encoding: UTF-8
       string: '["''100'' is not a valid `scenario`"]'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:48 GMT
+  recorded_at: Thu, 05 Jul 2018 13:55:59 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/?case_date=2018-01-01&type=AGFS
@@ -466,7 +466,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:48 GMT
+      - Thu, 05 Jul 2018 13:55:59 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -484,7 +484,7 @@ http_interactions:
       string: '{"count":1,"next":null,"previous":null,"results":[{"id":1,"start_date":"2012-04-01","end_date":"2018-03-31","type":"AGFS","description":"AGFS
         Fee Scheme 9"}]}'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:48 GMT
+  recorded_at: Thu, 05 Jul 2018 13:55:59 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/calculate/?advocate_type=JRALONE&day=1&number_of_cases=1&number_of_defendants=1&offence_class=E&scenario=5
@@ -504,7 +504,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:48 GMT
+      - Thu, 05 Jul 2018 13:55:59 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -521,7 +521,7 @@ http_interactions:
       encoding: UTF-8
       string: '["`fee_type_code` is a required field"]'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:48 GMT
+  recorded_at: Thu, 05 Jul 2018 13:55:59 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/calculate/?advocate_type=JRALONE&day=1&fee_type_code&number_of_cases=1&number_of_defendants=1&offence_class=E&scenario=5
@@ -541,7 +541,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:48 GMT
+      - Thu, 05 Jul 2018 13:55:59 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -558,7 +558,7 @@ http_interactions:
       encoding: UTF-8
       string: '["`fee_type_code` is a required field"]'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:48 GMT
+  recorded_at: Thu, 05 Jul 2018 13:55:59 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/calculate/?advocate_type=JRALONE&day=1&fee_type_code=AGFS_APPEAL_CON&number_of_cases=1&number_of_defendants=1&offence_class=E&scenario
@@ -578,7 +578,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:48 GMT
+      - Thu, 05 Jul 2018 13:55:59 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -595,7 +595,7 @@ http_interactions:
       encoding: UTF-8
       string: '["`scenario` is a required field"]'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:48 GMT
+  recorded_at: Thu, 05 Jul 2018 13:55:59 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/calculate/?advocate_type=JRALONE&day=1&fee_type_code=AGFS_APPEAL_CON&number_of_cases=1&number_of_defendants=1&offence_class&scenario=5
@@ -615,7 +615,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:48 GMT
+      - Thu, 05 Jul 2018 13:55:59 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -632,7 +632,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"amount":130.0}'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:48 GMT
+  recorded_at: Thu, 05 Jul 2018 13:55:59 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/calculate/?advocate_type&day=1&fee_type_code=AGFS_APPEAL_CON&number_of_cases=1&number_of_defendants=1&offence_class=E&scenario=5
@@ -652,7 +652,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:48 GMT
+      - Thu, 05 Jul 2018 13:55:59 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -669,7 +669,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"amount":0.0}'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:48 GMT
+  recorded_at: Thu, 05 Jul 2018 13:55:59 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/calculate/?advocate_type=JRALONE&day=1&fee_type_code=AGFS_APPEAL_CON&number_of_cases=1&number_of_defendants=1&offence_class=E&scenario=100
@@ -689,7 +689,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:48 GMT
+      - Thu, 05 Jul 2018 13:55:59 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -706,7 +706,7 @@ http_interactions:
       encoding: UTF-8
       string: '["''100'' is not a valid `scenario`"]'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:48 GMT
+  recorded_at: Thu, 05 Jul 2018 13:55:59 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/calculate/?advocate_type=JRALONE&day=1&fee_type_code=INVALID_FEE_TYPE_CODE&number_of_cases=1&number_of_defendants=1&offence_class=E&scenario=5
@@ -726,7 +726,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:48 GMT
+      - Thu, 05 Jul 2018 13:55:59 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -743,7 +743,7 @@ http_interactions:
       encoding: UTF-8
       string: '["''INVALID_FEE_TYPE_CODE'' is not a valid `fee_type_code`"]'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:48 GMT
+  recorded_at: Thu, 05 Jul 2018 13:55:59 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/calculate/?advocate_type=JRALONE&day=1&fee_type_code=AGFS_APPEAL_CON&number_of_cases=1&number_of_defendants=1&offence_class=INVALID_OFFENCE_CLASS&scenario=5
@@ -763,7 +763,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:48 GMT
+      - Thu, 05 Jul 2018 13:55:59 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -780,7 +780,7 @@ http_interactions:
       encoding: UTF-8
       string: '["''INVALID_OFFENCE_CLASS'' is not a valid `offence_class`"]'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:48 GMT
+  recorded_at: Thu, 05 Jul 2018 13:55:59 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/calculate/?advocate_type=INVALID_ADVOCATE_TYPE&day=1&fee_type_code=AGFS_APPEAL_CON&number_of_cases=1&number_of_defendants=1&offence_class=E&scenario=5
@@ -800,7 +800,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:48 GMT
+      - Thu, 05 Jul 2018 13:55:59 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -817,7 +817,7 @@ http_interactions:
       encoding: UTF-8
       string: '["''INVALID_ADVOCATE_TYPE'' is not a valid `advocate_type`"]'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:48 GMT
+  recorded_at: Thu, 05 Jul 2018 13:55:59 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/calculate/?advocate_type=JRALONE&day=1&defendant=2&fee_type_code=AGFS_APPEAL_CON&fixed=2&halfday=2&hour=2&not_a_real_param=rubbish&number_of_cases=1&number_of_defendants=1&offence_class=E&scenario=5
@@ -837,7 +837,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:48 GMT
+      - Thu, 05 Jul 2018 13:55:59 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -854,5 +854,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"amount":130.0}'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:48 GMT
+  recorded_at: Thu, 05 Jul 2018 13:55:59 GMT
 recorded_with: VCR 4.0.0

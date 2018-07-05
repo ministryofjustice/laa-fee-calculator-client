@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:49 GMT
+      - Thu, 05 Jul 2018 13:56:00 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -37,7 +37,7 @@ http_interactions:
       string: '{"id":1,"start_date":"2012-04-01","end_date":"2018-03-31","type":"AGFS","description":"AGFS
         Fee Scheme 9"}'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:49 GMT
+  recorded_at: Thu, 05 Jul 2018 13:56:00 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/units/
@@ -57,7 +57,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:49 GMT
+      - Thu, 05 Jul 2018 13:56:00 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -76,7 +76,7 @@ http_interactions:
         Days"},{"id":"HALFDAY","name":"Half Days"},{"id":"HOUR","name":"Hours"},{"id":"PPE","name":"Pages
         of Prosecuting Evidence"},{"id":"PW","name":"Prosecution Witnesses"}]}'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:49 GMT
+  recorded_at: Thu, 05 Jul 2018 13:56:00 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/units/DAY/
@@ -96,7 +96,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:49 GMT
+      - Thu, 05 Jul 2018 13:56:00 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -113,7 +113,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"id":"DAY","name":"Whole Days"}'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:49 GMT
+  recorded_at: Thu, 05 Jul 2018 13:56:00 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/units/?scenario=1
@@ -133,7 +133,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:49 GMT
+      - Thu, 05 Jul 2018 13:56:00 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -152,7 +152,7 @@ http_interactions:
         Days"},{"id":"HALFDAY","name":"Half Days"},{"id":"HOUR","name":"Hours"},{"id":"PPE","name":"Pages
         of Prosecuting Evidence"}]}'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:49 GMT
+  recorded_at: Thu, 05 Jul 2018 13:56:00 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/units/?advocate_type=QC
@@ -172,7 +172,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:50 GMT
+      - Thu, 05 Jul 2018 13:56:00 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -191,7 +191,7 @@ http_interactions:
         Days"},{"id":"HALFDAY","name":"Half Days"},{"id":"HOUR","name":"Hours"},{"id":"PPE","name":"Pages
         of Prosecuting Evidence"},{"id":"PW","name":"Prosecution Witnesses"}]}'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:50 GMT
+  recorded_at: Thu, 05 Jul 2018 13:56:00 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/units/?offence_class=A
@@ -211,7 +211,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:50 GMT
+      - Thu, 05 Jul 2018 13:56:00 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -230,7 +230,7 @@ http_interactions:
         Days"},{"id":"HALFDAY","name":"Half Days"},{"id":"HOUR","name":"Hours"},{"id":"PPE","name":"Pages
         of Prosecuting Evidence"},{"id":"PW","name":"Prosecution Witnesses"}]}'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:50 GMT
+  recorded_at: Thu, 05 Jul 2018 13:56:00 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/units/?fee_type_code=AGFS_FEE
@@ -250,7 +250,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:50 GMT
+      - Thu, 05 Jul 2018 13:56:00 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -269,7 +269,7 @@ http_interactions:
         Days"},{"id":"PPE","name":"Pages of Prosecuting Evidence"},{"id":"PW","name":"Prosecution
         Witnesses"}]}'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:50 GMT
+  recorded_at: Thu, 05 Jul 2018 13:56:00 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/units/1001/
@@ -289,7 +289,7 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:50 GMT
+      - Thu, 05 Jul 2018 13:56:00 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -306,7 +306,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"detail":"Not found."}'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:50 GMT
+  recorded_at: Thu, 05 Jul 2018 13:56:00 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/units/?fee_type_code=INVALID_FEE_TYPE_CODE&scenario=5
@@ -326,7 +326,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:50 GMT
+      - Thu, 05 Jul 2018 13:56:00 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -343,7 +343,7 @@ http_interactions:
       encoding: UTF-8
       string: '["''INVALID_FEE_TYPE_CODE'' is not a valid `fee_type_code`"]'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:50 GMT
+  recorded_at: Thu, 05 Jul 2018 13:56:00 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/units/?offence_class=E&scenario=5
@@ -363,7 +363,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:50 GMT
+      - Thu, 05 Jul 2018 13:56:00 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -381,5 +381,5 @@ http_interactions:
       string: '{"count":4,"next":null,"previous":null,"results":[{"id":"CASE","name":"Case"},{"id":"DAY","name":"Whole
         Days"},{"id":"HALFDAY","name":"Half Days"},{"id":"HOUR","name":"Hours"}]}'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:50 GMT
+  recorded_at: Thu, 05 Jul 2018 13:56:00 GMT
 recorded_with: VCR 4.0.0

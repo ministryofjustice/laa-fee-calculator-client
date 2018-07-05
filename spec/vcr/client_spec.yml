@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:43 GMT
+      - Thu, 05 Jul 2018 13:55:36 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -39,5 +39,5 @@ http_interactions:
         Fee Scheme 8"},{"id":3,"start_date":"2018-04-01","end_date":null,"type":"AGFS","description":"AGFS
         Fee Scheme 10"}]}'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:43 GMT
+  recorded_at: Thu, 05 Jul 2018 13:55:36 GMT
 recorded_with: VCR 4.0.0
