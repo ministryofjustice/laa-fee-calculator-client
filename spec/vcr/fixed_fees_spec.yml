@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:43 GMT
+      - Thu, 05 Jul 2018 13:55:36 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -37,7 +37,7 @@ http_interactions:
       string: '{"count":1,"next":null,"previous":null,"results":[{"id":1,"start_date":"2012-04-01","end_date":"2018-03-31","type":"AGFS","description":"AGFS
         Fee Scheme 9"}]}'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:43 GMT
+  recorded_at: Thu, 05 Jul 2018 13:55:36 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/calculate/?advocate_type=JRALONE&day=1&fee_type_code=AGFS_APPEAL_CON&number_of_cases=1&number_of_defendants=1&offence_class=E&scenario=5
@@ -57,7 +57,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:43 GMT
+      - Thu, 05 Jul 2018 13:55:36 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -74,7 +74,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"amount":130.0}'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:43 GMT
+  recorded_at: Thu, 05 Jul 2018 13:55:36 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/calculate/?advocate_type=LEDJR&day=1&fee_type_code=AGFS_APPEAL_CON&number_of_cases=1&number_of_defendants=1&offence_class=E&scenario=5
@@ -94,7 +94,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:43 GMT
+      - Thu, 05 Jul 2018 13:55:36 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -111,7 +111,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"amount":130.0}'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:43 GMT
+  recorded_at: Thu, 05 Jul 2018 13:55:36 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/calculate/?advocate_type=LEADJR&day=1&fee_type_code=AGFS_APPEAL_CON&number_of_cases=1&number_of_defendants=1&offence_class=E&scenario=5
@@ -131,7 +131,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:43 GMT
+      - Thu, 05 Jul 2018 13:55:36 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -148,7 +148,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"amount":195.0}'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:43 GMT
+  recorded_at: Thu, 05 Jul 2018 13:55:36 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/calculate/?advocate_type=QC&day=1&fee_type_code=AGFS_APPEAL_CON&number_of_cases=1&number_of_defendants=1&offence_class=E&scenario=5
@@ -168,7 +168,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:43 GMT
+      - Thu, 05 Jul 2018 13:55:36 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -185,7 +185,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"amount":260.0}'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:43 GMT
+  recorded_at: Thu, 05 Jul 2018 13:55:36 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/calculate/?advocate_type=INVALID&day=1&fee_type_code=AGFS_APPEAL_CON&number_of_cases=1&number_of_defendants=1&offence_class=E&scenario=5
@@ -205,7 +205,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:43 GMT
+      - Thu, 05 Jul 2018 13:55:36 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -222,7 +222,7 @@ http_interactions:
       encoding: UTF-8
       string: '["''INVALID'' is not a valid `advocate_type`"]'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:43 GMT
+  recorded_at: Thu, 05 Jul 2018 13:55:36 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/calculate/?advocate_type=JRALONE&day=30&fee_type_code=AGFS_APPEAL_CON&number_of_cases=1&number_of_defendants=1&offence_class=E&scenario=5
@@ -242,7 +242,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:43 GMT
+      - Thu, 05 Jul 2018 13:55:36 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -259,7 +259,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"amount":3900.0}'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:43 GMT
+  recorded_at: Thu, 05 Jul 2018 13:55:36 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/calculate/?advocate_type=JRALONE&day=31&fee_type_code=AGFS_APPEAL_CON&number_of_cases=1&number_of_defendants=1&offence_class=E&scenario=5
@@ -279,7 +279,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:43 GMT
+      - Thu, 05 Jul 2018 13:55:36 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -296,7 +296,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"amount":3900.0}'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:43 GMT
+  recorded_at: Thu, 05 Jul 2018 13:55:36 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/calculate/?advocate_type=JRALONE&day=1&fee_type_code=AGFS_APPEAL_CON&number_of_cases=1&number_of_defendants=2&offence_class=E&scenario=5
@@ -316,7 +316,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:43 GMT
+      - Thu, 05 Jul 2018 13:55:36 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -333,7 +333,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"amount":156.0}'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:43 GMT
+  recorded_at: Thu, 05 Jul 2018 13:55:36 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/calculate/?advocate_type=JRALONE&day=1&fee_type_code=AGFS_APPEAL_CON&number_of_cases=1&number_of_defendants=3&offence_class=E&scenario=5
@@ -353,7 +353,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:43 GMT
+      - Thu, 05 Jul 2018 13:55:36 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -370,7 +370,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"amount":182.0}'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:43 GMT
+  recorded_at: Thu, 05 Jul 2018 13:55:36 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/calculate/?advocate_type=JRALONE&day=1&fee_type_code=AGFS_APPEAL_CON&number_of_cases=1&number_of_defendants=4&offence_class=E&scenario=5
@@ -390,7 +390,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:43 GMT
+      - Thu, 05 Jul 2018 13:55:36 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -407,7 +407,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"amount":208.0}'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:43 GMT
+  recorded_at: Thu, 05 Jul 2018 13:55:36 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/calculate/?advocate_type=JRALONE&day=1&fee_type_code=AGFS_APPEAL_CON&number_of_cases=1&number_of_defendants=5&offence_class=E&scenario=5
@@ -427,7 +427,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:43 GMT
+      - Thu, 05 Jul 2018 13:55:36 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -444,7 +444,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"amount":234.0}'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:43 GMT
+  recorded_at: Thu, 05 Jul 2018 13:55:36 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/calculate/?advocate_type=JRALONE&day=1&fee_type_code=AGFS_APPEAL_CON&number_of_cases=1&number_of_defendants=10&offence_class=E&scenario=5
@@ -464,7 +464,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:44 GMT
+      - Thu, 05 Jul 2018 13:55:37 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -481,7 +481,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"amount":364.0}'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:44 GMT
+  recorded_at: Thu, 05 Jul 2018 13:55:37 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/calculate/?advocate_type=JRALONE&day=1&fee_type_code=AGFS_APPEAL_CON&number_of_cases=1&number_of_defendants=100&offence_class=E&scenario=5
@@ -501,7 +501,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:44 GMT
+      - Thu, 05 Jul 2018 13:55:37 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -518,7 +518,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"amount":2704.0}'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:44 GMT
+  recorded_at: Thu, 05 Jul 2018 13:55:37 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/calculate/?advocate_type=JRALONE&day=1&fee_type_code=AGFS_APPEAL_CON&number_of_cases=2&number_of_defendants=1&offence_class=E&scenario=5
@@ -538,7 +538,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:44 GMT
+      - Thu, 05 Jul 2018 13:55:37 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -555,7 +555,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"amount":156.0}'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:44 GMT
+  recorded_at: Thu, 05 Jul 2018 13:55:37 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/calculate/?advocate_type=JRALONE&day=1&fee_type_code=AGFS_APPEAL_CON&number_of_cases=3&number_of_defendants=1&offence_class=E&scenario=5
@@ -575,7 +575,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:44 GMT
+      - Thu, 05 Jul 2018 13:55:37 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -592,7 +592,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"amount":182.0}'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:44 GMT
+  recorded_at: Thu, 05 Jul 2018 13:55:37 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/calculate/?advocate_type=JRALONE&day=1&fee_type_code=AGFS_APPEAL_CON&number_of_cases=4&number_of_defendants=1&offence_class=E&scenario=5
@@ -612,7 +612,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:44 GMT
+      - Thu, 05 Jul 2018 13:55:37 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -629,7 +629,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"amount":208.0}'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:44 GMT
+  recorded_at: Thu, 05 Jul 2018 13:55:37 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/calculate/?advocate_type=JRALONE&day=1&fee_type_code=AGFS_APPEAL_CON&number_of_cases=5&number_of_defendants=1&offence_class=E&scenario=5
@@ -649,7 +649,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:44 GMT
+      - Thu, 05 Jul 2018 13:55:37 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -666,7 +666,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"amount":234.0}'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:44 GMT
+  recorded_at: Thu, 05 Jul 2018 13:55:37 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/calculate/?advocate_type=JRALONE&day=1&fee_type_code=AGFS_APPEAL_CON&number_of_cases=10&number_of_defendants=1&offence_class=E&scenario=5
@@ -686,7 +686,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:44 GMT
+      - Thu, 05 Jul 2018 13:55:37 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -703,7 +703,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"amount":364.0}'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:44 GMT
+  recorded_at: Thu, 05 Jul 2018 13:55:37 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/calculate/?advocate_type=JRALONE&day=1&fee_type_code=AGFS_APPEAL_CON&number_of_cases=100&number_of_defendants=1&offence_class=E&scenario=5
@@ -723,7 +723,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:44 GMT
+      - Thu, 05 Jul 2018 13:55:37 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -740,7 +740,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"amount":2704.0}'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:44 GMT
+  recorded_at: Thu, 05 Jul 2018 13:55:37 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/?case_date=2018-01-01&type=LGFS
@@ -760,7 +760,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:44 GMT
+      - Thu, 05 Jul 2018 13:55:53 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -778,7 +778,7 @@ http_interactions:
       string: '{"count":1,"next":null,"previous":null,"results":[{"id":2,"start_date":"2016-04-01","end_date":null,"type":"LGFS","description":"LGFS
         Fee Scheme 8"}]}'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:44 GMT
+  recorded_at: Thu, 05 Jul 2018 13:55:53 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/2/calculate/?day=1&fee_type_code=LIT_FEE&number_of_cases=1&number_of_defendants=1&offence_class=E&scenario=5
@@ -798,7 +798,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:44 GMT
+      - Thu, 05 Jul 2018 13:55:53 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -815,7 +815,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"amount":349.47}'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:44 GMT
+  recorded_at: Thu, 05 Jul 2018 13:55:53 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/2/calculate/?day=10&fee_type_code=LIT_FEE&number_of_cases=1&number_of_defendants=1&offence_class=E&scenario=5
@@ -835,7 +835,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:44 GMT
+      - Thu, 05 Jul 2018 13:55:53 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -852,7 +852,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"amount":349.47}'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:44 GMT
+  recorded_at: Thu, 05 Jul 2018 13:55:53 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/2/calculate/?day=100&fee_type_code=LIT_FEE&number_of_cases=1&number_of_defendants=1&offence_class=E&scenario=5
@@ -872,7 +872,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:44 GMT
+      - Thu, 05 Jul 2018 13:55:53 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -889,7 +889,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"amount":349.47}'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:44 GMT
+  recorded_at: Thu, 05 Jul 2018 13:55:53 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/2/calculate/?day=1&fee_type_code=LIT_FEE&number_of_cases=1&number_of_defendants=10&offence_class=E&scenario=5
@@ -909,7 +909,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:44 GMT
+      - Thu, 05 Jul 2018 13:55:53 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -926,7 +926,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"amount":349.47}'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:44 GMT
+  recorded_at: Thu, 05 Jul 2018 13:55:53 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/2/calculate/?day=1&fee_type_code=LIT_FEE&number_of_cases=10&number_of_defendants=1&offence_class=E&scenario=5
@@ -946,7 +946,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 04 Jul 2018 13:13:44 GMT
+      - Thu, 05 Jul 2018 13:55:53 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -963,5 +963,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"amount":349.47}'
     http_version: 
-  recorded_at: Wed, 04 Jul 2018 13:13:44 GMT
+  recorded_at: Thu, 05 Jul 2018 13:55:53 GMT
 recorded_with: VCR 4.0.0
