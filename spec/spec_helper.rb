@@ -28,6 +28,9 @@ RSpec.configure do |config|
     c.syntax = :expect
   end
 
+  # custom rspec helpers for outside of examples
+  config.extend Helpers::Regulations
+
   #######################################################
   # Mocking and VCR                                     #
   #######################################################
