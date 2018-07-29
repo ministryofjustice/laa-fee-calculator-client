@@ -2,44 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:8000/api/v1/fee-schemes/1/
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/json
-      User-Agent:
-      - laa-fee-calculator-client/0.1.1
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Thu, 05 Jul 2018 13:55:36 GMT
-      Server:
-      - WSGIServer/0.2 CPython/3.6.5
-      Content-Type:
-      - application/json
-      Vary:
-      - Accept, Cookie
-      Allow:
-      - GET, HEAD, OPTIONS
-      X-Frame-Options:
-      - SAMEORIGIN
-      Content-Length:
-      - '106'
-    body:
-      encoding: UTF-8
-      string: '{"id":1,"start_date":"2012-04-01","end_date":"2018-03-31","type":"AGFS","description":"AGFS
-        Fee Scheme 9"}'
-    http_version: 
-  recorded_at: Thu, 05 Jul 2018 13:55:36 GMT
-- request:
-    method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/advocate-types/
     body:
       encoding: US-ASCII
@@ -57,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 05 Jul 2018 13:55:36 GMT
+      - Sun, 29 Jul 2018 13:26:55 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -76,7 +38,7 @@ http_interactions:
         alone"},{"id":"LEADJR","name":"Leading junior"},{"id":"LEDJR","name":"Led
         junior"},{"id":"QC","name":"QC"}]}'
     http_version: 
-  recorded_at: Thu, 05 Jul 2018 13:55:36 GMT
+  recorded_at: Sun, 29 Jul 2018 13:26:55 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/advocate-types/JRALONE/
@@ -96,7 +58,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 05 Jul 2018 13:55:36 GMT
+      - Sun, 29 Jul 2018 13:26:55 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -113,7 +75,45 @@ http_interactions:
       encoding: UTF-8
       string: '{"id":"JRALONE","name":"Junior alone"}'
     http_version: 
-  recorded_at: Thu, 05 Jul 2018 13:55:36 GMT
+  recorded_at: Sun, 29 Jul 2018 13:26:55 GMT
+- request:
+    method: get
+    uri: http://localhost:8000/api/v1/fee-schemes/1/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/0.1.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 29 Jul 2018 13:26:55 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.6.5
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET, HEAD, OPTIONS
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '106'
+    body:
+      encoding: UTF-8
+      string: '{"id":1,"start_date":"2012-04-01","end_date":"2018-03-31","type":"AGFS","description":"AGFS
+        Fee Scheme 9"}'
+    http_version: 
+  recorded_at: Sun, 29 Jul 2018 13:26:55 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/advocate-types/INVALID/
@@ -133,7 +133,7 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Thu, 05 Jul 2018 13:55:36 GMT
+      - Sun, 29 Jul 2018 13:26:55 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -150,7 +150,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"detail":"Not found."}'
     http_version: 
-  recorded_at: Thu, 05 Jul 2018 13:55:36 GMT
+  recorded_at: Sun, 29 Jul 2018 13:26:55 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/2/
@@ -170,7 +170,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 05 Jul 2018 13:55:36 GMT
+      - Sun, 29 Jul 2018 13:26:55 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -182,13 +182,13 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Content-Length:
-      - '98'
+      - '112'
     body:
       encoding: UTF-8
-      string: '{"id":2,"start_date":"2016-04-01","end_date":null,"type":"LGFS","description":"LGFS
-        Fee Scheme 8"}'
+      string: '{"id":2,"start_date":"2016-04-01","end_date":"2017-11-30","type":"LGFS","description":"LGFS
+        Fee Scheme 2016-04"}'
     http_version: 
-  recorded_at: Thu, 05 Jul 2018 13:55:36 GMT
+  recorded_at: Sun, 29 Jul 2018 13:26:55 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/2/advocate-types/
@@ -208,7 +208,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 05 Jul 2018 13:55:36 GMT
+      - Sun, 29 Jul 2018 13:26:55 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -225,5 +225,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"count":0,"next":null,"previous":null,"results":[]}'
     http_version: 
-  recorded_at: Thu, 05 Jul 2018 13:55:36 GMT
+  recorded_at: Sun, 29 Jul 2018 13:26:55 GMT
 recorded_with: VCR 4.0.0
