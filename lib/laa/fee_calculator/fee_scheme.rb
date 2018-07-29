@@ -15,6 +15,7 @@ module LAA
       has_many :fee_types
       has_many :units
       has_many :modifier_types
+      has_many :prices
 
       def calculate(**options)
         yield options if block_given?
