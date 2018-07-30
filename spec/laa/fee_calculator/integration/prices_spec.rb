@@ -62,9 +62,6 @@ RSpec.describe LAA::FeeCalculator, :vcr do
           expect { fee_scheme.prices(id: -1) }.to raise_error(described_class::ResourceNotFound, /detail not found/i)
         end
 
-        # TODO: check whether advocate_type has any impact on prices returned
-        # and if not might be worth removing from the filtering options of the
-        # API itself. raise an issue on https://github.com/ministryofjustice/laa-fee-calculator
         context 'combination of options' do
           context 'without filters' do
             let(:results) { fee_scheme.prices }
@@ -95,12 +92,6 @@ RSpec.describe LAA::FeeCalculator, :vcr do
           specify 'can return a subset of items' do
             expect(fee_scheme.prices(scenario: 5, fee_type_code: 'AGFS_APPEAL_CON').size).to eql(4)
           end
-
-          # TODO: questionable whether we want to return an array of one here for consistency
-          # and instead have a .find method that returns first or nil in a more active record type way
-          # specify 'can return one item' do
-          #   expect(fee_scheme.prices(scenario: 5, fee_type_code: 'AGFS_APPEAL_SEN')).to be_instance_of(OpenStruct)
-          # end
         end
       end
     end
