@@ -178,11 +178,12 @@ This rake task automates the following:
 
 ```bash
 $ git push -u origin <branch>
-$ git tag -a v0.1.1 -m "Version 0.1.1"
-$ git push origin v0.1.1
+$ git tag -a v<VERSION> -m "Version <VERSION>"
+$ git push origin v<VERSION>
 $ gem build laa-fee-calculator-client.gemspec
-$ gem push laa-fee-calculator-client-[VERSION].gemspec
+$ gem push laa-fee-calculator-client-<VERSION>.gemspec
 ```
+*`<VERSION>` is the value of `LAA::FeeCalculator::VERSION`
 
 ## License
 
