@@ -10,7 +10,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.1.1
+      - laa-fee-calculator-client/0.1.2
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 29 Jul 2018 13:27:35 GMT
+      - Mon, 30 Jul 2018 11:15:38 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -40,7 +40,7 @@ http_interactions:
         Fee Scheme 10"},{"id":4,"start_date":"2017-12-01","end_date":null,"type":"LGFS","description":"LGFS
         Fee Scheme 2017-12"}]}'
     http_version: 
-  recorded_at: Sun, 29 Jul 2018 13:27:35 GMT
+  recorded_at: Mon, 30 Jul 2018 11:15:38 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/
@@ -51,7 +51,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.1.1
+      - laa-fee-calculator-client/0.1.2
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -60,7 +60,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 29 Jul 2018 13:27:35 GMT
+      - Mon, 30 Jul 2018 11:15:38 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -78,7 +78,7 @@ http_interactions:
       string: '{"id":1,"start_date":"2012-04-01","end_date":"2018-03-31","type":"AGFS","description":"AGFS
         Fee Scheme 9"}'
     http_version: 
-  recorded_at: Sun, 29 Jul 2018 13:27:35 GMT
+  recorded_at: Mon, 30 Jul 2018 11:15:38 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/?type=AGFS
@@ -89,7 +89,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.1.1
+      - laa-fee-calculator-client/0.1.2
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -98,7 +98,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 29 Jul 2018 13:27:35 GMT
+      - Mon, 30 Jul 2018 11:15:38 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -117,7 +117,7 @@ http_interactions:
         Fee Scheme 9"},{"id":3,"start_date":"2018-04-01","end_date":null,"type":"AGFS","description":"AGFS
         Fee Scheme 10"}]}'
     http_version: 
-  recorded_at: Sun, 29 Jul 2018 13:27:35 GMT
+  recorded_at: Mon, 30 Jul 2018 11:15:38 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/?case_date=2018-01-01
@@ -128,7 +128,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.1.1
+      - laa-fee-calculator-client/0.1.2
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -137,7 +137,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 29 Jul 2018 13:27:35 GMT
+      - Mon, 30 Jul 2018 11:15:38 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -156,7 +156,7 @@ http_interactions:
         Fee Scheme 9"},{"id":4,"start_date":"2017-12-01","end_date":null,"type":"LGFS","description":"LGFS
         Fee Scheme 2017-12"}]}'
     http_version: 
-  recorded_at: Sun, 29 Jul 2018 13:27:35 GMT
+  recorded_at: Mon, 30 Jul 2018 11:15:38 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/?case_date=2018-01-01&type=LGFS
@@ -167,7 +167,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.1.1
+      - laa-fee-calculator-client/0.1.2
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -176,7 +176,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 29 Jul 2018 13:27:35 GMT
+      - Mon, 30 Jul 2018 11:15:38 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -194,5 +194,5 @@ http_interactions:
       string: '{"count":1,"next":null,"previous":null,"results":[{"id":4,"start_date":"2017-12-01","end_date":null,"type":"LGFS","description":"LGFS
         Fee Scheme 2017-12"}]}'
     http_version: 
-  recorded_at: Sun, 29 Jul 2018 13:27:35 GMT
+  recorded_at: Mon, 30 Jul 2018 11:15:38 GMT
 recorded_with: VCR 4.0.0
