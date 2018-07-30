@@ -22,6 +22,14 @@ RSpec.describe LAA::FeeCalculator::FeeScheme, :vcr do
 
   it { is_expected.to be_kind_of(OpenStruct) }
 
+  it { is_expected.to respond_to(:advocate_types) }
+  it { is_expected.to respond_to(:scenarios) }
+  it { is_expected.to respond_to(:offence_classes) }
+  it { is_expected.to respond_to(:fee_types) }
+  it { is_expected.to respond_to(:units) }
+  it { is_expected.to respond_to(:modifier_types) }
+  it { is_expected.to respond_to(:prices) }
+
   describe '#calculate' do
     subject(:calculate) do
       fee_scheme.calculate(options)
