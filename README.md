@@ -166,9 +166,11 @@ Bug reports and pull requests are welcome on GitHub at [ministryofjustice/laa-fe
 
 3. Update the version in `lib/laa/fee_calculator/version` using [semantic versioning](https://guides.rubygems.org/patterns/#semantic-versioning).
 
-4. PR the change, code-review, merge.
+4. Update the `gemspec` file to give version a release date. (e.g. `spec.date = '2018-06-29'`)
 
-5. Pull master and run rake task below to publish
+5. PR the change, code-review, merge.
+
+6. Pull master and run rake task below to publish
 
 ```bash
 $ rake release
