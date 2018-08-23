@@ -65,13 +65,13 @@ RSpec.describe LAA::FeeCalculator do
     it 'resets the configured host' do
       expect(described_class.configuration.host).to eql host
       described_class.reset
-      expect(described_class.configuration.host).to eql described_class::Configuration::DEV_LAA_FEE_CALCULATOR_API_V1
+      expect(described_class.configuration.host).to eql described_class::Configuration::LAA_FEE_CALCULATOR_API_V1
     end
 
     it 'resets the connection host' do
       expect(described_class::Connection.instance.host).to eql host
       described_class.reset
-      expect(described_class::Connection.instance.host).to eql described_class::Configuration::DEV_LAA_FEE_CALCULATOR_API_V1
+      expect(described_class::Connection.instance.host).to eql described_class::Configuration::LAA_FEE_CALCULATOR_API_V1
     end
   end
 end
