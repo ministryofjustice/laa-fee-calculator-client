@@ -76,11 +76,8 @@ RSpec.describe LAA::FeeCalculator, :vcr do
           end
 
           context 'when filter reduces list' do
-            specify 'by is_basic and scenario' do
-              expect(fee_scheme.fee_types(is_basic: false, scenario: 8).size).to eql 33
-
-              # same result because the business logic of the api does not seem to be very useful
-              expect(fee_scheme.fee_types(scenario: 8).size).to eql 33 # same result because the business logic of the api is not useful
+            specify 'by scenario' do
+              expect(fee_scheme.fee_types(scenario: 8).size).to be < 36
             end
           end
 

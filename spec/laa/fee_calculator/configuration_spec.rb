@@ -4,8 +4,8 @@ RSpec.describe LAA::FeeCalculator::Configuration do
   describe '#host' do
     subject(:config) { described_class.new.host }
 
-    it 'defaults to develpoment laa fee calculator api v1' do
-      is_expected.to eql described_class::DEV_LAA_FEE_CALCULATOR_API_V1
+    it 'defaults to production laa fee calculator api v1' do
+      is_expected.to eql described_class::LAA_FEE_CALCULATOR_API_V1
     end
   end
 
