@@ -34,5 +34,30 @@ RSpec.describe LAA::FeeCalculator, :vcr do
         end
       end
     end
+
+    it { is_expected.to respond_to :find_by }
+
+    describe '#find_by' do
+      context 'with matching key value pair' do
+        subject(:result) { scenarios.find_by(code: 'AS000002') }
+
+        it 'returns one OpenStruct object with matching key value' do
+          is_expected.to be_instance_of(OpenStruct)
+          expect(result.code).to eq 'AS000002'
+        end
+      end
+
+      context 'without matching key value pair' do
+        subject(:result) { scenarios.find_by(code: 'AS111111') }
+
+        it { is_expected.to be_nil }
+      end
+
+      context 'with one matching and one non-matching key pair' do
+        subject(:result) { scenarios.find_by(code: 'AS000002', name: 'Discontinuance') }
+
+        it { is_expected.to be_nil }
+      end
+    end
   end
 end
