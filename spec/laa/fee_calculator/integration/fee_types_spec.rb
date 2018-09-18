@@ -58,7 +58,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
           expect { fee_scheme.fee_types(id: 1001) }.to raise_error(described_class::ResourceNotFound, /detail not found/i)
         end
 
-        specify 'returns empty arrat when no matching objects' do
+        specify 'returns empty array when no matching objects' do
           expect(fee_scheme.fee_types(is_basic: true, scenario: 8)).to be_empty
         end
 
@@ -88,6 +88,10 @@ RSpec.describe LAA::FeeCalculator, :vcr do
           end
         end
       end
+    end
+
+    it_behaves_like 'a searchable result set', code: 'AGFS_PLEA' do
+      let(:results) { fee_types }
     end
   end
 end

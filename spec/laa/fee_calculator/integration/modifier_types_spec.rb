@@ -76,5 +76,9 @@ RSpec.describe LAA::FeeCalculator, :vcr do
         end
       end
     end
+
+    it_behaves_like 'a searchable result set', name: 'NUMBER_OF_CASES' do
+      let(:results) { modifier_types }
+    end
   end
 end

@@ -6,10 +6,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
   context 'scenarios' do
     subject(:scenarios) { client.fee_schemes(1).scenarios }
 
-    it 'returns array of OpenStruct objects' do
-      is_expected.to be_an Array
-      is_expected.to include(instance_of(OpenStruct))
-    end
+    it { is_expected.to all(be_instance_of(OpenStruct)) }
 
     describe 'object' do
       subject { scenarios.first }
@@ -35,29 +32,8 @@ RSpec.describe LAA::FeeCalculator, :vcr do
       end
     end
 
-    it { is_expected.to respond_to :find_by }
-
-    describe '#find_by' do
-      context 'with matching key value pair' do
-        subject(:result) { scenarios.find_by(code: 'AS000002') }
-
-        it 'returns one OpenStruct object with matching key value' do
-          is_expected.to be_instance_of(OpenStruct)
-          expect(result.code).to eq 'AS000002'
-        end
-      end
-
-      context 'without matching key value pair' do
-        subject(:result) { scenarios.find_by(code: 'AS111111') }
-
-        it { is_expected.to be_nil }
-      end
-
-      context 'with one matching and one non-matching key pair' do
-        subject(:result) { scenarios.find_by(code: 'AS000002', name: 'Discontinuance') }
-
-        it { is_expected.to be_nil }
-      end
+    it_behaves_like 'a searchable result set', code: 'AS000002' do
+      let(:results) { scenarios }
     end
   end
 end

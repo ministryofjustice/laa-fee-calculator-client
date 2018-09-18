@@ -38,5 +38,9 @@ RSpec.describe LAA::FeeCalculator, :vcr do
         end
       end
     end
+
+    it_behaves_like 'a searchable result set', name: 'QC' do
+      let(:results) { advocate_types }
+    end
   end
 end

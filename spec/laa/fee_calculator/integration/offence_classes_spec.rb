@@ -35,5 +35,9 @@ RSpec.describe LAA::FeeCalculator, :vcr do
         end
       end
     end
+
+    it_behaves_like 'a searchable result set', name: 'A' do
+      let(:results) { offence_classes }
+    end
   end
 end

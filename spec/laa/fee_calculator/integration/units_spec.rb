@@ -80,5 +80,9 @@ RSpec.describe LAA::FeeCalculator, :vcr do
         end
       end
     end
+
+    it_behaves_like 'a searchable result set', name: 'Case' do
+      let(:results) { units }
+    end
   end
 end
