@@ -32,6 +32,7 @@ module LAA
 
             ostruct = JSON.parse(json, object_class: OpenStruct)
             return ostruct unless ostruct.respond_to?(:results)
+
             ostruct.results.extend Searchable
           end
         end
