@@ -8,6 +8,14 @@ module LAA
       end
 
       module ClassMethods
+        module Searchable
+          def find_by(**options)
+            find do |ostruct|
+              options.map { |k, v| ostruct[k].eql?(v) }.all?
+            end
+          end
+        end
+
         def has_many(association)
           define_method("#{association}_uri".to_sym) do |scheme_pk = nil, id = nil|
             uri = scheme_pk.nil? ? "#{association.to_s.tr('_', '-')}/" : "fee-schemes/#{scheme_pk}/#{association.to_s.tr('_', '-')}/"
@@ -24,7 +32,8 @@ module LAA
 
             ostruct = JSON.parse(json, object_class: OpenStruct)
             return ostruct unless ostruct.respond_to?(:results)
-            ostruct.results
+
+            ostruct.results.extend Searchable
           end
         end
       end

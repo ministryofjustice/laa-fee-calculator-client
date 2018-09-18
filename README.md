@@ -96,6 +96,7 @@ fee_scheme.offence_classes
 fee_scheme.fee_types
 fee_scheme.modifier_types
 fee_scheme.units
+fee_scheme.prices # defaults to first page (of 100)
 
 # filtered
 # by id
@@ -104,6 +105,11 @@ fee_scheme.modifier_types(1)
 
 # by options
 fee_scheme.modifier_types(fee_type_code: 'AGFS_APPEAL_CON')
+fee_scheme.prices(scenario: 5, advocate_type: 'QC')
+
+# searching (as opposed to query parameters filtering above)
+# by attribute values
+fee_scheme.scenarios.find_by(code: 'AS000002')
 ```
 
 ###### Calculate

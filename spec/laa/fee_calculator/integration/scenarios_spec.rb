@@ -6,10 +6,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
   context 'scenarios' do
     subject(:scenarios) { client.fee_schemes(1).scenarios }
 
-    it 'returns array of OpenStruct objects' do
-      is_expected.to be_an Array
-      is_expected.to include(instance_of(OpenStruct))
-    end
+    it { is_expected.to all(be_instance_of(OpenStruct)) }
 
     describe 'object' do
       subject { scenarios.first }
@@ -33,6 +30,10 @@ RSpec.describe LAA::FeeCalculator, :vcr do
           expect { fee_scheme.scenarios(id: 1001) }.to raise_error(described_class::ResourceNotFound, /detail not found/i)
         end
       end
+    end
+
+    it_behaves_like 'a searchable result set', code: 'AS000002' do
+      let(:results) { scenarios }
     end
   end
 end

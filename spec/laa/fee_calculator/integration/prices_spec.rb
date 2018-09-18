@@ -95,5 +95,9 @@ RSpec.describe LAA::FeeCalculator, :vcr do
         end
       end
     end
+
+    it_behaves_like 'a searchable result set', limit_from: 41 do
+      let(:results) { prices }
+    end
   end
 end
