@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 18 Sep 2018 07:58:55 GMT
+      - Tue, 18 Sep 2018 09:13:21 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -37,49 +37,7 @@ http_interactions:
       string: '{"id":1,"start_date":"2012-04-01","end_date":"2018-03-31","type":"AGFS","description":"AGFS
         Fee Scheme 9"}'
     http_version: 
-  recorded_at: Tue, 18 Sep 2018 07:58:55 GMT
-- request:
-    method: get
-    uri: http://localhost:8000/api/v1/fee-schemes/1/scenarios/
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/json
-      User-Agent:
-      - laa-fee-calculator-client/0.1.3
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Tue, 18 Sep 2018 07:58:55 GMT
-      Server:
-      - WSGIServer/0.2 CPython/3.6.5
-      Content-Type:
-      - application/json
-      Vary:
-      - Accept, Cookie
-      Allow:
-      - GET, HEAD, OPTIONS
-      X-Frame-Options:
-      - SAMEORIGIN
-      Content-Length:
-      - '702'
-    body:
-      encoding: UTF-8
-      string: '{"count":12,"next":null,"previous":null,"results":[{"id":1,"name":"Discontinuance","code":"AS000001"},{"id":2,"name":"Guilty
-        plea","code":"AS000002"},{"id":3,"name":"Cracked trial","code":"AS000003"},{"id":4,"name":"Trial","code":"AS000004"},{"id":5,"name":"Appeal
-        against conviction","code":"AS000005"},{"id":6,"name":"Appeal against sentence","code":"AS000006"},{"id":7,"name":"Committal
-        for sentence","code":"AS000007"},{"id":8,"name":"Contempt","code":"AS000008"},{"id":9,"name":"Breach
-        of crown court order","code":"AS000009"},{"id":10,"name":"Cracked before retrial","code":"AS000010"},{"id":11,"name":"Retrial","code":"AS000011"},{"id":12,"name":"Elected
-        case not proceeded","code":"AS000014"}]}'
-    http_version: 
-  recorded_at: Tue, 18 Sep 2018 07:58:55 GMT
+  recorded_at: Tue, 18 Sep 2018 09:13:21 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/advocate-types/
@@ -99,7 +57,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 18 Sep 2018 08:03:10 GMT
+      - Tue, 18 Sep 2018 09:13:21 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -118,7 +76,7 @@ http_interactions:
         alone"},{"id":"LEADJR","name":"Leading junior"},{"id":"LEDJR","name":"Led
         junior"},{"id":"QC","name":"QC"}]}'
     http_version: 
-  recorded_at: Tue, 18 Sep 2018 08:03:10 GMT
+  recorded_at: Tue, 18 Sep 2018 09:13:21 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/fee-types/
@@ -138,7 +96,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 18 Sep 2018 08:06:03 GMT
+      - Tue, 18 Sep 2018 09:13:44 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -191,7 +149,7 @@ http_interactions:
         relating to admissibility of evidence (half day)","code":"AGFS_ADM_EVD_HF","is_basic":false,"aggregation":"sum"},{"id":91,"name":"Wasted
         preparation fee","code":"AGFS_WSTD_PREP","is_basic":false,"aggregation":"sum"}]}'
     http_version: 
-  recorded_at: Tue, 18 Sep 2018 08:06:03 GMT
+  recorded_at: Tue, 18 Sep 2018 09:13:44 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/modifier-types/
@@ -211,7 +169,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 18 Sep 2018 08:10:11 GMT
+      - Tue, 18 Sep 2018 09:13:44 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -234,7 +192,7 @@ http_interactions:
         months between trials","unit":"MONTH"},{"id":6,"name":"THIRD_CRACKED","description":"Third
         in which a trial cracked","unit":"THIRD"}]}'
     http_version: 
-  recorded_at: Tue, 18 Sep 2018 08:10:11 GMT
+  recorded_at: Tue, 18 Sep 2018 09:13:44 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/offence-classes/
@@ -254,7 +212,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 18 Sep 2018 08:12:01 GMT
+      - Tue, 18 Sep 2018 09:13:45 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -281,46 +239,7 @@ http_interactions:
         sexual offences"},{"id":"K","name":"K","description":"Other offences of dishonesty
         (high value)"}]}'
     http_version: 
-  recorded_at: Tue, 18 Sep 2018 08:12:01 GMT
-- request:
-    method: get
-    uri: http://localhost:8000/api/v1/fee-schemes/1/units/
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/json
-      User-Agent:
-      - laa-fee-calculator-client/0.1.3
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Tue, 18 Sep 2018 08:25:26 GMT
-      Server:
-      - WSGIServer/0.2 CPython/3.6.5
-      Content-Type:
-      - application/json
-      Vary:
-      - Accept, Cookie
-      Allow:
-      - GET, HEAD, OPTIONS
-      X-Frame-Options:
-      - SAMEORIGIN
-      Content-Length:
-      - '272'
-    body:
-      encoding: UTF-8
-      string: '{"count":6,"next":null,"previous":null,"results":[{"id":"CASE","name":"Case"},{"id":"DAY","name":"Whole
-        Days"},{"id":"HALFDAY","name":"Half Days"},{"id":"HOUR","name":"Hours"},{"id":"PPE","name":"Pages
-        of Prosecuting Evidence"},{"id":"PW","name":"Prosecution Witnesses"}]}'
-    http_version: 
-  recorded_at: Tue, 18 Sep 2018 08:25:26 GMT
+  recorded_at: Tue, 18 Sep 2018 09:13:45 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/prices/
@@ -340,7 +259,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 18 Sep 2018 08:39:37 GMT
+      - Tue, 18 Sep 2018 09:13:46 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -461,10 +380,10 @@ http_interactions:
         months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
         months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false}]}'
     http_version: 
-  recorded_at: Tue, 18 Sep 2018 08:39:37 GMT
+  recorded_at: Tue, 18 Sep 2018 09:13:46 GMT
 - request:
     method: get
-    uri: http://localhost:8000/api/v1/fee-schemes/1/prices/?scenario=5
+    uri: http://localhost:8000/api/v1/fee-schemes/1/scenarios/
     body:
       encoding: US-ASCII
       string: ''
@@ -481,7 +400,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 18 Sep 2018 08:40:55 GMT
+      - Tue, 18 Sep 2018 09:13:46 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -493,90 +412,54 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Content-Length:
-      - '41779'
+      - '702'
     body:
       encoding: UTF-8
-      string: '{"count":128,"next":"http://localhost:8000/api/v1/fee-schemes/1/prices/?page=2&scenario=5","previous":null,"results":[{"id":1815,"scenario":5,"advocate_type":"QC","fee_type":5,"offence_class":null,"scheme":1,"unit":"HALFDAY","fee_per_unit":"260.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":60,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":1825,"scenario":5,"advocate_type":"LEDJR","fee_type":5,"offence_class":null,"scheme":1,"unit":"HALFDAY","fee_per_unit":"130.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":60,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":1830,"scenario":5,"advocate_type":"LEADJR","fee_type":5,"offence_class":null,"scheme":1,"unit":"HALFDAY","fee_per_unit":"195.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":60,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":1840,"scenario":5,"advocate_type":"JRALONE","fee_type":5,"offence_class":null,"scheme":1,"unit":"HALFDAY","fee_per_unit":"130.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":60,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":1854,"scenario":5,"advocate_type":"QC","fee_type":6,"offence_class":null,"scheme":1,"unit":"DAY","fee_per_unit":"497.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":30,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":1868,"scenario":5,"advocate_type":"LEDJR","fee_type":6,"offence_class":null,"scheme":1,"unit":"DAY","fee_per_unit":"238.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":30,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":1878,"scenario":5,"advocate_type":"LEADJR","fee_type":6,"offence_class":null,"scheme":1,"unit":"DAY","fee_per_unit":"346.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":30,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":1890,"scenario":5,"advocate_type":"JRALONE","fee_type":6,"offence_class":null,"scheme":1,"unit":"DAY","fee_per_unit":"238.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":30,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":1898,"scenario":5,"advocate_type":"QC","fee_type":7,"offence_class":null,"scheme":1,"unit":"DAY","fee_per_unit":"173.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":30,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":1904,"scenario":5,"advocate_type":"LEDJR","fee_type":7,"offence_class":null,"scheme":1,"unit":"DAY","fee_per_unit":"87.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":30,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":1920,"scenario":5,"advocate_type":"LEADJR","fee_type":7,"offence_class":null,"scheme":1,"unit":"DAY","fee_per_unit":"130.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":30,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":1935,"scenario":5,"advocate_type":"JRALONE","fee_type":7,"offence_class":null,"scheme":1,"unit":"DAY","fee_per_unit":"87.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":30,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":1945,"scenario":5,"advocate_type":"QC","fee_type":90,"offence_class":null,"scheme":1,"unit":"HALFDAY","fee_per_unit":"260.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":60,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":1953,"scenario":5,"advocate_type":"LEDJR","fee_type":90,"offence_class":null,"scheme":1,"unit":"HALFDAY","fee_per_unit":"130.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":60,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":1959,"scenario":5,"advocate_type":"LEADJR","fee_type":90,"offence_class":null,"scheme":1,"unit":"HALFDAY","fee_per_unit":"195.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":60,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":1977,"scenario":5,"advocate_type":"JRALONE","fee_type":90,"offence_class":null,"scheme":1,"unit":"HALFDAY","fee_per_unit":"130.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":60,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":1985,"scenario":5,"advocate_type":"QC","fee_type":17,"offence_class":null,"scheme":1,"unit":"DAY","fee_per_unit":"497.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":30,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":1993,"scenario":5,"advocate_type":"LEDJR","fee_type":17,"offence_class":null,"scheme":1,"unit":"DAY","fee_per_unit":"238.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":30,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2010,"scenario":5,"advocate_type":"LEADJR","fee_type":17,"offence_class":null,"scheme":1,"unit":"DAY","fee_per_unit":"346.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":30,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2020,"scenario":5,"advocate_type":"JRALONE","fee_type":17,"offence_class":null,"scheme":1,"unit":"DAY","fee_per_unit":"238.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":30,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2030,"scenario":5,"advocate_type":"QC","fee_type":8,"offence_class":null,"scheme":1,"unit":"DAY","fee_per_unit":"260.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":30,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
-        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2036,"scenario":5,"advocate_type":"LEDJR","fee_type":8,"offence_class":null,"scheme":1,"unit":"DAY","fee_per_unit":"130.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":30,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
-        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2054,"scenario":5,"advocate_type":"LEADJR","fee_type":8,"offence_class":null,"scheme":1,"unit":"DAY","fee_per_unit":"195.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":30,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
-        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2064,"scenario":5,"advocate_type":"JRALONE","fee_type":8,"offence_class":null,"scheme":1,"unit":"DAY","fee_per_unit":"130.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":30,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
-        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2206,"scenario":5,"advocate_type":"QC","fee_type":13,"offence_class":null,"scheme":1,"unit":"HOUR","fee_per_unit":"74.00000","fixed_fee":"0.00000","limit_from":7,"limit_to":8,"modifiers":[{"limit_from":21,"limit_to":25,"fixed_percent":"0.00","percent_per_unit":"0.00","modifier_type":{"id":3,"name":"TRIAL_LENGTH","description":"Trial
-        length","unit":"DAY"},"required":true,"priority":0,"strict_range":false}],"strict_range":false},{"id":2216,"scenario":5,"advocate_type":"LEDJR","fee_type":13,"offence_class":null,"scheme":1,"unit":"HOUR","fee_per_unit":"39.00000","fixed_fee":"0.00000","limit_from":7,"limit_to":8,"modifiers":[{"limit_from":21,"limit_to":25,"fixed_percent":"0.00","percent_per_unit":"0.00","modifier_type":{"id":3,"name":"TRIAL_LENGTH","description":"Trial
-        length","unit":"DAY"},"required":true,"priority":0,"strict_range":false}],"strict_range":false},{"id":2229,"scenario":5,"advocate_type":"LEADJR","fee_type":13,"offence_class":null,"scheme":1,"unit":"HOUR","fee_per_unit":"56.00000","fixed_fee":"0.00000","limit_from":7,"limit_to":8,"modifiers":[{"limit_from":21,"limit_to":25,"fixed_percent":"0.00","percent_per_unit":"0.00","modifier_type":{"id":3,"name":"TRIAL_LENGTH","description":"Trial
-        length","unit":"DAY"},"required":true,"priority":0,"strict_range":false}],"strict_range":false},{"id":2236,"scenario":5,"advocate_type":"JRALONE","fee_type":13,"offence_class":null,"scheme":1,"unit":"HOUR","fee_per_unit":"39.00000","fixed_fee":"0.00000","limit_from":7,"limit_to":8,"modifiers":[{"limit_from":21,"limit_to":25,"fixed_percent":"0.00","percent_per_unit":"0.00","modifier_type":{"id":3,"name":"TRIAL_LENGTH","description":"Trial
-        length","unit":"DAY"},"required":true,"priority":0,"strict_range":false}],"strict_range":false},{"id":2299,"scenario":5,"advocate_type":"QC","fee_type":16,"offence_class":null,"scheme":1,"unit":"DAY","fee_per_unit":"324.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":30,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2307,"scenario":5,"advocate_type":"LEDJR","fee_type":16,"offence_class":null,"scheme":1,"unit":"DAY","fee_per_unit":"173.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":30,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2318,"scenario":5,"advocate_type":"LEADJR","fee_type":16,"offence_class":null,"scheme":1,"unit":"DAY","fee_per_unit":"238.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":30,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2324,"scenario":5,"advocate_type":"JRALONE","fee_type":16,"offence_class":null,"scheme":1,"unit":"DAY","fee_per_unit":"173.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":30,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2335,"scenario":5,"advocate_type":"QC","fee_type":19,"offence_class":null,"scheme":1,"unit":"DAY","fee_per_unit":"497.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":30,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2344,"scenario":5,"advocate_type":"LEDJR","fee_type":19,"offence_class":null,"scheme":1,"unit":"DAY","fee_per_unit":"238.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":30,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2360,"scenario":5,"advocate_type":"LEADJR","fee_type":19,"offence_class":null,"scheme":1,"unit":"DAY","fee_per_unit":"346.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":30,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2368,"scenario":5,"advocate_type":"JRALONE","fee_type":19,"offence_class":null,"scheme":1,"unit":"DAY","fee_per_unit":"238.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":30,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2378,"scenario":5,"advocate_type":"QC","fee_type":18,"offence_class":null,"scheme":1,"unit":"HALFDAY","fee_per_unit":"260.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":60,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2396,"scenario":5,"advocate_type":"LEDJR","fee_type":18,"offence_class":null,"scheme":1,"unit":"HALFDAY","fee_per_unit":"130.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":60,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2407,"scenario":5,"advocate_type":"LEADJR","fee_type":18,"offence_class":null,"scheme":1,"unit":"HALFDAY","fee_per_unit":"195.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":60,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2415,"scenario":5,"advocate_type":"JRALONE","fee_type":18,"offence_class":null,"scheme":1,"unit":"HALFDAY","fee_per_unit":"130.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":60,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2429,"scenario":5,"advocate_type":"QC","fee_type":10,"offence_class":null,"scheme":1,"unit":"HALFDAY","fee_per_unit":"260.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":60,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2440,"scenario":5,"advocate_type":"LEDJR","fee_type":10,"offence_class":null,"scheme":1,"unit":"HALFDAY","fee_per_unit":"130.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":60,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2446,"scenario":5,"advocate_type":"LEADJR","fee_type":10,"offence_class":null,"scheme":1,"unit":"HALFDAY","fee_per_unit":"195.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":60,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2460,"scenario":5,"advocate_type":"JRALONE","fee_type":10,"offence_class":null,"scheme":1,"unit":"HALFDAY","fee_per_unit":"130.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":60,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2466,"scenario":5,"advocate_type":"QC","fee_type":11,"offence_class":null,"scheme":1,"unit":"DAY","fee_per_unit":"497.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":30,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2484,"scenario":5,"advocate_type":"LEDJR","fee_type":11,"offence_class":null,"scheme":1,"unit":"DAY","fee_per_unit":"238.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":30,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2494,"scenario":5,"advocate_type":"LEADJR","fee_type":11,"offence_class":null,"scheme":1,"unit":"DAY","fee_per_unit":"346.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":30,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2501,"scenario":5,"advocate_type":"JRALONE","fee_type":11,"offence_class":null,"scheme":1,"unit":"DAY","fee_per_unit":"238.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":30,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2514,"scenario":5,"advocate_type":"QC","fee_type":30,"offence_class":null,"scheme":1,"unit":"DAY","fee_per_unit":"281.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":30,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2528,"scenario":5,"advocate_type":"LEDJR","fee_type":30,"offence_class":null,"scheme":1,"unit":"DAY","fee_per_unit":"130.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":30,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2539,"scenario":5,"advocate_type":"LEADJR","fee_type":30,"offence_class":null,"scheme":1,"unit":"DAY","fee_per_unit":"195.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":30,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2552,"scenario":5,"advocate_type":"JRALONE","fee_type":30,"offence_class":null,"scheme":1,"unit":"DAY","fee_per_unit":"130.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":30,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2556,"scenario":5,"advocate_type":"QC","fee_type":20,"offence_class":null,"scheme":1,"unit":"HOUR","fee_per_unit":"0.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":240,"modifiers":[],"strict_range":false},{"id":2574,"scenario":5,"advocate_type":"LEDJR","fee_type":20,"offence_class":null,"scheme":1,"unit":"DAY","fee_per_unit":"108.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":30,"modifiers":[],"strict_range":false},{"id":2576,"scenario":5,"advocate_type":"LEADJR","fee_type":20,"offence_class":null,"scheme":1,"unit":"HOUR","fee_per_unit":"0.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":240,"modifiers":[],"strict_range":false},{"id":2592,"scenario":5,"advocate_type":"JRALONE","fee_type":20,"offence_class":null,"scheme":1,"unit":"DAY","fee_per_unit":"108.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":30,"modifiers":[],"strict_range":false},{"id":2601,"scenario":5,"advocate_type":"QC","fee_type":26,"offence_class":null,"scheme":1,"unit":"HOUR","fee_per_unit":"74.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":240,"modifiers":[],"strict_range":false},{"id":2609,"scenario":5,"advocate_type":"LEDJR","fee_type":26,"offence_class":null,"scheme":1,"unit":"HOUR","fee_per_unit":"39.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":240,"modifiers":[],"strict_range":false},{"id":2619,"scenario":5,"advocate_type":"LEADJR","fee_type":26,"offence_class":null,"scheme":1,"unit":"HOUR","fee_per_unit":"56.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":240,"modifiers":[],"strict_range":false},{"id":2636,"scenario":5,"advocate_type":"JRALONE","fee_type":26,"offence_class":null,"scheme":1,"unit":"HOUR","fee_per_unit":"39.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":240,"modifiers":[],"strict_range":false},{"id":2642,"scenario":5,"advocate_type":"QC","fee_type":25,"offence_class":null,"scheme":1,"unit":"HOUR","fee_per_unit":"74.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":240,"modifiers":[],"strict_range":false},{"id":2662,"scenario":5,"advocate_type":"LEDJR","fee_type":25,"offence_class":null,"scheme":1,"unit":"HOUR","fee_per_unit":"39.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":240,"modifiers":[],"strict_range":false},{"id":2672,"scenario":5,"advocate_type":"LEADJR","fee_type":25,"offence_class":null,"scheme":1,"unit":"HOUR","fee_per_unit":"56.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":240,"modifiers":[],"strict_range":false},{"id":2684,"scenario":5,"advocate_type":"JRALONE","fee_type":25,"offence_class":null,"scheme":1,"unit":"HOUR","fee_per_unit":"39.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":240,"modifiers":[],"strict_range":false},{"id":2738,"scenario":5,"advocate_type":"QC","fee_type":21,"offence_class":null,"scheme":1,"unit":"CASE","fee_per_unit":"26.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":1,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2741,"scenario":5,"advocate_type":"LEDJR","fee_type":21,"offence_class":null,"scheme":1,"unit":"CASE","fee_per_unit":"26.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":1,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2761,"scenario":5,"advocate_type":"LEADJR","fee_type":21,"offence_class":null,"scheme":1,"unit":"CASE","fee_per_unit":"26.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":1,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2772,"scenario":5,"advocate_type":"JRALONE","fee_type":21,"offence_class":null,"scheme":1,"unit":"CASE","fee_per_unit":"26.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":1,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2781,"scenario":5,"advocate_type":"QC","fee_type":23,"offence_class":null,"scheme":1,"unit":"HALFDAY","fee_per_unit":"260.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":60,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2792,"scenario":5,"advocate_type":"LEDJR","fee_type":23,"offence_class":null,"scheme":1,"unit":"HALFDAY","fee_per_unit":"130.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":60,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2798,"scenario":5,"advocate_type":"LEADJR","fee_type":23,"offence_class":null,"scheme":1,"unit":"HALFDAY","fee_per_unit":"195.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":60,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2806,"scenario":5,"advocate_type":"JRALONE","fee_type":23,"offence_class":null,"scheme":1,"unit":"HALFDAY","fee_per_unit":"130.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":60,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2825,"scenario":5,"advocate_type":"QC","fee_type":24,"offence_class":null,"scheme":1,"unit":"DAY","fee_per_unit":"497.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":30,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2835,"scenario":5,"advocate_type":"LEDJR","fee_type":24,"offence_class":null,"scheme":1,"unit":"DAY","fee_per_unit":"238.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":30,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2839,"scenario":5,"advocate_type":"LEADJR","fee_type":24,"offence_class":null,"scheme":1,"unit":"DAY","fee_per_unit":"346.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":30,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2855,"scenario":5,"advocate_type":"JRALONE","fee_type":24,"offence_class":null,"scheme":1,"unit":"DAY","fee_per_unit":"238.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":30,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2912,"scenario":5,"advocate_type":"QC","fee_type":4,"offence_class":null,"scheme":1,"unit":"CASE","fee_per_unit":"173.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":null,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2914,"scenario":5,"advocate_type":"LEDJR","fee_type":4,"offence_class":null,"scheme":1,"unit":"CASE","fee_per_unit":"87.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":null,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2920,"scenario":5,"advocate_type":"LEADJR","fee_type":4,"offence_class":null,"scheme":1,"unit":"CASE","fee_per_unit":"130.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":null,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2927,"scenario":5,"advocate_type":"JRALONE","fee_type":4,"offence_class":null,"scheme":1,"unit":"CASE","fee_per_unit":"87.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":null,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2936,"scenario":5,"advocate_type":"QC","fee_type":29,"offence_class":null,"scheme":1,"unit":"HOUR","fee_per_unit":"74.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":240,"modifiers":[],"strict_range":false},{"id":2950,"scenario":5,"advocate_type":"LEDJR","fee_type":29,"offence_class":null,"scheme":1,"unit":"HOUR","fee_per_unit":"39.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":240,"modifiers":[],"strict_range":false},{"id":2959,"scenario":5,"advocate_type":"LEADJR","fee_type":29,"offence_class":null,"scheme":1,"unit":"HOUR","fee_per_unit":"56.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":240,"modifiers":[],"strict_range":false},{"id":2969,"scenario":5,"advocate_type":"JRALONE","fee_type":29,"offence_class":null,"scheme":1,"unit":"HOUR","fee_per_unit":"39.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":240,"modifiers":[],"strict_range":false},{"id":2983,"scenario":5,"advocate_type":"QC","fee_type":36,"offence_class":null,"scheme":1,"unit":"HOUR","fee_per_unit":"74.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":240,"modifiers":[],"strict_range":false},{"id":2992,"scenario":5,"advocate_type":"LEDJR","fee_type":36,"offence_class":null,"scheme":1,"unit":"HOUR","fee_per_unit":"39.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":240,"modifiers":[],"strict_range":false},{"id":3004,"scenario":5,"advocate_type":"LEADJR","fee_type":36,"offence_class":null,"scheme":1,"unit":"HOUR","fee_per_unit":"56.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":240,"modifiers":[],"strict_range":false},{"id":3007,"scenario":5,"advocate_type":"JRALONE","fee_type":36,"offence_class":null,"scheme":1,"unit":"HOUR","fee_per_unit":"39.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":240,"modifiers":[],"strict_range":false},{"id":3071,"scenario":5,"advocate_type":"QC","fee_type":31,"offence_class":null,"scheme":1,"unit":"HALFDAY","fee_per_unit":"260.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":60,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":3084,"scenario":5,"advocate_type":"LEDJR","fee_type":31,"offence_class":null,"scheme":1,"unit":"HALFDAY","fee_per_unit":"130.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":60,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":3092,"scenario":5,"advocate_type":"LEADJR","fee_type":31,"offence_class":null,"scheme":1,"unit":"HALFDAY","fee_per_unit":"195.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":60,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":3102,"scenario":5,"advocate_type":"JRALONE","fee_type":31,"offence_class":null,"scheme":1,"unit":"HALFDAY","fee_per_unit":"130.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":60,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":3114,"scenario":5,"advocate_type":"QC","fee_type":32,"offence_class":null,"scheme":1,"unit":"DAY","fee_per_unit":"497.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":30,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":3121,"scenario":5,"advocate_type":"LEDJR","fee_type":32,"offence_class":null,"scheme":1,"unit":"DAY","fee_per_unit":"238.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":30,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":3141,"scenario":5,"advocate_type":"LEADJR","fee_type":32,"offence_class":null,"scheme":1,"unit":"DAY","fee_per_unit":"346.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":30,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":3142,"scenario":5,"advocate_type":"JRALONE","fee_type":32,"offence_class":null,"scheme":1,"unit":"DAY","fee_per_unit":"238.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":30,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":3162,"scenario":5,"advocate_type":"QC","fee_type":33,"offence_class":null,"scheme":1,"unit":"HOUR","fee_per_unit":"74.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":240,"modifiers":[],"strict_range":false},{"id":3167,"scenario":5,"advocate_type":"LEDJR","fee_type":33,"offence_class":null,"scheme":1,"unit":"HOUR","fee_per_unit":"39.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":240,"modifiers":[],"strict_range":false},{"id":3176,"scenario":5,"advocate_type":"LEADJR","fee_type":33,"offence_class":null,"scheme":1,"unit":"HOUR","fee_per_unit":"56.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":240,"modifiers":[],"strict_range":false},{"id":3189,"scenario":5,"advocate_type":"JRALONE","fee_type":33,"offence_class":null,"scheme":1,"unit":"HOUR","fee_per_unit":"39.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":240,"modifiers":[],"strict_range":false}]}'
+      string: '{"count":12,"next":null,"previous":null,"results":[{"id":1,"name":"Discontinuance","code":"AS000001"},{"id":2,"name":"Guilty
+        plea","code":"AS000002"},{"id":3,"name":"Cracked trial","code":"AS000003"},{"id":4,"name":"Trial","code":"AS000004"},{"id":5,"name":"Appeal
+        against conviction","code":"AS000005"},{"id":6,"name":"Appeal against sentence","code":"AS000006"},{"id":7,"name":"Committal
+        for sentence","code":"AS000007"},{"id":8,"name":"Contempt","code":"AS000008"},{"id":9,"name":"Breach
+        of crown court order","code":"AS000009"},{"id":10,"name":"Cracked before retrial","code":"AS000010"},{"id":11,"name":"Retrial","code":"AS000011"},{"id":12,"name":"Elected
+        case not proceeded","code":"AS000014"}]}'
     http_version: 
-  recorded_at: Tue, 18 Sep 2018 08:40:55 GMT
+  recorded_at: Tue, 18 Sep 2018 09:13:46 GMT
+- request:
+    method: get
+    uri: http://localhost:8000/api/v1/fee-schemes/1/units/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/0.1.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 18 Sep 2018 09:13:47 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.6.5
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET, HEAD, OPTIONS
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '272'
+    body:
+      encoding: UTF-8
+      string: '{"count":6,"next":null,"previous":null,"results":[{"id":"CASE","name":"Case"},{"id":"DAY","name":"Whole
+        Days"},{"id":"HALFDAY","name":"Half Days"},{"id":"HOUR","name":"Hours"},{"id":"PPE","name":"Pages
+        of Prosecuting Evidence"},{"id":"PW","name":"Prosecution Witnesses"}]}'
+    http_version: 
+  recorded_at: Tue, 18 Sep 2018 09:13:47 GMT
 recorded_with: VCR 4.0.0
