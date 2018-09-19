@@ -170,9 +170,9 @@ Bug reports and pull requests are welcome on GitHub at [ministryofjustice/laa-fe
 
 2. Run `bin/ruby_version_test` to test against ruby versions (2.4+ supported at present)
 
-3. Update the version in `lib/laa/fee_calculator/version` using [semantic versioning](https://guides.rubygems.org/patterns/#semantic-versioning).
+3. Update the VERSION in `lib/laa/fee_calculator/version` using [semantic versioning](https://guides.rubygems.org/patterns/#semantic-versioning).
 
-4. Update the `gemspec` file to give version a release date. (e.g. `spec.date = '2018-06-29'`)
+4. Update the VERSION_RELEASED in `lib/laa/fee_calculator/version` to the date you intend to publish/release the version.
 
 5. PR the change, code-review, merge.
 
