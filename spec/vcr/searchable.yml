@@ -10,7 +10,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.1.3
+      - laa-fee-calculator-client/0.2.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 18 Sep 2018 09:13:21 GMT
+      - Wed, 06 Mar 2019 21:04:21 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -37,7 +37,7 @@ http_interactions:
       string: '{"id":1,"start_date":"2012-04-01","end_date":"2018-03-31","type":"AGFS","description":"AGFS
         Fee Scheme 9"}'
     http_version: 
-  recorded_at: Tue, 18 Sep 2018 09:13:21 GMT
+  recorded_at: Wed, 06 Mar 2019 21:04:21 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/advocate-types/
@@ -48,7 +48,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.1.3
+      - laa-fee-calculator-client/0.2.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -57,7 +57,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 18 Sep 2018 09:13:21 GMT
+      - Wed, 06 Mar 2019 21:04:21 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -76,7 +76,7 @@ http_interactions:
         alone"},{"id":"LEADJR","name":"Leading junior"},{"id":"LEDJR","name":"Led
         junior"},{"id":"QC","name":"QC"}]}'
     http_version: 
-  recorded_at: Tue, 18 Sep 2018 09:13:21 GMT
+  recorded_at: Wed, 06 Mar 2019 21:04:21 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/fee-types/
@@ -87,7 +87,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.1.3
+      - laa-fee-calculator-client/0.2.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -96,7 +96,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 18 Sep 2018 09:13:44 GMT
+      - Wed, 06 Mar 2019 21:04:43 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -149,7 +149,7 @@ http_interactions:
         relating to admissibility of evidence (half day)","code":"AGFS_ADM_EVD_HF","is_basic":false,"aggregation":"sum"},{"id":91,"name":"Wasted
         preparation fee","code":"AGFS_WSTD_PREP","is_basic":false,"aggregation":"sum"}]}'
     http_version: 
-  recorded_at: Tue, 18 Sep 2018 09:13:44 GMT
+  recorded_at: Wed, 06 Mar 2019 21:04:43 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/modifier-types/
@@ -160,7 +160,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.1.3
+      - laa-fee-calculator-client/0.2.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -169,7 +169,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 18 Sep 2018 09:13:44 GMT
+      - Wed, 06 Mar 2019 21:04:43 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -192,7 +192,7 @@ http_interactions:
         months between trials","unit":"MONTH"},{"id":6,"name":"THIRD_CRACKED","description":"Third
         in which a trial cracked","unit":"THIRD"}]}'
     http_version: 
-  recorded_at: Tue, 18 Sep 2018 09:13:44 GMT
+  recorded_at: Wed, 06 Mar 2019 21:04:43 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/offence-classes/
@@ -203,7 +203,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.1.3
+      - laa-fee-calculator-client/0.2.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -212,7 +212,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 18 Sep 2018 09:13:45 GMT
+      - Wed, 06 Mar 2019 21:04:43 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -239,7 +239,7 @@ http_interactions:
         sexual offences"},{"id":"K","name":"K","description":"Other offences of dishonesty
         (high value)"}]}'
     http_version: 
-  recorded_at: Tue, 18 Sep 2018 09:13:45 GMT
+  recorded_at: Wed, 06 Mar 2019 21:04:43 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/prices/
@@ -250,7 +250,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.1.3
+      - laa-fee-calculator-client/0.2.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -259,7 +259,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 18 Sep 2018 09:13:46 GMT
+      - Wed, 06 Mar 2019 21:04:45 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -380,7 +380,7 @@ http_interactions:
         months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
         months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false}]}'
     http_version: 
-  recorded_at: Tue, 18 Sep 2018 09:13:46 GMT
+  recorded_at: Wed, 06 Mar 2019 21:04:45 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/scenarios/
@@ -391,7 +391,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.1.3
+      - laa-fee-calculator-client/0.2.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -400,7 +400,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 18 Sep 2018 09:13:46 GMT
+      - Wed, 06 Mar 2019 21:04:45 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -422,7 +422,7 @@ http_interactions:
         of crown court order","code":"AS000009"},{"id":10,"name":"Cracked before retrial","code":"AS000010"},{"id":11,"name":"Retrial","code":"AS000011"},{"id":12,"name":"Elected
         case not proceeded","code":"AS000014"}]}'
     http_version: 
-  recorded_at: Tue, 18 Sep 2018 09:13:46 GMT
+  recorded_at: Wed, 06 Mar 2019 21:04:45 GMT
 - request:
     method: get
     uri: http://localhost:8000/api/v1/fee-schemes/1/units/
@@ -433,7 +433,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.1.3
+      - laa-fee-calculator-client/0.2.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -442,7 +442,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 18 Sep 2018 09:13:47 GMT
+      - Wed, 06 Mar 2019 21:04:45 GMT
       Server:
       - WSGIServer/0.2 CPython/3.6.5
       Content-Type:
@@ -461,5 +461,5 @@ http_interactions:
         Days"},{"id":"HALFDAY","name":"Half Days"},{"id":"HOUR","name":"Hours"},{"id":"PPE","name":"Pages
         of Prosecuting Evidence"},{"id":"PW","name":"Prosecution Witnesses"}]}'
     http_version: 
-  recorded_at: Tue, 18 Sep 2018 09:13:47 GMT
+  recorded_at: Wed, 06 Mar 2019 21:04:45 GMT
 recorded_with: VCR 4.0.0
