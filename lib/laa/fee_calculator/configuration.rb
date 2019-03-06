@@ -9,8 +9,8 @@ module LAA
       attr_accessor :host, :headers
 
       def initialize
-        @host ||= host || LAA_FEE_CALCULATOR_API_V1
-        @headers ||= headers || HEADERS
+        @host = host || LAA_FEE_CALCULATOR_API_V1
+        @headers = headers || HEADERS
       end
     end
   end
