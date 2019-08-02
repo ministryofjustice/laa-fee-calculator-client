@@ -155,9 +155,9 @@ $ VCR_OFF=true rspec
 You can also test against a hosted API by modifying the following in the `spec_helper.rb`
 
 ```ruby
-# run tests against a remote host
+# run tests against the default remote host
 LAA::FeeCalculator.configure do |config|
-  config.host = LAA::FeeCalculator::Configuration::DEV_LAA_FEE_CALCULATOR_API_V1
+  config.host = LAA::FeeCalculator::Configuration::LAA_FEE_CALCULATOR_API_V1
 end
 
 ```
