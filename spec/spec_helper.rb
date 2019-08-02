@@ -39,7 +39,7 @@ RSpec.configure do |config|
   VCR.configure do |c|
     c.cassette_library_dir = 'spec/vcr'
     c.hook_into :webmock
-    c.default_cassette_options = { re_record_interval: 3600 * 24 * 7 } # 7 days in seconds
+    c.default_cassette_options = { re_record_interval: 3600 * 24 * 365 } # 365 days in seconds
   end
 
   # uncomment to turn off VCR for testing actual/local api

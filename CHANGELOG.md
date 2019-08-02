@@ -17,6 +17,8 @@ Add latest change log entries at top using template:
 ```
 
 ## Version 1.0.0
+### Added
+  - support for ruby 2.6.3
 ### Modified
   - default host to [https://laa-fee-calculator.service.justice.gov.uk/api/v1](https://laa-fee-calculator.service.justice.gov.uk/api/v1)
 ### Removed
