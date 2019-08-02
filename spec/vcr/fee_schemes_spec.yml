@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:8000/api/v1/fee-schemes/
+    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/
     body:
       encoding: US-ASCII
       string: ''
@@ -10,7 +10,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.2.0
+      - laa-fee-calculator-client/0.2.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -18,32 +18,37 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Date:
-      - Wed, 06 Mar 2019 21:04:42 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.5
+      - nginx/1.15.8
+      Date:
+      - Fri, 02 Aug 2019 09:17:22 GMT
       Content-Type:
       - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
       Vary:
       - Accept, Cookie
-      Allow:
-      - GET, HEAD, OPTIONS
+      - Accept-Encoding
       X-Frame-Options:
       - SAMEORIGIN
-      Content-Length:
-      - '471'
+      Allow:
+      - GET, HEAD, OPTIONS
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: '{"count":4,"next":null,"previous":null,"results":[{"id":1,"start_date":"2012-04-01","end_date":"2018-03-31","type":"AGFS","description":"AGFS
         Fee Scheme 9"},{"id":2,"start_date":"2016-04-01","end_date":null,"type":"LGFS","description":"LGFS
         Fee Scheme 2016-04"},{"id":3,"start_date":"2018-04-01","end_date":"2018-12-30","type":"AGFS","description":"AGFS
         Fee Scheme 10"},{"id":4,"start_date":"2018-12-31","end_date":null,"type":"AGFS","description":"AGFS
         Fee Scheme 11"}]}'
     http_version: 
-  recorded_at: Wed, 06 Mar 2019 21:04:42 GMT
+  recorded_at: Fri, 02 Aug 2019 09:17:22 GMT
 - request:
     method: get
-    uri: http://localhost:8000/api/v1/fee-schemes/1/
+    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/
     body:
       encoding: US-ASCII
       string: ''
@@ -51,7 +56,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.2.0
+      - laa-fee-calculator-client/0.2.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -59,29 +64,33 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Date:
-      - Wed, 06 Mar 2019 21:04:42 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.5
+      - nginx/1.15.8
+      Date:
+      - Fri, 02 Aug 2019 09:17:22 GMT
       Content-Type:
       - application/json
-      Vary:
-      - Accept, Cookie
+      Content-Length:
+      - '106'
+      Connection:
+      - keep-alive
       Allow:
       - GET, HEAD, OPTIONS
       X-Frame-Options:
       - SAMEORIGIN
-      Content-Length:
-      - '106'
+      Vary:
+      - Accept, Cookie
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
     body:
       encoding: UTF-8
       string: '{"id":1,"start_date":"2012-04-01","end_date":"2018-03-31","type":"AGFS","description":"AGFS
         Fee Scheme 9"}'
     http_version: 
-  recorded_at: Wed, 06 Mar 2019 21:04:42 GMT
+  recorded_at: Fri, 02 Aug 2019 09:17:22 GMT
 - request:
     method: get
-    uri: http://localhost:8000/api/v1/fee-schemes/?type=AGFS
+    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/?type=AGFS
     body:
       encoding: US-ASCII
       string: ''
@@ -89,7 +98,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.2.0
+      - laa-fee-calculator-client/0.2.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -97,31 +106,36 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Date:
-      - Wed, 06 Mar 2019 21:04:42 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.5
+      - nginx/1.15.8
+      Date:
+      - Fri, 02 Aug 2019 09:17:22 GMT
       Content-Type:
       - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
       Vary:
       - Accept, Cookie
-      Allow:
-      - GET, HEAD, OPTIONS
+      - Accept-Encoding
       X-Frame-Options:
       - SAMEORIGIN
-      Content-Length:
-      - '366'
+      Allow:
+      - GET, HEAD, OPTIONS
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: '{"count":3,"next":null,"previous":null,"results":[{"id":1,"start_date":"2012-04-01","end_date":"2018-03-31","type":"AGFS","description":"AGFS
         Fee Scheme 9"},{"id":3,"start_date":"2018-04-01","end_date":"2018-12-30","type":"AGFS","description":"AGFS
         Fee Scheme 10"},{"id":4,"start_date":"2018-12-31","end_date":null,"type":"AGFS","description":"AGFS
         Fee Scheme 11"}]}'
     http_version: 
-  recorded_at: Wed, 06 Mar 2019 21:04:42 GMT
+  recorded_at: Fri, 02 Aug 2019 09:17:22 GMT
 - request:
     method: get
-    uri: http://localhost:8000/api/v1/fee-schemes/?case_date=2018-01-01
+    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/?case_date=2018-01-01
     body:
       encoding: US-ASCII
       string: ''
@@ -129,7 +143,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.2.0
+      - laa-fee-calculator-client/0.2.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -137,30 +151,35 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Date:
-      - Wed, 06 Mar 2019 21:04:42 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.5
+      - nginx/1.15.8
+      Date:
+      - Fri, 02 Aug 2019 09:17:23 GMT
       Content-Type:
       - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
       Vary:
       - Accept, Cookie
+      - Accept-Encoding
       Allow:
       - GET, HEAD, OPTIONS
       X-Frame-Options:
       - SAMEORIGIN
-      Content-Length:
-      - '263'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: '{"count":2,"next":null,"previous":null,"results":[{"id":1,"start_date":"2012-04-01","end_date":"2018-03-31","type":"AGFS","description":"AGFS
         Fee Scheme 9"},{"id":2,"start_date":"2016-04-01","end_date":null,"type":"LGFS","description":"LGFS
         Fee Scheme 2016-04"}]}'
     http_version: 
-  recorded_at: Wed, 06 Mar 2019 21:04:42 GMT
+  recorded_at: Fri, 02 Aug 2019 09:17:23 GMT
 - request:
     method: get
-    uri: http://localhost:8000/api/v1/fee-schemes/?case_date=2018-01-01&type=LGFS
+    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/?case_date=2018-01-01&type=LGFS
     body:
       encoding: US-ASCII
       string: ''
@@ -168,7 +187,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.2.0
+      - laa-fee-calculator-client/0.2.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -176,24 +195,28 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Date:
-      - Wed, 06 Mar 2019 21:04:42 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.5
+      - nginx/1.15.8
+      Date:
+      - Fri, 02 Aug 2019 09:17:23 GMT
       Content-Type:
       - application/json
-      Vary:
-      - Accept, Cookie
+      Content-Length:
+      - '156'
+      Connection:
+      - keep-alive
       Allow:
       - GET, HEAD, OPTIONS
       X-Frame-Options:
       - SAMEORIGIN
-      Content-Length:
-      - '156'
+      Vary:
+      - Accept, Cookie
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
     body:
       encoding: UTF-8
       string: '{"count":1,"next":null,"previous":null,"results":[{"id":2,"start_date":"2016-04-01","end_date":null,"type":"LGFS","description":"LGFS
         Fee Scheme 2016-04"}]}'
     http_version: 
-  recorded_at: Wed, 06 Mar 2019 21:04:42 GMT
+  recorded_at: Fri, 02 Aug 2019 09:17:23 GMT
 recorded_with: VCR 4.0.0

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:8000/api/v1/fee-schemes/1/
+    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/
     body:
       encoding: US-ASCII
       string: ''
@@ -10,7 +10,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.2.0
+      - laa-fee-calculator-client/0.2.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -18,29 +18,33 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Date:
-      - Wed, 06 Mar 2019 21:04:43 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.5
+      - nginx/1.15.8
+      Date:
+      - Fri, 02 Aug 2019 09:17:25 GMT
       Content-Type:
       - application/json
-      Vary:
-      - Accept, Cookie
+      Content-Length:
+      - '106'
+      Connection:
+      - keep-alive
       Allow:
       - GET, HEAD, OPTIONS
       X-Frame-Options:
       - SAMEORIGIN
-      Content-Length:
-      - '106'
+      Vary:
+      - Accept, Cookie
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
     body:
       encoding: UTF-8
       string: '{"id":1,"start_date":"2012-04-01","end_date":"2018-03-31","type":"AGFS","description":"AGFS
         Fee Scheme 9"}'
     http_version: 
-  recorded_at: Wed, 06 Mar 2019 21:04:43 GMT
+  recorded_at: Fri, 02 Aug 2019 09:17:25 GMT
 - request:
     method: get
-    uri: http://localhost:8000/api/v1/fee-schemes/1/modifier-types/
+    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/modifier-types/
     body:
       encoding: US-ASCII
       string: ''
@@ -48,7 +52,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.2.0
+      - laa-fee-calculator-client/0.2.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -56,22 +60,27 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Date:
-      - Wed, 06 Mar 2019 21:04:43 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.5
+      - nginx/1.15.8
+      Date:
+      - Fri, 02 Aug 2019 09:17:25 GMT
       Content-Type:
       - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
       Vary:
       - Accept, Cookie
-      Allow:
-      - GET, HEAD, OPTIONS
+      - Accept-Encoding
       X-Frame-Options:
       - SAMEORIGIN
-      Content-Length:
-      - '594'
+      Allow:
+      - GET, HEAD, OPTIONS
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: '{"count":6,"next":null,"previous":null,"results":[{"id":1,"name":"NUMBER_OF_CASES","description":"Number
         of cases","unit":"CASE"},{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
         of defendants","unit":"DEFENDANT"},{"id":3,"name":"TRIAL_LENGTH","description":"Trial
@@ -80,10 +89,10 @@ http_interactions:
         months between trials","unit":"MONTH"},{"id":6,"name":"THIRD_CRACKED","description":"Third
         in which a trial cracked","unit":"THIRD"}]}'
     http_version: 
-  recorded_at: Wed, 06 Mar 2019 21:04:43 GMT
+  recorded_at: Fri, 02 Aug 2019 09:17:25 GMT
 - request:
     method: get
-    uri: http://localhost:8000/api/v1/fee-schemes/1/modifier-types/1/
+    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/modifier-types/1/
     body:
       encoding: US-ASCII
       string: ''
@@ -91,7 +100,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.2.0
+      - laa-fee-calculator-client/0.2.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -99,28 +108,32 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Date:
-      - Wed, 06 Mar 2019 21:04:43 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.5
+      - nginx/1.15.8
+      Date:
+      - Fri, 02 Aug 2019 09:17:25 GMT
       Content-Type:
       - application/json
-      Vary:
-      - Accept, Cookie
+      Content-Length:
+      - '79'
+      Connection:
+      - keep-alive
       Allow:
       - GET, HEAD, OPTIONS
       X-Frame-Options:
       - SAMEORIGIN
-      Content-Length:
-      - '79'
+      Vary:
+      - Accept, Cookie
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
     body:
       encoding: UTF-8
       string: '{"id":1,"name":"NUMBER_OF_CASES","description":"Number of cases","unit":"CASE"}'
     http_version: 
-  recorded_at: Wed, 06 Mar 2019 21:04:43 GMT
+  recorded_at: Fri, 02 Aug 2019 09:17:25 GMT
 - request:
     method: get
-    uri: http://localhost:8000/api/v1/fee-schemes/1/modifier-types/?scenario=1
+    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/modifier-types/?scenario=1
     body:
       encoding: US-ASCII
       string: ''
@@ -128,7 +141,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.2.0
+      - laa-fee-calculator-client/0.2.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -136,32 +149,37 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Date:
-      - Wed, 06 Mar 2019 21:04:43 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.5
+      - nginx/1.15.8
+      Date:
+      - Fri, 02 Aug 2019 09:17:26 GMT
       Content-Type:
       - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
       Vary:
       - Accept, Cookie
-      Allow:
-      - GET, HEAD, OPTIONS
+      - Accept-Encoding
       X-Frame-Options:
       - SAMEORIGIN
-      Content-Length:
-      - '406'
+      Allow:
+      - GET, HEAD, OPTIONS
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: '{"count":4,"next":null,"previous":null,"results":[{"id":1,"name":"NUMBER_OF_CASES","description":"Number
         of cases","unit":"CASE"},{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
         of defendants","unit":"DEFENDANT"},{"id":3,"name":"TRIAL_LENGTH","description":"Trial
         length","unit":"DAY"},{"id":4,"name":"PAGES_OF_PROSECUTING_EVIDENCE","description":"Pages
         of prosecuting evidence","unit":"PPE"}]}'
     http_version: 
-  recorded_at: Wed, 06 Mar 2019 21:04:43 GMT
+  recorded_at: Fri, 02 Aug 2019 09:17:26 GMT
 - request:
     method: get
-    uri: http://localhost:8000/api/v1/fee-schemes/1/modifier-types/?advocate_type=QC
+    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/modifier-types/?advocate_type=QC
     body:
       encoding: US-ASCII
       string: ''
@@ -169,7 +187,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.2.0
+      - laa-fee-calculator-client/0.2.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -177,22 +195,27 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Date:
-      - Wed, 06 Mar 2019 21:04:43 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.5
+      - nginx/1.15.8
+      Date:
+      - Fri, 02 Aug 2019 09:17:26 GMT
       Content-Type:
       - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
       Vary:
       - Accept, Cookie
-      Allow:
-      - GET, HEAD, OPTIONS
+      - Accept-Encoding
       X-Frame-Options:
       - SAMEORIGIN
-      Content-Length:
-      - '594'
+      Allow:
+      - GET, HEAD, OPTIONS
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: '{"count":6,"next":null,"previous":null,"results":[{"id":1,"name":"NUMBER_OF_CASES","description":"Number
         of cases","unit":"CASE"},{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
         of defendants","unit":"DEFENDANT"},{"id":3,"name":"TRIAL_LENGTH","description":"Trial
@@ -201,10 +224,10 @@ http_interactions:
         months between trials","unit":"MONTH"},{"id":6,"name":"THIRD_CRACKED","description":"Third
         in which a trial cracked","unit":"THIRD"}]}'
     http_version: 
-  recorded_at: Wed, 06 Mar 2019 21:04:43 GMT
+  recorded_at: Fri, 02 Aug 2019 09:17:26 GMT
 - request:
     method: get
-    uri: http://localhost:8000/api/v1/fee-schemes/1/modifier-types/?offence_class=A
+    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/modifier-types/?offence_class=A
     body:
       encoding: US-ASCII
       string: ''
@@ -212,7 +235,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.2.0
+      - laa-fee-calculator-client/0.2.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -220,22 +243,27 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Date:
-      - Wed, 06 Mar 2019 21:04:43 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.5
+      - nginx/1.15.8
+      Date:
+      - Fri, 02 Aug 2019 09:17:26 GMT
       Content-Type:
       - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
       Vary:
       - Accept, Cookie
+      - Accept-Encoding
       Allow:
       - GET, HEAD, OPTIONS
       X-Frame-Options:
       - SAMEORIGIN
-      Content-Length:
-      - '594'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: '{"count":6,"next":null,"previous":null,"results":[{"id":1,"name":"NUMBER_OF_CASES","description":"Number
         of cases","unit":"CASE"},{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
         of defendants","unit":"DEFENDANT"},{"id":3,"name":"TRIAL_LENGTH","description":"Trial
@@ -244,10 +272,10 @@ http_interactions:
         months between trials","unit":"MONTH"},{"id":6,"name":"THIRD_CRACKED","description":"Third
         in which a trial cracked","unit":"THIRD"}]}'
     http_version: 
-  recorded_at: Wed, 06 Mar 2019 21:04:43 GMT
+  recorded_at: Fri, 02 Aug 2019 09:17:26 GMT
 - request:
     method: get
-    uri: http://localhost:8000/api/v1/fee-schemes/1/modifier-types/?fee_type_code=AGFS_FEE
+    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/modifier-types/?fee_type_code=AGFS_FEE
     body:
       encoding: US-ASCII
       string: ''
@@ -255,7 +283,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.2.0
+      - laa-fee-calculator-client/0.2.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -263,22 +291,27 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Date:
-      - Wed, 06 Mar 2019 21:04:43 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.5
+      - nginx/1.15.8
+      Date:
+      - Fri, 02 Aug 2019 09:17:26 GMT
       Content-Type:
       - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
       Vary:
       - Accept, Cookie
-      Allow:
-      - GET, HEAD, OPTIONS
+      - Accept-Encoding
       X-Frame-Options:
       - SAMEORIGIN
-      Content-Length:
-      - '521'
+      Allow:
+      - GET, HEAD, OPTIONS
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: '{"count":5,"next":null,"previous":null,"results":[{"id":1,"name":"NUMBER_OF_CASES","description":"Number
         of cases","unit":"CASE"},{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
         of defendants","unit":"DEFENDANT"},{"id":4,"name":"PAGES_OF_PROSECUTING_EVIDENCE","description":"Pages
@@ -286,10 +319,10 @@ http_interactions:
         months between trials","unit":"MONTH"},{"id":6,"name":"THIRD_CRACKED","description":"Third
         in which a trial cracked","unit":"THIRD"}]}'
     http_version: 
-  recorded_at: Wed, 06 Mar 2019 21:04:43 GMT
+  recorded_at: Fri, 02 Aug 2019 09:17:26 GMT
 - request:
     method: get
-    uri: http://localhost:8000/api/v1/fee-schemes/1/modifier-types/1001/
+    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/modifier-types/1001/
     body:
       encoding: US-ASCII
       string: ''
@@ -297,7 +330,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.2.0
+      - laa-fee-calculator-client/0.2.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -305,28 +338,32 @@ http_interactions:
       code: 404
       message: Not Found
     headers:
-      Date:
-      - Wed, 06 Mar 2019 21:04:43 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.5
+      - nginx/1.15.8
+      Date:
+      - Fri, 02 Aug 2019 09:17:26 GMT
       Content-Type:
       - application/json
-      Vary:
-      - Accept, Cookie
+      Content-Length:
+      - '23'
+      Connection:
+      - keep-alive
       Allow:
       - GET, HEAD, OPTIONS
       X-Frame-Options:
       - SAMEORIGIN
-      Content-Length:
-      - '23'
+      Vary:
+      - Accept, Cookie
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
     body:
       encoding: UTF-8
       string: '{"detail":"Not found."}'
     http_version: 
-  recorded_at: Wed, 06 Mar 2019 21:04:43 GMT
+  recorded_at: Fri, 02 Aug 2019 09:17:26 GMT
 - request:
     method: get
-    uri: http://localhost:8000/api/v1/fee-schemes/1/modifier-types/?fee_type_code=INVALID_CODE
+    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/modifier-types/?fee_type_code=INVALID_CODE
     body:
       encoding: US-ASCII
       string: ''
@@ -334,7 +371,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.2.0
+      - laa-fee-calculator-client/0.2.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -342,28 +379,32 @@ http_interactions:
       code: 400
       message: Bad Request
     headers:
-      Date:
-      - Wed, 06 Mar 2019 21:04:43 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.5
+      - nginx/1.15.8
+      Date:
+      - Fri, 02 Aug 2019 09:17:26 GMT
       Content-Type:
       - application/json
+      Content-Length:
+      - '49'
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
       Vary:
       - Accept, Cookie
       Allow:
       - GET, HEAD, OPTIONS
-      X-Frame-Options:
-      - SAMEORIGIN
-      Content-Length:
-      - '49'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
     body:
       encoding: UTF-8
       string: '["''INVALID_CODE'' is not a valid `fee_type_code`"]'
     http_version: 
-  recorded_at: Wed, 06 Mar 2019 21:04:43 GMT
+  recorded_at: Fri, 02 Aug 2019 09:17:26 GMT
 - request:
     method: get
-    uri: http://localhost:8000/api/v1/fee-schemes/1/modifier-types/?fee_type_code=AGFS_APPEAL_CON&scenario=5
+    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/modifier-types/?fee_type_code=AGFS_APPEAL_CON&scenario=5
     body:
       encoding: US-ASCII
       string: ''
@@ -371,7 +412,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.2.0
+      - laa-fee-calculator-client/0.2.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -379,25 +420,29 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Date:
-      - Wed, 06 Mar 2019 21:04:43 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.5
+      - nginx/1.15.8
+      Date:
+      - Fri, 02 Aug 2019 09:17:27 GMT
       Content-Type:
       - application/json
+      Content-Length:
+      - '226'
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
       Vary:
       - Accept, Cookie
       Allow:
       - GET, HEAD, OPTIONS
-      X-Frame-Options:
-      - SAMEORIGIN
-      Content-Length:
-      - '226'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
     body:
       encoding: UTF-8
       string: '{"count":2,"next":null,"previous":null,"results":[{"id":1,"name":"NUMBER_OF_CASES","description":"Number
         of cases","unit":"CASE"},{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
         of defendants","unit":"DEFENDANT"}]}'
     http_version: 
-  recorded_at: Wed, 06 Mar 2019 21:04:43 GMT
+  recorded_at: Fri, 02 Aug 2019 09:17:27 GMT
 recorded_with: VCR 4.0.0
