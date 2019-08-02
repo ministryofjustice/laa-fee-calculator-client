@@ -137,6 +137,8 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 The test suite makes extensive use of the [VCR](https://github.com/vcr/vcr) gem to stub requests to the external API. Any examples within a `describe` block with a `:vcr` tag will automatically use (or generate) VCR cassettes via an `around` block - see `spec_helper.rb`. All cassettes are stored in the `spec/vcr` directory and automatically named after the spec that produced them. Only new episodes/requests are created.
 
+Note: VCR is configured to require a re-recording of cassettes once a year by default and will cause spec failures if this is not done. This can be disabled - see `spec_helper.rb` `re_record_interval`.
+
 To recreate all cassettes:
 
 - run the [laa-fee-calculator](https://github.com/ministryofjustice/laa-fee-calculator) API locally
@@ -160,6 +162,8 @@ end
 
 ```
 
+Note: 
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at [ministryofjustice/laa-fee-calculator-client](https://github.com/ministryofjustice/laa-fee-calculator-client)
@@ -168,7 +172,7 @@ Bug reports and pull requests are welcome on GitHub at [ministryofjustice/laa-fe
 
 1. Make required changes, run specs (rerecord vcr cassettes if necessary)
 
-2. Run `bin/ruby_version_test` to test against ruby versions (2.4+ supported at present)
+2. Run `bin/ruby_version_test` to test against ruby versions (2.5+ supported at present)
 
 3. Update the VERSION in `lib/laa/fee_calculator/version` using [semantic versioning](https://guides.rubygems.org/patterns/#semantic-versioning).
 

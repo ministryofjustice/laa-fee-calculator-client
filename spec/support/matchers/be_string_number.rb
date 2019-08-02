@@ -5,11 +5,9 @@ require 'bigdecimal/util'
 
 RSpec::Matchers.define :be_string_number do
   match do |actual|
-    begin
-      BigDecimal(actual)
-    rescue StandardError
-      false
-    end
+    BigDecimal(actual)
+  rescue StandardError
+    false
   end
 
   description do
