@@ -16,7 +16,7 @@ Add latest change log entries at top using template:
 ---
 ```
 
-## Version 1.0.0
+## Version 1.0.0.rc1
 ### Added
   - support/testing for ruby 2.6.0, 2.6.2 and 2.6.3
 ### Removed
