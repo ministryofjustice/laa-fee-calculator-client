@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:8000/api/v1/fee-schemes/1/
+    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/
     body:
       encoding: US-ASCII
       string: ''
@@ -10,7 +10,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.2.0
+      - laa-fee-calculator-client/0.2.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -18,29 +18,33 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Date:
-      - Wed, 06 Mar 2019 21:04:45 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.5
+      - nginx/1.15.8
+      Date:
+      - Fri, 02 Aug 2019 09:17:36 GMT
       Content-Type:
       - application/json
-      Vary:
-      - Accept, Cookie
+      Content-Length:
+      - '106'
+      Connection:
+      - keep-alive
       Allow:
       - GET, HEAD, OPTIONS
       X-Frame-Options:
       - SAMEORIGIN
-      Content-Length:
-      - '106'
+      Vary:
+      - Accept, Cookie
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
     body:
       encoding: UTF-8
       string: '{"id":1,"start_date":"2012-04-01","end_date":"2018-03-31","type":"AGFS","description":"AGFS
         Fee Scheme 9"}'
     http_version: 
-  recorded_at: Wed, 06 Mar 2019 21:04:45 GMT
+  recorded_at: Fri, 02 Aug 2019 09:17:36 GMT
 - request:
     method: get
-    uri: http://localhost:8000/api/v1/fee-schemes/1/scenarios/
+    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/scenarios/
     body:
       encoding: US-ASCII
       string: ''
@@ -48,7 +52,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.2.0
+      - laa-fee-calculator-client/0.2.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -56,22 +60,27 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Date:
-      - Wed, 06 Mar 2019 21:04:45 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.5
+      - nginx/1.15.8
+      Date:
+      - Fri, 02 Aug 2019 09:17:36 GMT
       Content-Type:
       - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
       Vary:
       - Accept, Cookie
-      Allow:
-      - GET, HEAD, OPTIONS
+      - Accept-Encoding
       X-Frame-Options:
       - SAMEORIGIN
-      Content-Length:
-      - '702'
+      Allow:
+      - GET, HEAD, OPTIONS
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: '{"count":12,"next":null,"previous":null,"results":[{"id":1,"name":"Discontinuance","code":"AS000001"},{"id":2,"name":"Guilty
         plea","code":"AS000002"},{"id":3,"name":"Cracked trial","code":"AS000003"},{"id":4,"name":"Trial","code":"AS000004"},{"id":5,"name":"Appeal
         against conviction","code":"AS000005"},{"id":6,"name":"Appeal against sentence","code":"AS000006"},{"id":7,"name":"Committal
@@ -79,10 +88,10 @@ http_interactions:
         of crown court order","code":"AS000009"},{"id":10,"name":"Cracked before retrial","code":"AS000010"},{"id":11,"name":"Retrial","code":"AS000011"},{"id":12,"name":"Elected
         case not proceeded","code":"AS000014"}]}'
     http_version: 
-  recorded_at: Wed, 06 Mar 2019 21:04:45 GMT
+  recorded_at: Fri, 02 Aug 2019 09:17:36 GMT
 - request:
     method: get
-    uri: http://localhost:8000/api/v1/fee-schemes/1/scenarios/1/
+    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/scenarios/1/
     body:
       encoding: US-ASCII
       string: ''
@@ -90,7 +99,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.2.0
+      - laa-fee-calculator-client/0.2.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -98,28 +107,32 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Date:
-      - Wed, 06 Mar 2019 21:04:45 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.5
+      - nginx/1.15.8
+      Date:
+      - Fri, 02 Aug 2019 09:17:36 GMT
       Content-Type:
       - application/json
+      Content-Length:
+      - '50'
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
       Vary:
       - Accept, Cookie
       Allow:
       - GET, HEAD, OPTIONS
-      X-Frame-Options:
-      - SAMEORIGIN
-      Content-Length:
-      - '50'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
     body:
       encoding: UTF-8
       string: '{"id":1,"name":"Discontinuance","code":"AS000001"}'
     http_version: 
-  recorded_at: Wed, 06 Mar 2019 21:04:45 GMT
+  recorded_at: Fri, 02 Aug 2019 09:17:36 GMT
 - request:
     method: get
-    uri: http://localhost:8000/api/v1/fee-schemes/1/scenarios/1001/
+    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/scenarios/1001/
     body:
       encoding: US-ASCII
       string: ''
@@ -127,7 +140,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.2.0
+      - laa-fee-calculator-client/0.2.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -135,23 +148,27 @@ http_interactions:
       code: 404
       message: Not Found
     headers:
-      Date:
-      - Wed, 06 Mar 2019 21:04:45 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.5
+      - nginx/1.15.8
+      Date:
+      - Fri, 02 Aug 2019 09:17:36 GMT
       Content-Type:
       - application/json
-      Vary:
-      - Accept, Cookie
+      Content-Length:
+      - '23'
+      Connection:
+      - keep-alive
       Allow:
       - GET, HEAD, OPTIONS
       X-Frame-Options:
       - SAMEORIGIN
-      Content-Length:
-      - '23'
+      Vary:
+      - Accept, Cookie
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
     body:
       encoding: UTF-8
       string: '{"detail":"Not found."}'
     http_version: 
-  recorded_at: Wed, 06 Mar 2019 21:04:45 GMT
+  recorded_at: Fri, 02 Aug 2019 09:17:36 GMT
 recorded_with: VCR 4.0.0

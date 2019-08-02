@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:8000/api/v1/fee-schemes/1/
+    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/
     body:
       encoding: US-ASCII
       string: ''
@@ -10,7 +10,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.2.0
+      - laa-fee-calculator-client/0.2.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -18,29 +18,33 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Date:
-      - Wed, 06 Mar 2019 21:04:42 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.5
+      - nginx/1.15.8
+      Date:
+      - Fri, 02 Aug 2019 09:17:23 GMT
       Content-Type:
       - application/json
+      Content-Length:
+      - '106'
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
       Vary:
       - Accept, Cookie
       Allow:
       - GET, HEAD, OPTIONS
-      X-Frame-Options:
-      - SAMEORIGIN
-      Content-Length:
-      - '106'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
     body:
       encoding: UTF-8
       string: '{"id":1,"start_date":"2012-04-01","end_date":"2018-03-31","type":"AGFS","description":"AGFS
         Fee Scheme 9"}'
     http_version: 
-  recorded_at: Wed, 06 Mar 2019 21:04:42 GMT
+  recorded_at: Fri, 02 Aug 2019 09:17:23 GMT
 - request:
     method: get
-    uri: http://localhost:8000/api/v1/fee-schemes/1/fee-types/
+    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/fee-types/
     body:
       encoding: US-ASCII
       string: ''
@@ -48,7 +52,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.2.0
+      - laa-fee-calculator-client/0.2.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -56,22 +60,27 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Date:
-      - Wed, 06 Mar 2019 21:04:42 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.5
+      - nginx/1.15.8
+      Date:
+      - Fri, 02 Aug 2019 09:17:23 GMT
       Content-Type:
       - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
       Vary:
       - Accept, Cookie
+      - Accept-Encoding
       Allow:
       - GET, HEAD, OPTIONS
       X-Frame-Options:
       - SAMEORIGIN
-      Content-Length:
-      - '4205'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: '{"count":36,"next":null,"previous":null,"results":[{"id":4,"name":"Plea
         and case management hearing","code":"AGFS_PLEA","is_basic":false,"aggregation":"sum"},{"id":5,"name":"Abuse
         of process hearing (half day)","code":"AGFS_ABS_PRC_HF","is_basic":false,"aggregation":"sum"},{"id":6,"name":"Abuse
@@ -110,10 +119,10 @@ http_interactions:
         relating to admissibility of evidence (half day)","code":"AGFS_ADM_EVD_HF","is_basic":false,"aggregation":"sum"},{"id":91,"name":"Wasted
         preparation fee","code":"AGFS_WSTD_PREP","is_basic":false,"aggregation":"sum"}]}'
     http_version: 
-  recorded_at: Wed, 06 Mar 2019 21:04:42 GMT
+  recorded_at: Fri, 02 Aug 2019 09:17:23 GMT
 - request:
     method: get
-    uri: http://localhost:8000/api/v1/fee-schemes/1/fee-types/4/
+    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/fee-types/4/
     body:
       encoding: US-ASCII
       string: ''
@@ -121,7 +130,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.2.0
+      - laa-fee-calculator-client/0.2.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -129,28 +138,32 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Date:
-      - Wed, 06 Mar 2019 21:04:42 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.5
+      - nginx/1.15.8
+      Date:
+      - Fri, 02 Aug 2019 09:17:23 GMT
       Content-Type:
       - application/json
+      Content-Length:
+      - '106'
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
       Vary:
       - Accept, Cookie
       Allow:
       - GET, HEAD, OPTIONS
-      X-Frame-Options:
-      - SAMEORIGIN
-      Content-Length:
-      - '106'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
     body:
       encoding: UTF-8
       string: '{"id":4,"name":"Plea and case management hearing","code":"AGFS_PLEA","is_basic":false,"aggregation":"sum"}'
     http_version: 
-  recorded_at: Wed, 06 Mar 2019 21:04:42 GMT
+  recorded_at: Fri, 02 Aug 2019 09:17:23 GMT
 - request:
     method: get
-    uri: http://localhost:8000/api/v1/fee-schemes/1/fee-types/?is_basic=true
+    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/fee-types/?is_basic=true
     body:
       encoding: US-ASCII
       string: ''
@@ -158,7 +171,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.2.0
+      - laa-fee-calculator-client/0.2.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -166,29 +179,33 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Date:
-      - Wed, 06 Mar 2019 21:04:42 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.5
+      - nginx/1.15.8
+      Date:
+      - Fri, 02 Aug 2019 09:17:23 GMT
       Content-Type:
       - application/json
-      Vary:
-      - Accept, Cookie
+      Content-Length:
+      - '137'
+      Connection:
+      - keep-alive
       Allow:
       - GET, HEAD, OPTIONS
       X-Frame-Options:
       - SAMEORIGIN
-      Content-Length:
-      - '137'
+      Vary:
+      - Accept, Cookie
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
     body:
       encoding: UTF-8
       string: '{"count":1,"next":null,"previous":null,"results":[{"id":34,"name":"Advocate
         fee","code":"AGFS_FEE","is_basic":true,"aggregation":"sum"}]}'
     http_version: 
-  recorded_at: Wed, 06 Mar 2019 21:04:42 GMT
+  recorded_at: Fri, 02 Aug 2019 09:17:23 GMT
 - request:
     method: get
-    uri: http://localhost:8000/api/v1/fee-schemes/1/fee-types/?scenario=1
+    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/fee-types/?scenario=1
     body:
       encoding: US-ASCII
       string: ''
@@ -196,7 +213,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.2.0
+      - laa-fee-calculator-client/0.2.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -204,22 +221,27 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Date:
-      - Wed, 06 Mar 2019 21:04:42 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.5
+      - nginx/1.15.8
+      Date:
+      - Fri, 02 Aug 2019 09:17:24 GMT
       Content-Type:
       - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
       Vary:
       - Accept, Cookie
+      - Accept-Encoding
       Allow:
       - GET, HEAD, OPTIONS
       X-Frame-Options:
       - SAMEORIGIN
-      Content-Length:
-      - '3498'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: '{"count":30,"next":null,"previous":null,"results":[{"id":4,"name":"Plea
         and case management hearing","code":"AGFS_PLEA","is_basic":false,"aggregation":"sum"},{"id":5,"name":"Abuse
         of process hearing (half day)","code":"AGFS_ABS_PRC_HF","is_basic":false,"aggregation":"sum"},{"id":6,"name":"Abuse
@@ -252,10 +274,10 @@ http_interactions:
         relating to admissibility of evidence (half day)","code":"AGFS_ADM_EVD_HF","is_basic":false,"aggregation":"sum"},{"id":91,"name":"Wasted
         preparation fee","code":"AGFS_WSTD_PREP","is_basic":false,"aggregation":"sum"}]}'
     http_version: 
-  recorded_at: Wed, 06 Mar 2019 21:04:42 GMT
+  recorded_at: Fri, 02 Aug 2019 09:17:24 GMT
 - request:
     method: get
-    uri: http://localhost:8000/api/v1/fee-schemes/1/fee-types/?advocate_type=QC
+    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/fee-types/?advocate_type=QC
     body:
       encoding: US-ASCII
       string: ''
@@ -263,7 +285,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.2.0
+      - laa-fee-calculator-client/0.2.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -271,22 +293,27 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Date:
-      - Wed, 06 Mar 2019 21:04:42 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.5
+      - nginx/1.15.8
+      Date:
+      - Fri, 02 Aug 2019 09:17:24 GMT
       Content-Type:
       - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
       Vary:
       - Accept, Cookie
-      Allow:
-      - GET, HEAD, OPTIONS
+      - Accept-Encoding
       X-Frame-Options:
       - SAMEORIGIN
-      Content-Length:
-      - '4205'
+      Allow:
+      - GET, HEAD, OPTIONS
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: '{"count":36,"next":null,"previous":null,"results":[{"id":4,"name":"Plea
         and case management hearing","code":"AGFS_PLEA","is_basic":false,"aggregation":"sum"},{"id":5,"name":"Abuse
         of process hearing (half day)","code":"AGFS_ABS_PRC_HF","is_basic":false,"aggregation":"sum"},{"id":6,"name":"Abuse
@@ -325,10 +352,10 @@ http_interactions:
         relating to admissibility of evidence (half day)","code":"AGFS_ADM_EVD_HF","is_basic":false,"aggregation":"sum"},{"id":91,"name":"Wasted
         preparation fee","code":"AGFS_WSTD_PREP","is_basic":false,"aggregation":"sum"}]}'
     http_version: 
-  recorded_at: Wed, 06 Mar 2019 21:04:42 GMT
+  recorded_at: Fri, 02 Aug 2019 09:17:24 GMT
 - request:
     method: get
-    uri: http://localhost:8000/api/v1/fee-schemes/1/fee-types/?offence_class=A
+    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/fee-types/?offence_class=A
     body:
       encoding: US-ASCII
       string: ''
@@ -336,7 +363,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.2.0
+      - laa-fee-calculator-client/0.2.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -344,22 +371,27 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Date:
-      - Wed, 06 Mar 2019 21:04:42 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.5
+      - nginx/1.15.8
+      Date:
+      - Fri, 02 Aug 2019 09:17:24 GMT
       Content-Type:
       - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
       Vary:
       - Accept, Cookie
-      Allow:
-      - GET, HEAD, OPTIONS
+      - Accept-Encoding
       X-Frame-Options:
       - SAMEORIGIN
-      Content-Length:
-      - '4205'
+      Allow:
+      - GET, HEAD, OPTIONS
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: '{"count":36,"next":null,"previous":null,"results":[{"id":4,"name":"Plea
         and case management hearing","code":"AGFS_PLEA","is_basic":false,"aggregation":"sum"},{"id":5,"name":"Abuse
         of process hearing (half day)","code":"AGFS_ABS_PRC_HF","is_basic":false,"aggregation":"sum"},{"id":6,"name":"Abuse
@@ -398,10 +430,10 @@ http_interactions:
         relating to admissibility of evidence (half day)","code":"AGFS_ADM_EVD_HF","is_basic":false,"aggregation":"sum"},{"id":91,"name":"Wasted
         preparation fee","code":"AGFS_WSTD_PREP","is_basic":false,"aggregation":"sum"}]}'
     http_version: 
-  recorded_at: Wed, 06 Mar 2019 21:04:42 GMT
+  recorded_at: Fri, 02 Aug 2019 09:17:24 GMT
 - request:
     method: get
-    uri: http://localhost:8000/api/v1/fee-schemes/1/fee-types/?fee_type_code=AGFS_FEE
+    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/fee-types/?fee_type_code=AGFS_FEE
     body:
       encoding: US-ASCII
       string: ''
@@ -409,7 +441,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.2.0
+      - laa-fee-calculator-client/0.2.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -417,29 +449,33 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Date:
-      - Wed, 06 Mar 2019 21:04:42 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.5
+      - nginx/1.15.8
+      Date:
+      - Fri, 02 Aug 2019 09:17:24 GMT
       Content-Type:
       - application/json
-      Vary:
-      - Accept, Cookie
-      Allow:
-      - GET, HEAD, OPTIONS
-      X-Frame-Options:
-      - SAMEORIGIN
       Content-Length:
       - '137'
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET, HEAD, OPTIONS
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
     body:
       encoding: UTF-8
       string: '{"count":1,"next":null,"previous":null,"results":[{"id":34,"name":"Advocate
         fee","code":"AGFS_FEE","is_basic":true,"aggregation":"sum"}]}'
     http_version: 
-  recorded_at: Wed, 06 Mar 2019 21:04:42 GMT
+  recorded_at: Fri, 02 Aug 2019 09:17:24 GMT
 - request:
     method: get
-    uri: http://localhost:8000/api/v1/fee-schemes/1/fee-types/1001/
+    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/fee-types/1001/
     body:
       encoding: US-ASCII
       string: ''
@@ -447,7 +483,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.2.0
+      - laa-fee-calculator-client/0.2.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -455,28 +491,32 @@ http_interactions:
       code: 404
       message: Not Found
     headers:
-      Date:
-      - Wed, 06 Mar 2019 21:04:42 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.5
+      - nginx/1.15.8
+      Date:
+      - Fri, 02 Aug 2019 09:17:24 GMT
       Content-Type:
       - application/json
+      Content-Length:
+      - '23'
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
       Vary:
       - Accept, Cookie
       Allow:
       - GET, HEAD, OPTIONS
-      X-Frame-Options:
-      - SAMEORIGIN
-      Content-Length:
-      - '23'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
     body:
       encoding: UTF-8
       string: '{"detail":"Not found."}'
     http_version: 
-  recorded_at: Wed, 06 Mar 2019 21:04:42 GMT
+  recorded_at: Fri, 02 Aug 2019 09:17:24 GMT
 - request:
     method: get
-    uri: http://localhost:8000/api/v1/fee-schemes/1/fee-types/?is_basic=true&scenario=8
+    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/fee-types/?is_basic=true&scenario=8
     body:
       encoding: US-ASCII
       string: ''
@@ -484,7 +524,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.2.0
+      - laa-fee-calculator-client/0.2.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -492,28 +532,32 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Date:
-      - Wed, 06 Mar 2019 21:04:42 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.5
+      - nginx/1.15.8
+      Date:
+      - Fri, 02 Aug 2019 09:17:24 GMT
       Content-Type:
       - application/json
+      Content-Length:
+      - '52'
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
       Vary:
       - Accept, Cookie
       Allow:
       - GET, HEAD, OPTIONS
-      X-Frame-Options:
-      - SAMEORIGIN
-      Content-Length:
-      - '52'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
     body:
       encoding: UTF-8
       string: '{"count":0,"next":null,"previous":null,"results":[]}'
     http_version: 
-  recorded_at: Wed, 06 Mar 2019 21:04:42 GMT
+  recorded_at: Fri, 02 Aug 2019 09:17:24 GMT
 - request:
     method: get
-    uri: http://localhost:8000/api/v1/fee-schemes/1/fee-types/?scenario=8
+    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/fee-types/?scenario=8
     body:
       encoding: US-ASCII
       string: ''
@@ -521,7 +565,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.2.0
+      - laa-fee-calculator-client/0.2.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -529,22 +573,27 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Date:
-      - Wed, 06 Mar 2019 21:04:42 GMT
       Server:
-      - WSGIServer/0.2 CPython/3.6.5
+      - nginx/1.15.8
+      Date:
+      - Fri, 02 Aug 2019 09:17:24 GMT
       Content-Type:
       - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
       Vary:
       - Accept, Cookie
-      Allow:
-      - GET, HEAD, OPTIONS
+      - Accept-Encoding
       X-Frame-Options:
       - SAMEORIGIN
-      Content-Length:
-      - '3412'
+      Allow:
+      - GET, HEAD, OPTIONS
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: '{"count":29,"next":null,"previous":null,"results":[{"id":4,"name":"Plea
         and case management hearing","code":"AGFS_PLEA","is_basic":false,"aggregation":"sum"},{"id":5,"name":"Abuse
         of process hearing (half day)","code":"AGFS_ABS_PRC_HF","is_basic":false,"aggregation":"sum"},{"id":6,"name":"Abuse
@@ -576,5 +625,5 @@ http_interactions:
         relating to admissibility of evidence (half day)","code":"AGFS_ADM_EVD_HF","is_basic":false,"aggregation":"sum"},{"id":91,"name":"Wasted
         preparation fee","code":"AGFS_WSTD_PREP","is_basic":false,"aggregation":"sum"}]}'
     http_version: 
-  recorded_at: Wed, 06 Mar 2019 21:04:42 GMT
+  recorded_at: Fri, 02 Aug 2019 09:17:24 GMT
 recorded_with: VCR 4.0.0
