@@ -13,8 +13,8 @@ Dir[File.join(LAA::FeeCalculator.root, 'spec', 'support', '**', '*.rb')].each { 
 LAA::FeeCalculator.configure do |config|
   # [un]comment to test against api running locally or remotely
   # or to recreate VCR cassettes
-  config.host = 'http://localhost:8000/api/v1'
-  # config.host = LAA::FeeCalculator::Configuration::DEV_LAA_FEE_CALCULATOR_API_V1
+  # config.host = 'http://localhost:8000/api/v1'
+  config.host = LAA::FeeCalculator::Configuration::DEV_LAA_FEE_CALCULATOR_API_V1
 end
 
 RSpec.configure do |config|
