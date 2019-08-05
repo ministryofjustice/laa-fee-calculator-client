@@ -13,8 +13,20 @@ Add latest change log entries at top using template:
 ### Removed
   -
 
----
 ```
+
+## Version 1.0.0
+
+#### Note
+The [API itself](https://laa-fee-calculator.service.justice.gov.uk/api/v1/docs) has changed datacenter and domain name. This version defaults to using the newly hosted API. The old API will no longer receive updates and should be considered deprecated. It will be removed entirely once traffic to it is near zero - please raise an [issue](https://github.com/ministryofjustice/laa-fee-calculator-client/issues) if this is problematic.
+
+### Added
+  - support/testing for ruby 2.6.0, 2.6.2 and 2.6.3
+### Removed
+  - removed support for ruby 2.4
+  - removed testing against ruby versions less than 2.5.5
+### Modified
+  - default host to [https://laa-fee-calculator.service.justice.gov.uk/api/v1](https://laa-fee-calculator.service.justice.gov.uk/api/v1)
 
 ## Version 1.0.0.rc1
 ### Added
@@ -24,6 +36,4 @@ Add latest change log entries at top using template:
   - removed support/testing against ruby versions less than 2.5.5
 ### Modified
   - default host to [https://laa-fee-calculator.service.justice.gov.uk/api/v1](https://laa-fee-calculator.service.justice.gov.uk/api/v1)
-
----
 
