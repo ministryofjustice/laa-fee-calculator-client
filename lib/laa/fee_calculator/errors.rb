@@ -6,7 +6,7 @@ module LAA
 
     # raised for failed response status between 400 and 599 and not handled
     # by classes below
-    class ClientError < Faraday::Error::ClientError
+    class ClientError < Faraday::ClientError
       # overide the e.message attribute
       # e.g. raise LAA::FeeCalculator::ResponseError.new(response)
       # => #<LAA::FeeCalculator::ResponseError: "`case_date` should be in the format YYYY-MM-DD">
