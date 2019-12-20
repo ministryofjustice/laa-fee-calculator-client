@@ -15,6 +15,13 @@ Add latest change log entries at top using template:
 
 ```
 
+## Version 1.1.0
+
+### Modified
+  - updated Faraday dependency
+  - Fixed deprecation warning resulting from `Faraday::Error::ClientError` being deprecated in favour of `Faraday::ClientError`
+  - updated development dependencies - rubocop, bundler
+
 ## Version 1.0.0
 
 #### Note

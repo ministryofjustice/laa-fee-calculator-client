@@ -12,7 +12,7 @@ endpoints, providing a simple interface for querying data, in particular, the pr
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'laa-fee-calculator-client', '~> 0.1.1'
+gem 'laa-fee-calculator-client', '~> 1.1.0'
 ```
 
 And then execute:
@@ -178,9 +178,11 @@ Bug reports and pull requests are welcome on GitHub at [ministryofjustice/laa-fe
 
 4. Update the VERSION_RELEASED in `lib/laa/fee_calculator/version` to the date you intend to publish/release the version.
 
-5. PR the change, code-review, merge.
+5. Update the `CHANGELOG.md` - format/documentation standards specified at top of file.
 
-6. Pull master and run rake task below to publish
+6. PR the change, code-review, merge.
+
+7. Pull master and run rake task below to publish
 
 ```bash
 $ rake release
