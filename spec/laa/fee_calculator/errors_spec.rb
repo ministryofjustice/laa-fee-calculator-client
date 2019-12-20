@@ -18,7 +18,7 @@ RSpec.describe LAA::FeeCalculator::ClientError do
     }
   end
 
-  it { is_expected.to be_kind_of(Faraday::Error::ClientError) }
+  it { is_expected.to be_kind_of(Faraday::ClientError) }
   it { is_expected.to respond_to(:message) }
   it { is_expected.to respond_to(:response) }
 
