@@ -7,7 +7,7 @@ Metrics/BlockLength:
     - 'spec/**/*'
     - '*.gemspec'
 
-Metrics/LineLength:
+Layout/LineLength:
   Exclude:
     - '*.gemspec'
 
