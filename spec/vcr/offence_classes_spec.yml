@@ -2,48 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/json
-      User-Agent:
-      - laa-fee-calculator-client/0.2.1
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - nginx/1.15.8
-      Date:
-      - Fri, 02 Aug 2019 09:17:27 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '106'
-      Connection:
-      - keep-alive
-      Allow:
-      - GET, HEAD, OPTIONS
-      X-Frame-Options:
-      - SAMEORIGIN
-      Vary:
-      - Accept, Cookie
-      Strict-Transport-Security:
-      - max-age=15724800; includeSubDomains
-    body:
-      encoding: UTF-8
-      string: '{"id":1,"start_date":"2012-04-01","end_date":"2018-03-31","type":"AGFS","description":"AGFS
-        Fee Scheme 9"}'
-    http_version: 
-  recorded_at: Fri, 02 Aug 2019 09:17:27 GMT
-- request:
-    method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/offence-classes/
     body:
       encoding: US-ASCII
@@ -52,7 +10,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.2.1
+      - laa-fee-calculator-client/1.1.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -60,19 +18,16 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - nginx/1.15.8
       Date:
-      - Fri, 02 Aug 2019 09:17:27 GMT
+      - Mon, 01 Feb 2021 09:45:17 GMT
       Content-Type:
       - application/json
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '929'
       Connection:
       - keep-alive
       Vary:
       - Accept, Cookie
-      - Accept-Encoding
       X-Frame-Options:
       - SAMEORIGIN
       Allow:
@@ -80,7 +35,7 @@ http_interactions:
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: '{"count":11,"next":null,"previous":null,"results":[{"id":"A","name":"A","description":"Homicide
         and related grave offences"},{"id":"B","name":"B","description":"Offences
         involving serious violence or damage and serious drug offences"},{"id":"C","name":"C","description":"Lesser
@@ -92,8 +47,7 @@ http_interactions:
         justice and similar offences"},{"id":"J","name":"J","description":"Serious
         sexual offences"},{"id":"K","name":"K","description":"Other offences of dishonesty
         (high value)"}]}'
-    http_version: 
-  recorded_at: Fri, 02 Aug 2019 09:17:27 GMT
+  recorded_at: Mon, 01 Feb 2021 09:45:17 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/offence-classes/A/
@@ -104,7 +58,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.2.1
+      - laa-fee-calculator-client/1.1.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -112,10 +66,8 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - nginx/1.15.8
       Date:
-      - Fri, 02 Aug 2019 09:17:28 GMT
+      - Mon, 01 Feb 2021 09:45:17 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -124,17 +76,55 @@ http_interactions:
       - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
-      Vary:
-      - Accept, Cookie
       Allow:
       - GET, HEAD, OPTIONS
+      Vary:
+      - Accept, Cookie
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
     body:
       encoding: UTF-8
       string: '{"id":"A","name":"A","description":"Homicide and related grave offences"}'
-    http_version: 
-  recorded_at: Fri, 02 Aug 2019 09:17:28 GMT
+  recorded_at: Mon, 01 Feb 2021 09:45:17 GMT
+- request:
+    method: get
+    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 01 Feb 2021 09:45:17 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '106'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET, HEAD, OPTIONS
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: '{"id":1,"start_date":"2012-04-01","end_date":"2018-03-31","type":"AGFS","description":"AGFS
+        Fee Scheme 9"}'
+  recorded_at: Mon, 01 Feb 2021 09:45:17 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/offence-classes/INVALID/
@@ -145,7 +135,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.2.1
+      - laa-fee-calculator-client/1.1.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -153,10 +143,8 @@ http_interactions:
       code: 404
       message: Not Found
     headers:
-      Server:
-      - nginx/1.15.8
       Date:
-      - Fri, 02 Aug 2019 09:17:28 GMT
+      - Mon, 01 Feb 2021 09:45:17 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -165,15 +153,14 @@ http_interactions:
       - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
-      Vary:
-      - Accept, Cookie
       Allow:
       - GET, HEAD, OPTIONS
+      Vary:
+      - Accept, Cookie
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
     body:
       encoding: UTF-8
       string: '{"detail":"Not found."}'
-    http_version: 
-  recorded_at: Fri, 02 Aug 2019 09:17:28 GMT
-recorded_with: VCR 4.0.0
+  recorded_at: Mon, 01 Feb 2021 09:45:17 GMT
+recorded_with: VCR 6.0.0

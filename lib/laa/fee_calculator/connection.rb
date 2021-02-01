@@ -10,6 +10,7 @@ module LAA
       extend Forwardable
 
       attr_reader :conn
+
       def_delegators :conn, :port, :headers, :url_prefix, :options, :ssl, :get
 
       def initialize

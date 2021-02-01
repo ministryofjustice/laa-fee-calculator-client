@@ -21,6 +21,7 @@ module LAA
       end
 
       attr_writer :configuration
+
       def configuration
         @configuration ||= Configuration.new
       end

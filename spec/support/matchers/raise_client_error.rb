@@ -7,7 +7,7 @@ RSpec::Matchers.define :raise_client_error do |error_klass = LAA::FeeCalculator:
   rescue StandardError => e
     @error_klass = e.class
     @error_message = e.message
-    e.class.eql?(error_klass) && e.message.match?(error_message)
+    e.instance_of?(error_klass) && e.message.match?(error_message)
   end
 
   def supports_block_expectations?

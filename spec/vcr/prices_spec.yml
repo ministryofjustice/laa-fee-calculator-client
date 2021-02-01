@@ -2,194 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/json
-      User-Agent:
-      - laa-fee-calculator-client/0.2.1
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - nginx/1.15.8
-      Date:
-      - Fri, 02 Aug 2019 09:17:28 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '106'
-      Connection:
-      - keep-alive
-      X-Frame-Options:
-      - SAMEORIGIN
-      Vary:
-      - Accept, Cookie
-      Allow:
-      - GET, HEAD, OPTIONS
-      Strict-Transport-Security:
-      - max-age=15724800; includeSubDomains
-    body:
-      encoding: UTF-8
-      string: '{"id":1,"start_date":"2012-04-01","end_date":"2018-03-31","type":"AGFS","description":"AGFS
-        Fee Scheme 9"}'
-    http_version: 
-  recorded_at: Fri, 02 Aug 2019 09:17:28 GMT
-- request:
-    method: get
-    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/prices/
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/json
-      User-Agent:
-      - laa-fee-calculator-client/0.2.1
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - nginx/1.15.8
-      Date:
-      - Fri, 02 Aug 2019 09:17:29 GMT
-      Content-Type:
-      - application/json
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept, Cookie
-      - Accept-Encoding
-      X-Frame-Options:
-      - SAMEORIGIN
-      Allow:
-      - GET, HEAD, OPTIONS
-      Strict-Transport-Security:
-      - max-age=15724800; includeSubDomains
-    body:
-      encoding: ASCII-8BIT
-      string: '{"count":2890,"next":"https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/prices/?page=2","previous":null,"results":[{"id":1,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"A","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"2856.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
-        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"A","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"2856.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
-        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false},{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
-        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
-        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":3,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"A","scheme":1,"unit":"DAY","fee_per_unit":"979.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[],"strict_range":false},{"id":4,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"A","scheme":1,"unit":"DAY","fee_per_unit":"979.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
-        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
-        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":5,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"A","scheme":1,"unit":"DAY","fee_per_unit":"387.00000","fixed_fee":"0.00000","limit_from":41,"limit_to":50,"modifiers":[],"strict_range":false},{"id":6,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"A","scheme":1,"unit":"DAY","fee_per_unit":"387.00000","fixed_fee":"0.00000","limit_from":41,"limit_to":50,"modifiers":[],"strict_range":false},{"id":7,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"A","scheme":1,"unit":"DAY","fee_per_unit":"414.00000","fixed_fee":"0.00000","limit_from":51,"limit_to":9999,"modifiers":[],"strict_range":false},{"id":8,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"A","scheme":1,"unit":"DAY","fee_per_unit":"414.00000","fixed_fee":"0.00000","limit_from":51,"limit_to":9999,"modifiers":[],"strict_range":false},{"id":9,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"B","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"2529.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
-        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":10,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"B","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"2529.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
-        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false},{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
-        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
-        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":11,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"B","scheme":1,"unit":"DAY","fee_per_unit":"857.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[],"strict_range":false},{"id":12,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"B","scheme":1,"unit":"DAY","fee_per_unit":"857.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
-        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
-        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":13,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"B","scheme":1,"unit":"DAY","fee_per_unit":"387.00000","fixed_fee":"0.00000","limit_from":41,"limit_to":50,"modifiers":[],"strict_range":false},{"id":14,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"B","scheme":1,"unit":"DAY","fee_per_unit":"387.00000","fixed_fee":"0.00000","limit_from":41,"limit_to":50,"modifiers":[],"strict_range":false},{"id":15,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"B","scheme":1,"unit":"DAY","fee_per_unit":"414.00000","fixed_fee":"0.00000","limit_from":51,"limit_to":9999,"modifiers":[],"strict_range":false},{"id":16,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"B","scheme":1,"unit":"DAY","fee_per_unit":"414.00000","fixed_fee":"0.00000","limit_from":51,"limit_to":9999,"modifiers":[],"strict_range":false},{"id":17,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"C","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"1968.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
-        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":18,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"C","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"1968.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
-        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false},{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
-        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
-        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":19,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"C","scheme":1,"unit":"DAY","fee_per_unit":"816.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[],"strict_range":false},{"id":20,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"C","scheme":1,"unit":"DAY","fee_per_unit":"816.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
-        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
-        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":21,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"C","scheme":1,"unit":"DAY","fee_per_unit":"387.00000","fixed_fee":"0.00000","limit_from":41,"limit_to":50,"modifiers":[],"strict_range":false},{"id":22,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"C","scheme":1,"unit":"DAY","fee_per_unit":"387.00000","fixed_fee":"0.00000","limit_from":41,"limit_to":50,"modifiers":[],"strict_range":false},{"id":23,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"C","scheme":1,"unit":"DAY","fee_per_unit":"414.00000","fixed_fee":"0.00000","limit_from":51,"limit_to":9999,"modifiers":[],"strict_range":false},{"id":24,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"C","scheme":1,"unit":"DAY","fee_per_unit":"414.00000","fixed_fee":"0.00000","limit_from":51,"limit_to":9999,"modifiers":[],"strict_range":false},{"id":25,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"D","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"2284.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
-        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":26,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"D","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"2284.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
-        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false},{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
-        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
-        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":27,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"D","scheme":1,"unit":"DAY","fee_per_unit":"816.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[],"strict_range":false},{"id":28,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"D","scheme":1,"unit":"DAY","fee_per_unit":"816.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
-        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
-        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":29,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"D","scheme":1,"unit":"DAY","fee_per_unit":"387.00000","fixed_fee":"0.00000","limit_from":41,"limit_to":50,"modifiers":[],"strict_range":false},{"id":30,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"D","scheme":1,"unit":"DAY","fee_per_unit":"387.00000","fixed_fee":"0.00000","limit_from":41,"limit_to":50,"modifiers":[],"strict_range":false},{"id":31,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"D","scheme":1,"unit":"DAY","fee_per_unit":"414.00000","fixed_fee":"0.00000","limit_from":51,"limit_to":9999,"modifiers":[],"strict_range":false},{"id":32,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"D","scheme":1,"unit":"DAY","fee_per_unit":"414.00000","fixed_fee":"0.00000","limit_from":51,"limit_to":9999,"modifiers":[],"strict_range":false},{"id":33,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"E","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"1514.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
-        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":34,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"E","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"1514.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
-        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false},{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
-        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
-        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":35,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"E","scheme":1,"unit":"DAY","fee_per_unit":"612.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[],"strict_range":false},{"id":36,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"E","scheme":1,"unit":"DAY","fee_per_unit":"612.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
-        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
-        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":37,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"E","scheme":1,"unit":"DAY","fee_per_unit":"387.00000","fixed_fee":"0.00000","limit_from":41,"limit_to":50,"modifiers":[],"strict_range":false},{"id":38,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"E","scheme":1,"unit":"DAY","fee_per_unit":"387.00000","fixed_fee":"0.00000","limit_from":41,"limit_to":50,"modifiers":[],"strict_range":false},{"id":39,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"E","scheme":1,"unit":"DAY","fee_per_unit":"414.00000","fixed_fee":"0.00000","limit_from":51,"limit_to":9999,"modifiers":[],"strict_range":false},{"id":40,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"E","scheme":1,"unit":"DAY","fee_per_unit":"414.00000","fixed_fee":"0.00000","limit_from":51,"limit_to":9999,"modifiers":[],"strict_range":false},{"id":41,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"F","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"1514.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
-        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":42,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"F","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"1514.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
-        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false},{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
-        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
-        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":43,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"F","scheme":1,"unit":"DAY","fee_per_unit":"612.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[],"strict_range":false},{"id":44,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"F","scheme":1,"unit":"DAY","fee_per_unit":"612.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
-        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
-        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":45,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"F","scheme":1,"unit":"DAY","fee_per_unit":"387.00000","fixed_fee":"0.00000","limit_from":41,"limit_to":50,"modifiers":[],"strict_range":false},{"id":46,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"F","scheme":1,"unit":"DAY","fee_per_unit":"387.00000","fixed_fee":"0.00000","limit_from":41,"limit_to":50,"modifiers":[],"strict_range":false},{"id":47,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"F","scheme":1,"unit":"DAY","fee_per_unit":"414.00000","fixed_fee":"0.00000","limit_from":51,"limit_to":9999,"modifiers":[],"strict_range":false},{"id":48,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"F","scheme":1,"unit":"DAY","fee_per_unit":"414.00000","fixed_fee":"0.00000","limit_from":51,"limit_to":9999,"modifiers":[],"strict_range":false},{"id":49,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"G","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"1514.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
-        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":50,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"G","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"1514.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
-        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false},{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
-        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
-        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":51,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"G","scheme":1,"unit":"DAY","fee_per_unit":"612.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[],"strict_range":false},{"id":52,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"G","scheme":1,"unit":"DAY","fee_per_unit":"612.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
-        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
-        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":53,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"G","scheme":1,"unit":"DAY","fee_per_unit":"387.00000","fixed_fee":"0.00000","limit_from":41,"limit_to":50,"modifiers":[],"strict_range":false},{"id":54,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"G","scheme":1,"unit":"DAY","fee_per_unit":"387.00000","fixed_fee":"0.00000","limit_from":41,"limit_to":50,"modifiers":[],"strict_range":false},{"id":55,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"G","scheme":1,"unit":"DAY","fee_per_unit":"414.00000","fixed_fee":"0.00000","limit_from":51,"limit_to":9999,"modifiers":[],"strict_range":false},{"id":56,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"G","scheme":1,"unit":"DAY","fee_per_unit":"414.00000","fixed_fee":"0.00000","limit_from":51,"limit_to":9999,"modifiers":[],"strict_range":false},{"id":57,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"H","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"1903.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
-        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":58,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"H","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"1903.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
-        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false},{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
-        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
-        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":59,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"H","scheme":1,"unit":"DAY","fee_per_unit":"816.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[],"strict_range":false},{"id":60,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"H","scheme":1,"unit":"DAY","fee_per_unit":"816.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
-        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
-        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":61,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"H","scheme":1,"unit":"DAY","fee_per_unit":"387.00000","fixed_fee":"0.00000","limit_from":41,"limit_to":50,"modifiers":[],"strict_range":false},{"id":62,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"H","scheme":1,"unit":"DAY","fee_per_unit":"387.00000","fixed_fee":"0.00000","limit_from":41,"limit_to":50,"modifiers":[],"strict_range":false},{"id":63,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"H","scheme":1,"unit":"DAY","fee_per_unit":"414.00000","fixed_fee":"0.00000","limit_from":51,"limit_to":9999,"modifiers":[],"strict_range":false},{"id":64,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"H","scheme":1,"unit":"DAY","fee_per_unit":"414.00000","fixed_fee":"0.00000","limit_from":51,"limit_to":9999,"modifiers":[],"strict_range":false},{"id":65,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"I","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"2122.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
-        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":66,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"I","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"2122.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
-        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false},{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
-        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
-        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":67,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"I","scheme":1,"unit":"DAY","fee_per_unit":"816.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[],"strict_range":false},{"id":68,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"I","scheme":1,"unit":"DAY","fee_per_unit":"816.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
-        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
-        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":69,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"I","scheme":1,"unit":"DAY","fee_per_unit":"387.00000","fixed_fee":"0.00000","limit_from":41,"limit_to":50,"modifiers":[],"strict_range":false},{"id":70,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"I","scheme":1,"unit":"DAY","fee_per_unit":"387.00000","fixed_fee":"0.00000","limit_from":41,"limit_to":50,"modifiers":[],"strict_range":false},{"id":71,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"I","scheme":1,"unit":"DAY","fee_per_unit":"414.00000","fixed_fee":"0.00000","limit_from":51,"limit_to":9999,"modifiers":[],"strict_range":false},{"id":72,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"I","scheme":1,"unit":"DAY","fee_per_unit":"414.00000","fixed_fee":"0.00000","limit_from":51,"limit_to":9999,"modifiers":[],"strict_range":false},{"id":73,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"J","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"2856.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
-        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":74,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"J","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"2856.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
-        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false},{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
-        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
-        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":75,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"J","scheme":1,"unit":"DAY","fee_per_unit":"979.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[],"strict_range":false},{"id":76,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"J","scheme":1,"unit":"DAY","fee_per_unit":"979.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
-        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
-        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":77,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"J","scheme":1,"unit":"DAY","fee_per_unit":"387.00000","fixed_fee":"0.00000","limit_from":41,"limit_to":50,"modifiers":[],"strict_range":false},{"id":78,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"J","scheme":1,"unit":"DAY","fee_per_unit":"387.00000","fixed_fee":"0.00000","limit_from":41,"limit_to":50,"modifiers":[],"strict_range":false},{"id":79,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"J","scheme":1,"unit":"DAY","fee_per_unit":"414.00000","fixed_fee":"0.00000","limit_from":51,"limit_to":9999,"modifiers":[],"strict_range":false},{"id":80,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"J","scheme":1,"unit":"DAY","fee_per_unit":"414.00000","fixed_fee":"0.00000","limit_from":51,"limit_to":9999,"modifiers":[],"strict_range":false},{"id":81,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"K","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"2856.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
-        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":82,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"K","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"2856.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
-        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false},{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
-        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
-        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":83,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"K","scheme":1,"unit":"DAY","fee_per_unit":"979.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[],"strict_range":false},{"id":84,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"K","scheme":1,"unit":"DAY","fee_per_unit":"979.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
-        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
-        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":85,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"K","scheme":1,"unit":"DAY","fee_per_unit":"387.00000","fixed_fee":"0.00000","limit_from":41,"limit_to":50,"modifiers":[],"strict_range":false},{"id":86,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"K","scheme":1,"unit":"DAY","fee_per_unit":"387.00000","fixed_fee":"0.00000","limit_from":41,"limit_to":50,"modifiers":[],"strict_range":false},{"id":87,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"K","scheme":1,"unit":"DAY","fee_per_unit":"414.00000","fixed_fee":"0.00000","limit_from":51,"limit_to":9999,"modifiers":[],"strict_range":false},{"id":88,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"K","scheme":1,"unit":"DAY","fee_per_unit":"414.00000","fixed_fee":"0.00000","limit_from":51,"limit_to":9999,"modifiers":[],"strict_range":false},{"id":89,"scenario":4,"advocate_type":"LEADJR","fee_type":34,"offence_class":"A","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"2142.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
-        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":90,"scenario":11,"advocate_type":"LEADJR","fee_type":34,"offence_class":"A","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"2142.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
-        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false},{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
-        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
-        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":91,"scenario":4,"advocate_type":"LEADJR","fee_type":34,"offence_class":"A","scheme":1,"unit":"DAY","fee_per_unit":"734.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[],"strict_range":false},{"id":92,"scenario":11,"advocate_type":"LEADJR","fee_type":34,"offence_class":"A","scheme":1,"unit":"DAY","fee_per_unit":"734.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
-        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
-        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":93,"scenario":4,"advocate_type":"LEADJR","fee_type":34,"offence_class":"A","scheme":1,"unit":"DAY","fee_per_unit":"331.00000","fixed_fee":"0.00000","limit_from":41,"limit_to":50,"modifiers":[],"strict_range":false},{"id":94,"scenario":11,"advocate_type":"LEADJR","fee_type":34,"offence_class":"A","scheme":1,"unit":"DAY","fee_per_unit":"331.00000","fixed_fee":"0.00000","limit_from":41,"limit_to":50,"modifiers":[],"strict_range":false},{"id":95,"scenario":4,"advocate_type":"LEADJR","fee_type":34,"offence_class":"A","scheme":1,"unit":"DAY","fee_per_unit":"356.00000","fixed_fee":"0.00000","limit_from":51,"limit_to":9999,"modifiers":[],"strict_range":false},{"id":96,"scenario":11,"advocate_type":"LEADJR","fee_type":34,"offence_class":"A","scheme":1,"unit":"DAY","fee_per_unit":"356.00000","fixed_fee":"0.00000","limit_from":51,"limit_to":9999,"modifiers":[],"strict_range":false},{"id":97,"scenario":4,"advocate_type":"LEADJR","fee_type":34,"offence_class":"B","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"1897.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
-        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":98,"scenario":11,"advocate_type":"LEADJR","fee_type":34,"offence_class":"B","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"1897.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
-        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
-        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false},{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
-        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
-        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":99,"scenario":4,"advocate_type":"LEADJR","fee_type":34,"offence_class":"B","scheme":1,"unit":"DAY","fee_per_unit":"643.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[],"strict_range":false},{"id":100,"scenario":11,"advocate_type":"LEADJR","fee_type":34,"offence_class":"B","scheme":1,"unit":"DAY","fee_per_unit":"643.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
-        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
-        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false}]}'
-    http_version: 
-  recorded_at: Fri, 02 Aug 2019 09:17:29 GMT
-- request:
-    method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/prices/1/
     body:
       encoding: US-ASCII
@@ -198,7 +10,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.2.1
+      - laa-fee-calculator-client/1.1.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -206,32 +18,28 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - nginx/1.15.8
       Date:
-      - Fri, 02 Aug 2019 09:17:30 GMT
+      - Mon, 01 Feb 2021 09:45:23 GMT
       Content-Type:
       - application/json
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '688'
       Connection:
       - keep-alive
-      Vary:
-      - Accept, Cookie
-      - Accept-Encoding
-      Allow:
-      - GET, HEAD, OPTIONS
       X-Frame-Options:
       - SAMEORIGIN
+      Allow:
+      - GET, HEAD, OPTIONS
+      Vary:
+      - Accept, Cookie
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: '{"id":1,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"A","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"2856.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
         of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
         of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false}'
-    http_version: 
-  recorded_at: Fri, 02 Aug 2019 09:17:30 GMT
+  recorded_at: Mon, 01 Feb 2021 09:45:23 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/prices/?scenario=5
@@ -242,7 +50,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.2.1
+      - laa-fee-calculator-client/1.1.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -250,27 +58,24 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - nginx/1.15.8
       Date:
-      - Fri, 02 Aug 2019 09:17:30 GMT
+      - Mon, 01 Feb 2021 09:45:23 GMT
       Content-Type:
       - application/json
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '41807'
       Connection:
       - keep-alive
-      Vary:
-      - Accept, Cookie
-      - Accept-Encoding
       X-Frame-Options:
       - SAMEORIGIN
       Allow:
       - GET, HEAD, OPTIONS
+      Vary:
+      - Accept, Cookie
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: '{"count":128,"next":"https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/prices/?page=2&scenario=5","previous":null,"results":[{"id":1815,"scenario":5,"advocate_type":"QC","fee_type":5,"offence_class":null,"scheme":1,"unit":"HALFDAY","fee_per_unit":"260.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":60,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
         of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":1825,"scenario":5,"advocate_type":"LEDJR","fee_type":5,"offence_class":null,"scheme":1,"unit":"HALFDAY","fee_per_unit":"130.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":60,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
         of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":1830,"scenario":5,"advocate_type":"LEADJR","fee_type":5,"offence_class":null,"scheme":1,"unit":"HALFDAY","fee_per_unit":"195.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":60,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
@@ -352,8 +157,7 @@ http_interactions:
         of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":3141,"scenario":5,"advocate_type":"LEADJR","fee_type":32,"offence_class":null,"scheme":1,"unit":"DAY","fee_per_unit":"346.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":30,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
         of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":3142,"scenario":5,"advocate_type":"JRALONE","fee_type":32,"offence_class":null,"scheme":1,"unit":"DAY","fee_per_unit":"238.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":30,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
         of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":3162,"scenario":5,"advocate_type":"QC","fee_type":33,"offence_class":null,"scheme":1,"unit":"HOUR","fee_per_unit":"74.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":240,"modifiers":[],"strict_range":false},{"id":3167,"scenario":5,"advocate_type":"LEDJR","fee_type":33,"offence_class":null,"scheme":1,"unit":"HOUR","fee_per_unit":"39.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":240,"modifiers":[],"strict_range":false},{"id":3176,"scenario":5,"advocate_type":"LEADJR","fee_type":33,"offence_class":null,"scheme":1,"unit":"HOUR","fee_per_unit":"56.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":240,"modifiers":[],"strict_range":false},{"id":3189,"scenario":5,"advocate_type":"JRALONE","fee_type":33,"offence_class":null,"scheme":1,"unit":"HOUR","fee_per_unit":"39.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":240,"modifiers":[],"strict_range":false}]}'
-    http_version: 
-  recorded_at: Fri, 02 Aug 2019 09:17:30 GMT
+  recorded_at: Mon, 01 Feb 2021 09:45:23 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/prices/?advocate_type=QC
@@ -364,7 +168,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.2.1
+      - laa-fee-calculator-client/1.1.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -372,27 +176,24 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - nginx/1.15.8
       Date:
-      - Fri, 02 Aug 2019 09:17:31 GMT
+      - Mon, 01 Feb 2021 09:45:24 GMT
       Content-Type:
       - application/json
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '54471'
       Connection:
       - keep-alive
       Vary:
       - Accept, Cookie
-      - Accept-Encoding
-      Allow:
-      - GET, HEAD, OPTIONS
       X-Frame-Options:
       - SAMEORIGIN
+      Allow:
+      - GET, HEAD, OPTIONS
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: '{"count":722,"next":"https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/prices/?advocate_type=QC&page=2","previous":null,"results":[{"id":1,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"A","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"2856.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
         of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
         of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"A","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"2856.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
@@ -530,8 +331,7 @@ http_interactions:
         months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-25.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
         months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":1,"fixed_percent":"0.00","percent_per_unit":"0.00","modifier_type":{"id":6,"name":"THIRD_CRACKED","description":"Third
         in which a trial cracked","unit":"THIRD"},"required":true,"priority":0,"strict_range":true}],"strict_range":false}]}'
-    http_version: 
-  recorded_at: Fri, 02 Aug 2019 09:17:31 GMT
+  recorded_at: Mon, 01 Feb 2021 09:45:24 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/prices/?offence_class=A
@@ -542,7 +342,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.2.1
+      - laa-fee-calculator-client/1.1.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -550,27 +350,24 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - nginx/1.15.8
       Date:
-      - Fri, 02 Aug 2019 09:17:32 GMT
+      - Mon, 01 Feb 2021 09:45:25 GMT
       Content-Type:
       - application/json
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '69265'
       Connection:
       - keep-alive
       Vary:
       - Accept, Cookie
-      - Accept-Encoding
-      X-Frame-Options:
-      - SAMEORIGIN
       Allow:
       - GET, HEAD, OPTIONS
+      X-Frame-Options:
+      - SAMEORIGIN
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: '{"count":1568,"next":"https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/prices/?offence_class=A&page=2","previous":null,"results":[{"id":1,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"A","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"2856.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
         of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
         of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"A","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"2856.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
@@ -768,8 +565,7 @@ http_interactions:
         months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-25.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
         months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":1,"fixed_percent":"0.00","percent_per_unit":"0.00","modifier_type":{"id":6,"name":"THIRD_CRACKED","description":"Third
         in which a trial cracked","unit":"THIRD"},"required":true,"priority":0,"strict_range":true}],"strict_range":false}]}'
-    http_version: 
-  recorded_at: Fri, 02 Aug 2019 09:17:33 GMT
+  recorded_at: Mon, 01 Feb 2021 09:45:25 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/prices/?fee_type_code=AGFS_FEE
@@ -780,7 +576,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.2.1
+      - laa-fee-calculator-client/1.1.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -788,19 +584,16 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - nginx/1.15.8
       Date:
-      - Fri, 02 Aug 2019 09:17:33 GMT
+      - Mon, 01 Feb 2021 09:45:25 GMT
       Content-Type:
       - application/json
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '46867'
       Connection:
       - keep-alive
       Vary:
       - Accept, Cookie
-      - Accept-Encoding
       X-Frame-Options:
       - SAMEORIGIN
       Allow:
@@ -808,7 +601,7 @@ http_interactions:
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: '{"count":1454,"next":"https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/prices/?fee_type_code=AGFS_FEE&page=2","previous":null,"results":[{"id":1,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"A","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"2856.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
         of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
         of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"A","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"2856.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
@@ -914,8 +707,7 @@ http_interactions:
         months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":99,"scenario":4,"advocate_type":"LEADJR","fee_type":34,"offence_class":"B","scheme":1,"unit":"DAY","fee_per_unit":"643.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[],"strict_range":false},{"id":100,"scenario":11,"advocate_type":"LEADJR","fee_type":34,"offence_class":"B","scheme":1,"unit":"DAY","fee_per_unit":"643.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
         months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
         months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false}]}'
-    http_version: 
-  recorded_at: Fri, 02 Aug 2019 09:17:33 GMT
+  recorded_at: Mon, 01 Feb 2021 09:45:25 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/prices/-1/
@@ -926,7 +718,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.2.1
+      - laa-fee-calculator-client/1.1.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -934,10 +726,8 @@ http_interactions:
       code: 404
       message: Not Found
     headers:
-      Server:
-      - nginx/1.15.8
       Date:
-      - Fri, 02 Aug 2019 09:17:34 GMT
+      - Mon, 01 Feb 2021 09:45:25 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -946,17 +736,158 @@ http_interactions:
       - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
-      Vary:
-      - Accept, Cookie
       Allow:
       - GET, HEAD, OPTIONS
+      Vary:
+      - Accept, Cookie
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
     body:
       encoding: UTF-8
       string: '{"detail":"Not found."}'
-    http_version: 
-  recorded_at: Fri, 02 Aug 2019 09:17:34 GMT
+  recorded_at: Mon, 01 Feb 2021 09:45:25 GMT
+- request:
+    method: get
+    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/prices/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 01 Feb 2021 09:45:26 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '46844'
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      Allow:
+      - GET, HEAD, OPTIONS
+      Vary:
+      - Accept, Cookie
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: '{"count":2890,"next":"https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/prices/?page=2","previous":null,"results":[{"id":1,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"A","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"2856.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
+        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
+        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"A","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"2856.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
+        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
+        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false},{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":3,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"A","scheme":1,"unit":"DAY","fee_per_unit":"979.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[],"strict_range":false},{"id":4,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"A","scheme":1,"unit":"DAY","fee_per_unit":"979.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":5,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"A","scheme":1,"unit":"DAY","fee_per_unit":"387.00000","fixed_fee":"0.00000","limit_from":41,"limit_to":50,"modifiers":[],"strict_range":false},{"id":6,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"A","scheme":1,"unit":"DAY","fee_per_unit":"387.00000","fixed_fee":"0.00000","limit_from":41,"limit_to":50,"modifiers":[],"strict_range":false},{"id":7,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"A","scheme":1,"unit":"DAY","fee_per_unit":"414.00000","fixed_fee":"0.00000","limit_from":51,"limit_to":9999,"modifiers":[],"strict_range":false},{"id":8,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"A","scheme":1,"unit":"DAY","fee_per_unit":"414.00000","fixed_fee":"0.00000","limit_from":51,"limit_to":9999,"modifiers":[],"strict_range":false},{"id":9,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"B","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"2529.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
+        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
+        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":10,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"B","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"2529.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
+        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
+        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false},{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":11,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"B","scheme":1,"unit":"DAY","fee_per_unit":"857.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[],"strict_range":false},{"id":12,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"B","scheme":1,"unit":"DAY","fee_per_unit":"857.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":13,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"B","scheme":1,"unit":"DAY","fee_per_unit":"387.00000","fixed_fee":"0.00000","limit_from":41,"limit_to":50,"modifiers":[],"strict_range":false},{"id":14,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"B","scheme":1,"unit":"DAY","fee_per_unit":"387.00000","fixed_fee":"0.00000","limit_from":41,"limit_to":50,"modifiers":[],"strict_range":false},{"id":15,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"B","scheme":1,"unit":"DAY","fee_per_unit":"414.00000","fixed_fee":"0.00000","limit_from":51,"limit_to":9999,"modifiers":[],"strict_range":false},{"id":16,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"B","scheme":1,"unit":"DAY","fee_per_unit":"414.00000","fixed_fee":"0.00000","limit_from":51,"limit_to":9999,"modifiers":[],"strict_range":false},{"id":17,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"C","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"1968.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
+        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
+        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":18,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"C","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"1968.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
+        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
+        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false},{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":19,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"C","scheme":1,"unit":"DAY","fee_per_unit":"816.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[],"strict_range":false},{"id":20,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"C","scheme":1,"unit":"DAY","fee_per_unit":"816.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":21,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"C","scheme":1,"unit":"DAY","fee_per_unit":"387.00000","fixed_fee":"0.00000","limit_from":41,"limit_to":50,"modifiers":[],"strict_range":false},{"id":22,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"C","scheme":1,"unit":"DAY","fee_per_unit":"387.00000","fixed_fee":"0.00000","limit_from":41,"limit_to":50,"modifiers":[],"strict_range":false},{"id":23,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"C","scheme":1,"unit":"DAY","fee_per_unit":"414.00000","fixed_fee":"0.00000","limit_from":51,"limit_to":9999,"modifiers":[],"strict_range":false},{"id":24,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"C","scheme":1,"unit":"DAY","fee_per_unit":"414.00000","fixed_fee":"0.00000","limit_from":51,"limit_to":9999,"modifiers":[],"strict_range":false},{"id":25,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"D","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"2284.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
+        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
+        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":26,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"D","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"2284.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
+        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
+        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false},{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":27,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"D","scheme":1,"unit":"DAY","fee_per_unit":"816.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[],"strict_range":false},{"id":28,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"D","scheme":1,"unit":"DAY","fee_per_unit":"816.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":29,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"D","scheme":1,"unit":"DAY","fee_per_unit":"387.00000","fixed_fee":"0.00000","limit_from":41,"limit_to":50,"modifiers":[],"strict_range":false},{"id":30,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"D","scheme":1,"unit":"DAY","fee_per_unit":"387.00000","fixed_fee":"0.00000","limit_from":41,"limit_to":50,"modifiers":[],"strict_range":false},{"id":31,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"D","scheme":1,"unit":"DAY","fee_per_unit":"414.00000","fixed_fee":"0.00000","limit_from":51,"limit_to":9999,"modifiers":[],"strict_range":false},{"id":32,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"D","scheme":1,"unit":"DAY","fee_per_unit":"414.00000","fixed_fee":"0.00000","limit_from":51,"limit_to":9999,"modifiers":[],"strict_range":false},{"id":33,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"E","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"1514.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
+        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
+        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":34,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"E","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"1514.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
+        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
+        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false},{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":35,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"E","scheme":1,"unit":"DAY","fee_per_unit":"612.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[],"strict_range":false},{"id":36,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"E","scheme":1,"unit":"DAY","fee_per_unit":"612.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":37,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"E","scheme":1,"unit":"DAY","fee_per_unit":"387.00000","fixed_fee":"0.00000","limit_from":41,"limit_to":50,"modifiers":[],"strict_range":false},{"id":38,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"E","scheme":1,"unit":"DAY","fee_per_unit":"387.00000","fixed_fee":"0.00000","limit_from":41,"limit_to":50,"modifiers":[],"strict_range":false},{"id":39,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"E","scheme":1,"unit":"DAY","fee_per_unit":"414.00000","fixed_fee":"0.00000","limit_from":51,"limit_to":9999,"modifiers":[],"strict_range":false},{"id":40,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"E","scheme":1,"unit":"DAY","fee_per_unit":"414.00000","fixed_fee":"0.00000","limit_from":51,"limit_to":9999,"modifiers":[],"strict_range":false},{"id":41,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"F","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"1514.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
+        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
+        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":42,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"F","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"1514.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
+        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
+        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false},{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":43,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"F","scheme":1,"unit":"DAY","fee_per_unit":"612.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[],"strict_range":false},{"id":44,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"F","scheme":1,"unit":"DAY","fee_per_unit":"612.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":45,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"F","scheme":1,"unit":"DAY","fee_per_unit":"387.00000","fixed_fee":"0.00000","limit_from":41,"limit_to":50,"modifiers":[],"strict_range":false},{"id":46,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"F","scheme":1,"unit":"DAY","fee_per_unit":"387.00000","fixed_fee":"0.00000","limit_from":41,"limit_to":50,"modifiers":[],"strict_range":false},{"id":47,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"F","scheme":1,"unit":"DAY","fee_per_unit":"414.00000","fixed_fee":"0.00000","limit_from":51,"limit_to":9999,"modifiers":[],"strict_range":false},{"id":48,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"F","scheme":1,"unit":"DAY","fee_per_unit":"414.00000","fixed_fee":"0.00000","limit_from":51,"limit_to":9999,"modifiers":[],"strict_range":false},{"id":49,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"G","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"1514.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
+        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
+        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":50,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"G","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"1514.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
+        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
+        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false},{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":51,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"G","scheme":1,"unit":"DAY","fee_per_unit":"612.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[],"strict_range":false},{"id":52,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"G","scheme":1,"unit":"DAY","fee_per_unit":"612.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":53,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"G","scheme":1,"unit":"DAY","fee_per_unit":"387.00000","fixed_fee":"0.00000","limit_from":41,"limit_to":50,"modifiers":[],"strict_range":false},{"id":54,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"G","scheme":1,"unit":"DAY","fee_per_unit":"387.00000","fixed_fee":"0.00000","limit_from":41,"limit_to":50,"modifiers":[],"strict_range":false},{"id":55,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"G","scheme":1,"unit":"DAY","fee_per_unit":"414.00000","fixed_fee":"0.00000","limit_from":51,"limit_to":9999,"modifiers":[],"strict_range":false},{"id":56,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"G","scheme":1,"unit":"DAY","fee_per_unit":"414.00000","fixed_fee":"0.00000","limit_from":51,"limit_to":9999,"modifiers":[],"strict_range":false},{"id":57,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"H","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"1903.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
+        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
+        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":58,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"H","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"1903.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
+        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
+        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false},{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":59,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"H","scheme":1,"unit":"DAY","fee_per_unit":"816.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[],"strict_range":false},{"id":60,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"H","scheme":1,"unit":"DAY","fee_per_unit":"816.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":61,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"H","scheme":1,"unit":"DAY","fee_per_unit":"387.00000","fixed_fee":"0.00000","limit_from":41,"limit_to":50,"modifiers":[],"strict_range":false},{"id":62,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"H","scheme":1,"unit":"DAY","fee_per_unit":"387.00000","fixed_fee":"0.00000","limit_from":41,"limit_to":50,"modifiers":[],"strict_range":false},{"id":63,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"H","scheme":1,"unit":"DAY","fee_per_unit":"414.00000","fixed_fee":"0.00000","limit_from":51,"limit_to":9999,"modifiers":[],"strict_range":false},{"id":64,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"H","scheme":1,"unit":"DAY","fee_per_unit":"414.00000","fixed_fee":"0.00000","limit_from":51,"limit_to":9999,"modifiers":[],"strict_range":false},{"id":65,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"I","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"2122.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
+        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
+        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":66,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"I","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"2122.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
+        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
+        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false},{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":67,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"I","scheme":1,"unit":"DAY","fee_per_unit":"816.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[],"strict_range":false},{"id":68,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"I","scheme":1,"unit":"DAY","fee_per_unit":"816.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":69,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"I","scheme":1,"unit":"DAY","fee_per_unit":"387.00000","fixed_fee":"0.00000","limit_from":41,"limit_to":50,"modifiers":[],"strict_range":false},{"id":70,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"I","scheme":1,"unit":"DAY","fee_per_unit":"387.00000","fixed_fee":"0.00000","limit_from":41,"limit_to":50,"modifiers":[],"strict_range":false},{"id":71,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"I","scheme":1,"unit":"DAY","fee_per_unit":"414.00000","fixed_fee":"0.00000","limit_from":51,"limit_to":9999,"modifiers":[],"strict_range":false},{"id":72,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"I","scheme":1,"unit":"DAY","fee_per_unit":"414.00000","fixed_fee":"0.00000","limit_from":51,"limit_to":9999,"modifiers":[],"strict_range":false},{"id":73,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"J","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"2856.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
+        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
+        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":74,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"J","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"2856.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
+        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
+        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false},{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":75,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"J","scheme":1,"unit":"DAY","fee_per_unit":"979.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[],"strict_range":false},{"id":76,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"J","scheme":1,"unit":"DAY","fee_per_unit":"979.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":77,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"J","scheme":1,"unit":"DAY","fee_per_unit":"387.00000","fixed_fee":"0.00000","limit_from":41,"limit_to":50,"modifiers":[],"strict_range":false},{"id":78,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"J","scheme":1,"unit":"DAY","fee_per_unit":"387.00000","fixed_fee":"0.00000","limit_from":41,"limit_to":50,"modifiers":[],"strict_range":false},{"id":79,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"J","scheme":1,"unit":"DAY","fee_per_unit":"414.00000","fixed_fee":"0.00000","limit_from":51,"limit_to":9999,"modifiers":[],"strict_range":false},{"id":80,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"J","scheme":1,"unit":"DAY","fee_per_unit":"414.00000","fixed_fee":"0.00000","limit_from":51,"limit_to":9999,"modifiers":[],"strict_range":false},{"id":81,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"K","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"2856.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
+        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
+        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":82,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"K","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"2856.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
+        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
+        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false},{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":83,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"K","scheme":1,"unit":"DAY","fee_per_unit":"979.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[],"strict_range":false},{"id":84,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"K","scheme":1,"unit":"DAY","fee_per_unit":"979.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":85,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"K","scheme":1,"unit":"DAY","fee_per_unit":"387.00000","fixed_fee":"0.00000","limit_from":41,"limit_to":50,"modifiers":[],"strict_range":false},{"id":86,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"K","scheme":1,"unit":"DAY","fee_per_unit":"387.00000","fixed_fee":"0.00000","limit_from":41,"limit_to":50,"modifiers":[],"strict_range":false},{"id":87,"scenario":4,"advocate_type":"QC","fee_type":34,"offence_class":"K","scheme":1,"unit":"DAY","fee_per_unit":"414.00000","fixed_fee":"0.00000","limit_from":51,"limit_to":9999,"modifiers":[],"strict_range":false},{"id":88,"scenario":11,"advocate_type":"QC","fee_type":34,"offence_class":"K","scheme":1,"unit":"DAY","fee_per_unit":"414.00000","fixed_fee":"0.00000","limit_from":51,"limit_to":9999,"modifiers":[],"strict_range":false},{"id":89,"scenario":4,"advocate_type":"LEADJR","fee_type":34,"offence_class":"A","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"2142.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
+        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
+        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":90,"scenario":11,"advocate_type":"LEADJR","fee_type":34,"offence_class":"A","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"2142.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
+        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
+        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false},{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":91,"scenario":4,"advocate_type":"LEADJR","fee_type":34,"offence_class":"A","scheme":1,"unit":"DAY","fee_per_unit":"734.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[],"strict_range":false},{"id":92,"scenario":11,"advocate_type":"LEADJR","fee_type":34,"offence_class":"A","scheme":1,"unit":"DAY","fee_per_unit":"734.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":93,"scenario":4,"advocate_type":"LEADJR","fee_type":34,"offence_class":"A","scheme":1,"unit":"DAY","fee_per_unit":"331.00000","fixed_fee":"0.00000","limit_from":41,"limit_to":50,"modifiers":[],"strict_range":false},{"id":94,"scenario":11,"advocate_type":"LEADJR","fee_type":34,"offence_class":"A","scheme":1,"unit":"DAY","fee_per_unit":"331.00000","fixed_fee":"0.00000","limit_from":41,"limit_to":50,"modifiers":[],"strict_range":false},{"id":95,"scenario":4,"advocate_type":"LEADJR","fee_type":34,"offence_class":"A","scheme":1,"unit":"DAY","fee_per_unit":"356.00000","fixed_fee":"0.00000","limit_from":51,"limit_to":9999,"modifiers":[],"strict_range":false},{"id":96,"scenario":11,"advocate_type":"LEADJR","fee_type":34,"offence_class":"A","scheme":1,"unit":"DAY","fee_per_unit":"356.00000","fixed_fee":"0.00000","limit_from":51,"limit_to":9999,"modifiers":[],"strict_range":false},{"id":97,"scenario":4,"advocate_type":"LEADJR","fee_type":34,"offence_class":"B","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"1897.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
+        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
+        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":98,"scenario":11,"advocate_type":"LEADJR","fee_type":34,"offence_class":"B","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"1897.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
+        of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
+        of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false},{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":99,"scenario":4,"advocate_type":"LEADJR","fee_type":34,"offence_class":"B","scheme":1,"unit":"DAY","fee_per_unit":"643.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[],"strict_range":false},{"id":100,"scenario":11,"advocate_type":"LEADJR","fee_type":34,"offence_class":"B","scheme":1,"unit":"DAY","fee_per_unit":"643.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
+        months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false}]}'
+  recorded_at: Mon, 01 Feb 2021 09:45:26 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/prices/?page=2
@@ -967,7 +898,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.2.1
+      - laa-fee-calculator-client/1.1.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -975,27 +906,24 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - nginx/1.15.8
       Date:
-      - Fri, 02 Aug 2019 09:17:34 GMT
+      - Mon, 01 Feb 2021 09:45:26 GMT
       Content-Type:
       - application/json
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '45445'
       Connection:
       - keep-alive
-      Vary:
-      - Accept, Cookie
-      - Accept-Encoding
       X-Frame-Options:
       - SAMEORIGIN
       Allow:
       - GET, HEAD, OPTIONS
+      Vary:
+      - Accept, Cookie
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: '{"count":2890,"next":"https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/prices/?page=3","previous":"https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/prices/","results":[{"id":101,"scenario":4,"advocate_type":"LEADJR","fee_type":34,"offence_class":"B","scheme":1,"unit":"DAY","fee_per_unit":"331.00000","fixed_fee":"0.00000","limit_from":41,"limit_to":50,"modifiers":[],"strict_range":false},{"id":102,"scenario":11,"advocate_type":"LEADJR","fee_type":34,"offence_class":"B","scheme":1,"unit":"DAY","fee_per_unit":"331.00000","fixed_fee":"0.00000","limit_from":41,"limit_to":50,"modifiers":[],"strict_range":false},{"id":103,"scenario":4,"advocate_type":"LEADJR","fee_type":34,"offence_class":"B","scheme":1,"unit":"DAY","fee_per_unit":"356.00000","fixed_fee":"0.00000","limit_from":51,"limit_to":9999,"modifiers":[],"strict_range":false},{"id":104,"scenario":11,"advocate_type":"LEADJR","fee_type":34,"offence_class":"B","scheme":1,"unit":"DAY","fee_per_unit":"356.00000","fixed_fee":"0.00000","limit_from":51,"limit_to":9999,"modifiers":[],"strict_range":false},{"id":105,"scenario":4,"advocate_type":"LEADJR","fee_type":34,"offence_class":"C","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"1476.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
         of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
         of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":106,"scenario":11,"advocate_type":"LEADJR","fee_type":34,"offence_class":"C","scheme":1,"unit":"DAY","fee_per_unit":"0.00000","fixed_fee":"1476.00000","limit_from":1,"limit_to":2,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
@@ -1093,8 +1021,46 @@ http_interactions:
         months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":195,"scenario":4,"advocate_type":"LEDJR","fee_type":34,"offence_class":"C","scheme":1,"unit":"DAY","fee_per_unit":"408.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[],"strict_range":false},{"id":196,"scenario":11,"advocate_type":"LEDJR","fee_type":34,"offence_class":"C","scheme":1,"unit":"DAY","fee_per_unit":"408.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
         months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
         months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":197,"scenario":4,"advocate_type":"LEDJR","fee_type":34,"offence_class":"C","scheme":1,"unit":"DAY","fee_per_unit":"221.00000","fixed_fee":"0.00000","limit_from":41,"limit_to":50,"modifiers":[],"strict_range":false},{"id":198,"scenario":11,"advocate_type":"LEDJR","fee_type":34,"offence_class":"C","scheme":1,"unit":"DAY","fee_per_unit":"221.00000","fixed_fee":"0.00000","limit_from":41,"limit_to":50,"modifiers":[],"strict_range":false},{"id":199,"scenario":4,"advocate_type":"LEDJR","fee_type":34,"offence_class":"C","scheme":1,"unit":"DAY","fee_per_unit":"237.00000","fixed_fee":"0.00000","limit_from":51,"limit_to":9999,"modifiers":[],"strict_range":false},{"id":200,"scenario":11,"advocate_type":"LEDJR","fee_type":34,"offence_class":"C","scheme":1,"unit":"DAY","fee_per_unit":"237.00000","fixed_fee":"0.00000","limit_from":51,"limit_to":9999,"modifiers":[],"strict_range":false}]}'
-    http_version: 
-  recorded_at: Fri, 02 Aug 2019 09:17:34 GMT
+  recorded_at: Mon, 01 Feb 2021 09:45:26 GMT
+- request:
+    method: get
+    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 01 Feb 2021 09:45:26 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '106'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET, HEAD, OPTIONS
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: '{"id":1,"start_date":"2012-04-01","end_date":"2018-03-31","type":"AGFS","description":"AGFS
+        Fee Scheme 9"}'
+  recorded_at: Mon, 01 Feb 2021 09:45:26 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/prices/?fee_type_code=AGFS_APPEAL_CON&scenario=5
@@ -1105,7 +1071,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/0.2.1
+      - laa-fee-calculator-client/1.1.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -1113,27 +1079,24 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - nginx/1.15.8
       Date:
-      - Fri, 02 Aug 2019 09:17:35 GMT
+      - Mon, 01 Feb 2021 09:45:26 GMT
       Content-Type:
       - application/json
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '2831'
       Connection:
       - keep-alive
-      Vary:
-      - Accept, Cookie
-      - Accept-Encoding
-      Allow:
-      - GET, HEAD, OPTIONS
       X-Frame-Options:
       - SAMEORIGIN
+      Allow:
+      - GET, HEAD, OPTIONS
+      Vary:
+      - Accept, Cookie
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: '{"count":4,"next":null,"previous":null,"results":[{"id":2030,"scenario":5,"advocate_type":"QC","fee_type":8,"offence_class":null,"scheme":1,"unit":"DAY","fee_per_unit":"260.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":30,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
         of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
         of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2036,"scenario":5,"advocate_type":"LEDJR","fee_type":8,"offence_class":null,"scheme":1,"unit":"DAY","fee_per_unit":"130.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":30,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
@@ -1143,6 +1106,5 @@ http_interactions:
         of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false},{"id":2064,"scenario":5,"advocate_type":"JRALONE","fee_type":8,"offence_class":null,"scheme":1,"unit":"DAY","fee_per_unit":"130.00000","fixed_fee":"0.00000","limit_from":1,"limit_to":30,"modifiers":[{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":1,"name":"NUMBER_OF_CASES","description":"Number
         of cases","unit":"CASE"},"required":false,"priority":0,"strict_range":false},{"limit_from":2,"limit_to":null,"fixed_percent":"0.00","percent_per_unit":"20.00","modifier_type":{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
         of defendants","unit":"DEFENDANT"},"required":false,"priority":0,"strict_range":false}],"strict_range":false}]}'
-    http_version: 
-  recorded_at: Fri, 02 Aug 2019 09:17:35 GMT
-recorded_with: VCR 4.0.0
+  recorded_at: Mon, 01 Feb 2021 09:45:26 GMT
+recorded_with: VCR 6.0.0
