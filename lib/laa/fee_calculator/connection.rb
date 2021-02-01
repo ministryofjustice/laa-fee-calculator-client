@@ -16,7 +16,7 @@ module LAA
       def initialize
         @conn = Faraday.new(url: LAA::FeeCalculator.configuration.host, headers: default_headers) do |conn|
           conn.use LAA::FeeCalculator::RaiseError
-          conn.use Faraday::Adapter::NetHttp
+          conn.adapter :net_http
         end
       end
 
