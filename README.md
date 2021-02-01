@@ -12,7 +12,7 @@ endpoints, providing a simple interface for querying data, in particular, the pr
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'laa-fee-calculator-client', '~> 1.1.0'
+gem 'laa-fee-calculator-client', '~> 1.2.0'
 ```
 
 And then execute:

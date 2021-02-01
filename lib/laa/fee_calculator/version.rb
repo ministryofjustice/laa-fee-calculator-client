@@ -2,8 +2,8 @@
 
 module LAA
   module FeeCalculator
-    VERSION = "1.1.0"
-    VERSION_RELEASED = "2019-12-20"
+    VERSION = "1.2.0"
+    VERSION_RELEASED = "2021-02-01"
     USER_AGENT = "laa-fee-calculator-client/#{VERSION}"
   end
 end
