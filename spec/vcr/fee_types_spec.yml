@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/fee-types/4/
+    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/
     body:
       encoding: US-ASCII
       string: ''
@@ -10,7 +10,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.1.0
+      - laa-fee-calculator-client/1.2.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -19,25 +19,138 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 01 Feb 2021 09:45:12 GMT
+      - Wed, 03 Feb 2021 16:19:52 GMT
       Content-Type:
       - application/json
       Content-Length:
       - '106'
       Connection:
       - keep-alive
-      Vary:
-      - Accept, Cookie
+      X-Frame-Options:
+      - SAMEORIGIN
       Allow:
       - GET, HEAD, OPTIONS
+      Vary:
+      - Accept, Cookie
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: '{"id":1,"start_date":"2012-04-01","end_date":"2018-03-31","type":"AGFS","description":"AGFS
+        Fee Scheme 9"}'
+  recorded_at: Wed, 03 Feb 2021 16:19:52 GMT
+- request:
+    method: get
+    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/fee-types/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/1.2.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 03 Feb 2021 16:19:52 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '4205'
+      Connection:
+      - keep-alive
+      Allow:
+      - GET, HEAD, OPTIONS
+      Vary:
+      - Accept, Cookie
       X-Frame-Options:
       - SAMEORIGIN
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
     body:
       encoding: UTF-8
+      string: '{"count":36,"next":null,"previous":null,"results":[{"id":4,"name":"Plea
+        and case management hearing","code":"AGFS_PLEA","is_basic":false,"aggregation":"sum"},{"id":5,"name":"Abuse
+        of process hearing (half day)","code":"AGFS_ABS_PRC_HF","is_basic":false,"aggregation":"sum"},{"id":6,"name":"Abuse
+        of process hearing (full day)","code":"AGFS_ABS_PRC_WL","is_basic":false,"aggregation":"sum"},{"id":7,"name":"Adjourned
+        appeals","code":"AGFS_ADJOURNED","is_basic":false,"aggregation":"sum"},{"id":8,"name":"Appeals
+        to crown court against conviction","code":"AGFS_APPEAL_CON","is_basic":false,"aggregation":"sum"},{"id":9,"name":"Appeals
+        to the crown court against sentence","code":"AGFS_APPEAL_SEN","is_basic":false,"aggregation":"sum"},{"id":10,"name":"Application
+        to dismiss a charge day 2 onwards (half day)","code":"AGFS_DMS_DY2_HF","is_basic":false,"aggregation":"sum"},{"id":11,"name":"Application
+        to dismiss a charge day 2 onwards (full day)","code":"AGFS_DMS_DY2_WL","is_basic":false,"aggregation":"sum"},{"id":12,"name":"Committal
+        for sentence hearing","code":"AGFS_COMMITTAL","is_basic":false,"aggregation":"sum"},{"id":13,"name":"Conferences
+        and views (hours)","code":"AGFS_CONFERENCE","is_basic":false,"aggregation":"sum"},{"id":14,"name":"Contempt
+        hearings","code":"AGFS_CONTEMPT","is_basic":false,"aggregation":"sum"},{"id":15,"name":"Contempt
+        hearings (apportioned)","code":"AGFS_CNTMPT_APP","is_basic":false,"aggregation":"sum"},{"id":16,"name":"Deferred
+        sentence hearings","code":"AGFS_DEF_SEN_HR","is_basic":false,"aggregation":"sum"},{"id":17,"name":"Hearings
+        relating to admissibility of evidence (full day)","code":"AGFS_ADM_EVD_WL","is_basic":false,"aggregation":"sum"},{"id":18,"name":"Hearings
+        relating to disclosure (half day)","code":"AGFS_DISC_HALF","is_basic":false,"aggregation":"sum"},{"id":19,"name":"Hearings
+        relating to disclosure (full day)","code":"AGFS_DISC_FULL","is_basic":false,"aggregation":"sum"},{"id":20,"name":"Noting
+        brief","code":"AGFS_NOTING_BRF","is_basic":false,"aggregation":"sum"},{"id":21,"name":"Paper
+        plea and case management","code":"AGFS_PAPER_PLEA","is_basic":false,"aggregation":"sum"},{"id":22,"name":"Proceeds
+        relating to breach of an order of the crown court","code":"AGFS_ORDER_BRCH","is_basic":false,"aggregation":"sum"},{"id":23,"name":"Public
+        interest immunity hearing (half day)","code":"AGFS_PI_IMMN_HF","is_basic":false,"aggregation":"sum"},{"id":24,"name":"Public
+        interest immunity hearing (full day)","code":"AGFS_PI_IMMN_WL","is_basic":false,"aggregation":"sum"},{"id":25,"name":"Research
+        of very unusual or novel factual issue","code":"AGFS_NOVELISSUE","is_basic":false,"aggregation":"sum"},{"id":26,"name":"Research
+        of very unusual of novel point of law","code":"AGFS_NOVEL_LAW","is_basic":false,"aggregation":"sum"},{"id":27,"name":"Standard
+        appearance fee","code":"AGFS_STD_APPRNC","is_basic":false,"aggregation":"sum"},{"id":28,"name":"Sentence
+        hearing","code":"AGFS_SENTENCE","is_basic":false,"aggregation":"sum"},{"id":29,"name":"Special
+        preperation (hourly)","code":"AGFS_SPCL_PREP","is_basic":false,"aggregation":"sum"},{"id":30,"name":"Trial
+        not proceed","code":"AGFS_NOT_PRCD","is_basic":false,"aggregation":"sum"},{"id":31,"name":"Unsuccesful
+        application to vacate a guilty plea (half day)","code":"AGFS_UN_VAC_HF","is_basic":false,"aggregation":"sum"},{"id":32,"name":"Unsuccesful
+        application to vacate a guilty plea (full day)","code":"AGFS_UN_VAC_WL","is_basic":false,"aggregation":"sum"},{"id":33,"name":"Written
+        / oral advice","code":"AGFS_WRTN_ORAL","is_basic":false,"aggregation":"sum"},{"id":34,"name":"Advocate
+        fee","code":"AGFS_FEE","is_basic":true,"aggregation":"sum"},{"id":36,"name":"Staged
+        payments","code":"AGFS_STAGED","is_basic":false,"aggregation":"sum"},{"id":83,"name":"Confiscation
+        (half day)","code":"AGFS_CONFISC_HF","is_basic":false,"aggregation":"sum"},{"id":85,"name":"Confiscation
+        (full day)","code":"AGFS_CONFISC_WL","is_basic":false,"aggregation":"sum"},{"id":90,"name":"Hearings
+        relating to admissibility of evidence (half day)","code":"AGFS_ADM_EVD_HF","is_basic":false,"aggregation":"sum"},{"id":91,"name":"Wasted
+        preparation fee","code":"AGFS_WSTD_PREP","is_basic":false,"aggregation":"sum"}]}'
+  recorded_at: Wed, 03 Feb 2021 16:19:52 GMT
+- request:
+    method: get
+    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/fee-types/4/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/1.2.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 03 Feb 2021 16:19:52 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '106'
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      Allow:
+      - GET, HEAD, OPTIONS
+      Vary:
+      - Accept, Cookie
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+    body:
+      encoding: UTF-8
       string: '{"id":4,"name":"Plea and case management hearing","code":"AGFS_PLEA","is_basic":false,"aggregation":"sum"}'
-  recorded_at: Mon, 01 Feb 2021 09:45:12 GMT
+  recorded_at: Wed, 03 Feb 2021 16:19:52 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/fee-types/?is_basic=true
@@ -48,7 +161,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.1.0
+      - laa-fee-calculator-client/1.2.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -57,7 +170,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 01 Feb 2021 09:45:12 GMT
+      - Wed, 03 Feb 2021 16:19:52 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -76,7 +189,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"count":1,"next":null,"previous":null,"results":[{"id":34,"name":"Advocate
         fee","code":"AGFS_FEE","is_basic":true,"aggregation":"sum"}]}'
-  recorded_at: Mon, 01 Feb 2021 09:45:12 GMT
+  recorded_at: Wed, 03 Feb 2021 16:19:52 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/fee-types/?scenario=1
@@ -87,7 +200,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.1.0
+      - laa-fee-calculator-client/1.2.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -96,7 +209,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 01 Feb 2021 09:45:12 GMT
+      - Wed, 03 Feb 2021 16:19:52 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -144,7 +257,7 @@ http_interactions:
         (full day)","code":"AGFS_CONFISC_WL","is_basic":false,"aggregation":"sum"},{"id":90,"name":"Hearings
         relating to admissibility of evidence (half day)","code":"AGFS_ADM_EVD_HF","is_basic":false,"aggregation":"sum"},{"id":91,"name":"Wasted
         preparation fee","code":"AGFS_WSTD_PREP","is_basic":false,"aggregation":"sum"}]}'
-  recorded_at: Mon, 01 Feb 2021 09:45:12 GMT
+  recorded_at: Wed, 03 Feb 2021 16:19:52 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/fee-types/?advocate_type=QC
@@ -155,7 +268,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.1.0
+      - laa-fee-calculator-client/1.2.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -164,19 +277,19 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 01 Feb 2021 09:45:12 GMT
+      - Wed, 03 Feb 2021 16:19:52 GMT
       Content-Type:
       - application/json
       Content-Length:
       - '4205'
       Connection:
       - keep-alive
+      Allow:
+      - GET, HEAD, OPTIONS
       Vary:
       - Accept, Cookie
       X-Frame-Options:
       - SAMEORIGIN
-      Allow:
-      - GET, HEAD, OPTIONS
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
     body:
@@ -218,7 +331,7 @@ http_interactions:
         (full day)","code":"AGFS_CONFISC_WL","is_basic":false,"aggregation":"sum"},{"id":90,"name":"Hearings
         relating to admissibility of evidence (half day)","code":"AGFS_ADM_EVD_HF","is_basic":false,"aggregation":"sum"},{"id":91,"name":"Wasted
         preparation fee","code":"AGFS_WSTD_PREP","is_basic":false,"aggregation":"sum"}]}'
-  recorded_at: Mon, 01 Feb 2021 09:45:12 GMT
+  recorded_at: Wed, 03 Feb 2021 16:19:52 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/fee-types/?offence_class=A
@@ -229,7 +342,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.1.0
+      - laa-fee-calculator-client/1.2.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -238,17 +351,17 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 01 Feb 2021 09:45:12 GMT
+      - Wed, 03 Feb 2021 16:19:52 GMT
       Content-Type:
       - application/json
       Content-Length:
       - '4205'
       Connection:
       - keep-alive
-      Vary:
-      - Accept, Cookie
       Allow:
       - GET, HEAD, OPTIONS
+      Vary:
+      - Accept, Cookie
       X-Frame-Options:
       - SAMEORIGIN
       Strict-Transport-Security:
@@ -292,7 +405,7 @@ http_interactions:
         (full day)","code":"AGFS_CONFISC_WL","is_basic":false,"aggregation":"sum"},{"id":90,"name":"Hearings
         relating to admissibility of evidence (half day)","code":"AGFS_ADM_EVD_HF","is_basic":false,"aggregation":"sum"},{"id":91,"name":"Wasted
         preparation fee","code":"AGFS_WSTD_PREP","is_basic":false,"aggregation":"sum"}]}'
-  recorded_at: Mon, 01 Feb 2021 09:45:12 GMT
+  recorded_at: Wed, 03 Feb 2021 16:19:52 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/fee-types/?fee_type_code=AGFS_FEE
@@ -303,7 +416,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.1.0
+      - laa-fee-calculator-client/1.2.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -312,26 +425,26 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 01 Feb 2021 09:45:12 GMT
+      - Wed, 03 Feb 2021 16:19:53 GMT
       Content-Type:
       - application/json
       Content-Length:
       - '137'
       Connection:
       - keep-alive
-      Vary:
-      - Accept, Cookie
       X-Frame-Options:
       - SAMEORIGIN
       Allow:
       - GET, HEAD, OPTIONS
+      Vary:
+      - Accept, Cookie
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
     body:
       encoding: UTF-8
       string: '{"count":1,"next":null,"previous":null,"results":[{"id":34,"name":"Advocate
         fee","code":"AGFS_FEE","is_basic":true,"aggregation":"sum"}]}'
-  recorded_at: Mon, 01 Feb 2021 09:45:12 GMT
+  recorded_at: Wed, 03 Feb 2021 16:19:53 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/fee-types/1001/
@@ -342,7 +455,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.1.0
+      - laa-fee-calculator-client/1.2.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -351,7 +464,7 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Mon, 01 Feb 2021 09:45:12 GMT
+      - Wed, 03 Feb 2021 16:19:53 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -360,16 +473,16 @@ http_interactions:
       - keep-alive
       Vary:
       - Accept, Cookie
-      Allow:
-      - GET, HEAD, OPTIONS
       X-Frame-Options:
       - SAMEORIGIN
+      Allow:
+      - GET, HEAD, OPTIONS
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
     body:
       encoding: UTF-8
       string: '{"detail":"Not found."}'
-  recorded_at: Mon, 01 Feb 2021 09:45:12 GMT
+  recorded_at: Wed, 03 Feb 2021 16:19:53 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/fee-types/?is_basic=true&scenario=8
@@ -380,7 +493,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.1.0
+      - laa-fee-calculator-client/1.2.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -389,138 +502,25 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 01 Feb 2021 09:45:13 GMT
+      - Wed, 03 Feb 2021 16:19:53 GMT
       Content-Type:
       - application/json
       Content-Length:
       - '52'
       Connection:
       - keep-alive
-      Vary:
-      - Accept, Cookie
-      Allow:
-      - GET, HEAD, OPTIONS
       X-Frame-Options:
       - SAMEORIGIN
+      Allow:
+      - GET, HEAD, OPTIONS
+      Vary:
+      - Accept, Cookie
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
     body:
       encoding: UTF-8
       string: '{"count":0,"next":null,"previous":null,"results":[]}'
-  recorded_at: Mon, 01 Feb 2021 09:45:13 GMT
-- request:
-    method: get
-    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/fee-types/
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/json
-      User-Agent:
-      - laa-fee-calculator-client/1.1.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Mon, 01 Feb 2021 09:45:13 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '4205'
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept, Cookie
-      X-Frame-Options:
-      - SAMEORIGIN
-      Allow:
-      - GET, HEAD, OPTIONS
-      Strict-Transport-Security:
-      - max-age=15724800; includeSubDomains
-    body:
-      encoding: UTF-8
-      string: '{"count":36,"next":null,"previous":null,"results":[{"id":4,"name":"Plea
-        and case management hearing","code":"AGFS_PLEA","is_basic":false,"aggregation":"sum"},{"id":5,"name":"Abuse
-        of process hearing (half day)","code":"AGFS_ABS_PRC_HF","is_basic":false,"aggregation":"sum"},{"id":6,"name":"Abuse
-        of process hearing (full day)","code":"AGFS_ABS_PRC_WL","is_basic":false,"aggregation":"sum"},{"id":7,"name":"Adjourned
-        appeals","code":"AGFS_ADJOURNED","is_basic":false,"aggregation":"sum"},{"id":8,"name":"Appeals
-        to crown court against conviction","code":"AGFS_APPEAL_CON","is_basic":false,"aggregation":"sum"},{"id":9,"name":"Appeals
-        to the crown court against sentence","code":"AGFS_APPEAL_SEN","is_basic":false,"aggregation":"sum"},{"id":10,"name":"Application
-        to dismiss a charge day 2 onwards (half day)","code":"AGFS_DMS_DY2_HF","is_basic":false,"aggregation":"sum"},{"id":11,"name":"Application
-        to dismiss a charge day 2 onwards (full day)","code":"AGFS_DMS_DY2_WL","is_basic":false,"aggregation":"sum"},{"id":12,"name":"Committal
-        for sentence hearing","code":"AGFS_COMMITTAL","is_basic":false,"aggregation":"sum"},{"id":13,"name":"Conferences
-        and views (hours)","code":"AGFS_CONFERENCE","is_basic":false,"aggregation":"sum"},{"id":14,"name":"Contempt
-        hearings","code":"AGFS_CONTEMPT","is_basic":false,"aggregation":"sum"},{"id":15,"name":"Contempt
-        hearings (apportioned)","code":"AGFS_CNTMPT_APP","is_basic":false,"aggregation":"sum"},{"id":16,"name":"Deferred
-        sentence hearings","code":"AGFS_DEF_SEN_HR","is_basic":false,"aggregation":"sum"},{"id":17,"name":"Hearings
-        relating to admissibility of evidence (full day)","code":"AGFS_ADM_EVD_WL","is_basic":false,"aggregation":"sum"},{"id":18,"name":"Hearings
-        relating to disclosure (half day)","code":"AGFS_DISC_HALF","is_basic":false,"aggregation":"sum"},{"id":19,"name":"Hearings
-        relating to disclosure (full day)","code":"AGFS_DISC_FULL","is_basic":false,"aggregation":"sum"},{"id":20,"name":"Noting
-        brief","code":"AGFS_NOTING_BRF","is_basic":false,"aggregation":"sum"},{"id":21,"name":"Paper
-        plea and case management","code":"AGFS_PAPER_PLEA","is_basic":false,"aggregation":"sum"},{"id":22,"name":"Proceeds
-        relating to breach of an order of the crown court","code":"AGFS_ORDER_BRCH","is_basic":false,"aggregation":"sum"},{"id":23,"name":"Public
-        interest immunity hearing (half day)","code":"AGFS_PI_IMMN_HF","is_basic":false,"aggregation":"sum"},{"id":24,"name":"Public
-        interest immunity hearing (full day)","code":"AGFS_PI_IMMN_WL","is_basic":false,"aggregation":"sum"},{"id":25,"name":"Research
-        of very unusual or novel factual issue","code":"AGFS_NOVELISSUE","is_basic":false,"aggregation":"sum"},{"id":26,"name":"Research
-        of very unusual of novel point of law","code":"AGFS_NOVEL_LAW","is_basic":false,"aggregation":"sum"},{"id":27,"name":"Standard
-        appearance fee","code":"AGFS_STD_APPRNC","is_basic":false,"aggregation":"sum"},{"id":28,"name":"Sentence
-        hearing","code":"AGFS_SENTENCE","is_basic":false,"aggregation":"sum"},{"id":29,"name":"Special
-        preperation (hourly)","code":"AGFS_SPCL_PREP","is_basic":false,"aggregation":"sum"},{"id":30,"name":"Trial
-        not proceed","code":"AGFS_NOT_PRCD","is_basic":false,"aggregation":"sum"},{"id":31,"name":"Unsuccesful
-        application to vacate a guilty plea (half day)","code":"AGFS_UN_VAC_HF","is_basic":false,"aggregation":"sum"},{"id":32,"name":"Unsuccesful
-        application to vacate a guilty plea (full day)","code":"AGFS_UN_VAC_WL","is_basic":false,"aggregation":"sum"},{"id":33,"name":"Written
-        / oral advice","code":"AGFS_WRTN_ORAL","is_basic":false,"aggregation":"sum"},{"id":34,"name":"Advocate
-        fee","code":"AGFS_FEE","is_basic":true,"aggregation":"sum"},{"id":36,"name":"Staged
-        payments","code":"AGFS_STAGED","is_basic":false,"aggregation":"sum"},{"id":83,"name":"Confiscation
-        (half day)","code":"AGFS_CONFISC_HF","is_basic":false,"aggregation":"sum"},{"id":85,"name":"Confiscation
-        (full day)","code":"AGFS_CONFISC_WL","is_basic":false,"aggregation":"sum"},{"id":90,"name":"Hearings
-        relating to admissibility of evidence (half day)","code":"AGFS_ADM_EVD_HF","is_basic":false,"aggregation":"sum"},{"id":91,"name":"Wasted
-        preparation fee","code":"AGFS_WSTD_PREP","is_basic":false,"aggregation":"sum"}]}'
-  recorded_at: Mon, 01 Feb 2021 09:45:13 GMT
-- request:
-    method: get
-    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/json
-      User-Agent:
-      - laa-fee-calculator-client/1.1.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Mon, 01 Feb 2021 09:45:13 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '106'
-      Connection:
-      - keep-alive
-      X-Frame-Options:
-      - SAMEORIGIN
-      Allow:
-      - GET, HEAD, OPTIONS
-      Vary:
-      - Accept, Cookie
-      Strict-Transport-Security:
-      - max-age=15724800; includeSubDomains
-    body:
-      encoding: UTF-8
-      string: '{"id":1,"start_date":"2012-04-01","end_date":"2018-03-31","type":"AGFS","description":"AGFS
-        Fee Scheme 9"}'
-  recorded_at: Mon, 01 Feb 2021 09:45:13 GMT
+  recorded_at: Wed, 03 Feb 2021 16:19:53 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/fee-types/?scenario=8
@@ -531,7 +531,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.1.0
+      - laa-fee-calculator-client/1.2.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -540,19 +540,19 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 01 Feb 2021 09:45:13 GMT
+      - Wed, 03 Feb 2021 16:19:53 GMT
       Content-Type:
       - application/json
       Content-Length:
       - '3412'
       Connection:
       - keep-alive
+      Vary:
+      - Accept, Cookie
       X-Frame-Options:
       - SAMEORIGIN
       Allow:
       - GET, HEAD, OPTIONS
-      Vary:
-      - Accept, Cookie
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
     body:
@@ -587,5 +587,5 @@ http_interactions:
         payments","code":"AGFS_STAGED","is_basic":false,"aggregation":"sum"},{"id":90,"name":"Hearings
         relating to admissibility of evidence (half day)","code":"AGFS_ADM_EVD_HF","is_basic":false,"aggregation":"sum"},{"id":91,"name":"Wasted
         preparation fee","code":"AGFS_WSTD_PREP","is_basic":false,"aggregation":"sum"}]}'
-  recorded_at: Mon, 01 Feb 2021 09:45:13 GMT
+  recorded_at: Wed, 03 Feb 2021 16:19:53 GMT
 recorded_with: VCR 6.0.0
