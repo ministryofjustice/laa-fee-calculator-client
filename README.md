@@ -162,7 +162,7 @@ end
 
 ```
 
-Note: 
+Note:
 
 ## Contributing
 
@@ -172,7 +172,7 @@ Bug reports and pull requests are welcome on GitHub at [ministryofjustice/laa-fe
 
 1. Make required changes, run specs (rerecord vcr cassettes if necessary)
 
-2. Run `bin/ruby_version_test` to test against ruby versions (2.6+ supported at present)
+2. Run `bin/ruby_version_test` to test against ruby versions (2.6.6+ supported at present)
 
 3. Update the VERSION in `lib/laa/fee_calculator/version` using [semantic versioning](https://guides.rubygems.org/patterns/#semantic-versioning).
 
