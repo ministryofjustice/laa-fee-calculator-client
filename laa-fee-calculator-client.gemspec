@@ -7,8 +7,8 @@ require 'laa/fee_calculator/version'
 Gem::Specification.new do |spec|
   spec.name          = 'laa-fee-calculator-client'
   spec.version       = LAA::FeeCalculator::VERSION
-  spec.authors       = ['Joel Sugarman', 'Ministry of Justice']
-  spec.email         = ['joel.sugarman@digital.justice.gov.uk', 'tools@digital.justice.gov.uk']
+  spec.authors       = ['Katharine Ahern', 'Ministry of Justice']
+  spec.email         = ['katharine.ahern@digital.justice.gov.uk', 'joel.sugarman@digital.justice.gov.uk', 'tools@digital.justice.gov.uk']
   spec.date          = LAA::FeeCalculator::VERSION_RELEASED
   spec.summary       = 'Ruby client for the Legal Aid Agency fee calculator API'
   spec.description   = "Ruby client for the Ministry of Justices LAA fee calculator API. A simple interface for transparent calling of the API endpoints to query data and return calculated fee amounts."
