@@ -14,6 +14,16 @@ Add latest change log entries at top using template:
   -
 
 ```
+## Version 1.2.0
+
+### Modified
+  - updated Faraday dependency
+  - updated development dependencies - rubocop, bundler
+### Added
+  - support/testing for ruby 2.7.0
+### Removed
+  - removed support for ruby 2.5
+  - removed testing against ruby versions less than 2.6
 
 ## Version 1.1.0
 

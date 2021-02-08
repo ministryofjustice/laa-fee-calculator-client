@@ -24,13 +24,13 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   # see bin/ruby_version_test
-  spec.required_ruby_version = '>= 2.5.0'
+  spec.required_ruby_version = '>= 2.6.0'
 
   spec.add_runtime_dependency 'addressable', '~> 2.3', '>= 2.3.7'
-  spec.add_runtime_dependency 'faraday', '>= 0.9.2', '< 0.18.0'
+  spec.add_runtime_dependency 'faraday', '>= 0.9.2', '< 1.4.0'
 
   spec.add_development_dependency 'awesome_print'
-  spec.add_development_dependency 'bundler', '~> 2.1.2'
+  spec.add_development_dependency 'bundler', '~> 2.2.8'
   spec.add_development_dependency 'pry-byebug'
   spec.add_development_dependency 'rake', '~> 13.0'
   spec.add_development_dependency 'rb-readline'
