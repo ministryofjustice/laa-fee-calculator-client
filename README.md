@@ -182,7 +182,7 @@ Bug reports and pull requests are welcome on GitHub at [ministryofjustice/laa-fe
 
 6. PR the change, code-review, merge.
 
-7. Pull master and run rake task below to publish
+7. Pull master and run rake task below to publish. Note, you will need a [rubygems](https://rubygems.org/) account with gem owner privileges and have configured your `~/.gem/credentials` in order for this task to complete successfully.
 
 ```bash
 $ rake release
@@ -195,7 +195,7 @@ $ git push -u origin <branch>
 $ git tag -a v<VERSION> -m "Version <VERSION>"
 $ git push origin v<VERSION>
 $ gem build laa-fee-calculator-client.gemspec
-$ gem push laa-fee-calculator-client-<VERSION>.gemspec
+$ gem push laa-fee-calculator-client-<VERSION>.gem
 ```
 *`<VERSION>` is the value of `LAA::FeeCalculator::VERSION`
 
