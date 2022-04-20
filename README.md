@@ -1,5 +1,5 @@
-![RSpec](https://github.com/ministryofjustice/laa-fee-calculator-client/actions/workflows/rspec/badge.svg)
-![Rubocop](https://github.com/ministryofjustice/laa-fee-calculator-client/actions/workflows/rubocop/badge.svg)
+![RSpec](https://github.com/ministryofjustice/laa-fee-calculator-client/actions/workflows/rspec.yml/badge.svg)
+![Rubocop](https://github.com/ministryofjustice/laa-fee-calculator-client/actions/workflows/rubocop.yml/badge.svg)
 [![Gem Version](https://badge.fury.io/rb/laa-fee-calculator-client.svg)](https://badge.fury.io/rb/laa-fee-calculator-client)
 ![](https://ruby-gem-downloads-badge.herokuapp.com/laa-fee-calculator-client?type=total)
 
