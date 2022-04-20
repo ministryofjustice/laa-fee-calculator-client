@@ -10,10 +10,18 @@ jobs:
   tests:
     name: Run RSpec tests
     runs-on: ubuntu-latest
+    continue-on-error: ${{ matrix.accepted-failure }}
     strategy:
       matrix:
         ruby-version: ['2.6', '2.7']
-        # ruby-version: ['2.6', '2.7', '3.0', '3.1', 'head']
+        accepted-failure: [false]
+        include:
+          - ruby-version: '3.0'
+            accepted-failure: true
+          - ruby-version: '3.1'
+            accepted-failure: true
+          - ruby-version: 'head'
+            accepted-failure: true
     steps:
       - uses: actions/checkout@v2
       - name: Set up Ruby ${{ matrix.ruby-version }}
