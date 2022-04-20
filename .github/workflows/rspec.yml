@@ -31,4 +31,4 @@ jobs:
       - name: Bundle
         run: bundle install
       - name: RSpec
-        run: bundle exec rspec
+        run: bundle exec rspec || ${{ matrix.accepted-failure }}
