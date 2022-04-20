@@ -2,17 +2,64 @@
 
 set -e
 
-rubies=("ruby-2.6.0" "ruby-2.6.1" "ruby-2.6.2" "ruby-2.6.3" "ruby-2.6.4" "ruby-2.6.5" "ruby-2.6.6" "ruby-2.7.0" "ruby-2.7.1" "ruby-2.7.2")
-for i in "${rubies[@]}"
+RUBIES="2.7 3.0 3.1"
+
+if [ -e Gemfile.lock ]
+then
+  echo Moving Gemfile.lock to Gemfile.lock.tmp
+  mv Gemfile.lock Gemfile.lock.tmp
+fi
+
+if (which rbenv)
+then
+  echo "Using rbenv"
+  eval "$(rbenv init - bash)"
+  get_version() {
+    rbenv install --list 2> /dev/null | grep -E "^$1"
+  }
+  install_ruby() {
+    rbenv install --skip-existing $1
+  }
+  run_tests_with() {
+    rbenv shell $1
+    bundle install
+    bundle exec rspec spec
+    rbenv shell --unset
+  }
+elif (which rvm)
+then
+  echo "Using rvm"
+  get_version() {
+    echo $1
+  }
+  install_ruby() {
+    rvm install $1
+  }
+  run_tests_with() {
+    rvm $1 exec bundle install
+    rvm $1 exec bundle exec rspec spec
+  }
+else
+  echo "No Ruby version manager found"
+  exit 1
+fi
+
+for r in $RUBIES
 do
   echo "====================================================="
-  echo "$i: Start Test"
+  echo "$r: Start Test"
   echo "====================================================="
-  if [[ $(rvm list | grep $i) ]]; then echo "$i already installed!"; else rvm install $i; fi
-  rvm $i exec gem install bundler
-  rvm $i exec bundle install
-  rvm $i exec bundle exec rspec spec
+  VERSION=`get_version $r`
+  install_ruby $VERSION
+  run_tests_with $VERSION
+  rm Gemfile.lock
   echo "====================================================="
-  echo "$i: End Test"
+  echo "$r: End Test"
   echo "====================================================="
 done
+
+if [ -e Gemfile.lock.tmp ]
+then
+  echo Moving Gemfile.lock.tmp to Gemfile.lock
+  mv Gemfile.lock.tmp Gemfile.lock
+fi
