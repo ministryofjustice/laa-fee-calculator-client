@@ -2,7 +2,6 @@
 
 require "laa/fee_calculator"
 require "bundler/setup"
-require 'pry-byebug'
 require 'awesome_print'
 require 'webmock/rspec'
 require 'vcr'
