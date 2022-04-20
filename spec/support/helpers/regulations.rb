@@ -17,7 +17,6 @@ module Helpers
       return hash unless options
 
       hash.select do |row|
-        # binding.pry unless row[:offence_class].eql?('A')
         options.map { |attr, val| row[attr].eql?(val) }.all?
       end
     end

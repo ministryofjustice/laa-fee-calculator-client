@@ -32,7 +32,7 @@ RSpec.describe LAA::FeeCalculator::FeeScheme, :vcr do
 
   describe '#calculate' do
     subject(:calculate) do
-      fee_scheme.calculate(options)
+      fee_scheme.calculate(**options)
     end
 
     let(:options) do
@@ -50,7 +50,7 @@ RSpec.describe LAA::FeeCalculator::FeeScheme, :vcr do
     end
 
     it 'yields options to block' do
-      expect { |block| fee_scheme.calculate(options, &block) }.to yield_with_args(instance_of(Hash))
+      expect { |block| fee_scheme.calculate(**options, &block) }.to yield_with_args(instance_of(Hash))
     end
   end
 end

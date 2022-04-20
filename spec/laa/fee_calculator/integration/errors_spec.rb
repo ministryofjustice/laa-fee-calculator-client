@@ -78,13 +78,13 @@ RSpec.describe LAA::FeeCalculator, :vcr do
       end
 
       subject(:calculate) do
-        fee_scheme.calculate(options)
+        fee_scheme.calculate(**options)
       end
 
       context 'when not supplied with required params' do
         subject(:calculate) do
           fee_scheme.calculate(
-            options.reject { |k, _v| k.eql?(:fee_type_code) }
+            **options.reject { |k, _v| k.eql?(:fee_type_code) }
           )
         end
 
@@ -171,13 +171,12 @@ RSpec.describe LAA::FeeCalculator, :vcr do
       context 'when supplied with unneeded or invalid params' do
         subject(:calculate) do
           fee_scheme.calculate(
-            options.merge(
-              fixed: 2,
-              defendant: 2,
-              halfday: 2,
-              not_a_real_param: 'rubbish',
-              hour: 2
-            )
+            **options,
+            fixed: 2,
+            defendant: 2,
+            halfday: 2,
+            not_a_real_param: 'rubbish',
+            hour: 2
           )
         end
 
