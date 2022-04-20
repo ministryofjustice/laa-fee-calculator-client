@@ -2,45 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/json
-      User-Agent:
-      - laa-fee-calculator-client/1.2.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Wed, 03 Feb 2021 16:19:54 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '106'
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept, Cookie
-      X-Frame-Options:
-      - SAMEORIGIN
-      Allow:
-      - GET, HEAD, OPTIONS
-      Strict-Transport-Security:
-      - max-age=15724800; includeSubDomains
-    body:
-      encoding: UTF-8
-      string: '{"id":1,"start_date":"2012-04-01","end_date":"2018-03-31","type":"AGFS","description":"AGFS
-        Fee Scheme 9"}'
-  recorded_at: Wed, 03 Feb 2021 16:19:54 GMT
-- request:
-    method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/offence-classes/
     body:
       encoding: US-ASCII
@@ -58,17 +19,17 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 03 Feb 2021 16:19:54 GMT
+      - Wed, 20 Apr 2022 11:55:10 GMT
       Content-Type:
       - application/json
       Content-Length:
       - '929'
       Connection:
       - keep-alive
+      Vary:
+      - Accept, Origin, Cookie
       Allow:
       - GET, HEAD, OPTIONS
-      Vary:
-      - Accept, Cookie
       X-Frame-Options:
       - SAMEORIGIN
       Strict-Transport-Security:
@@ -86,7 +47,7 @@ http_interactions:
         justice and similar offences"},{"id":"J","name":"J","description":"Serious
         sexual offences"},{"id":"K","name":"K","description":"Other offences of dishonesty
         (high value)"}]}'
-  recorded_at: Wed, 03 Feb 2021 16:19:54 GMT
+  recorded_at: Wed, 20 Apr 2022 11:55:10 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/offence-classes/A/
@@ -106,17 +67,17 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 03 Feb 2021 16:19:54 GMT
+      - Wed, 20 Apr 2022 11:55:11 GMT
       Content-Type:
       - application/json
       Content-Length:
       - '73'
       Connection:
       - keep-alive
+      Vary:
+      - Accept, Origin, Cookie
       Allow:
       - GET, HEAD, OPTIONS
-      Vary:
-      - Accept, Cookie
       X-Frame-Options:
       - SAMEORIGIN
       Strict-Transport-Security:
@@ -124,7 +85,46 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"id":"A","name":"A","description":"Homicide and related grave offences"}'
-  recorded_at: Wed, 03 Feb 2021 16:19:54 GMT
+  recorded_at: Wed, 20 Apr 2022 11:55:11 GMT
+- request:
+    method: get
+    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/1.2.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 20 Apr 2022 11:55:11 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '106'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept, Origin, Cookie
+      Allow:
+      - GET, HEAD, OPTIONS
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: '{"id":1,"start_date":"2012-04-01","end_date":"2018-03-31","type":"AGFS","description":"AGFS
+        Fee Scheme 9"}'
+  recorded_at: Wed, 20 Apr 2022 11:55:11 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/offence-classes/INVALID/
@@ -144,7 +144,7 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Wed, 03 Feb 2021 16:19:54 GMT
+      - Wed, 20 Apr 2022 11:55:11 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -152,15 +152,15 @@ http_interactions:
       Connection:
       - keep-alive
       Vary:
-      - Accept, Cookie
-      X-Frame-Options:
-      - SAMEORIGIN
+      - Accept, Origin, Cookie
       Allow:
       - GET, HEAD, OPTIONS
+      X-Frame-Options:
+      - SAMEORIGIN
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
     body:
       encoding: UTF-8
       string: '{"detail":"Not found."}'
-  recorded_at: Wed, 03 Feb 2021 16:19:54 GMT
+  recorded_at: Wed, 20 Apr 2022 11:55:11 GMT
 recorded_with: VCR 6.0.0

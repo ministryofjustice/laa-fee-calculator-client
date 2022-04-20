@@ -19,23 +19,23 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 03 Feb 2021 16:19:16 GMT
+      - Wed, 20 Apr 2022 11:54:05 GMT
       Content-Type:
       - application/json
       Content-Length:
       - '16'
       Connection:
       - keep-alive
-      X-Frame-Options:
-      - SAMEORIGIN
+      Vary:
+      - Accept, Origin, Cookie
       Allow:
       - GET
-      Vary:
-      - Accept, Cookie
+      X-Frame-Options:
+      - SAMEORIGIN
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
     body:
       encoding: UTF-8
       string: '{"amount":130.0}'
-  recorded_at: Wed, 03 Feb 2021 16:19:16 GMT
+  recorded_at: Wed, 20 Apr 2022 11:54:05 GMT
 recorded_with: VCR 6.0.0
