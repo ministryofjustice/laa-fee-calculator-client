@@ -14,6 +14,17 @@ Add latest change log entries at top using template:
   -
 
 ```
+## Version 1.3.0
+
+### Modified
+  - update Faraday dependency
+
+### Added
+  - support for Ruby 3.0 and 3.1
+
+### Removed
+  - removed support for Ruby 2.6
+
 ## Version 1.2.0
 
 ### Modified
