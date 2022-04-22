@@ -17,10 +17,8 @@ RSpec.describe LAA::FeeCalculator, :vcr do
       ]
     end
 
-    it 'returns array of OpenStruct objects' do
-      expect(modifier_types).to be_an Array
-      expect(modifier_types).to include(instance_of(OpenStruct))
-    end
+    it { is_expected.to be_an Array }
+    it { is_expected.to include(instance_of(OpenStruct)) }
 
     it 'returns all modifier_types for scheme' do
       expect(modifier_types.map(&:name)).to match_array(names)

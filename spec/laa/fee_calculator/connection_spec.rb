@@ -62,9 +62,7 @@ RSpec.describe LAA::FeeCalculator::Connection do
   describe '#ping', :vcr do
     subject(:response) { described_class.instance.ping }
 
-    it 'responds with JSON', skip: 'not yet implmented in API - responds with 501' do
-      expect(response).to be_success
-      expect(JSON.parse(response.body)).not raise_error
-    end
+    it { is_expected.to be_success }
+    it { expect { JSON.parse(response.body) }.not_to raise_error }
   end
 end

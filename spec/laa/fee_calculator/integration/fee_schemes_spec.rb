@@ -8,10 +8,8 @@ RSpec.describe LAA::FeeCalculator, :vcr do
 
     let(:fee_scheme_class) { described_class::FeeScheme }
 
-    it 'returns array of FeeScheme objects' do
-      expect(fee_schemes).to be_an Array
-      expect(fee_schemes).to include(instance_of(fee_scheme_class))
-    end
+    it { is_expected.to be_an Array }
+    it { is_expected.to include(instance_of(fee_scheme_class)) }
 
     describe 'object' do
       subject { fee_schemes.first }

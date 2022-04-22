@@ -6,10 +6,8 @@ RSpec.describe LAA::FeeCalculator, :vcr do
   context 'advocate types' do
     subject(:advocate_types) { client.fee_schemes(1).advocate_types }
 
-    it 'returns array of OpenStruct objects' do
-      expect(advocate_types).to be_an Array
-      expect(advocate_types).to include(instance_of(OpenStruct))
-    end
+    it { is_expected.to be_an Array }
+    it { is_expected.to include(instance_of(OpenStruct)) }
 
     describe 'object' do
       subject { advocate_types.first }

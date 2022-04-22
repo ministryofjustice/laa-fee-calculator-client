@@ -54,6 +54,8 @@ RSpec.describe LAA::FeeCalculator do
   end
 
   describe '.reset' do
+    subject(:reset) { described_class.reset }
+
     let(:host) { 'https://mycustom-laa-fee-calculator-api-v2/api/v2' }
 
     before do
@@ -63,15 +65,17 @@ RSpec.describe LAA::FeeCalculator do
     end
 
     it 'resets the configured host' do
-      expect(described_class.configuration.host).to eql host
-      described_class.reset
-      expect(described_class.configuration.host).to eql described_class::Configuration::LAA_FEE_CALCULATOR_API_V1
+      expect { reset }
+        .to change { described_class.configuration.host }
+        .from(host)
+        .to(described_class::Configuration::LAA_FEE_CALCULATOR_API_V1)
     end
 
     it 'resets the connection host' do
-      expect(described_class::Connection.instance.host).to eql host
-      described_class.reset
-      expect(described_class::Connection.instance.host).to eql described_class::Configuration::LAA_FEE_CALCULATOR_API_V1
+      expect { reset }
+        .to change { described_class::Connection.instance.host }
+        .from(host)
+        .to(described_class::Configuration::LAA_FEE_CALCULATOR_API_V1)
     end
   end
 end
