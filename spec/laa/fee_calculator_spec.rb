@@ -2,14 +2,14 @@
 
 RSpec.describe LAA::FeeCalculator do
   it "has a version number" do
-    expect(described_class::VERSION).not_to be nil
+    expect(described_class::VERSION).not_to be_nil
   end
 
   describe ".client" do
     subject { described_class.client }
 
     it 'returns a client object' do
-      is_expected.to be_a described_class::Client
+      expect(subject).to be_a described_class::Client
     end
   end
 
@@ -17,11 +17,11 @@ RSpec.describe LAA::FeeCalculator do
     subject(:configuration) { described_class.configuration }
 
     it 'returns configuration object' do
-      is_expected.to be_a described_class::Configuration
+      expect(subject).to be_a described_class::Configuration
     end
 
     it 'memoized' do
-      is_expected.to be_equal(described_class.configuration)
+      expect(subject).to be_equal(described_class.configuration)
     end
   end
 

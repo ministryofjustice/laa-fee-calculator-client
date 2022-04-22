@@ -5,7 +5,7 @@ RSpec.describe LAA::FeeCalculator::Connection do
 
   describe 'singleton' do
     it '.instance' do
-      is_expected.to eql described_class.instance
+      expect(subject).to eql described_class.instance
     end
 
     it '.new raises error' do
@@ -25,16 +25,17 @@ RSpec.describe LAA::FeeCalculator::Connection do
 
     context 'with defaults' do
       it 'returns a default host' do
-        is_expected.to_not be_nil
+        expect(subject).not_to be_nil
       end
 
       it 'returns a uri string' do
-        expect { URI.parse(host) }.to_not raise_error
+        expect { URI.parse(host) }.not_to raise_error
       end
     end
 
     context 'with host configured' do
       subject { described_class.instance.host }
+
       let(:host) { 'https://mycustom-laa-fee-calculator/api/v2' }
 
       before do
@@ -44,13 +45,14 @@ RSpec.describe LAA::FeeCalculator::Connection do
       end
 
       it 'returns configured host' do
-        is_expected.to eql host
+        expect(subject).to eql host
       end
     end
   end
 
   describe '#get' do
     subject(:get) { described_class.instance.get(uri) }
+
     let(:uri) { '/' }
 
     it 'delegated to adapter connection' do

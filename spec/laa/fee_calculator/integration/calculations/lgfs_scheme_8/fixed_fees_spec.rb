@@ -29,15 +29,16 @@ RSpec.describe LAA::FeeCalculator, :vcr do
           let(:fixed_amount) { 349.47 }
 
           it 'returns calculated value' do
-            is_expected.to eql fixed_amount
+            expect(subject).to eql fixed_amount
           end
 
           context 'units' do
             [1, 10, 100].each do |quantity|
               context "for quantity of #{quantity}" do
                 let(:quantity) { quantity }
+
                 it 'returns fixed amount' do
-                  is_expected.to eql fixed_amount
+                  expect(subject).to eql fixed_amount
                 end
               end
             end
@@ -48,8 +49,9 @@ RSpec.describe LAA::FeeCalculator, :vcr do
               [1, 10].each do |number_of_defendants|
                 context "#{number_of_defendants} defendants" do
                   let(:number_of_defendants) { number_of_defendants }
+
                   it 'returns fixed amount' do
-                    is_expected.to eql fixed_amount
+                    expect(subject).to eql fixed_amount
                   end
                 end
               end
@@ -59,8 +61,9 @@ RSpec.describe LAA::FeeCalculator, :vcr do
               [1, 10].each do |number_of_cases|
                 context "#{number_of_cases} cases" do
                   let(:number_of_cases) { number_of_cases }
+
                   it 'returns fixed amount' do
-                    is_expected.to eql fixed_amount
+                    expect(subject).to eql fixed_amount
                   end
                 end
               end

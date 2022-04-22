@@ -10,6 +10,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
 
     describe 'object' do
       subject { scenarios.first }
+
       it { is_expected.to respond_to(:id) }
       it { is_expected.to respond_to(:name) }
     end

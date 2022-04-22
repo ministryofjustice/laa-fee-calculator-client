@@ -177,13 +177,11 @@ Bug reports and pull requests are welcome on GitHub at [ministryofjustice/laa-fe
 
 3. Update the VERSION in `lib/laa/fee_calculator/version` using [semantic versioning](https://guides.rubygems.org/patterns/#semantic-versioning).
 
-4. Update the VERSION_RELEASED in `lib/laa/fee_calculator/version` to the date you intend to publish/release the version.
+4. Update the `CHANGELOG.md` - format/documentation standards specified at top of file.
 
-5. Update the `CHANGELOG.md` - format/documentation standards specified at top of file.
+5. PR the change, code-review, merge.
 
-6. PR the change, code-review, merge.
-
-7. Pull master and run rake task below to publish. Note, you will need a [rubygems](https://rubygems.org/) account with gem owner privileges and have configured your `~/.gem/credentials` in order for this task to complete successfully.
+6. Pull master and run rake task below to publish. Note, you will need a [rubygems](https://rubygems.org/) account with gem owner privileges and have configured your `~/.gem/credentials` in order for this task to complete successfully.
 
 ```bash
 $ rake release

@@ -57,6 +57,8 @@ RSpec.describe LAA::FeeCalculator, :vcr do
     end
 
     context 'calculate' do
+      subject(:calculate) { fee_scheme.calculate(**options) }
+
       let(:fee_scheme) { client.fee_schemes(type: 'AGFS', case_date: '2018-01-01') }
       let(:scenario) { 5 } # Appeal against convicition
       let(:advocate_type) { 'JRALONE' }
@@ -75,10 +77,6 @@ RSpec.describe LAA::FeeCalculator, :vcr do
           number_of_cases: number_of_cases,
           number_of_defendants: number_of_defendants
         }
-      end
-
-      subject(:calculate) do
-        fee_scheme.calculate(**options)
       end
 
       context 'when not supplied with required params' do
@@ -119,8 +117,8 @@ RSpec.describe LAA::FeeCalculator, :vcr do
           let(:offence_class) { nil }
 
           it 'does not raise error' do
-            expect { calculate }.to_not raise_client_error
-            is_expected.to be_kind_of(Float)
+            expect { calculate }.not_to raise_client_error
+            expect(subject).to be_kind_of(Float)
           end
         end
 
@@ -128,8 +126,8 @@ RSpec.describe LAA::FeeCalculator, :vcr do
           let(:advocate_type) { nil }
 
           it 'does not raise error' do
-            expect { calculate }.to_not raise_client_error
-            is_expected.to be_kind_of(Float)
+            expect { calculate }.not_to raise_client_error
+            expect(subject).to be_kind_of(Float)
           end
         end
       end
@@ -185,7 +183,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
         end
 
         it 'returns calculated amount' do
-          is_expected.to be > 0
+          expect(subject).to be > 0
         end
       end
     end

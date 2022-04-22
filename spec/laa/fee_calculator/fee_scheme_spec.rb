@@ -2,6 +2,7 @@
 
 RSpec.describe LAA::FeeCalculator::FeeScheme, :vcr do
   subject(:fee_scheme) { JSON.parse(json, object_class: described_class) }
+
   let(:json) do
     {
       id: 1,
@@ -46,7 +47,7 @@ RSpec.describe LAA::FeeCalculator::FeeScheme, :vcr do
     end
 
     it 'returns a decimal' do
-      is_expected.to be_kind_of(Float)
+      expect(subject).to be_kind_of(Float)
     end
 
     it 'yields options to block' do
