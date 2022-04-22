@@ -27,7 +27,7 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = '>= 2.6.0'
 
   spec.add_runtime_dependency 'addressable', '~> 2.3', '>= 2.3.7'
-  spec.add_runtime_dependency 'faraday', '~> 1.0'
+  spec.add_runtime_dependency 'faraday', '>= 1', '< 3'
 
   spec.add_development_dependency 'awesome_print'
   spec.add_development_dependency 'rake', '~> 13.0'
