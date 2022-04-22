@@ -35,7 +35,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
           let(:basic_fee) { 1467.58 }
 
           it 'returns calculated value' do
-            expect(subject).to eql basic_fee
+            expect(calculate).to eql basic_fee
           end
 
           context 'units' do
@@ -52,7 +52,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
                   let(:days) { quantity }
 
                   it 'returns basic fee' do
-                    expect(subject).to eql basic_fee
+                    expect(calculate).to eql basic_fee
                   end
                 end
               end
@@ -61,7 +61,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
                 let(:days) { 3 }
 
                 it 'returns basic fee plus fixed amount per additional day' do
-                  expect(subject).to be > basic_fee
+                  expect(calculate).to be > basic_fee
                 end
               end
 
@@ -71,7 +71,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
                     let(:days) { quantity }
 
                     it 'returns max. amount' do
-                      expect(subject).to eql 90_159.18
+                      expect(calculate).to eql 90_159.18
                     end
                   end
                 end
@@ -93,7 +93,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
                       let(:ppe) { quantity }
 
                       it 'returns basic fee' do
-                        expect(subject).to eql basic_fee
+                        expect(calculate).to eql basic_fee
                       end
                     end
                   end
@@ -103,7 +103,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
                     let(:ppe) { 81 }
 
                     it 'returns basic fee + increment' do
-                      expect(subject).to be > basic_fee
+                      expect(calculate).to be > basic_fee
                     end
                   end
                 end
@@ -121,7 +121,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
                       let(:ppe) { quantity }
 
                       it 'returns incremented basic fee' do
-                        expect(subject).to eql basic_fee
+                        expect(calculate).to eql basic_fee
                       end
                     end
                   end
@@ -130,7 +130,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
                     let(:ppe) { 96 }
 
                     it 'returns incremented basic fee plus ppe increment' do
-                      expect(subject).to be > basic_fee
+                      expect(calculate).to be > basic_fee
                     end
                   end
                 end
@@ -145,7 +145,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
                     let(:ppe) { quantity }
 
                     it 'returns basic fee' do
-                      expect(subject).to eql basic_fee
+                      expect(calculate).to eql basic_fee
                     end
                   end
                 end
@@ -155,7 +155,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
                   let(:ppe) { 71 }
 
                   it 'returns basic fee + increment' do
-                    expect(subject).to be > basic_fee
+                    expect(calculate).to be > basic_fee
                   end
                 end
               end

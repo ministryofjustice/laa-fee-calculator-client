@@ -22,8 +22,8 @@ RSpec.describe LAA::FeeCalculator::Client, :vcr do
 
     # NOTE: see integration/fee_schemes_spec.rb for more fee scheme testing
     it 'returns array of fee scheme objects' do
-      expect(subject).to be_an Array
-      expect(subject).to include(instance_of(LAA::FeeCalculator::FeeScheme))
+      expect(fee_schemes).to be_an Array
+      expect(fee_schemes).to include(instance_of(LAA::FeeCalculator::FeeScheme))
     end
   end
 end

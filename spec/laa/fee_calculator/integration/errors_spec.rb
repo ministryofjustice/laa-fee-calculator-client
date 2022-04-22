@@ -118,7 +118,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
 
           it 'does not raise error' do
             expect { calculate }.not_to raise_client_error
-            expect(subject).to be_kind_of(Float)
+            expect(calculate).to be_kind_of(Float)
           end
         end
 
@@ -127,7 +127,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
 
           it 'does not raise error' do
             expect { calculate }.not_to raise_client_error
-            expect(subject).to be_kind_of(Float)
+            expect(calculate).to be_kind_of(Float)
           end
         end
       end
@@ -183,7 +183,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
         end
 
         it 'returns calculated amount' do
-          expect(subject).to be > 0
+          expect(calculate).to be > 0
         end
       end
     end

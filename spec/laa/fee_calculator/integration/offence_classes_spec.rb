@@ -7,8 +7,8 @@ RSpec.describe LAA::FeeCalculator, :vcr do
     subject(:offence_classes) { client.fee_schemes(1).offence_classes }
 
     it 'returns array of OpenStruct objects' do
-      expect(subject).to be_an Array
-      expect(subject).to include(instance_of(OpenStruct))
+      expect(offence_classes).to be_an Array
+      expect(offence_classes).to include(instance_of(OpenStruct))
     end
 
     describe 'object' do

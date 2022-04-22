@@ -30,7 +30,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
           let(:number_of_defendants) { 1 }
 
           it 'returns calculated value' do
-            expect(subject).to eql 130.0
+            expect(calculate).to eql 130.0
           end
 
           context 'advocate_types' do

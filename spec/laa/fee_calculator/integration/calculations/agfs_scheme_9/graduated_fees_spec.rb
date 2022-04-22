@@ -39,7 +39,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
           let(:basic_fee) { 1_632.0 }
 
           it 'returns calculated value' do
-            expect(subject).to eql basic_fee
+            expect(calculate).to eql basic_fee
           end
 
           context 'units' do
@@ -52,7 +52,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
                   let(:days) { quantity }
 
                   it 'returns basic fee' do
-                    expect(subject).to eql basic_fee
+                    expect(calculate).to eql basic_fee
                   end
                 end
               end
@@ -91,7 +91,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
                     let(:days) { quantity }
 
                     it 'returns max. amount' do
-                      expect(subject).to eql 2_859_897.0
+                      expect(calculate).to eql 2_859_897.0
                     end
                   end
                 end

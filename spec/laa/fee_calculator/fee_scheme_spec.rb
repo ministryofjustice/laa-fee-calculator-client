@@ -47,7 +47,7 @@ RSpec.describe LAA::FeeCalculator::FeeScheme, :vcr do
     end
 
     it 'returns a decimal' do
-      expect(subject).to be_kind_of(Float)
+      expect(calculate).to be_kind_of(Float)
     end
 
     it 'yields options to block' do

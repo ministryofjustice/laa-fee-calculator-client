@@ -6,10 +6,10 @@ RSpec.describe LAA::FeeCalculator do
   end
 
   describe ".client" do
-    subject { described_class.client }
+    subject(:client) { described_class.client }
 
     it 'returns a client object' do
-      expect(subject).to be_a described_class::Client
+      expect(client).to be_a described_class::Client
     end
   end
 
@@ -17,11 +17,11 @@ RSpec.describe LAA::FeeCalculator do
     subject(:configuration) { described_class.configuration }
 
     it 'returns configuration object' do
-      expect(subject).to be_a described_class::Configuration
+      expect(configuration).to be_a described_class::Configuration
     end
 
     it 'memoized' do
-      expect(subject).to be_equal(described_class.configuration)
+      expect(configuration).to be_equal(described_class.configuration)
     end
   end
 
