@@ -27,7 +27,8 @@ RSpec.describe LAA::FeeCalculator, :vcr do
         end
 
         specify 'raises ResourceNotFound when no matching objects' do
-          expect { fee_scheme.scenarios(id: 1001) }.to raise_error(described_class::ResourceNotFound, /detail not found/i)
+          expect { fee_scheme.scenarios(id: 1001) }
+            .to raise_error(described_class::ResourceNotFound, /detail not found/i)
         end
       end
     end

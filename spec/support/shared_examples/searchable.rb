@@ -8,7 +8,7 @@ RSpec.shared_examples 'a searchable result set' do |**options|
     let(:value) { options.values.first }
 
     before do
-      raise ArgumentError.new('shared example options should only include a single valid key value pair') if options.keys.size > 1
+      raise ArgumentError.new('options should only include one valid key value pair') if options.keys.size > 1
     end
 
     context 'with matching key value pair' do

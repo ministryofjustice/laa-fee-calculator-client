@@ -18,7 +18,11 @@ module LAA
 
         def has_many(association)
           define_method("#{association}_uri".to_sym) do |scheme_pk = nil, id = nil|
-            uri = scheme_pk.nil? ? "#{association.to_s.tr('_', '-')}/" : "fee-schemes/#{scheme_pk}/#{association.to_s.tr('_', '-')}/"
+            uri = if scheme_pk.nil?
+                    "#{association.to_s.tr('_', '-')}/"
+                  else
+                    "fee-schemes/#{scheme_pk}/#{association.to_s.tr('_', '-')}/"
+                  end
             uri = uri.concat(id.to_s, '/') unless id.nil?
             Addressable::URI.parse(uri)
           end

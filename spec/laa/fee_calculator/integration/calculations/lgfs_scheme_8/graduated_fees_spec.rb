@@ -166,7 +166,13 @@ RSpec.describe LAA::FeeCalculator, :vcr do
             # NOTE: adds a single 20% to basic fee for defendant 2 to 4
             # or a single 30% if defendants are 5+
             # The basic fee is the sum calculated based on days and ppe
-            # i.e. basic_fee + (basic_fee * (0.2 * [number_of_defendants-1,3].min) + (0.3 * [number_of_defendants-4,0].min))
+            # I.e.;
+            #       if number_of_defendants = 1
+            #         basic_fee
+            #       else if number_of_defendants = 2, 3 or 4
+            #         basic_fee + (0.2 * basic_fee)
+            #       else if number_of_defendants >= 5
+            #         basic_fee + (0.3 * basic_fee)
             #
             context 'number of defendants' do
               context 'defendant 1 carries no uplift' do
