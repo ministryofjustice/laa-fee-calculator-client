@@ -9,3 +9,6 @@ updates:
   open-pull-requests-limit: 10
   reviewers:
   - ministryofjustice/laa-claim-for-payment
+  ignore:
+  - dependency-name: faraday
+    update-types: version-update:semver-major
