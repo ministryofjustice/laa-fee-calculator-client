@@ -12,7 +12,7 @@ module LAA
   module FeeCalculator
     class << self
       def root
-        spec = Gem::Specification.find_by_name("laa-fee-calculator-client")
+        spec = Gem::Specification.find_by_name('laa-fee-calculator-client')
         spec.gem_dir
       end
 

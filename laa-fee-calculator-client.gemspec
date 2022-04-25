@@ -10,10 +10,10 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Katharine Ahern', 'Ministry of Justice']
   spec.email         = ['katharine.ahern@digital.justice.gov.uk', 'joel.sugarman@digital.justice.gov.uk', 'tools@digital.justice.gov.uk']
   spec.summary       = 'Ruby client for the Legal Aid Agency fee calculator API'
-  spec.description   = "Ruby client for the Ministry of Justices LAA fee calculator API. A simple interface for transparent calling of the API endpoints to query data and return calculated fee amounts."
+  spec.description   = 'Ruby client for the Ministry of Justices LAA fee calculator API. A simple interface for transparent calling of the API endpoints to query data and return calculated fee amounts.'
   spec.homepage      = 'https://github.com/ministryofjustice/laa-fee-calculator-client'
   spec.license       = 'MIT'
-  spec.extra_rdoc_files = ["LICENSE", "README.md"]
+  spec.extra_rdoc_files = ['LICENSE', 'README.md']
 
   spec.files = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test/|spec/|features/|\..*)})
