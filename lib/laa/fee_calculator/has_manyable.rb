@@ -18,19 +18,9 @@ module LAA
         end
 
         def has_many(association)
-          define_method("#{association}_uri".to_sym) do |scheme_pk = nil, id = nil|
-            uri = if scheme_pk.nil?
-                    "#{association.to_s.tr('_', '-')}/"
-                  else
-                    "fee-schemes/#{scheme_pk}/#{association.to_s.tr('_', '-')}/"
-                  end
-            uri = uri.concat(id.to_s, '/') unless id.nil?
-            Addressable::URI.parse(uri)
-          end
-
           define_method(association) do |id = nil, **options|
             id ||= options&.fetch(:id, nil)
-            uri = self.send("#{association}_uri", self.id, id)
+            uri = uri_for(association, scheme_pk: self.id, id: id)
             uri.query_values = options.reject { |k, _v| k.eql?(:id) }
 
             json = get(uri).body
@@ -41,6 +31,16 @@ module LAA
             ostruct.results.extend Searchable
           end
         end
+      end
+
+      def uri_for(association, scheme_pk: nil, id: nil)
+        uri = if scheme_pk.nil?
+                "#{association.to_s.tr('_', '-')}/"
+              else
+                "fee-schemes/#{scheme_pk}/#{association.to_s.tr('_', '-')}/"
+              end
+        uri = uri.concat(id.to_s, '/') unless id.nil?
+        Addressable::URI.parse(uri)
       end
     end
   end
