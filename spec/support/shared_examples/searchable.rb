@@ -8,7 +8,7 @@ RSpec.shared_examples 'a searchable result set' do |**options|
     let(:value) { options.values.first }
 
     before do
-      raise ArgumentError.new('shared example options should only include a single valid key value pair') if options.keys.size > 1
+      raise ArgumentError.new('options should only include one valid key value pair') if options.keys.size > 1
     end
 
     context 'with matching key value pair' do
@@ -21,16 +21,19 @@ RSpec.shared_examples 'a searchable result set' do |**options|
 
     context 'without matching key value pair' do
       subject(:result) { results.find_by(key => 'any_old_rubbish') }
+
       it { is_expected.to be_nil }
     end
 
     context 'with one matching and one non-matching key pair' do
       subject(:result) { results.find_by(key => value, key => 'any_old_rubbish') }
+
       it { is_expected.to be_nil }
     end
 
     context 'with one valid and one invalid key pair' do
       subject(:result) { results.find_by(key => value, not_a_key: value) }
+
       it { is_expected.to be_nil }
     end
   end

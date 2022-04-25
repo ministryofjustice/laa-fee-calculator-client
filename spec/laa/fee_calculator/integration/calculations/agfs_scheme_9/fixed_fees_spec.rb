@@ -30,7 +30,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
           let(:number_of_defendants) { 1 }
 
           it 'returns calculated value' do
-            is_expected.to eql 130.0
+            expect(calculate).to eql 130.0
           end
 
           context 'advocate_types' do
@@ -38,21 +38,25 @@ RSpec.describe LAA::FeeCalculator, :vcr do
 
             context 'Junior alone' do
               let(:advocate_type) { 'JRALONE' }
+
               it { is_expected.to eql(130.0) }
             end
 
             context 'Led junior' do
               let(:advocate_type) { 'LEDJR' }
+
               it { is_expected.to eql(130.0) }
             end
 
             context 'Lead junior' do
               let(:advocate_type) { 'LEADJR' }
+
               it { is_expected.to eql(195.0) }
             end
 
             context 'QC' do
               let(:advocate_type) { 'QC' }
+
               it { is_expected.to eql(260.0) }
             end
 
@@ -70,6 +74,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
               [1, 30, 31].each do |quantity|
                 context "for quantity of #{quantity}" do
                   let(:quantity) { quantity }
+
                   it { is_expected.to eql(quantity * 130.0) } if quantity.between?(1, 30)
                   it { is_expected.to eql(3900.0) } if quantity > 30
                 end
@@ -94,6 +99,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
                 [1, 2, 3, 4, 5, 10, 100].each do |number_of_defendants|
                   context "#{number_of_defendants} defendants" do
                     let(:number_of_defendants) { number_of_defendants }
+
                     it { is_expected.to eql amount }
                   end
                 end
@@ -114,6 +120,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
                 [1, 2, 3, 4, 5, 10, 100].each do |number_of_cases|
                   context "#{number_of_cases} cases" do
                     let(:number_of_cases) { number_of_cases }
+
                     it { is_expected.to eql amount }
                   end
                 end

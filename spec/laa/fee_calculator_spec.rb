@@ -2,14 +2,14 @@
 
 RSpec.describe LAA::FeeCalculator do
   it "has a version number" do
-    expect(described_class::VERSION).not_to be nil
+    expect(described_class::VERSION).not_to be_nil
   end
 
   describe ".client" do
-    subject { described_class.client }
+    subject(:client) { described_class.client }
 
     it 'returns a client object' do
-      is_expected.to be_a described_class::Client
+      expect(client).to be_a described_class::Client
     end
   end
 
@@ -17,11 +17,11 @@ RSpec.describe LAA::FeeCalculator do
     subject(:configuration) { described_class.configuration }
 
     it 'returns configuration object' do
-      is_expected.to be_a described_class::Configuration
+      expect(configuration).to be_a described_class::Configuration
     end
 
     it 'memoized' do
-      is_expected.to be_equal(described_class.configuration)
+      expect(configuration).to be_equal(described_class.configuration)
     end
   end
 
@@ -54,6 +54,8 @@ RSpec.describe LAA::FeeCalculator do
   end
 
   describe '.reset' do
+    subject(:reset) { described_class.reset }
+
     let(:host) { 'https://mycustom-laa-fee-calculator-api-v2/api/v2' }
 
     before do
@@ -63,15 +65,17 @@ RSpec.describe LAA::FeeCalculator do
     end
 
     it 'resets the configured host' do
-      expect(described_class.configuration.host).to eql host
-      described_class.reset
-      expect(described_class.configuration.host).to eql described_class::Configuration::LAA_FEE_CALCULATOR_API_V1
+      expect { reset }
+        .to change { described_class.configuration.host }
+        .from(host)
+        .to(described_class::Configuration::LAA_FEE_CALCULATOR_API_V1)
     end
 
     it 'resets the connection host' do
-      expect(described_class::Connection.instance.host).to eql host
-      described_class.reset
-      expect(described_class::Connection.instance.host).to eql described_class::Configuration::LAA_FEE_CALCULATOR_API_V1
+      expect { reset }
+        .to change { described_class::Connection.instance.host }
+        .from(host)
+        .to(described_class::Configuration::LAA_FEE_CALCULATOR_API_V1)
     end
   end
 end

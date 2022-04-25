@@ -5,15 +5,15 @@ RSpec.describe LAA::FeeCalculator, :vcr do
 
   context 'fee schemes' do
     subject(:fee_schemes) { client.fee_schemes }
+
     let(:fee_scheme_class) { described_class::FeeScheme }
 
-    it 'returns array of FeeScheme objects' do
-      is_expected.to be_an Array
-      is_expected.to include(instance_of(fee_scheme_class))
-    end
+    it { is_expected.to be_an Array }
+    it { is_expected.to include(instance_of(fee_scheme_class)) }
 
     describe 'object' do
       subject { fee_schemes.first }
+
       it { is_expected.to be_kind_of(OpenStruct) }
       it { is_expected.to respond_to(:id) }
       it { is_expected.to respond_to(:start_date) }

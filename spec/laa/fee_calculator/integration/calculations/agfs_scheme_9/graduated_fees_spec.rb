@@ -39,7 +39,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
           let(:basic_fee) { 1_632.0 }
 
           it 'returns calculated value' do
-            is_expected.to eql basic_fee
+            expect(calculate).to eql basic_fee
           end
 
           context 'units' do
@@ -50,8 +50,9 @@ RSpec.describe LAA::FeeCalculator, :vcr do
               [1, 2].each do |quantity|
                 context "#{quantity} days" do
                   let(:days) { quantity }
+
                   it 'returns basic fee' do
-                    is_expected.to eql basic_fee
+                    expect(calculate).to eql basic_fee
                   end
                 end
               end
@@ -90,7 +91,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
                     let(:days) { quantity }
 
                     it 'returns max. amount' do
-                      is_expected.to eql 2_859_897.0
+                      expect(calculate).to eql 2_859_897.0
                     end
                   end
                 end
@@ -195,6 +196,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
             context 'number of cases' do
               context 'case 1 carries no uplift' do
                 let(:number_of_cases) { 1 }
+
                 it { is_expected.to eql basic_fee }
               end
 
@@ -218,6 +220,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
             context 'number of defendants' do
               context 'defendant 1 carries no uplift' do
                 let(:number_of_defendants) { 1 }
+
                 it { is_expected.to eql basic_fee }
               end
 

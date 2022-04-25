@@ -6,10 +6,8 @@ RSpec.describe LAA::FeeCalculator, :vcr do
   context 'units' do
     subject(:units) { client.fee_schemes(1).units }
 
-    it 'returns array of OpenStruct objects' do
-      is_expected.to be_an Array
-      is_expected.to include(instance_of(OpenStruct))
-    end
+    it { is_expected.to be_an Array }
+    it { is_expected.to include(instance_of(OpenStruct)) }
 
     describe 'object' do
       subject { units.first }

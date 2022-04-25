@@ -6,10 +6,8 @@ RSpec.describe LAA::FeeCalculator, :vcr do
   context 'prices' do
     subject(:prices) { client.fee_schemes(1).prices }
 
-    it 'returns array of OpenStruct objects' do
-      is_expected.to be_an Array
-      is_expected.to include(instance_of(OpenStruct))
-    end
+    it { is_expected.to be_an Array }
+    it { is_expected.to include(instance_of(OpenStruct)) }
 
     describe 'object' do
       subject(:instance) { prices.first }
@@ -64,18 +62,18 @@ RSpec.describe LAA::FeeCalculator, :vcr do
 
         context 'combination of options' do
           context 'without filters' do
-            let(:results) { fee_scheme.prices }
+            context 'with the default parameters' do
+              let(:results) { fee_scheme.prices }
 
-            specify 'default returns results paginated by 100' do
-              results = fee_scheme.prices
-              expect(results.size).to eql 100
-              expect(results.last.id).to be 100
+              it { expect(results.size).to eql 100 }
+              it { expect(results.last.id).to be 100 }
             end
 
-            specify 'can specify page' do
-              results = fee_scheme.prices(page: 2)
-              expect(results.size).to eql 100
-              expect(results.last.id).to be 200
+            context 'with the second page of results' do
+              let(:results) { fee_scheme.prices(page: 2) }
+
+              it { expect(results.size).to eql 100 }
+              it { expect(results.last.id).to be 200 }
             end
           end
         end

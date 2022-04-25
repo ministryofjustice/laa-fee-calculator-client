@@ -6,13 +6,21 @@ RSpec.describe LAA::FeeCalculator, :vcr do
   context 'modifier_types' do
     subject(:modifier_types) { client.fee_schemes(1).modifier_types }
 
-    it 'returns array of OpenStruct objects' do
-      is_expected.to be_an Array
-      is_expected.to include(instance_of(OpenStruct))
+    let(:names) do
+      %w[
+        NUMBER_OF_CASES
+        NUMBER_OF_DEFENDANTS
+        TRIAL_LENGTH
+        PAGES_OF_PROSECUTING_EVIDENCE
+        RETRIAL_INTERVAL
+        THIRD_CRACKED
+      ]
     end
 
+    it { is_expected.to be_an Array }
+    it { is_expected.to include(instance_of(OpenStruct)) }
+
     it 'returns all modifier_types for scheme' do
-      names = %w[NUMBER_OF_CASES NUMBER_OF_DEFENDANTS TRIAL_LENGTH PAGES_OF_PROSECUTING_EVIDENCE RETRIAL_INTERVAL THIRD_CRACKED]
       expect(modifier_types.map(&:name)).to match_array(names)
     end
 
@@ -54,7 +62,8 @@ RSpec.describe LAA::FeeCalculator, :vcr do
         end
 
         specify 'raises ResourceNotFound when no matching objects' do
-          expect { fee_scheme.modifier_types(id: 1001) }.to raise_error(described_class::ResourceNotFound, /detail not found/i)
+          expect { fee_scheme.modifier_types(id: 1001) }
+            .to raise_error(described_class::ResourceNotFound, /detail not found/i)
         end
 
         specify 'raise ResponseError when invalid options supplied' do

@@ -22,7 +22,7 @@ RSpec.describe LAA::FeeCalculator::ClientError do
   it { is_expected.to respond_to(:message) }
   it { is_expected.to respond_to(:response) }
 
-  context '#response' do
+  describe '#response' do
     subject(:err_response) { error.response }
 
     it { is_expected.to be_a Hash }

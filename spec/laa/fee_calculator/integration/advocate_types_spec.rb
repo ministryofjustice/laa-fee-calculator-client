@@ -6,13 +6,12 @@ RSpec.describe LAA::FeeCalculator, :vcr do
   context 'advocate types' do
     subject(:advocate_types) { client.fee_schemes(1).advocate_types }
 
-    it 'returns array of OpenStruct objects' do
-      is_expected.to be_an Array
-      is_expected.to include(instance_of(OpenStruct))
-    end
+    it { is_expected.to be_an Array }
+    it { is_expected.to include(instance_of(OpenStruct)) }
 
     describe 'object' do
       subject { advocate_types.first }
+
       it { is_expected.to respond_to(:id) }
       it { is_expected.to respond_to(:name) }
     end
@@ -30,7 +29,8 @@ RSpec.describe LAA::FeeCalculator, :vcr do
         end
 
         specify 'raises ResourceNotFound when no matching objects' do
-          expect { fee_scheme.advocate_types(id: 'INVALID') }.to raise_error(described_class::ResourceNotFound, /detail not found/i)
+          expect { fee_scheme.advocate_types(id: 'INVALID') }
+            .to raise_error(described_class::ResourceNotFound, /detail not found/i)
         end
 
         specify 'returns empty array when no objects for scheme' do

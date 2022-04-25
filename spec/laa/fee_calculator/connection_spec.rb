@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
 RSpec.describe LAA::FeeCalculator::Connection do
-  subject { described_class.instance }
+  subject(:connection) { described_class.instance }
 
   describe 'singleton' do
     it '.instance' do
-      is_expected.to eql described_class.instance
+      expect(connection).to eql described_class.instance
     end
 
     it '.new raises error' do
@@ -25,32 +25,32 @@ RSpec.describe LAA::FeeCalculator::Connection do
 
     context 'with defaults' do
       it 'returns a default host' do
-        is_expected.to_not be_nil
+        expect(host).not_to be_nil
       end
 
       it 'returns a uri string' do
-        expect { URI.parse(host) }.to_not raise_error
+        expect { URI.parse(host) }.not_to raise_error
       end
     end
 
     context 'with host configured' do
-      subject { described_class.instance.host }
-      let(:host) { 'https://mycustom-laa-fee-calculator/api/v2' }
+      let(:url) { 'https://mycustom-laa-fee-calculator/api/v2' }
 
       before do
         LAA::FeeCalculator.configure do |config|
-          config.host = host
+          config.host = url
         end
       end
 
       it 'returns configured host' do
-        is_expected.to eql host
+        expect(host).to eql url
       end
     end
   end
 
   describe '#get' do
     subject(:get) { described_class.instance.get(uri) }
+
     let(:uri) { '/' }
 
     it 'delegated to adapter connection' do
@@ -62,9 +62,7 @@ RSpec.describe LAA::FeeCalculator::Connection do
   describe '#ping', :vcr do
     subject(:response) { described_class.instance.ping }
 
-    it 'responds with JSON', skip: 'not yet implmented in API - responds with 501' do
-      expect(response).to be_success
-      expect(JSON.parse(response.body)).not raise_error
-    end
+    it { is_expected.to be_success }
+    it { expect { JSON.parse(response.body) }.not_to raise_error }
   end
 end

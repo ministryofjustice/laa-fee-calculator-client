@@ -35,7 +35,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
           let(:basic_fee) { 1467.58 }
 
           it 'returns calculated value' do
-            is_expected.to eql basic_fee
+            expect(calculate).to eql basic_fee
           end
 
           context 'units' do
@@ -50,16 +50,18 @@ RSpec.describe LAA::FeeCalculator, :vcr do
               [1, 2].each do |quantity|
                 context "#{quantity} days" do
                   let(:days) { quantity }
+
                   it 'returns basic fee' do
-                    is_expected.to eql basic_fee
+                    expect(calculate).to eql basic_fee
                   end
                 end
               end
 
               context '3 to 200 days' do
                 let(:days) { 3 }
+
                 it 'returns basic fee plus fixed amount per additional day' do
-                  is_expected.to be > basic_fee
+                  expect(calculate).to be > basic_fee
                 end
               end
 
@@ -69,7 +71,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
                     let(:days) { quantity }
 
                     it 'returns max. amount' do
-                      is_expected.to eql 90_159.18
+                      expect(calculate).to eql 90_159.18
                     end
                   end
                 end
@@ -91,7 +93,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
                       let(:ppe) { quantity }
 
                       it 'returns basic fee' do
-                        is_expected.to eql basic_fee
+                        expect(calculate).to eql basic_fee
                       end
                     end
                   end
@@ -101,7 +103,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
                     let(:ppe) { 81 }
 
                     it 'returns basic fee + increment' do
-                      is_expected.to be > basic_fee
+                      expect(calculate).to be > basic_fee
                     end
                   end
                 end
@@ -119,7 +121,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
                       let(:ppe) { quantity }
 
                       it 'returns incremented basic fee' do
-                        is_expected.to eql basic_fee
+                        expect(calculate).to eql basic_fee
                       end
                     end
                   end
@@ -128,7 +130,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
                     let(:ppe) { 96 }
 
                     it 'returns incremented basic fee plus ppe increment' do
-                      is_expected.to be > basic_fee
+                      expect(calculate).to be > basic_fee
                     end
                   end
                 end
@@ -143,7 +145,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
                     let(:ppe) { quantity }
 
                     it 'returns basic fee' do
-                      is_expected.to eql basic_fee
+                      expect(calculate).to eql basic_fee
                     end
                   end
                 end
@@ -153,7 +155,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
                   let(:ppe) { 71 }
 
                   it 'returns basic fee + increment' do
-                    is_expected.to be > basic_fee
+                    expect(calculate).to be > basic_fee
                   end
                 end
               end
@@ -166,11 +168,18 @@ RSpec.describe LAA::FeeCalculator, :vcr do
             # NOTE: adds a single 20% to basic fee for defendant 2 to 4
             # or a single 30% if defendants are 5+
             # The basic fee is the sum calculated based on days and ppe
-            # i.e. basic_fee + (basic_fee * (0.2 * [number_of_defendants-1,3].min) + (0.3 * [number_of_defendants-4,0].min))
+            # I.e.;
+            #       if number_of_defendants = 1
+            #         basic_fee
+            #       else if number_of_defendants = 2, 3 or 4
+            #         basic_fee + (0.2 * basic_fee)
+            #       else if number_of_defendants >= 5
+            #         basic_fee + (0.3 * basic_fee)
             #
             context 'number of defendants' do
               context 'defendant 1 carries no uplift' do
                 let(:number_of_defendants) { 1 }
+
                 it { is_expected.to eql basic_fee }
               end
 
