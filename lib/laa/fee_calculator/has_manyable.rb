@@ -1,5 +1,6 @@
+# frozen_string_literal: true
+
 require 'json'
-require 'addressable/uri'
 
 module LAA
   module FeeCalculator
@@ -19,11 +20,10 @@ module LAA
 
         def has_many(association)
           define_method(association) do |id = nil, **options|
-            id ||= options&.fetch(:id, nil)
-            uri = uri_for(association, scheme_pk: self.id, id: id)
-            uri.query_values = options.reject { |k, _v| k.eql?(:id) }
+            uri = uri_for(association, id: id || options[:id])
+            filtered_params = options.reject { |k, _v| k.eql?(:id) }
 
-            json = get(uri).body
+            json = get(uri, filtered_params).body
 
             ostruct = JSON.parse(json, object_class: OpenStruct)
             return ostruct unless ostruct.respond_to?(:results)
@@ -33,14 +33,14 @@ module LAA
         end
       end
 
-      def uri_for(association, scheme_pk: nil, id: nil)
-        uri = if scheme_pk.nil?
-                "#{association.to_s.tr('_', '-')}/"
-              else
-                "fee-schemes/#{scheme_pk}/#{association.to_s.tr('_', '-')}/"
-              end
-        uri = uri.concat(id.to_s, '/') unless id.nil?
-        Addressable::URI.parse(uri)
+      def uri_for(association, id: nil)
+        return "#{base_fee_scheme_uri}#{association.to_s.tr('_', '-')}/" if id.nil?
+
+        "#{base_fee_scheme_uri}#{association.to_s.tr('_', '-')}/#{id}/"
+      end
+
+      def base_fee_scheme_uri
+        id ? "fee-schemes/#{id}/" : ''
       end
     end
   end
