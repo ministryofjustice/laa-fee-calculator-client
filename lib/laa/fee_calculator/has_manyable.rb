@@ -1,4 +1,5 @@
 require 'json'
+require 'addressable/uri'
 
 module LAA
   module FeeCalculator

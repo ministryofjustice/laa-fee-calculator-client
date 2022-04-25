@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'addressable/uri'
+
 module LAA
   module FeeCalculator
     class Calculator

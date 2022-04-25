@@ -1,4 +1,4 @@
-require "addressable/uri"
+# frozen_string_literal: true
 
 module LAA
   module FeeCalculator
@@ -17,19 +17,25 @@ module LAA
       end
 
       def fee_schemes(id = nil, **options)
-        uri = 'fee-schemes/'
-        id ||= options.fetch(:id, nil)
-        uri.concat(id.to_s, "/") if id
-        uri = Addressable::URI.parse(uri)
-        uri.query_values = options.reject { |k, _v| k.eql?(:id) }
+        uri = fee_schemes_uri(id || options[:id])
+        filtered_params = options.reject { |k, _| k.eql?(:id) }
+        # Ruby 3.0+; filtered_params = options.except(:id)
 
-        json = get(uri).body
+        json = get(uri, filtered_params).body
 
         fstruct = JSON.parse(json, object_class: FeeScheme)
         return fstruct unless fstruct.respond_to?(:results)
         return fstruct.results.first if fstruct.results.size.eql?(1)
 
         fstruct.results
+      end
+
+      private
+
+      def fee_schemes_uri(id)
+        return "fee-schemes/#{id}/" if id
+
+        'fee-schemes/'
       end
     end
   end
