@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-require "bundler/setup"
-require "laa/fee_calculator"
+require 'bundler/setup'
+require 'laa/fee_calculator'
 
 # You can add fixtures and/or initialization code here to make experimenting
 # with your gem easier. You can also use a different console, if you like.
@@ -16,5 +16,5 @@ LAA::FeeCalculator.configure do |config|
   config.host = 'http://localhost:8000/api/v1'
 end
 
-require "irb"
+require 'irb'
 IRB.start(__FILE__)

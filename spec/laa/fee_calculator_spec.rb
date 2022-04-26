@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
 RSpec.describe LAA::FeeCalculator do
-  it "has a version number" do
+  it 'has a version number' do
     expect(described_class::VERSION).not_to be_nil
   end
 
-  describe ".client" do
+  describe '.client' do
     subject(:client) { described_class.client }
 
     it 'returns a client object' do
