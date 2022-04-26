@@ -13,13 +13,8 @@ Add latest change log entries at top using template:
 ### Removed
   -
 ```
-## Version UNRELEASED
-### Added
-  -
-### Fixed
-  -
-### Modified
-  -
+## Version 1.3.1
+
 ### Removed
   - `addressable` gem dependency
 
