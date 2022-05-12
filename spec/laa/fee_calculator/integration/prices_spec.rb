@@ -6,13 +6,13 @@ RSpec.describe LAA::FeeCalculator, :vcr do
   context 'prices' do
     subject(:prices) { client.fee_schemes(1).prices }
 
-    it { is_expected.to be_an Array }
-    it { is_expected.to include(instance_of(OpenStruct)) }
+    it { is_expected.to be_an Enumerable }
+    it { is_expected.to include(instance_of(LAA::FeeCalculator::Price)) }
 
     describe 'object' do
       subject(:instance) { prices.first }
 
-      it { is_expected.to be_instance_of(OpenStruct) }
+      it { is_expected.to be_instance_of(LAA::FeeCalculator::Price) }
       it { is_expected.to respond_to(:id) }
       it { is_expected.to respond_to(:scheme) }
       it { is_expected.to respond_to(:scenario) }
@@ -32,28 +32,28 @@ RSpec.describe LAA::FeeCalculator, :vcr do
       subject(:fee_scheme) { client.fee_schemes(1) }
 
       specify 'by id' do
-        expect(fee_scheme.prices(1)).to be_instance_of(OpenStruct)
+        expect(fee_scheme.prices(1)).to be_instance_of(LAA::FeeCalculator::Price)
       end
 
       context 'with options' do
         specify 'by id' do
-          expect(fee_scheme.prices(id: 1)).to be_instance_of(OpenStruct)
+          expect(fee_scheme.prices(id: 1)).to be_instance_of(LAA::FeeCalculator::Price)
         end
 
         specify 'by scenario (a.k.a case types)' do
-          expect(fee_scheme.prices(scenario: 5)).to include(instance_of(OpenStruct))
+          expect(fee_scheme.prices(scenario: 5)).to be_instance_of(LAA::FeeCalculator::PricesCollection)
         end
 
         specify 'by advocate_type (a.k.a advocate category)' do
-          expect(fee_scheme.prices(advocate_type: 'QC')).to include(instance_of(OpenStruct))
+          expect(fee_scheme.prices(advocate_type: 'QC')).to be_instance_of(LAA::FeeCalculator::PricesCollection)
         end
 
         specify 'by offence_class' do
-          expect(fee_scheme.prices(offence_class: 'A')).to include(instance_of(OpenStruct))
+          expect(fee_scheme.prices(offence_class: 'A')).to be_instance_of(LAA::FeeCalculator::PricesCollection)
         end
 
         specify 'by fee_type_code' do
-          expect(fee_scheme.prices(fee_type_code: 'AGFS_FEE')).to include(instance_of(OpenStruct))
+          expect(fee_scheme.prices(fee_type_code: 'AGFS_FEE')).to be_instance_of(LAA::FeeCalculator::PricesCollection)
         end
 
         specify 'raises ResourceNotFound when no matching objects' do
