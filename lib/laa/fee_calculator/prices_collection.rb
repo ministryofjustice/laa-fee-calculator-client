@@ -11,7 +11,8 @@ module LAA
         @fee_scheme = fee_scheme
         @base_url = base_url
         @params = kwargs
-        @prices_url = "#{@base_url}prices/"
+        @prices_data = "#{@base_url}prices/"
+        @prices_pages = []
       end
 
       def each(&block)
@@ -19,7 +20,7 @@ module LAA
       end
 
       def size
-        prices.count
+        @size ||= prices_data(0)['count']
       end
 
       def last
@@ -35,11 +36,24 @@ module LAA
       private
 
       def prices
-        @prices ||= prices_data['results'].map { |p| Price.new(**p) }
+        Array.new(size) { |i| prices_pages(i / 100)[i % 100] }
       end
 
-      def prices_data
-        @prices_data ||= JSON.parse(Connection.instance.get(@prices_url, @params).body)
+      def prices_pages(page)
+        @prices_pages[page] ||= prices_data(page)['results'].map { |data| Price.new(**data) }
+      end
+
+      def prices_data(page)
+        if @prices_data.is_a?(String)
+          @prices_data = [api_request(@prices_data)]
+          @prices_data += Array.new((@prices_data[0]['count'] / 100) - 1) { nil } if @prices_data[0]['count'] > 100
+        end
+
+        @prices_data[page] ||= api_request(prices_data(page - 1)['next'])
+      end
+
+      def api_request(url)
+        JSON.parse(Connection.instance.get(url, @params).body)
       end
     end
   end

@@ -65,15 +65,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
             context 'with the default parameters' do
               let(:results) { fee_scheme.prices }
 
-              it { expect(results.size).to eql 100 }
-              it { expect(results.last.id).to be 100 }
-            end
-
-            context 'with the second page of results' do
-              let(:results) { fee_scheme.prices(page: 2) }
-
-              it { expect(results.size).to eql 100 }
-              it { expect(results.last.id).to be 200 }
+              it { expect(results.size).to eq(2890) }
             end
           end
         end
