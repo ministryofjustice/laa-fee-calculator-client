@@ -23,7 +23,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   # see bin/ruby_version_test
-  spec.required_ruby_version = '>= 2.6.0'
+  spec.required_ruby_version = '>= 2.7.0'
 
   spec.add_runtime_dependency 'faraday', '~> 1.0'
   spec.add_runtime_dependency 'faraday-http-cache', '~> 2.2'
