@@ -36,7 +36,7 @@ module LAA
       private
 
       def prices
-        Array.new(size) { |i| prices_pages(i / 100)[i % 100] }
+        size.times.lazy.map { |i| prices_pages(i / 100)[i % 100] }
       end
 
       def prices_pages(page)
