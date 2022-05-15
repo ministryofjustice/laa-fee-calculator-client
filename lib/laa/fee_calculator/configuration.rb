@@ -6,7 +6,7 @@ module LAA
       LAA_FEE_CALCULATOR_API_V1 = 'https://laa-fee-calculator.service.justice.gov.uk/api/v1'
       HEADERS = { 'Accept' => 'application/json', 'User-Agent' => USER_AGENT }.freeze
 
-      attr_accessor :host, :headers
+      attr_accessor :host, :headers, :cache, :logger
 
       def initialize
         @host = host || LAA_FEE_CALCULATOR_API_V1

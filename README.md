@@ -163,6 +163,17 @@ end
 
 ```
 
+## Caching
+
+Caching can be configured, with optional logging, by providing a cache store:
+
+```ruby
+LAA::FeeCalculator.configure do |config|
+  config.cache = Rails.cache
+  config.logger = Rails.logger
+end
+```
+
 Note: 
 
 ## Contributing
