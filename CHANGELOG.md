@@ -13,6 +13,13 @@ Add latest change log entries at top using template:
 ### Removed
   -
 ```
+
+
+## Version 1.4.0
+
+### Added
+  - New configuration options for caching and logging
+
 ## Version 1.3.1
 
 ### Removed

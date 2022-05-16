@@ -2,7 +2,7 @@
 
 module LAA
   module FeeCalculator
-    VERSION = '1.3.1'
+    VERSION = '1.4.0'
     USER_AGENT = "laa-fee-calculator-client/#{VERSION}"
   end
 end
