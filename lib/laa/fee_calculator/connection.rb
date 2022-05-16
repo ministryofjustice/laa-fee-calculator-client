@@ -2,6 +2,7 @@
 
 require 'singleton'
 require 'faraday'
+require 'faraday/http_cache'
 
 module LAA
   module FeeCalculator
@@ -16,6 +17,7 @@ module LAA
       def initialize
         @conn = Faraday.new(url: LAA::FeeCalculator.configuration.host, headers: default_headers) do |conn|
           conn.use LAA::FeeCalculator::RaiseError
+          conn.use(:http_cache, store: cache, logger: logger) if cache
           conn.adapter :net_http
         end
       end
@@ -38,6 +40,14 @@ module LAA
 
       def default_headers
         LAA::FeeCalculator.configuration.headers
+      end
+
+      def cache
+        LAA::FeeCalculator.configuration.cache
+      end
+
+      def logger
+        LAA::FeeCalculator.configuration.logger
       end
     end
   end
