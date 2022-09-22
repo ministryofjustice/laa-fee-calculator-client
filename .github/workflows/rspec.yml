@@ -14,9 +14,12 @@ jobs:
     strategy:
       matrix:
         ruby-version: ['2.6', '2.7', '3.0', '3.1']
+        faraday-version: ['1.0', '1.1', '1.2', '1.3', '1.4', '1.5', '1.6', '1.7', '1.8', '1.9', '1.10']
         accepted-failure: [false]
         include:
           - ruby-version: 'head'
+            accepted-failure: true
+          - faraday-version: 'head'
             accepted-failure: true
     steps:
       - uses: actions/checkout@v2
@@ -24,6 +27,10 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: ${{ matrix.ruby-version }}
+      - run: bundle add faraday --version '~> ${{ matrix.faraday-version }}.0'
+        if: matrix.faraday-version != 'head'
+      - run: bundle add faraday --git 'https://github.com/lostisland/faraday' --branch '1.x'
+        if: matrix.faraday-version == 'head'
       - name: Bundle
         run: bundle install
       - name: RSpec
