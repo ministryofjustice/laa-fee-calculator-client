@@ -8,7 +8,7 @@ module LAA
     # Wrap Faraday adapter error handling with
     # gem specific handlers.
     #
-    class RaiseError < Faraday::Response::Middleware
+    class RaiseError < Faraday::Middleware
       CLIENT_ERROR_STATUSES = (400...600)
 
       def on_complete(env)

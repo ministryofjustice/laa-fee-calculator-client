@@ -14,6 +14,11 @@ Add latest change log entries at top using template:
   -
 ```
 
+## Version 2.0.0
+
+### Modified
+  - Update Faraday dependency to version 2
+
 ## Version 1.5.0
 
 ### Added
