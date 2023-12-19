@@ -174,8 +174,6 @@ LAA::FeeCalculator.configure do |config|
 end
 ```
 
-Note: 
-
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at [ministryofjustice/laa-fee-calculator-client](https://github.com/ministryofjustice/laa-fee-calculator-client)
