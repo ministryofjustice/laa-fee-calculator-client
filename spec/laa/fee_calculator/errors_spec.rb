@@ -44,14 +44,14 @@ RSpec.describe LAA::FeeCalculator::ResponseError do
         'allow' => 'GET, HEAD, OPTIONS',
         'x-frame-options' => 'SAMEORIGIN',
         'content-length' => '50' },
-      body: '["`case_date` should be in the format YYYY-MM-DD"]'
+      body: '`case_date:`["Enter a valid date."]'
     }
   end
 
   it { is_expected.to be_kind_of(LAA::FeeCalculator::ClientError) }
 
   it 'returns response body as message' do
-    expect(error.message).to match(/`case_date` should be in the format YYYY-MM-DD/)
+    expect(error.message).to match('`case_date:`["Enter a valid date."]')
   end
 end
 

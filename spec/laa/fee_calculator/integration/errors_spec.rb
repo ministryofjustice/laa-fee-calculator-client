@@ -37,7 +37,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
         it 'raises ResponseError for bad request, 400, with response body for message' do
           expect do
             client.fee_schemes(case_date: '20181-01-01')
-          end.to raise_client_error(described_class::ResponseError, /`case_date` should be in the format YYYY-MM-DD/)
+          end.to raise_client_error(described_class::ResponseError, /Enter a valid date./)
         end
       end
 
