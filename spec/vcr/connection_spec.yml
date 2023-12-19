@@ -10,7 +10,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.3.0
+      - laa-fee-calculator-client/1.4.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 22 Apr 2022 14:14:38 GMT
+      - Tue, 19 Dec 2023 14:20:50 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -29,15 +29,19 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       X-Frame-Options:
-      - SAMEORIGIN
+      - DENY
       Vary:
-      - Origin
+      - origin
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - same-origin
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
     body:
       encoding: UTF-8
-      string: '{"build_date": "2022-04-07T08:43:55+00:00", "build_tag": "master",
-        "commit_id": "361bdd724997c4355b8045acb0abcaa77076eb90", "version_number":
-        "1541"}'
-  recorded_at: Fri, 22 Apr 2022 14:14:38 GMT
+      string: '{"build_date": "2023-12-15T11:41:56+00:00", "build_tag": "master",
+        "commit_id": "0faa515c78919920036215ce6d6f3a7029fdd22e", "version_number":
+        "4381"}'
+  recorded_at: Tue, 19 Dec 2023 14:20:50 GMT
 recorded_with: VCR 6.1.0

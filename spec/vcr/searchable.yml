@@ -10,7 +10,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.2.0
+      - laa-fee-calculator-client/1.4.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 20 Apr 2022 11:54:06 GMT
+      - Tue, 19 Dec 2023 14:20:52 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -27,11 +27,17 @@ http_interactions:
       Connection:
       - keep-alive
       Vary:
-      - Accept, Origin, Cookie
+      - Accept, origin, Cookie
       Allow:
       - GET, HEAD, OPTIONS
+      Cache-Control:
+      - public, max-age=7200
       X-Frame-Options:
-      - SAMEORIGIN
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - same-origin
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
     body:
@@ -39,7 +45,7 @@ http_interactions:
       string: '{"count":4,"next":null,"previous":null,"results":[{"id":"JRALONE","name":"Junior
         alone"},{"id":"LEADJR","name":"Leading junior"},{"id":"LEDJR","name":"Led
         junior"},{"id":"QC","name":"QC"}]}'
-  recorded_at: Wed, 20 Apr 2022 11:54:06 GMT
+  recorded_at: Tue, 19 Dec 2023 14:20:52 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/fee-types/
@@ -50,7 +56,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.2.0
+      - laa-fee-calculator-client/1.4.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -59,7 +65,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 20 Apr 2022 11:55:08 GMT
+      - Tue, 19 Dec 2023 14:21:46 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -67,11 +73,17 @@ http_interactions:
       Connection:
       - keep-alive
       Vary:
-      - Accept, Origin, Cookie
+      - Accept, origin, Cookie
       Allow:
       - GET, HEAD, OPTIONS
+      Cache-Control:
+      - public, max-age=7200
       X-Frame-Options:
-      - SAMEORIGIN
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - same-origin
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
     body:
@@ -113,7 +125,7 @@ http_interactions:
         (full day)","code":"AGFS_CONFISC_WL","is_basic":false,"aggregation":"sum"},{"id":90,"name":"Hearings
         relating to admissibility of evidence (half day)","code":"AGFS_ADM_EVD_HF","is_basic":false,"aggregation":"sum"},{"id":91,"name":"Wasted
         preparation fee","code":"AGFS_WSTD_PREP","is_basic":false,"aggregation":"sum"}]}'
-  recorded_at: Wed, 20 Apr 2022 11:55:08 GMT
+  recorded_at: Tue, 19 Dec 2023 14:21:46 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/modifier-types/
@@ -124,7 +136,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.2.0
+      - laa-fee-calculator-client/1.4.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -133,7 +145,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 20 Apr 2022 11:55:10 GMT
+      - Tue, 19 Dec 2023 14:21:49 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -141,11 +153,17 @@ http_interactions:
       Connection:
       - keep-alive
       Vary:
-      - Accept, Origin, Cookie
+      - Accept, origin, Cookie
       Allow:
       - GET, HEAD, OPTIONS
+      Cache-Control:
+      - public, max-age=7200
       X-Frame-Options:
-      - SAMEORIGIN
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - same-origin
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
     body:
@@ -157,7 +175,7 @@ http_interactions:
         of prosecuting evidence","unit":"PPE"},{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
         months between trials","unit":"MONTH"},{"id":6,"name":"THIRD_CRACKED","description":"Third
         in which a trial cracked","unit":"THIRD"}]}'
-  recorded_at: Wed, 20 Apr 2022 11:55:10 GMT
+  recorded_at: Tue, 19 Dec 2023 14:21:49 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/offence-classes/
@@ -168,7 +186,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.2.0
+      - laa-fee-calculator-client/1.4.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -177,7 +195,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 20 Apr 2022 11:55:11 GMT
+      - Tue, 19 Dec 2023 14:21:51 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -185,11 +203,17 @@ http_interactions:
       Connection:
       - keep-alive
       Vary:
-      - Accept, Origin, Cookie
+      - Accept, origin, Cookie
       Allow:
       - GET, HEAD, OPTIONS
+      Cache-Control:
+      - public, max-age=7200
       X-Frame-Options:
-      - SAMEORIGIN
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - same-origin
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
     body:
@@ -205,7 +229,7 @@ http_interactions:
         justice and similar offences"},{"id":"J","name":"J","description":"Serious
         sexual offences"},{"id":"K","name":"K","description":"Other offences of dishonesty
         (high value)"}]}'
-  recorded_at: Wed, 20 Apr 2022 11:55:11 GMT
+  recorded_at: Tue, 19 Dec 2023 14:21:51 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/prices/
@@ -216,7 +240,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.2.0
+      - laa-fee-calculator-client/1.4.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -225,7 +249,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 20 Apr 2022 11:55:20 GMT
+      - Tue, 19 Dec 2023 14:22:02 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -233,11 +257,17 @@ http_interactions:
       Connection:
       - keep-alive
       Vary:
-      - Accept, Origin, Cookie
+      - Accept, origin, Cookie
       Allow:
       - GET, HEAD, OPTIONS
+      Cache-Control:
+      - public, max-age=7200
       X-Frame-Options:
-      - SAMEORIGIN
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - same-origin
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
     body:
@@ -347,7 +377,7 @@ http_interactions:
         months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false},{"id":99,"scenario":4,"advocate_type":"LEADJR","fee_type":34,"offence_class":"B","scheme":1,"unit":"DAY","fee_per_unit":"643.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[],"strict_range":false},{"id":100,"scenario":11,"advocate_type":"LEADJR","fee_type":34,"offence_class":"B","scheme":1,"unit":"DAY","fee_per_unit":"643.00000","fixed_fee":"0.00000","limit_from":3,"limit_to":40,"modifiers":[{"limit_from":0,"limit_to":0,"fixed_percent":"-30.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
         months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true},{"limit_from":1,"limit_to":null,"fixed_percent":"-20.00","percent_per_unit":"0.00","modifier_type":{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
         months between trials","unit":"MONTH"},"required":false,"priority":5,"strict_range":true}],"strict_range":false}]}'
-  recorded_at: Wed, 20 Apr 2022 11:55:20 GMT
+  recorded_at: Tue, 19 Dec 2023 14:22:02 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/scenarios/
@@ -358,7 +388,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.2.0
+      - laa-fee-calculator-client/1.4.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -367,7 +397,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 20 Apr 2022 11:55:21 GMT
+      - Tue, 19 Dec 2023 14:22:03 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -375,11 +405,17 @@ http_interactions:
       Connection:
       - keep-alive
       Vary:
-      - Accept, Origin, Cookie
+      - Accept, origin, Cookie
       Allow:
       - GET, HEAD, OPTIONS
+      Cache-Control:
+      - public, max-age=7200
       X-Frame-Options:
-      - SAMEORIGIN
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - same-origin
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
     body:
@@ -390,7 +426,7 @@ http_interactions:
         for sentence","code":"AS000007"},{"id":8,"name":"Contempt","code":"AS000008"},{"id":9,"name":"Breach
         of crown court order","code":"AS000009"},{"id":10,"name":"Cracked before retrial","code":"AS000010"},{"id":11,"name":"Retrial","code":"AS000011"},{"id":12,"name":"Elected
         case not proceeded","code":"AS000014"}]}'
-  recorded_at: Wed, 20 Apr 2022 11:55:21 GMT
+  recorded_at: Tue, 19 Dec 2023 14:22:03 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/
@@ -401,7 +437,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.2.0
+      - laa-fee-calculator-client/1.4.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -410,26 +446,32 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 20 Apr 2022 11:55:23 GMT
+      - Tue, 19 Dec 2023 14:22:05 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '106'
+      - '140'
       Connection:
       - keep-alive
       Vary:
-      - Accept, Origin, Cookie
+      - Accept, origin, Cookie
       Allow:
       - GET, HEAD, OPTIONS
+      Cache-Control:
+      - public, max-age=7200
       X-Frame-Options:
-      - SAMEORIGIN
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - same-origin
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
     body:
       encoding: UTF-8
-      string: '{"id":1,"start_date":"2012-04-01","end_date":"2018-03-31","type":"AGFS","description":"AGFS
+      string: '{"id":1,"start_date":"2012-04-01","end_date":"2018-03-31","earliest_main_hearing_date":null,"type":"AGFS","description":"AGFS
         Fee Scheme 9"}'
-  recorded_at: Wed, 20 Apr 2022 11:55:23 GMT
+  recorded_at: Tue, 19 Dec 2023 14:22:05 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/units/
@@ -440,7 +482,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.2.0
+      - laa-fee-calculator-client/1.4.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -449,7 +491,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 20 Apr 2022 11:55:23 GMT
+      - Tue, 19 Dec 2023 14:22:05 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -457,11 +499,17 @@ http_interactions:
       Connection:
       - keep-alive
       Vary:
-      - Accept, Origin, Cookie
+      - Accept, origin, Cookie
       Allow:
       - GET, HEAD, OPTIONS
+      Cache-Control:
+      - public, max-age=7200
       X-Frame-Options:
-      - SAMEORIGIN
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - same-origin
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
     body:
@@ -469,5 +517,5 @@ http_interactions:
       string: '{"count":6,"next":null,"previous":null,"results":[{"id":"CASE","name":"Case"},{"id":"DAY","name":"Whole
         Days"},{"id":"HALFDAY","name":"Half Days"},{"id":"HOUR","name":"Hours"},{"id":"PPE","name":"Pages
         of Prosecuting Evidence"},{"id":"PW","name":"Prosecution Witnesses"}]}'
-  recorded_at: Wed, 20 Apr 2022 11:55:23 GMT
-recorded_with: VCR 6.0.0
+  recorded_at: Tue, 19 Dec 2023 14:22:05 GMT
+recorded_with: VCR 6.1.0

@@ -10,7 +10,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.2.0
+      - laa-fee-calculator-client/1.4.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 20 Apr 2022 11:55:06 GMT
+      - Tue, 19 Dec 2023 14:21:44 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -27,17 +27,23 @@ http_interactions:
       Connection:
       - keep-alive
       Vary:
-      - Accept, Origin, Cookie
+      - Accept, origin, Cookie
       Allow:
       - GET, HEAD, OPTIONS
+      Cache-Control:
+      - public, max-age=7200
       X-Frame-Options:
-      - SAMEORIGIN
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - same-origin
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
     body:
       encoding: UTF-8
       string: '{"id":4,"name":"Plea and case management hearing","code":"AGFS_PLEA","is_basic":false,"aggregation":"sum"}'
-  recorded_at: Wed, 20 Apr 2022 11:55:06 GMT
+  recorded_at: Tue, 19 Dec 2023 14:21:44 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/fee-types/?is_basic=true
@@ -48,7 +54,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.2.0
+      - laa-fee-calculator-client/1.4.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -57,7 +63,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 20 Apr 2022 11:55:06 GMT
+      - Tue, 19 Dec 2023 14:21:44 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -65,18 +71,24 @@ http_interactions:
       Connection:
       - keep-alive
       Vary:
-      - Accept, Origin, Cookie
+      - Accept, origin, Cookie
       Allow:
       - GET, HEAD, OPTIONS
+      Cache-Control:
+      - public, max-age=7200
       X-Frame-Options:
-      - SAMEORIGIN
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - same-origin
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
     body:
       encoding: UTF-8
       string: '{"count":1,"next":null,"previous":null,"results":[{"id":34,"name":"Advocate
         fee","code":"AGFS_FEE","is_basic":true,"aggregation":"sum"}]}'
-  recorded_at: Wed, 20 Apr 2022 11:55:06 GMT
+  recorded_at: Tue, 19 Dec 2023 14:21:44 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/fee-types/?scenario=1
@@ -87,7 +99,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.2.0
+      - laa-fee-calculator-client/1.4.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -96,7 +108,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 20 Apr 2022 11:55:06 GMT
+      - Tue, 19 Dec 2023 14:21:44 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -104,11 +116,17 @@ http_interactions:
       Connection:
       - keep-alive
       Vary:
-      - Accept, Origin, Cookie
+      - Accept, origin, Cookie
       Allow:
       - GET, HEAD, OPTIONS
+      Cache-Control:
+      - public, max-age=7200
       X-Frame-Options:
-      - SAMEORIGIN
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - same-origin
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
     body:
@@ -144,7 +162,7 @@ http_interactions:
         (full day)","code":"AGFS_CONFISC_WL","is_basic":false,"aggregation":"sum"},{"id":90,"name":"Hearings
         relating to admissibility of evidence (half day)","code":"AGFS_ADM_EVD_HF","is_basic":false,"aggregation":"sum"},{"id":91,"name":"Wasted
         preparation fee","code":"AGFS_WSTD_PREP","is_basic":false,"aggregation":"sum"}]}'
-  recorded_at: Wed, 20 Apr 2022 11:55:06 GMT
+  recorded_at: Tue, 19 Dec 2023 14:21:44 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/fee-types/?advocate_type=QC
@@ -155,7 +173,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.2.0
+      - laa-fee-calculator-client/1.4.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -164,7 +182,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 20 Apr 2022 11:55:06 GMT
+      - Tue, 19 Dec 2023 14:21:45 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -172,11 +190,17 @@ http_interactions:
       Connection:
       - keep-alive
       Vary:
-      - Accept, Origin, Cookie
+      - Accept, origin, Cookie
       Allow:
       - GET, HEAD, OPTIONS
+      Cache-Control:
+      - public, max-age=7200
       X-Frame-Options:
-      - SAMEORIGIN
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - same-origin
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
     body:
@@ -218,7 +242,7 @@ http_interactions:
         (full day)","code":"AGFS_CONFISC_WL","is_basic":false,"aggregation":"sum"},{"id":90,"name":"Hearings
         relating to admissibility of evidence (half day)","code":"AGFS_ADM_EVD_HF","is_basic":false,"aggregation":"sum"},{"id":91,"name":"Wasted
         preparation fee","code":"AGFS_WSTD_PREP","is_basic":false,"aggregation":"sum"}]}'
-  recorded_at: Wed, 20 Apr 2022 11:55:06 GMT
+  recorded_at: Tue, 19 Dec 2023 14:21:45 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/fee-types/?offence_class=A
@@ -229,7 +253,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.2.0
+      - laa-fee-calculator-client/1.4.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -238,7 +262,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 20 Apr 2022 11:55:07 GMT
+      - Tue, 19 Dec 2023 14:21:45 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -246,11 +270,17 @@ http_interactions:
       Connection:
       - keep-alive
       Vary:
-      - Accept, Origin, Cookie
+      - Accept, origin, Cookie
       Allow:
       - GET, HEAD, OPTIONS
+      Cache-Control:
+      - public, max-age=7200
       X-Frame-Options:
-      - SAMEORIGIN
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - same-origin
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
     body:
@@ -292,7 +322,7 @@ http_interactions:
         (full day)","code":"AGFS_CONFISC_WL","is_basic":false,"aggregation":"sum"},{"id":90,"name":"Hearings
         relating to admissibility of evidence (half day)","code":"AGFS_ADM_EVD_HF","is_basic":false,"aggregation":"sum"},{"id":91,"name":"Wasted
         preparation fee","code":"AGFS_WSTD_PREP","is_basic":false,"aggregation":"sum"}]}'
-  recorded_at: Wed, 20 Apr 2022 11:55:07 GMT
+  recorded_at: Tue, 19 Dec 2023 14:21:45 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/fee-types/?fee_type_code=AGFS_FEE
@@ -303,7 +333,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.2.0
+      - laa-fee-calculator-client/1.4.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -312,7 +342,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 20 Apr 2022 11:55:07 GMT
+      - Tue, 19 Dec 2023 14:21:45 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -320,18 +350,24 @@ http_interactions:
       Connection:
       - keep-alive
       Vary:
-      - Accept, Origin, Cookie
+      - Accept, origin, Cookie
       Allow:
       - GET, HEAD, OPTIONS
+      Cache-Control:
+      - public, max-age=7200
       X-Frame-Options:
-      - SAMEORIGIN
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - same-origin
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
     body:
       encoding: UTF-8
       string: '{"count":1,"next":null,"previous":null,"results":[{"id":34,"name":"Advocate
         fee","code":"AGFS_FEE","is_basic":true,"aggregation":"sum"}]}'
-  recorded_at: Wed, 20 Apr 2022 11:55:07 GMT
+  recorded_at: Tue, 19 Dec 2023 14:21:45 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/fee-types/1001/
@@ -342,7 +378,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.2.0
+      - laa-fee-calculator-client/1.4.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -351,7 +387,7 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Wed, 20 Apr 2022 11:55:07 GMT
+      - Tue, 19 Dec 2023 14:21:45 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -359,17 +395,23 @@ http_interactions:
       Connection:
       - keep-alive
       Vary:
-      - Accept, Origin, Cookie
+      - Accept, origin, Cookie
       Allow:
       - GET, HEAD, OPTIONS
+      Cache-Control:
+      - public, max-age=7200
       X-Frame-Options:
-      - SAMEORIGIN
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - same-origin
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
     body:
       encoding: UTF-8
       string: '{"detail":"Not found."}'
-  recorded_at: Wed, 20 Apr 2022 11:55:07 GMT
+  recorded_at: Tue, 19 Dec 2023 14:21:45 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/fee-types/?is_basic=true&scenario=8
@@ -380,7 +422,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.2.0
+      - laa-fee-calculator-client/1.4.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -389,7 +431,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 20 Apr 2022 11:55:07 GMT
+      - Tue, 19 Dec 2023 14:21:45 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -397,17 +439,23 @@ http_interactions:
       Connection:
       - keep-alive
       Vary:
-      - Accept, Origin, Cookie
+      - Accept, origin, Cookie
       Allow:
       - GET, HEAD, OPTIONS
+      Cache-Control:
+      - public, max-age=7200
       X-Frame-Options:
-      - SAMEORIGIN
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - same-origin
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
     body:
       encoding: UTF-8
       string: '{"count":0,"next":null,"previous":null,"results":[]}'
-  recorded_at: Wed, 20 Apr 2022 11:55:07 GMT
+  recorded_at: Tue, 19 Dec 2023 14:21:45 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/fee-types/
@@ -418,7 +466,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.2.0
+      - laa-fee-calculator-client/1.4.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -427,7 +475,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 20 Apr 2022 11:55:07 GMT
+      - Tue, 19 Dec 2023 14:21:45 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -435,11 +483,17 @@ http_interactions:
       Connection:
       - keep-alive
       Vary:
-      - Accept, Origin, Cookie
+      - Accept, origin, Cookie
       Allow:
       - GET, HEAD, OPTIONS
+      Cache-Control:
+      - public, max-age=7200
       X-Frame-Options:
-      - SAMEORIGIN
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - same-origin
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
     body:
@@ -481,7 +535,7 @@ http_interactions:
         (full day)","code":"AGFS_CONFISC_WL","is_basic":false,"aggregation":"sum"},{"id":90,"name":"Hearings
         relating to admissibility of evidence (half day)","code":"AGFS_ADM_EVD_HF","is_basic":false,"aggregation":"sum"},{"id":91,"name":"Wasted
         preparation fee","code":"AGFS_WSTD_PREP","is_basic":false,"aggregation":"sum"}]}'
-  recorded_at: Wed, 20 Apr 2022 11:55:07 GMT
+  recorded_at: Tue, 19 Dec 2023 14:21:45 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/
@@ -492,7 +546,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.2.0
+      - laa-fee-calculator-client/1.4.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -501,26 +555,32 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 20 Apr 2022 11:55:07 GMT
+      - Tue, 19 Dec 2023 14:21:45 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '106'
+      - '140'
       Connection:
       - keep-alive
       Vary:
-      - Accept, Origin, Cookie
+      - Accept, origin, Cookie
       Allow:
       - GET, HEAD, OPTIONS
+      Cache-Control:
+      - public, max-age=7200
       X-Frame-Options:
-      - SAMEORIGIN
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - same-origin
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
     body:
       encoding: UTF-8
-      string: '{"id":1,"start_date":"2012-04-01","end_date":"2018-03-31","type":"AGFS","description":"AGFS
+      string: '{"id":1,"start_date":"2012-04-01","end_date":"2018-03-31","earliest_main_hearing_date":null,"type":"AGFS","description":"AGFS
         Fee Scheme 9"}'
-  recorded_at: Wed, 20 Apr 2022 11:55:07 GMT
+  recorded_at: Tue, 19 Dec 2023 14:21:45 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/fee-types/?scenario=8
@@ -531,7 +591,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.2.0
+      - laa-fee-calculator-client/1.4.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -540,7 +600,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 20 Apr 2022 11:55:07 GMT
+      - Tue, 19 Dec 2023 14:21:46 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -548,11 +608,17 @@ http_interactions:
       Connection:
       - keep-alive
       Vary:
-      - Accept, Origin, Cookie
+      - Accept, origin, Cookie
       Allow:
       - GET, HEAD, OPTIONS
+      Cache-Control:
+      - public, max-age=7200
       X-Frame-Options:
-      - SAMEORIGIN
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - same-origin
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
     body:
@@ -587,5 +653,5 @@ http_interactions:
         payments","code":"AGFS_STAGED","is_basic":false,"aggregation":"sum"},{"id":90,"name":"Hearings
         relating to admissibility of evidence (half day)","code":"AGFS_ADM_EVD_HF","is_basic":false,"aggregation":"sum"},{"id":91,"name":"Wasted
         preparation fee","code":"AGFS_WSTD_PREP","is_basic":false,"aggregation":"sum"}]}'
-  recorded_at: Wed, 20 Apr 2022 11:55:07 GMT
-recorded_with: VCR 6.0.0
+  recorded_at: Tue, 19 Dec 2023 14:21:46 GMT
+recorded_with: VCR 6.1.0
