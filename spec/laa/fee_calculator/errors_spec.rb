@@ -18,7 +18,7 @@ RSpec.describe LAA::FeeCalculator::ClientError do
     }
   end
 
-  it { is_expected.to be_kind_of(Faraday::ClientError) }
+  it { is_expected.to be_a(Faraday::ClientError) }
   it { is_expected.to respond_to(:message) }
   it { is_expected.to respond_to(:response) }
 
@@ -48,7 +48,7 @@ RSpec.describe LAA::FeeCalculator::ResponseError do
     }
   end
 
-  it { is_expected.to be_kind_of(LAA::FeeCalculator::ClientError) }
+  it { is_expected.to be_a(LAA::FeeCalculator::ClientError) }
 
   it 'returns response body as message' do
     expect(error.message).to match('`case_date:`["Enter a valid date."]')
@@ -73,7 +73,7 @@ RSpec.describe LAA::FeeCalculator::ResourceNotFound do
     }
   end
 
-  it { is_expected.to be_kind_of(LAA::FeeCalculator::ResponseError) }
+  it { is_expected.to be_a(LAA::FeeCalculator::ResponseError) }
   it { is_expected.to respond_to(:message) }
   it { is_expected.to respond_to(:response) }
 
