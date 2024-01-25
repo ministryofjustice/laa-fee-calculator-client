@@ -14,7 +14,7 @@ RSpec.describe LAA::FeeCalculator::Client, :vcr do
   describe '#connection' do
     subject { described_class.new.connection }
 
-    it { is_expected.to be_kind_of LAA::FeeCalculator::Connection }
+    it { is_expected.to be_a LAA::FeeCalculator::Connection }
   end
 
   describe '#fee_schemes' do

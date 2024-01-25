@@ -117,14 +117,14 @@ RSpec.describe LAA::FeeCalculator, :vcr do
           let(:offence_class) { nil }
 
           it { expect { calculate }.not_to raise_client_error }
-          it { is_expected.to be_kind_of(Float) }
+          it { is_expected.to be_a(Float) }
         end
 
         context 'advocate_type' do
           let(:advocate_type) { nil }
 
           it { expect { calculate }.not_to raise_client_error }
-          it { is_expected.to be_kind_of(Float) }
+          it { is_expected.to be_a(Float) }
         end
       end
 

@@ -14,7 +14,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
     describe 'object' do
       subject { fee_schemes.first }
 
-      it { is_expected.to be_kind_of(OpenStruct) }
+      it { is_expected.to be_a(OpenStruct) }
       it { is_expected.to respond_to(:id) }
       it { is_expected.to respond_to(:start_date) }
       it { is_expected.to respond_to(:end_date) }
