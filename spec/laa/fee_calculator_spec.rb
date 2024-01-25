@@ -21,7 +21,7 @@ RSpec.describe LAA::FeeCalculator do
     end
 
     it 'memoized' do
-      expect(configuration).to be_equal(described_class.configuration)
+      expect(configuration).to equal(described_class.configuration)
     end
   end
 
