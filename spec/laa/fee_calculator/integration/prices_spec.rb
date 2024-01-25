@@ -79,9 +79,9 @@ RSpec.describe LAA::FeeCalculator, :vcr do
         end
 
         context 'when filtering' do
-          # FIXME: API inconsistent in sometimes raising errors for invalid options and sometimes returning
-          # empty results (depending on endpoint)
-          xspecify 'raises ResponseError for invalid option values' do
+          specify 'raises ResponseError for invalid option values' do
+            pending 'API inconsistent in sometimes raising errors for invalid options and sometimes returning empty ' \
+                    'results (depending on endpoint)'
             expect do
               fee_scheme.prices(scenario: 5, fee_type_code: 'INVALID_FEE_TYPE_CODE')
             end.to raise_client_error(LAA::FeeCalculator::ResponseError)
