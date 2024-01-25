@@ -200,7 +200,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
                 it { is_expected.to eql basic_fee }
               end
 
-              context "cases 2+ carry 20\% uplift of basic fee per case" do
+              context 'cases 2+ carry 20% uplift of basic fee per case' do
                 let(:result) { (basic_fee + (basic_fee * (0.2 * (number_of_cases - 1)))).round(2) }
 
                 [2, 3, 5, 10, 100, 10_000].each do |number_of_cases|
@@ -224,7 +224,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
                 it { is_expected.to eql basic_fee }
               end
 
-              context "defendants 2+ carry 20\% uplift of basic fee per defendant" do
+              context 'defendants 2+ carry 20% uplift of basic fee per defendant' do
                 let(:result) { (basic_fee + (basic_fee * (0.2 * (number_of_defendants - 1)))).round(2) }
 
                 [2, 3, 5, 10, 100, 10_000].each do |number_of_defendants|

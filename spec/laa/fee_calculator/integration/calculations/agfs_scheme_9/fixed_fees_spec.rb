@@ -95,7 +95,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
                 fee_per_unit + (fee_per_unit * (0.2 * (number_of_defendants - 1)))
               end
 
-              context "defendant 2+ carry a 20\% uplift per defendant" do
+              context 'defendant 2+ carry a 20% uplift per defendant' do
                 [1, 2, 3, 4, 5, 10, 100].each do |number_of_defendants|
                   context "#{number_of_defendants} defendants" do
                     let(:number_of_defendants) { number_of_defendants }
@@ -116,7 +116,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
                 fee_per_unit + (fee_per_unit * (0.2 * (number_of_cases - 1)))
               end
 
-              context "cases 2+ carry a 20\% uplift per case" do
+              context 'cases 2+ carry a 20% uplift per case' do
                 [1, 2, 3, 4, 5, 10, 100].each do |number_of_cases|
                   context "#{number_of_cases} cases" do
                     let(:number_of_cases) { number_of_cases }
