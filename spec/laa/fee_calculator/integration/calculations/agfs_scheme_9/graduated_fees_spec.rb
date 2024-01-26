@@ -78,12 +78,12 @@ RSpec.describe LAA::FeeCalculator, :vcr do
               end
 
               # TODO: add banding from functional description from clem and use
-              context '41 to 50 days' do
-              end
+              # context '41 to 50 days' do
+              # end
 
               # TODO: add banding from functional description from clem and use
-              context '51+ days' do
-              end
+              # context '51+ days' do
+              # end
 
               context 'upper limit 9,999' do
                 [9_999, 10_000].each do |quantity|
