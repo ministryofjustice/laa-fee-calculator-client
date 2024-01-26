@@ -65,14 +65,14 @@ RSpec.describe LAA::FeeCalculator, :vcr do
             context 'with the default parameters' do
               let(:results) { fee_scheme.prices }
 
-              it { expect(results.size).to eql 100 }
+              it { expect(results.size).to be 100 }
               it { expect(results.last.id).to be 100 }
             end
 
             context 'with the second page of results' do
               let(:results) { fee_scheme.prices(page: 2) }
 
-              it { expect(results.size).to eql 100 }
+              it { expect(results.size).to be 100 }
               it { expect(results.last.id).to be 200 }
             end
           end
@@ -88,7 +88,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
           end
 
           specify 'can return a subset of items' do
-            expect(fee_scheme.prices(scenario: 5, fee_type_code: 'AGFS_APPEAL_CON').size).to eql(4)
+            expect(fee_scheme.prices(scenario: 5, fee_type_code: 'AGFS_APPEAL_CON').size).to be(4)
           end
         end
       end

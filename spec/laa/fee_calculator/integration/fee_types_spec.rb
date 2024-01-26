@@ -71,7 +71,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
           let(:all) { fee_scheme.fee_types }
 
           specify 'without filters there are 36' do
-            expect(all.size).to eql 36
+            expect(all.size).to be 36
           end
 
           context 'when filter reduces list' do

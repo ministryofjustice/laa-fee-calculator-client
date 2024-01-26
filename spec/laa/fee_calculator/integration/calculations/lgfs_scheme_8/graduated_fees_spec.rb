@@ -71,7 +71,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
                     let(:days) { quantity }
 
                     it 'returns max. amount' do
-                      expect(calculate).to eql 90_159.18
+                      expect(calculate).to be 90_159.18
                     end
                   end
                 end
