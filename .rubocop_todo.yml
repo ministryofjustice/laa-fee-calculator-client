@@ -102,20 +102,6 @@ RSpec/SpecFilePathFormat:
     - 'spec/laa/fee_calculator/integration/scenarios_spec.rb'
     - 'spec/laa/fee_calculator/integration/units_spec.rb'
 
-# Offense count: 9
-# Configuration parameters: AllowedConstants.
-Style/Documentation:
-  Exclude:
-    - 'spec/**/*'
-    - 'test/**/*'
-    - 'lib/laa/fee_calculator.rb'
-    - 'lib/laa/fee_calculator/calculator.rb'
-    - 'lib/laa/fee_calculator/client.rb'
-    - 'lib/laa/fee_calculator/configuration.rb'
-    - 'lib/laa/fee_calculator/connection.rb'
-    - 'lib/laa/fee_calculator/fee_scheme.rb'
-    - 'lib/laa/fee_calculator/has_manyable.rb'
-
 # Offense count: 43
 Style/OpenStructUse:
   Exclude:

@@ -17,4 +17,7 @@ Layout/LineLength:
   Exclude:
     - '*.gemspec'
 
+Style/Documentation:
+  Enabled: false
+
 inherit_from: .rubocop_todo.yml
