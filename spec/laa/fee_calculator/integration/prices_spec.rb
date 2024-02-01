@@ -3,7 +3,7 @@
 RSpec.describe LAA::FeeCalculator, :vcr do
   subject(:client) { described_class.client }
 
-  context 'prices' do
+  describe '#prices' do
     subject(:prices) { client.fee_schemes(1).prices }
 
     it { is_expected.to be_an Array }
@@ -28,7 +28,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
       specify { expect(instance.fixed_fee).to be_string_number }
     end
 
-    context 'filterable' do
+    context 'when filtering' do
       subject(:fee_scheme) { client.fee_schemes(1) }
 
       specify 'by id' do
@@ -60,7 +60,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
           expect { fee_scheme.prices(id: -1) }.to raise_error(described_class::ResourceNotFound, /detail not found/i)
         end
 
-        context 'combination of options' do
+        context 'with a combination of options' do
           context 'without filters' do
             context 'with the default parameters' do
               let(:results) { fee_scheme.prices }

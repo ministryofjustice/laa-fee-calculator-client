@@ -3,7 +3,7 @@
 RSpec.describe LAA::FeeCalculator, :vcr do
   subject(:client) { described_class.client }
 
-  context 'scenarios' do
+  describe '#scenarios' do
     subject(:scenarios) { client.fee_schemes(1).scenarios }
 
     it { is_expected.to all(be_instance_of(OpenStruct)) }
@@ -15,7 +15,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
       it { is_expected.to respond_to(:name) }
     end
 
-    context 'filterable' do
+    context 'when filtering' do
       subject(:fee_scheme) { client.fee_schemes(1) }
 
       specify 'by id' do

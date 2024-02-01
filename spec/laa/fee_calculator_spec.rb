@@ -34,7 +34,7 @@ RSpec.describe LAA::FeeCalculator do
       expect(described_class.configure).to be_an_instance_of(described_class::Configuration)
     end
 
-    context 'configuring host' do
+    context 'when configuring host' do
       let(:host) { 'https://mycustom-laa-fee-calculator-api-v2/api/v2' }
 
       before do

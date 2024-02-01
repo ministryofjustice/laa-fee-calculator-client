@@ -3,7 +3,7 @@
 RSpec.describe LAA::FeeCalculator, :vcr do
   subject(:client) { described_class.client }
 
-  context 'advocate types' do
+  describe '#advocate_types' do
     subject(:advocate_types) { client.fee_schemes(1).advocate_types }
 
     it { is_expected.to be_an Array }
@@ -16,7 +16,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
       it { is_expected.to respond_to(:name) }
     end
 
-    context 'filterable' do
+    context 'when filtering' do
       subject(:fee_scheme) { client.fee_schemes(1) }
 
       specify 'by id' do

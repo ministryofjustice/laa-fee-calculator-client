@@ -23,25 +23,6 @@ Performance/CollectionLiteralInLoop:
   Exclude:
     - 'spec/laa/fee_calculator/integration/calculations/agfs_scheme_9/graduated_fees_spec.rb'
 
-# Offense count: 125
-# Configuration parameters: Prefixes, AllowedPatterns.
-# Prefixes: when, with, without
-RSpec/ContextWording:
-  Exclude:
-    - 'spec/laa/fee_calculator/integration/advocate_types_spec.rb'
-    - 'spec/laa/fee_calculator/integration/calculations/agfs_scheme_9/fixed_fees_spec.rb'
-    - 'spec/laa/fee_calculator/integration/calculations/agfs_scheme_9/graduated_fees_spec.rb'
-    - 'spec/laa/fee_calculator/integration/calculations/lgfs_scheme_8/fixed_fees_spec.rb'
-    - 'spec/laa/fee_calculator/integration/calculations/lgfs_scheme_8/graduated_fees_spec.rb'
-    - 'spec/laa/fee_calculator/integration/errors_spec.rb'
-    - 'spec/laa/fee_calculator/integration/fee_schemes_spec.rb'
-    - 'spec/laa/fee_calculator/integration/fee_types_spec.rb'
-    - 'spec/laa/fee_calculator/integration/modifier_types_spec.rb'
-    - 'spec/laa/fee_calculator/integration/offence_classes_spec.rb'
-    - 'spec/laa/fee_calculator/integration/prices_spec.rb'
-    - 'spec/laa/fee_calculator/integration/scenarios_spec.rb'
-    - 'spec/laa/fee_calculator/integration/units_spec.rb'
-    - 'spec/laa/fee_calculator_spec.rb'
 
 # Offense count: 2
 # This cop supports unsafe autocorrection (--autocorrect-all).

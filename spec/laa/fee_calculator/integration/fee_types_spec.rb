@@ -3,7 +3,7 @@
 RSpec.describe LAA::FeeCalculator, :vcr do
   subject(:client) { described_class.client }
 
-  context 'fee_types' do
+  describe '#fee_types' do
     subject(:fee_types) { client.fee_schemes(1).fee_types }
 
     it { is_expected.to be_an Array }
@@ -19,7 +19,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
       it { is_expected.to respond_to(:aggregation) }
     end
 
-    context 'filterable' do
+    context 'when filtering' do
       subject(:fee_scheme) { client.fee_schemes(1) }
 
       specify 'by id' do
@@ -67,7 +67,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
         # result in a reduced list (e.g. for "fixed fees" e.g. contempt)
         # which means you can just filter by scenario
         # to get multipe applicable fee types.
-        context 'combination of options' do
+        context 'with a combination of options' do
           let(:all) { fee_scheme.fee_types }
 
           specify 'without filters there are 36' do
