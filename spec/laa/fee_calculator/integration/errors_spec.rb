@@ -84,7 +84,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
       context 'when not supplied with required params' do
         subject(:calculate) do
           fee_scheme.calculate(
-            **options.reject { |k, _v| k.eql?(:fee_type_code) }
+            **options.except(:fee_type_code)
           )
         end
 

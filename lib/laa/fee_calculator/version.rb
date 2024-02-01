@@ -3,6 +3,6 @@
 module LAA
   module FeeCalculator
     VERSION = '1.4.0'
-    USER_AGENT = "laa-fee-calculator-client/#{VERSION}"
+    USER_AGENT = "laa-fee-calculator-client/#{VERSION}".freeze
   end
 end

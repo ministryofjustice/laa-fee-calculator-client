@@ -9,7 +9,7 @@ module LAA
     # gem specific handlers.
     #
     class RaiseError < Faraday::Response::Middleware
-      CLIENT_ERROR_STATUSES = (400...600).freeze
+      CLIENT_ERROR_STATUSES = (400...600)
 
       def on_complete(env)
         case env[:status]
