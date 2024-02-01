@@ -14,6 +14,13 @@ Add latest change log entries at top using template:
   -
 ```
 
+## Version 1.5.0
+
+### Added
+  - Support for Ruby 3.2 and 3.3
+
+### Removed
+  - Support for Ruby 2.6 and 2.7
 
 ## Version 1.4.0
 
