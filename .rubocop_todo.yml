@@ -48,12 +48,6 @@ RSpec/FilePath:
     - 'spec/laa/fee_calculator/integration/scenarios_spec.rb'
     - 'spec/laa/fee_calculator/integration/units_spec.rb'
 
-# Offense count: 1
-# Configuration parameters: .
-# SupportedStyles: have_received, receive
-RSpec/MessageSpies:
-  EnforcedStyle: receive
-
 # Offense count: 98
 # Configuration parameters: AllowSubject, Max.
 RSpec/MultipleMemoizedHelpers:

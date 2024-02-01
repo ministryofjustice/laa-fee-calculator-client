@@ -53,9 +53,11 @@ RSpec.describe LAA::FeeCalculator::Connection do
 
     let(:uri) { '/' }
 
+    before { allow(described_class.instance.conn).to receive(:get) }
+
     it 'delegated to adapter connection' do
-      expect(described_class.instance.conn).to receive(:get)
       get
+      expect(described_class.instance.conn).to have_received(:get)
     end
   end
 
