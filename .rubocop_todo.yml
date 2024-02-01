@@ -54,11 +54,6 @@ RSpec/FilePath:
 RSpec/MessageSpies:
   EnforcedStyle: receive
 
-# Offense count: 1
-RSpec/MultipleDescribes:
-  Exclude:
-    - 'spec/laa/fee_calculator/errors_spec.rb'
-
 # Offense count: 98
 # Configuration parameters: AllowSubject, Max.
 RSpec/MultipleMemoizedHelpers:
