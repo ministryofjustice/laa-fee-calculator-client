@@ -18,8 +18,7 @@ module LAA
 
       def fee_schemes(id = nil, **options)
         uri = fee_schemes_uri(id || options[:id])
-        filtered_params = options.reject { |k, _| k.eql?(:id) }
-        # Ruby 3.0+; filtered_params = options.except(:id)
+        filtered_params = options.except(:id)
 
         json = get(uri, filtered_params).body
 

@@ -21,7 +21,7 @@ RSpec.describe LAA::FeeCalculator::FeeScheme, :vcr do
   let(:number_of_cases) { 1 }
   let(:number_of_defendants) { 1 }
 
-  it { is_expected.to be_kind_of(OpenStruct) }
+  it { is_expected.to be_a(OpenStruct) }
 
   it { is_expected.to respond_to(:advocate_types) }
   it { is_expected.to respond_to(:scenarios) }
@@ -47,7 +47,7 @@ RSpec.describe LAA::FeeCalculator::FeeScheme, :vcr do
     end
 
     it 'returns a decimal' do
-      expect(calculate).to be_kind_of(Float)
+      expect(calculate).to be_a(Float)
     end
 
     it 'yields options to block' do

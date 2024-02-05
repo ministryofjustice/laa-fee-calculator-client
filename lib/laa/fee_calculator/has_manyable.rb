@@ -21,7 +21,7 @@ module LAA
         def has_many(association)
           define_method(association) do |id = nil, **options|
             uri = uri_for(association, id: id || options[:id])
-            filtered_params = options.reject { |k, _v| k.eql?(:id) }
+            filtered_params = options.except(:id)
 
             json = get(uri, filtered_params).body
 

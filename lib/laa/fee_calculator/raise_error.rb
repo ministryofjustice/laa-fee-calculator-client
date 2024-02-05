@@ -9,16 +9,16 @@ module LAA
     # gem specific handlers.
     #
     class RaiseError < Faraday::Response::Middleware
-      CLIENT_ERROR_STATUSES = (400...600).freeze
+      CLIENT_ERROR_STATUSES = (400...600)
 
       def on_complete(env)
         case env[:status]
         when 400
-          raise LAA::FeeCalculator::ResponseError.new(response_values(env))
+          raise LAA::FeeCalculator::ResponseError, response_values(env)
         when 404
-          raise LAA::FeeCalculator::ResourceNotFound.new(response_values(env))
+          raise LAA::FeeCalculator::ResourceNotFound, response_values(env)
         when CLIENT_ERROR_STATUSES
-          raise LAA::FeeCalculator::ClientError.new(response_values(env))
+          raise LAA::FeeCalculator::ClientError, response_values(env)
         end
       end
 

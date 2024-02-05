@@ -3,7 +3,7 @@
 RSpec.describe LAA::FeeCalculator, :vcr do
   subject(:client) { described_class.client }
 
-  context 'units' do
+  describe '#units' do
     subject(:units) { client.fee_schemes(1).units }
 
     it { is_expected.to be_an Array }
@@ -16,7 +16,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
       it { is_expected.to respond_to(:name) }
     end
 
-    context 'filterable' do
+    context 'when filtering' do
       subject(:fee_scheme) { client.fee_schemes(1) }
 
       specify 'by id' do
@@ -51,11 +51,11 @@ RSpec.describe LAA::FeeCalculator, :vcr do
         # TODO: check whether advocate_type has any impact on units returned
         # and if not might be worth removing from the filtering options of the
         # API itself. raise an issue on https://github.com/ministryofjustice/laa-fee-calculator
-        context 'combination of options' do
+        context 'with a combination of options' do
           let(:all) { fee_scheme.units }
 
           specify 'without filters there are 6' do
-            expect(all.size).to eql 6
+            expect(all.size).to be 6
           end
 
           context 'when filtering' do
@@ -66,7 +66,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
             end
 
             specify 'can return a subset of items' do
-              expect(fee_scheme.units(scenario: 5, offence_class: 'E').size).to eql(4)
+              expect(fee_scheme.units(scenario: 5, offence_class: 'E').size).to be(4)
             end
 
             # TODO: questionable whether we want to return an array of one here for consistency

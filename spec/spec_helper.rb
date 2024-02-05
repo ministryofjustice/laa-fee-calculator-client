@@ -7,7 +7,7 @@ require 'webmock/rspec'
 require 'vcr'
 
 # require all spec support files
-Dir[File.join(LAA::FeeCalculator.root, 'spec', 'support', '**', '*.rb')].sort.each { |f| require f }
+Dir[File.join(LAA::FeeCalculator.root, 'spec', 'support', '**', '*.rb')].each { |f| require f }
 
 LAA::FeeCalculator.configure do |config|
   # [un]comment to test against api running locally or remotely

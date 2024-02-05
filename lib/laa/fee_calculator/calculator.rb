@@ -8,7 +8,7 @@ module LAA
 
       def initialize(scheme_pk, options)
         @uri = "fee-schemes/#{scheme_pk}/calculate/"
-        @filtered_params = options.reject { |k, _v| k.eql?(:id) }
+        @filtered_params = options.except(:id)
       end
 
       def call

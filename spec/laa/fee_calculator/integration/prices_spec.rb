@@ -3,7 +3,7 @@
 RSpec.describe LAA::FeeCalculator, :vcr do
   subject(:client) { described_class.client }
 
-  context 'prices' do
+  describe '#prices' do
     subject(:prices) { client.fee_schemes(1).prices }
 
     it { is_expected.to be_an Array }
@@ -28,7 +28,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
       specify { expect(instance.fixed_fee).to be_string_number }
     end
 
-    context 'filterable' do
+    context 'when filtering' do
       subject(:fee_scheme) { client.fee_schemes(1) }
 
       specify 'by id' do
@@ -60,35 +60,35 @@ RSpec.describe LAA::FeeCalculator, :vcr do
           expect { fee_scheme.prices(id: -1) }.to raise_error(described_class::ResourceNotFound, /detail not found/i)
         end
 
-        context 'combination of options' do
+        context 'with a combination of options' do
           context 'without filters' do
             context 'with the default parameters' do
               let(:results) { fee_scheme.prices }
 
-              it { expect(results.size).to eql 100 }
+              it { expect(results.size).to be 100 }
               it { expect(results.last.id).to be 100 }
             end
 
             context 'with the second page of results' do
               let(:results) { fee_scheme.prices(page: 2) }
 
-              it { expect(results.size).to eql 100 }
+              it { expect(results.size).to be 100 }
               it { expect(results.last.id).to be 200 }
             end
           end
         end
 
         context 'when filtering' do
-          # FIXME: API inconsistent in sometimes raising errors for invalid options and sometimes returning
-          # empty results (depending on endpoint)
-          xspecify 'raises ResponseError for invalid option values' do
+          specify 'raises ResponseError for invalid option values' do
+            pending 'API inconsistent in sometimes raising errors for invalid options and sometimes returning empty ' \
+                    'results (depending on endpoint)'
             expect do
               fee_scheme.prices(scenario: 5, fee_type_code: 'INVALID_FEE_TYPE_CODE')
             end.to raise_client_error(LAA::FeeCalculator::ResponseError)
           end
 
           specify 'can return a subset of items' do
-            expect(fee_scheme.prices(scenario: 5, fee_type_code: 'AGFS_APPEAL_CON').size).to eql(4)
+            expect(fee_scheme.prices(scenario: 5, fee_type_code: 'AGFS_APPEAL_CON').size).to be(4)
           end
         end
       end

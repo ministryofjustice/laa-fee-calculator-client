@@ -3,7 +3,7 @@
 RSpec.describe LAA::FeeCalculator, :vcr do
   subject(:client) { described_class.client }
 
-  context 'fee_types' do
+  describe '#fee_types' do
     subject(:fee_types) { client.fee_schemes(1).fee_types }
 
     it { is_expected.to be_an Array }
@@ -19,7 +19,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
       it { is_expected.to respond_to(:aggregation) }
     end
 
-    context 'filterable' do
+    context 'when filtering' do
       subject(:fee_scheme) { client.fee_schemes(1) }
 
       specify 'by id' do
@@ -33,7 +33,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
 
         # NOTE: there is only one is_basic: true
         specify 'by is_basic (a.k.a AGFS_FEE/advocate fee)' do
-          expect(fee_scheme.fee_types(is_basic: true)).to match_array [instance_of(OpenStruct)]
+          expect(fee_scheme.fee_types(is_basic: true)).to contain_exactly(instance_of(OpenStruct))
         end
 
         specify 'by scenario (a.k.a case types)' do
@@ -49,7 +49,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
         end
 
         specify 'by fee_type_code' do
-          expect(fee_scheme.fee_types(fee_type_code: 'AGFS_FEE')).to match_array [instance_of(OpenStruct)]
+          expect(fee_scheme.fee_types(fee_type_code: 'AGFS_FEE')).to contain_exactly(instance_of(OpenStruct))
         end
 
         specify 'raises ResourceNotFound when no matching objects' do
@@ -67,11 +67,11 @@ RSpec.describe LAA::FeeCalculator, :vcr do
         # result in a reduced list (e.g. for "fixed fees" e.g. contempt)
         # which means you can just filter by scenario
         # to get multipe applicable fee types.
-        context 'combination of options' do
+        context 'with a combination of options' do
           let(:all) { fee_scheme.fee_types }
 
           specify 'without filters there are 36' do
-            expect(all.size).to eql 36
+            expect(all.size).to be 36
           end
 
           context 'when filter reduces list' do

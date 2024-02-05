@@ -3,7 +3,7 @@
 RSpec.describe LAA::FeeCalculator, :vcr do
   subject(:client) { described_class.client }
 
-  context 'fee schemes' do
+  describe '#fee schemes' do
     subject(:fee_schemes) { client.fee_schemes }
 
     let(:fee_scheme_class) { described_class::FeeScheme }
@@ -14,7 +14,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
     describe 'object' do
       subject { fee_schemes.first }
 
-      it { is_expected.to be_kind_of(OpenStruct) }
+      it { is_expected.to be_a(OpenStruct) }
       it { is_expected.to respond_to(:id) }
       it { is_expected.to respond_to(:start_date) }
       it { is_expected.to respond_to(:end_date) }
@@ -23,7 +23,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
       it { is_expected.to respond_to :calculate }
     end
 
-    context 'filterable' do
+    context 'when filtering' do
       specify 'by id' do
         expect(client.fee_schemes(1)).to be_instance_of(fee_scheme_class)
       end

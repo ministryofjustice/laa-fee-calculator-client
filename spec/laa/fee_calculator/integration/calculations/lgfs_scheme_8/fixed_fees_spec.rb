@@ -4,11 +4,11 @@ RSpec.describe LAA::FeeCalculator, :vcr do
   subject(:client) { described_class.client }
 
   describe 'calculate' do
-    context 'LGFS scheme 8' do
+    context 'with LGFS scheme 8' do
       let(:fee_scheme) { client.fee_schemes(type: 'LGFS', case_date: '2018-01-01') }
 
-      context 'Fixed fees' do
-        context 'Appeal againt conviction' do
+      context 'with Fixed fees' do
+        context 'with Appeal againt conviction' do
           subject(:calculate) do
             fee_scheme.calculate(
               scenario: scenario,
@@ -32,9 +32,9 @@ RSpec.describe LAA::FeeCalculator, :vcr do
             expect(calculate).to eql fixed_amount
           end
 
-          context 'units' do
+          describe 'units' do
             [1, 10, 100].each do |quantity|
-              context "for quantity of #{quantity}" do
+              context "with quantity of #{quantity}" do
                 let(:quantity) { quantity }
 
                 it 'returns fixed amount' do
@@ -44,10 +44,10 @@ RSpec.describe LAA::FeeCalculator, :vcr do
             end
           end
 
-          context 'modifier-types' do
-            context 'number_of_defendants' do
+          describe 'modifier-types' do
+            describe 'number_of_defendants' do
               [1, 10].each do |number_of_defendants|
-                context "#{number_of_defendants} defendants" do
+                context "with #{number_of_defendants} defendants" do
                   let(:number_of_defendants) { number_of_defendants }
 
                   it 'returns fixed amount' do
@@ -57,9 +57,9 @@ RSpec.describe LAA::FeeCalculator, :vcr do
               end
             end
 
-            context 'number_of_cases' do
+            describe 'number_of_cases' do
               [1, 10].each do |number_of_cases|
-                context "#{number_of_cases} cases" do
+                context "with #{number_of_cases} cases" do
                   let(:number_of_cases) { number_of_cases }
 
                   it 'returns fixed amount' do

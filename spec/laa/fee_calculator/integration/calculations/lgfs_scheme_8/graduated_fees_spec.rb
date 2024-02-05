@@ -6,12 +6,12 @@
 RSpec.describe LAA::FeeCalculator, :vcr do
   subject(:client) { described_class.client }
 
-  describe 'calculate' do
-    context 'LGFS scheme 8' do
+  describe '#calculate' do
+    context 'with LGFS scheme 8' do
       let(:fee_scheme) { client.fee_schemes(type: 'LGFS', case_date: '2018-01-01') }
 
-      context 'Graduated fees' do
-        context 'Trial' do
+      context 'with Graduated fees' do
+        context 'with a Trial' do
           subject(:calculate) do
             fee_scheme.calculate(
               scenario: scenario,
@@ -38,8 +38,8 @@ RSpec.describe LAA::FeeCalculator, :vcr do
             expect(calculate).to eql basic_fee
           end
 
-          context 'units' do
-            context 'days' do
+          describe 'units' do
+            describe 'days' do
               # day 1 and 2 included in basic fee
               # day 3+ add individual amounts
               # TODO: check API prices endpoint as
@@ -48,7 +48,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
               #
 
               [1, 2].each do |quantity|
-                context "#{quantity} days" do
+                context "with #{quantity} days" do
                   let(:days) { quantity }
 
                   it 'returns basic fee' do
@@ -57,7 +57,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
                 end
               end
 
-              context '3 to 200 days' do
+              context 'with 3 to 200 days' do
                 let(:days) { 3 }
 
                 it 'returns basic fee plus fixed amount per additional day' do
@@ -65,13 +65,13 @@ RSpec.describe LAA::FeeCalculator, :vcr do
                 end
               end
 
-              context 'upper limit' do
+              describe 'upper limit' do
                 [200, 201].each do |quantity|
-                  context "#{quantity} days" do
+                  context "with #{quantity} days" do
                     let(:days) { quantity }
 
                     it 'returns max. amount' do
-                      expect(calculate).to eql 90_159.18
+                      expect(calculate).to be 90_159.18
                     end
                   end
                 end
@@ -80,8 +80,8 @@ RSpec.describe LAA::FeeCalculator, :vcr do
 
             # check API logic in line with PPE cut of regulations.
             # http://www.legislation.gov.uk/uksi/2016/313/schedule/1/made
-            context 'ppe' do
-              context 'PPE cut off for band A offence' do
+            describe 'ppe' do
+              context 'with PPE cut off for band A offence' do
                 let(:offence_class) { 'A' }
                 let(:basic_fee) { 1_467.58 }
 
@@ -89,7 +89,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
                   let(:days) { 2 }
 
                   [0, 80].each do |quantity|
-                    context "#{quantity} ppe" do
+                    context "with #{quantity} ppe" do
                       let(:ppe) { quantity }
 
                       it 'returns basic fee' do
@@ -99,7 +99,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
                   end
 
                   # NOTE: there are alot more ranges to cover - see regulations
-                  context '81+ ppe' do
+                  context 'with 81+ ppe' do
                     let(:ppe) { 81 }
 
                     it 'returns basic fee + increment' do
@@ -117,7 +117,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
                   let(:basic_fee) { 1720.12 } # see regs
 
                   [0, 1, 95].each do |quantity|
-                    context "#{quantity} ppe" do
+                    context "with #{quantity} ppe" do
                       let(:ppe) { quantity }
 
                       it 'returns incremented basic fee' do
@@ -126,7 +126,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
                     end
                   end
 
-                  context '96+ ppe' do
+                  context 'with 96+ ppe' do
                     let(:ppe) { 96 }
 
                     it 'returns incremented basic fee plus ppe increment' do
@@ -136,12 +136,12 @@ RSpec.describe LAA::FeeCalculator, :vcr do
                 end
               end
 
-              context 'PPE cut off for band B offence' do
+              context 'with PPE cut off for band B offence' do
                 let(:offence_class) { 'B' }
                 let(:basic_fee) { 1097.66 }
 
                 [0, 70].each do |quantity|
-                  context "#{quantity} ppe" do
+                  context "with #{quantity} ppe" do
                     let(:ppe) { quantity }
 
                     it 'returns basic fee' do
@@ -151,7 +151,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
                 end
 
                 # TODO: there are more ranges to cover - see regulations
-                context '71+ ppe' do
+                context 'with 71+ ppe' do
                   let(:ppe) { 71 }
 
                   it 'returns basic fee + increment' do
@@ -162,7 +162,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
             end
           end
 
-          context 'modifier-types' do
+          describe 'modifier-types' do
             let(:quantity) { 1 }
 
             # NOTE: adds a single 20% to basic fee for defendant 2 to 4
@@ -176,18 +176,18 @@ RSpec.describe LAA::FeeCalculator, :vcr do
             #       else if number_of_defendants >= 5
             #         basic_fee + (0.3 * basic_fee)
             #
-            context 'number of defendants' do
-              context 'defendant 1 carries no uplift' do
+            describe 'number of defendants' do
+              context 'when defendant 1 carries no uplift' do
                 let(:number_of_defendants) { 1 }
 
                 it { is_expected.to eql basic_fee }
               end
 
-              context "defendants 2 to 4 carry a single 20\% uplift of basic fee" do
+              context 'when defendants 2 to 4 carry a single 20% uplift of basic fee' do
                 let(:basic_plus_20_percent) { (basic_fee + (0.2 * basic_fee)).round(2) }
 
                 [2, 3, 4].each do |number_of_defendants|
-                  context "#{number_of_defendants} defendants" do
+                  context "with #{number_of_defendants} defendants" do
                     let(:number_of_defendants) { number_of_defendants }
 
                     it { is_expected.to eql basic_plus_20_percent }
@@ -195,11 +195,11 @@ RSpec.describe LAA::FeeCalculator, :vcr do
                 end
               end
 
-              context "defendants 5+ carry a single 30\% uplift of basic fee" do
+              context 'when defendants 5+ carry a single 30% uplift of basic fee' do
                 let(:basic_plus_30_percent) { (basic_fee + (0.3 * basic_fee)).round(2) }
 
                 [5, 10, 100].each do |number_of_defendants|
-                  context "#{number_of_defendants} defendants" do
+                  context "with #{number_of_defendants} defendants" do
                     let(:number_of_defendants) { number_of_defendants }
 
                     it { is_expected.to eql basic_plus_30_percent }

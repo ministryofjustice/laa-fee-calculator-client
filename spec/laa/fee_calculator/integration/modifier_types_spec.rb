@@ -3,7 +3,7 @@
 RSpec.describe LAA::FeeCalculator, :vcr do
   subject(:client) { described_class.client }
 
-  context 'modifier_types' do
+  describe '#modifier_types' do
     subject(:modifier_types) { client.fee_schemes(1).modifier_types }
 
     let(:names) do
@@ -33,7 +33,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
       it { is_expected.to respond_to(:unit) }
     end
 
-    context 'filterable' do
+    context 'when filtering' do
       subject(:fee_scheme) { client.fee_schemes(1) }
 
       specify 'by id' do
@@ -72,10 +72,10 @@ RSpec.describe LAA::FeeCalculator, :vcr do
           end.to raise_client_error(LAA::FeeCalculator::ResponseError)
         end
 
-        context 'combination of options' do
+        context 'with a combination of options' do
           let(:all) { fee_scheme.modifier_types }
 
-          context 'for an Appeal against conviction' do
+          context 'with an Appeal against conviction' do
             let(:modifier_types) { fee_scheme.modifier_types(scenario: 5, fee_type_code: 'AGFS_APPEAL_CON') }
 
             specify 'returns applicable units to fill' do
