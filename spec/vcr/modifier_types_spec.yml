@@ -10,7 +10,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.4.0
+      - laa-fee-calculator-client/2.0.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 26 Jan 2024 11:56:37 GMT
+      - Tue, 06 Feb 2024 10:08:25 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -46,7 +46,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"id":1,"start_date":"2012-04-01","end_date":"2018-03-31","earliest_main_hearing_date":null,"type":"AGFS","description":"AGFS
         Fee Scheme 9"}'
-  recorded_at: Fri, 26 Jan 2024 11:56:37 GMT
+  recorded_at: Tue, 06 Feb 2024 10:08:25 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/modifier-types/
@@ -57,7 +57,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.4.0
+      - laa-fee-calculator-client/2.0.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -66,7 +66,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 26 Jan 2024 11:56:37 GMT
+      - Tue, 06 Feb 2024 10:08:25 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -98,7 +98,7 @@ http_interactions:
         of prosecuting evidence","unit":"PPE"},{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
         months between trials","unit":"MONTH"},{"id":6,"name":"THIRD_CRACKED","description":"Third
         in which a trial cracked","unit":"THIRD"}]}'
-  recorded_at: Fri, 26 Jan 2024 11:56:37 GMT
+  recorded_at: Tue, 06 Feb 2024 10:08:25 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/modifier-types/1/
@@ -109,7 +109,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.4.0
+      - laa-fee-calculator-client/2.0.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -118,7 +118,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 26 Jan 2024 11:56:37 GMT
+      - Tue, 06 Feb 2024 10:08:25 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -144,7 +144,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"id":1,"name":"NUMBER_OF_CASES","description":"Number of cases","unit":"CASE"}'
-  recorded_at: Fri, 26 Jan 2024 11:56:37 GMT
+  recorded_at: Tue, 06 Feb 2024 10:08:25 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/modifier-types/?scenario=1
@@ -155,7 +155,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.4.0
+      - laa-fee-calculator-client/2.0.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -164,7 +164,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 26 Jan 2024 11:56:37 GMT
+      - Tue, 06 Feb 2024 10:08:25 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -194,7 +194,7 @@ http_interactions:
         of defendants","unit":"DEFENDANT"},{"id":3,"name":"TRIAL_LENGTH","description":"Trial
         length","unit":"DAY"},{"id":4,"name":"PAGES_OF_PROSECUTING_EVIDENCE","description":"Pages
         of prosecuting evidence","unit":"PPE"}]}'
-  recorded_at: Fri, 26 Jan 2024 11:56:37 GMT
+  recorded_at: Tue, 06 Feb 2024 10:08:25 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/modifier-types/?advocate_type=QC
@@ -205,7 +205,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.4.0
+      - laa-fee-calculator-client/2.0.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -214,7 +214,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 26 Jan 2024 11:56:37 GMT
+      - Tue, 06 Feb 2024 10:08:25 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -246,7 +246,7 @@ http_interactions:
         of prosecuting evidence","unit":"PPE"},{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
         months between trials","unit":"MONTH"},{"id":6,"name":"THIRD_CRACKED","description":"Third
         in which a trial cracked","unit":"THIRD"}]}'
-  recorded_at: Fri, 26 Jan 2024 11:56:37 GMT
+  recorded_at: Tue, 06 Feb 2024 10:08:25 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/modifier-types/?offence_class=A
@@ -257,7 +257,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.4.0
+      - laa-fee-calculator-client/2.0.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -266,7 +266,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 26 Jan 2024 11:56:37 GMT
+      - Tue, 06 Feb 2024 10:08:25 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -298,7 +298,7 @@ http_interactions:
         of prosecuting evidence","unit":"PPE"},{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
         months between trials","unit":"MONTH"},{"id":6,"name":"THIRD_CRACKED","description":"Third
         in which a trial cracked","unit":"THIRD"}]}'
-  recorded_at: Fri, 26 Jan 2024 11:56:37 GMT
+  recorded_at: Tue, 06 Feb 2024 10:08:25 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/modifier-types/?fee_type_code=AGFS_FEE
@@ -309,7 +309,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.4.0
+      - laa-fee-calculator-client/2.0.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -318,7 +318,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 26 Jan 2024 11:56:38 GMT
+      - Tue, 06 Feb 2024 10:08:25 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -349,7 +349,7 @@ http_interactions:
         of prosecuting evidence","unit":"PPE"},{"id":5,"name":"RETRIAL_INTERVAL","description":"Whole
         months between trials","unit":"MONTH"},{"id":6,"name":"THIRD_CRACKED","description":"Third
         in which a trial cracked","unit":"THIRD"}]}'
-  recorded_at: Fri, 26 Jan 2024 11:56:38 GMT
+  recorded_at: Tue, 06 Feb 2024 10:08:25 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/modifier-types/1001/
@@ -360,7 +360,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.4.0
+      - laa-fee-calculator-client/2.0.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -369,7 +369,7 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Fri, 26 Jan 2024 11:56:38 GMT
+      - Tue, 06 Feb 2024 10:08:25 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -395,7 +395,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"detail":"Not found."}'
-  recorded_at: Fri, 26 Jan 2024 11:56:38 GMT
+  recorded_at: Tue, 06 Feb 2024 10:08:25 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/modifier-types/?fee_type_code=INVALID_CODE
@@ -406,7 +406,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.4.0
+      - laa-fee-calculator-client/2.0.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -415,7 +415,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Fri, 26 Jan 2024 11:56:38 GMT
+      - Tue, 06 Feb 2024 10:08:25 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -441,7 +441,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '["''INVALID_CODE'' is not a valid `fee_type_code`"]'
-  recorded_at: Fri, 26 Jan 2024 11:56:38 GMT
+  recorded_at: Tue, 06 Feb 2024 10:08:25 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/modifier-types/?fee_type_code=AGFS_APPEAL_CON&scenario=5
@@ -452,7 +452,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.4.0
+      - laa-fee-calculator-client/2.0.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -461,7 +461,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 26 Jan 2024 11:56:38 GMT
+      - Tue, 06 Feb 2024 10:08:25 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -489,5 +489,5 @@ http_interactions:
       string: '{"count":2,"next":null,"previous":null,"results":[{"id":1,"name":"NUMBER_OF_CASES","description":"Number
         of cases","unit":"CASE"},{"id":2,"name":"NUMBER_OF_DEFENDANTS","description":"Number
         of defendants","unit":"DEFENDANT"}]}'
-  recorded_at: Fri, 26 Jan 2024 11:56:38 GMT
+  recorded_at: Tue, 06 Feb 2024 10:08:25 GMT
 recorded_with: VCR 6.2.0

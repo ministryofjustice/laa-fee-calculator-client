@@ -10,7 +10,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.4.0
+      - laa-fee-calculator-client/2.0.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 26 Jan 2024 11:56:04 GMT
+      - Tue, 06 Feb 2024 10:07:58 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -42,8 +42,8 @@ http_interactions:
       - max-age=15724800; includeSubDomains
     body:
       encoding: UTF-8
-      string: '{"build_date": "2024-01-25T14:24:40+00:00", "build_tag": "master",
-        "commit_id": "49cb2f8fb5f72ef94eeab7e349621a1bb008b7f4", "version_number":
-        "4510"}'
-  recorded_at: Fri, 26 Jan 2024 11:56:04 GMT
+      string: '{"build_date": "2024-02-01T10:29:07+00:00", "build_tag": "master",
+        "commit_id": "ed731ebfcd4d9825e7d407ae3cb3d96a935fa76e", "version_number":
+        "4527"}'
+  recorded_at: Tue, 06 Feb 2024 10:07:58 GMT
 recorded_with: VCR 6.2.0

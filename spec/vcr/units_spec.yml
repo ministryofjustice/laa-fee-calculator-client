@@ -10,7 +10,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.4.0
+      - laa-fee-calculator-client/2.0.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 26 Jan 2024 11:56:42 GMT
+      - Tue, 06 Feb 2024 10:07:20 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -46,7 +46,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"id":1,"start_date":"2012-04-01","end_date":"2018-03-31","earliest_main_hearing_date":null,"type":"AGFS","description":"AGFS
         Fee Scheme 9"}'
-  recorded_at: Fri, 26 Jan 2024 11:56:42 GMT
+  recorded_at: Tue, 06 Feb 2024 10:07:20 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/units/
@@ -57,7 +57,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.4.0
+      - laa-fee-calculator-client/2.0.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -66,7 +66,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 26 Jan 2024 11:56:42 GMT
+      - Tue, 06 Feb 2024 10:07:20 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -94,7 +94,7 @@ http_interactions:
       string: '{"count":6,"next":null,"previous":null,"results":[{"id":"CASE","name":"Case"},{"id":"DAY","name":"Whole
         Days"},{"id":"HALFDAY","name":"Half Days"},{"id":"HOUR","name":"Hours"},{"id":"PPE","name":"Pages
         of Prosecuting Evidence"},{"id":"PW","name":"Prosecution Witnesses"}]}'
-  recorded_at: Fri, 26 Jan 2024 11:56:42 GMT
+  recorded_at: Tue, 06 Feb 2024 10:07:20 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/units/DAY/
@@ -105,7 +105,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.4.0
+      - laa-fee-calculator-client/2.0.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -114,7 +114,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 26 Jan 2024 11:56:42 GMT
+      - Tue, 06 Feb 2024 10:08:29 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -140,7 +140,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"id":"DAY","name":"Whole Days"}'
-  recorded_at: Fri, 26 Jan 2024 11:56:42 GMT
+  recorded_at: Tue, 06 Feb 2024 10:08:29 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/units/?scenario=1
@@ -151,7 +151,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.4.0
+      - laa-fee-calculator-client/2.0.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -160,7 +160,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 26 Jan 2024 11:56:42 GMT
+      - Tue, 06 Feb 2024 10:08:29 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -188,7 +188,7 @@ http_interactions:
       string: '{"count":5,"next":null,"previous":null,"results":[{"id":"CASE","name":"Case"},{"id":"DAY","name":"Whole
         Days"},{"id":"HALFDAY","name":"Half Days"},{"id":"HOUR","name":"Hours"},{"id":"PPE","name":"Pages
         of Prosecuting Evidence"}]}'
-  recorded_at: Fri, 26 Jan 2024 11:56:42 GMT
+  recorded_at: Tue, 06 Feb 2024 10:08:29 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/units/?advocate_type=QC
@@ -199,7 +199,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.4.0
+      - laa-fee-calculator-client/2.0.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -208,7 +208,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 26 Jan 2024 11:56:42 GMT
+      - Tue, 06 Feb 2024 10:08:29 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -236,7 +236,7 @@ http_interactions:
       string: '{"count":6,"next":null,"previous":null,"results":[{"id":"CASE","name":"Case"},{"id":"DAY","name":"Whole
         Days"},{"id":"HALFDAY","name":"Half Days"},{"id":"HOUR","name":"Hours"},{"id":"PPE","name":"Pages
         of Prosecuting Evidence"},{"id":"PW","name":"Prosecution Witnesses"}]}'
-  recorded_at: Fri, 26 Jan 2024 11:56:42 GMT
+  recorded_at: Tue, 06 Feb 2024 10:08:29 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/units/?offence_class=A
@@ -247,7 +247,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.4.0
+      - laa-fee-calculator-client/2.0.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -256,7 +256,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 26 Jan 2024 11:56:42 GMT
+      - Tue, 06 Feb 2024 10:08:29 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -284,7 +284,7 @@ http_interactions:
       string: '{"count":6,"next":null,"previous":null,"results":[{"id":"CASE","name":"Case"},{"id":"DAY","name":"Whole
         Days"},{"id":"HALFDAY","name":"Half Days"},{"id":"HOUR","name":"Hours"},{"id":"PPE","name":"Pages
         of Prosecuting Evidence"},{"id":"PW","name":"Prosecution Witnesses"}]}'
-  recorded_at: Fri, 26 Jan 2024 11:56:42 GMT
+  recorded_at: Tue, 06 Feb 2024 10:08:29 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/units/?fee_type_code=AGFS_FEE
@@ -295,7 +295,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.4.0
+      - laa-fee-calculator-client/2.0.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -304,7 +304,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 26 Jan 2024 11:56:42 GMT
+      - Tue, 06 Feb 2024 10:08:29 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -332,7 +332,7 @@ http_interactions:
       string: '{"count":3,"next":null,"previous":null,"results":[{"id":"DAY","name":"Whole
         Days"},{"id":"PPE","name":"Pages of Prosecuting Evidence"},{"id":"PW","name":"Prosecution
         Witnesses"}]}'
-  recorded_at: Fri, 26 Jan 2024 11:56:42 GMT
+  recorded_at: Tue, 06 Feb 2024 10:08:29 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/units/1001/
@@ -343,7 +343,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.4.0
+      - laa-fee-calculator-client/2.0.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -352,7 +352,7 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Fri, 26 Jan 2024 11:56:42 GMT
+      - Tue, 06 Feb 2024 10:08:29 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -378,7 +378,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"detail":"Not found."}'
-  recorded_at: Fri, 26 Jan 2024 11:56:42 GMT
+  recorded_at: Tue, 06 Feb 2024 10:08:29 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/units/?fee_type_code=INVALID_FEE_TYPE_CODE&scenario=5
@@ -389,7 +389,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.4.0
+      - laa-fee-calculator-client/2.0.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -398,7 +398,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Fri, 26 Jan 2024 11:56:42 GMT
+      - Tue, 06 Feb 2024 10:08:29 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -424,7 +424,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '["''INVALID_FEE_TYPE_CODE'' is not a valid `fee_type_code`"]'
-  recorded_at: Fri, 26 Jan 2024 11:56:42 GMT
+  recorded_at: Tue, 06 Feb 2024 10:08:29 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/units/?offence_class=E&scenario=5
@@ -435,7 +435,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.4.0
+      - laa-fee-calculator-client/2.0.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -444,7 +444,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 26 Jan 2024 11:56:42 GMT
+      - Tue, 06 Feb 2024 10:08:29 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -471,5 +471,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"count":4,"next":null,"previous":null,"results":[{"id":"CASE","name":"Case"},{"id":"DAY","name":"Whole
         Days"},{"id":"HALFDAY","name":"Half Days"},{"id":"HOUR","name":"Hours"}]}'
-  recorded_at: Fri, 26 Jan 2024 11:56:42 GMT
+  recorded_at: Tue, 06 Feb 2024 10:08:29 GMT
 recorded_with: VCR 6.2.0

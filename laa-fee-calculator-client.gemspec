@@ -25,7 +25,7 @@ Gem::Specification.new do |spec|
   # see bin/ruby_version_test
   spec.required_ruby_version = '>= 3.0.0'
 
-  spec.add_runtime_dependency 'faraday', '~> 1.0'
+  spec.add_runtime_dependency 'faraday', '~> 2.9'
   spec.add_runtime_dependency 'faraday-http-cache', '~> 2.2'
   spec.metadata['rubygems_mfa_required'] = 'true'
 end

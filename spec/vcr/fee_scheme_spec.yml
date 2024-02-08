@@ -10,7 +10,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.4.0
+      - laa-fee-calculator-client/2.0.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 26 Jan 2024 11:56:04 GMT
+      - Tue, 06 Feb 2024 10:07:58 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -45,5 +45,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"amount":130.0}'
-  recorded_at: Fri, 26 Jan 2024 11:56:04 GMT
+  recorded_at: Tue, 06 Feb 2024 10:07:58 GMT
 recorded_with: VCR 6.2.0

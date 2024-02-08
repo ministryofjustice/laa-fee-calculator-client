@@ -10,7 +10,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.4.0
+      - laa-fee-calculator-client/2.0.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -19,7 +19,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Fri, 26 Jan 2024 11:56:34 GMT
+      - Tue, 06 Feb 2024 10:08:22 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -45,7 +45,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"case_date":["Enter a valid date."]}'
-  recorded_at: Fri, 26 Jan 2024 11:56:34 GMT
+  recorded_at: Tue, 06 Feb 2024 10:08:22 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/100/
@@ -56,7 +56,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.4.0
+      - laa-fee-calculator-client/2.0.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -65,7 +65,7 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Fri, 26 Jan 2024 11:56:34 GMT
+      - Tue, 06 Feb 2024 10:08:22 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -91,7 +91,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"detail":"Not found."}'
-  recorded_at: Fri, 26 Jan 2024 11:56:34 GMT
+  recorded_at: Tue, 06 Feb 2024 10:08:22 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/
@@ -102,7 +102,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.4.0
+      - laa-fee-calculator-client/2.0.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -111,7 +111,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 26 Jan 2024 11:56:34 GMT
+      - Tue, 06 Feb 2024 10:08:22 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -149,7 +149,7 @@ http_interactions:
         Fee Scheme 14 (2023-02 - Section 28)"},{"id":11,"start_date":"2023-04-17","end_date":"2023-11-15","earliest_main_hearing_date":null,"type":"AGFS","description":"AGFS
         Fee Scheme 15 (2023-04 - Additional Preparation Fee)"},{"id":12,"start_date":"2023-11-16","end_date":null,"earliest_main_hearing_date":null,"type":"AGFS","description":"AGFS
         Fee Scheme 16 (2023-11 - Increase section 28)"}]}'
-  recorded_at: Fri, 26 Jan 2024 11:56:34 GMT
+  recorded_at: Tue, 06 Feb 2024 10:08:22 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/fee-types/1000/
@@ -160,7 +160,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.4.0
+      - laa-fee-calculator-client/2.0.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -169,7 +169,7 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Fri, 26 Jan 2024 11:56:34 GMT
+      - Tue, 06 Feb 2024 10:08:22 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -195,7 +195,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"detail":"Not found."}'
-  recorded_at: Fri, 26 Jan 2024 11:56:34 GMT
+  recorded_at: Tue, 06 Feb 2024 10:08:22 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/fee-types/?scenario=INVALID_DATATYPE
@@ -206,7 +206,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.4.0
+      - laa-fee-calculator-client/2.0.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -215,7 +215,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Fri, 26 Jan 2024 11:56:34 GMT
+      - Tue, 06 Feb 2024 10:08:23 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -241,7 +241,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '["''INVALID_DATATYPE'' is not a valid `scenario`"]'
-  recorded_at: Fri, 26 Jan 2024 11:56:34 GMT
+  recorded_at: Tue, 06 Feb 2024 10:08:23 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/fee-types/?scenario=100
@@ -252,7 +252,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.4.0
+      - laa-fee-calculator-client/2.0.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -261,7 +261,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Fri, 26 Jan 2024 11:56:34 GMT
+      - Tue, 06 Feb 2024 10:08:23 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -287,7 +287,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '["''100'' is not a valid `scenario`"]'
-  recorded_at: Fri, 26 Jan 2024 11:56:34 GMT
+  recorded_at: Tue, 06 Feb 2024 10:08:23 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/units/1000/
@@ -298,7 +298,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.4.0
+      - laa-fee-calculator-client/2.0.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -307,7 +307,7 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Fri, 26 Jan 2024 11:56:34 GMT
+      - Tue, 06 Feb 2024 10:08:23 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -333,7 +333,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"detail":"Not found."}'
-  recorded_at: Fri, 26 Jan 2024 11:56:34 GMT
+  recorded_at: Tue, 06 Feb 2024 10:08:23 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/units/?scenario=INVALID_DATATYPE
@@ -344,7 +344,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.4.0
+      - laa-fee-calculator-client/2.0.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -353,7 +353,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Fri, 26 Jan 2024 11:56:34 GMT
+      - Tue, 06 Feb 2024 10:08:23 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -379,7 +379,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '["''INVALID_DATATYPE'' is not a valid `scenario`"]'
-  recorded_at: Fri, 26 Jan 2024 11:56:34 GMT
+  recorded_at: Tue, 06 Feb 2024 10:08:23 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/units/?scenario=100
@@ -390,7 +390,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.4.0
+      - laa-fee-calculator-client/2.0.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -399,7 +399,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Fri, 26 Jan 2024 11:56:34 GMT
+      - Tue, 06 Feb 2024 10:08:23 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -425,7 +425,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '["''100'' is not a valid `scenario`"]'
-  recorded_at: Fri, 26 Jan 2024 11:56:34 GMT
+  recorded_at: Tue, 06 Feb 2024 10:08:23 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/modifier-types/1000/
@@ -436,7 +436,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.4.0
+      - laa-fee-calculator-client/2.0.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -445,7 +445,7 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Fri, 26 Jan 2024 11:56:34 GMT
+      - Tue, 06 Feb 2024 10:08:23 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -471,7 +471,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"detail":"Not found."}'
-  recorded_at: Fri, 26 Jan 2024 11:56:34 GMT
+  recorded_at: Tue, 06 Feb 2024 10:08:23 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/modifier-types/?scenario=INVALID_DATATYPE
@@ -482,7 +482,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.4.0
+      - laa-fee-calculator-client/2.0.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -491,7 +491,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Fri, 26 Jan 2024 11:56:34 GMT
+      - Tue, 06 Feb 2024 10:08:23 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -517,7 +517,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '["''INVALID_DATATYPE'' is not a valid `scenario`"]'
-  recorded_at: Fri, 26 Jan 2024 11:56:34 GMT
+  recorded_at: Tue, 06 Feb 2024 10:08:23 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/modifier-types/?scenario=100
@@ -528,7 +528,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.4.0
+      - laa-fee-calculator-client/2.0.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -537,7 +537,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Fri, 26 Jan 2024 11:56:34 GMT
+      - Tue, 06 Feb 2024 10:08:23 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -563,7 +563,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '["''100'' is not a valid `scenario`"]'
-  recorded_at: Fri, 26 Jan 2024 11:56:34 GMT
+  recorded_at: Tue, 06 Feb 2024 10:08:23 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/?case_date=2018-01-01&type=AGFS
@@ -574,7 +574,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.4.0
+      - laa-fee-calculator-client/2.0.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -583,7 +583,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 26 Jan 2024 11:56:35 GMT
+      - Tue, 06 Feb 2024 10:08:23 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -610,7 +610,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"count":1,"next":null,"previous":null,"results":[{"id":1,"start_date":"2012-04-01","end_date":"2018-03-31","earliest_main_hearing_date":null,"type":"AGFS","description":"AGFS
         Fee Scheme 9"}]}'
-  recorded_at: Fri, 26 Jan 2024 11:56:35 GMT
+  recorded_at: Tue, 06 Feb 2024 10:08:23 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/calculate/?advocate_type=JRALONE&day=1&number_of_cases=1&number_of_defendants=1&offence_class=E&scenario=5
@@ -621,7 +621,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.4.0
+      - laa-fee-calculator-client/2.0.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -630,7 +630,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Fri, 26 Jan 2024 11:56:35 GMT
+      - Tue, 06 Feb 2024 10:08:23 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -656,7 +656,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '["`fee_type_code` is a required field"]'
-  recorded_at: Fri, 26 Jan 2024 11:56:35 GMT
+  recorded_at: Tue, 06 Feb 2024 10:08:23 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/calculate/?advocate_type=JRALONE&day=1&fee_type_code&number_of_cases=1&number_of_defendants=1&offence_class=E&scenario=5
@@ -667,7 +667,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.4.0
+      - laa-fee-calculator-client/2.0.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -676,7 +676,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Fri, 26 Jan 2024 11:56:35 GMT
+      - Tue, 06 Feb 2024 10:08:23 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -702,7 +702,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '["`fee_type_code` is a required field"]'
-  recorded_at: Fri, 26 Jan 2024 11:56:35 GMT
+  recorded_at: Tue, 06 Feb 2024 10:08:23 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/calculate/?advocate_type=JRALONE&day=1&fee_type_code=AGFS_APPEAL_CON&number_of_cases=1&number_of_defendants=1&offence_class=E&scenario
@@ -713,7 +713,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.4.0
+      - laa-fee-calculator-client/2.0.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -722,7 +722,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Fri, 26 Jan 2024 11:56:35 GMT
+      - Tue, 06 Feb 2024 10:08:23 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -748,7 +748,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '["`scenario` is a required field"]'
-  recorded_at: Fri, 26 Jan 2024 11:56:35 GMT
+  recorded_at: Tue, 06 Feb 2024 10:08:23 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/calculate/?advocate_type=JRALONE&day=1&fee_type_code=AGFS_APPEAL_CON&number_of_cases=1&number_of_defendants=1&offence_class&scenario=5
@@ -759,7 +759,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.4.0
+      - laa-fee-calculator-client/2.0.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -768,7 +768,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 26 Jan 2024 11:56:35 GMT
+      - Tue, 06 Feb 2024 10:08:23 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -794,7 +794,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"amount":130.0}'
-  recorded_at: Fri, 26 Jan 2024 11:56:35 GMT
+  recorded_at: Tue, 06 Feb 2024 10:08:23 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/calculate/?advocate_type&day=1&fee_type_code=AGFS_APPEAL_CON&number_of_cases=1&number_of_defendants=1&offence_class=E&scenario=5
@@ -805,7 +805,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.4.0
+      - laa-fee-calculator-client/2.0.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -814,7 +814,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 26 Jan 2024 11:56:35 GMT
+      - Tue, 06 Feb 2024 10:08:23 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -840,7 +840,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"amount":0.0}'
-  recorded_at: Fri, 26 Jan 2024 11:56:35 GMT
+  recorded_at: Tue, 06 Feb 2024 10:08:23 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/calculate/?advocate_type=JRALONE&day=1&fee_type_code=AGFS_APPEAL_CON&number_of_cases=1&number_of_defendants=1&offence_class=E&scenario=100
@@ -851,7 +851,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.4.0
+      - laa-fee-calculator-client/2.0.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -860,7 +860,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Fri, 26 Jan 2024 11:56:35 GMT
+      - Tue, 06 Feb 2024 10:08:23 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -886,7 +886,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '["''100'' is not a valid `scenario`"]'
-  recorded_at: Fri, 26 Jan 2024 11:56:35 GMT
+  recorded_at: Tue, 06 Feb 2024 10:08:23 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/calculate/?advocate_type=JRALONE&day=1&fee_type_code=INVALID_FEE_TYPE_CODE&number_of_cases=1&number_of_defendants=1&offence_class=E&scenario=5
@@ -897,7 +897,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.4.0
+      - laa-fee-calculator-client/2.0.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -906,7 +906,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Fri, 26 Jan 2024 11:56:35 GMT
+      - Tue, 06 Feb 2024 10:08:23 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -932,7 +932,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '["''INVALID_FEE_TYPE_CODE'' is not a valid `fee_type_code`"]'
-  recorded_at: Fri, 26 Jan 2024 11:56:35 GMT
+  recorded_at: Tue, 06 Feb 2024 10:08:23 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/calculate/?advocate_type=JRALONE&day=1&fee_type_code=AGFS_APPEAL_CON&number_of_cases=1&number_of_defendants=1&offence_class=INVALID_OFFENCE_CLASS&scenario=5
@@ -943,7 +943,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.4.0
+      - laa-fee-calculator-client/2.0.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -952,7 +952,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Fri, 26 Jan 2024 11:56:35 GMT
+      - Tue, 06 Feb 2024 10:08:24 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -978,7 +978,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '["''INVALID_OFFENCE_CLASS'' is not a valid `offence_class`"]'
-  recorded_at: Fri, 26 Jan 2024 11:56:35 GMT
+  recorded_at: Tue, 06 Feb 2024 10:08:24 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/calculate/?advocate_type=INVALID_ADVOCATE_TYPE&day=1&fee_type_code=AGFS_APPEAL_CON&number_of_cases=1&number_of_defendants=1&offence_class=E&scenario=5
@@ -989,7 +989,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.4.0
+      - laa-fee-calculator-client/2.0.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -998,7 +998,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Fri, 26 Jan 2024 11:56:35 GMT
+      - Tue, 06 Feb 2024 10:08:24 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -1024,7 +1024,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '["''INVALID_ADVOCATE_TYPE'' is not a valid `advocate_type`"]'
-  recorded_at: Fri, 26 Jan 2024 11:56:35 GMT
+  recorded_at: Tue, 06 Feb 2024 10:08:24 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/calculate/?advocate_type=JRALONE&day=1&defendant=2&fee_type_code=AGFS_APPEAL_CON&fixed=2&halfday=2&hour=2&not_a_real_param=rubbish&number_of_cases=1&number_of_defendants=1&offence_class=E&scenario=5
@@ -1035,7 +1035,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - laa-fee-calculator-client/1.4.0
+      - laa-fee-calculator-client/2.0.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -1044,7 +1044,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 26 Jan 2024 11:56:35 GMT
+      - Tue, 06 Feb 2024 10:08:24 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -1070,5 +1070,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"amount":130.0}'
-  recorded_at: Fri, 26 Jan 2024 11:56:35 GMT
+  recorded_at: Tue, 06 Feb 2024 10:08:24 GMT
 recorded_with: VCR 6.2.0
