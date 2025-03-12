@@ -27,5 +27,6 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency 'faraday', '~> 2.9'
   spec.add_runtime_dependency 'faraday-http-cache', '~> 2.2'
+  spec.add_runtime_dependency 'bigdecimal'
   spec.metadata['rubygems_mfa_required'] = 'true'
 end
