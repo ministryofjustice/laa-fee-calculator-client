@@ -19,11 +19,11 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 06 Feb 2024 10:07:58 GMT
+      - Wed, 12 Mar 2025 17:03:37 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '149'
+      - '147'
       Connection:
       - keep-alive
       Access-Control-Allow-Origin:
@@ -39,11 +39,10 @@ http_interactions:
       Cross-Origin-Opener-Policy:
       - same-origin
       Strict-Transport-Security:
-      - max-age=15724800; includeSubDomains
+      - max-age=31536000; includeSubDomains
     body:
       encoding: UTF-8
-      string: '{"build_date": "2024-02-01T10:29:07+00:00", "build_tag": "main",
-        "commit_id": "ed731ebfcd4d9825e7d407ae3cb3d96a935fa76e", "version_number":
-        "4527"}'
-  recorded_at: Tue, 06 Feb 2024 10:07:58 GMT
+      string: '{"build_date": "2025-03-06T13:38:24+00:00", "build_tag": "main", "commit_id":
+        "487ead9c1205576c63cf3e83b71b6d61086686e0", "version_number": "6313"}'
+  recorded_at: Wed, 12 Mar 2025 17:03:37 GMT
 recorded_with: VCR 6.2.0

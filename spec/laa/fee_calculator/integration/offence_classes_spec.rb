@@ -31,7 +31,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
 
         specify 'raises ResourceNotFound when no matching objects' do
           expect { fee_scheme.offence_classes(id: 'INVALID') }
-            .to raise_error(described_class::ResourceNotFound, /detail not found/i)
+            .to raise_error(described_class::ResourceNotFound, /No OffenceClass matches the given query./i)
         end
       end
     end

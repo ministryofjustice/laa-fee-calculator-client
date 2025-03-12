@@ -63,7 +63,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
 
         specify 'raises ResourceNotFound when no matching objects' do
           expect { fee_scheme.modifier_types(id: 1001) }
-            .to raise_error(described_class::ResourceNotFound, /detail not found/i)
+            .to raise_error(described_class::ResourceNotFound, /detail No ModifierType matches the given query./i)
         end
 
         specify 'raise ResponseError when invalid options supplied' do

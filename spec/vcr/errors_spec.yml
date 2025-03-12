@@ -19,7 +19,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Tue, 06 Feb 2024 10:08:22 GMT
+      - Wed, 12 Mar 2025 17:04:35 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -41,11 +41,11 @@ http_interactions:
       Cross-Origin-Opener-Policy:
       - same-origin
       Strict-Transport-Security:
-      - max-age=15724800; includeSubDomains
+      - max-age=31536000; includeSubDomains
     body:
       encoding: UTF-8
       string: '{"case_date":["Enter a valid date."]}'
-  recorded_at: Tue, 06 Feb 2024 10:08:22 GMT
+  recorded_at: Wed, 12 Mar 2025 17:04:35 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/100/
@@ -65,11 +65,11 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Tue, 06 Feb 2024 10:08:22 GMT
+      - Wed, 12 Mar 2025 17:04:35 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '23'
+      - '47'
       Connection:
       - keep-alive
       Vary:
@@ -87,11 +87,379 @@ http_interactions:
       Cross-Origin-Opener-Policy:
       - same-origin
       Strict-Transport-Security:
-      - max-age=15724800; includeSubDomains
+      - max-age=31536000; includeSubDomains
     body:
       encoding: UTF-8
-      string: '{"detail":"Not found."}'
-  recorded_at: Tue, 06 Feb 2024 10:08:22 GMT
+      string: '{"detail":"No Scheme matches the given query."}'
+  recorded_at: Wed, 12 Mar 2025 17:04:35 GMT
+- request:
+    method: get
+    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/fee-types/1000/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/2.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Wed, 12 Mar 2025 17:04:35 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '48'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept, origin, Cookie
+      Allow:
+      - GET, HEAD, OPTIONS
+      Cache-Control:
+      - public, max-age=7200
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - same-origin
+      Cross-Origin-Opener-Policy:
+      - same-origin
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: '{"detail":"No FeeType matches the given query."}'
+  recorded_at: Wed, 12 Mar 2025 17:04:35 GMT
+- request:
+    method: get
+    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/fee-types/?scenario=INVALID_DATATYPE
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/2.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Wed, 12 Mar 2025 17:04:36 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '48'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept, origin, Cookie
+      Allow:
+      - GET, HEAD, OPTIONS
+      Cache-Control:
+      - public, max-age=7200
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - same-origin
+      Cross-Origin-Opener-Policy:
+      - same-origin
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: '["''INVALID_DATATYPE'' is not a valid `scenario`"]'
+  recorded_at: Wed, 12 Mar 2025 17:04:36 GMT
+- request:
+    method: get
+    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/fee-types/?scenario=100
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/2.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Wed, 12 Mar 2025 17:04:36 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '35'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept, origin, Cookie
+      Allow:
+      - GET, HEAD, OPTIONS
+      Cache-Control:
+      - public, max-age=7200
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - same-origin
+      Cross-Origin-Opener-Policy:
+      - same-origin
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: '["''100'' is not a valid `scenario`"]'
+  recorded_at: Wed, 12 Mar 2025 17:04:36 GMT
+- request:
+    method: get
+    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/units/1000/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/2.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Wed, 12 Mar 2025 17:04:36 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '45'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept, origin, Cookie
+      Allow:
+      - GET, HEAD, OPTIONS
+      Cache-Control:
+      - public, max-age=7200
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - same-origin
+      Cross-Origin-Opener-Policy:
+      - same-origin
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: '{"detail":"No Unit matches the given query."}'
+  recorded_at: Wed, 12 Mar 2025 17:04:36 GMT
+- request:
+    method: get
+    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/units/?scenario=INVALID_DATATYPE
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/2.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Wed, 12 Mar 2025 17:04:36 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '48'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept, origin, Cookie
+      Allow:
+      - GET, HEAD, OPTIONS
+      Cache-Control:
+      - public, max-age=7200
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - same-origin
+      Cross-Origin-Opener-Policy:
+      - same-origin
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: '["''INVALID_DATATYPE'' is not a valid `scenario`"]'
+  recorded_at: Wed, 12 Mar 2025 17:04:36 GMT
+- request:
+    method: get
+    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/units/?scenario=100
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/2.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Wed, 12 Mar 2025 17:04:36 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '35'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept, origin, Cookie
+      Allow:
+      - GET, HEAD, OPTIONS
+      Cache-Control:
+      - public, max-age=7200
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - same-origin
+      Cross-Origin-Opener-Policy:
+      - same-origin
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: '["''100'' is not a valid `scenario`"]'
+  recorded_at: Wed, 12 Mar 2025 17:04:36 GMT
+- request:
+    method: get
+    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/modifier-types/1000/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/2.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Wed, 12 Mar 2025 17:04:36 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '53'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept, origin, Cookie
+      Allow:
+      - GET, HEAD, OPTIONS
+      Cache-Control:
+      - public, max-age=7200
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - same-origin
+      Cross-Origin-Opener-Policy:
+      - same-origin
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: '{"detail":"No ModifierType matches the given query."}'
+  recorded_at: Wed, 12 Mar 2025 17:04:36 GMT
+- request:
+    method: get
+    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/modifier-types/?scenario=INVALID_DATATYPE
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/2.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Wed, 12 Mar 2025 17:04:36 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '48'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept, origin, Cookie
+      Allow:
+      - GET, HEAD, OPTIONS
+      Cache-Control:
+      - public, max-age=7200
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - same-origin
+      Cross-Origin-Opener-Policy:
+      - same-origin
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: '["''INVALID_DATATYPE'' is not a valid `scenario`"]'
+  recorded_at: Wed, 12 Mar 2025 17:04:36 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/
@@ -111,7 +479,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 06 Feb 2024 10:08:22 GMT
+      - Wed, 12 Mar 2025 17:04:37 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -133,7 +501,7 @@ http_interactions:
       Cross-Origin-Opener-Policy:
       - same-origin
       Strict-Transport-Security:
-      - max-age=15724800; includeSubDomains
+      - max-age=31536000; includeSubDomains
     body:
       encoding: UTF-8
       string: '{"count":12,"next":null,"previous":null,"results":[{"id":1,"start_date":"2012-04-01","end_date":"2018-03-31","earliest_main_hearing_date":null,"type":"AGFS","description":"AGFS
@@ -149,375 +517,7 @@ http_interactions:
         Fee Scheme 14 (2023-02 - Section 28)"},{"id":11,"start_date":"2023-04-17","end_date":"2023-11-15","earliest_main_hearing_date":null,"type":"AGFS","description":"AGFS
         Fee Scheme 15 (2023-04 - Additional Preparation Fee)"},{"id":12,"start_date":"2023-11-16","end_date":null,"earliest_main_hearing_date":null,"type":"AGFS","description":"AGFS
         Fee Scheme 16 (2023-11 - Increase section 28)"}]}'
-  recorded_at: Tue, 06 Feb 2024 10:08:22 GMT
-- request:
-    method: get
-    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/fee-types/1000/
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/json
-      User-Agent:
-      - laa-fee-calculator-client/2.0.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      Date:
-      - Tue, 06 Feb 2024 10:08:22 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '23'
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept, origin, Cookie
-      Allow:
-      - GET, HEAD, OPTIONS
-      Cache-Control:
-      - public, max-age=7200
-      X-Frame-Options:
-      - DENY
-      X-Content-Type-Options:
-      - nosniff
-      Referrer-Policy:
-      - same-origin
-      Cross-Origin-Opener-Policy:
-      - same-origin
-      Strict-Transport-Security:
-      - max-age=15724800; includeSubDomains
-    body:
-      encoding: UTF-8
-      string: '{"detail":"Not found."}'
-  recorded_at: Tue, 06 Feb 2024 10:08:22 GMT
-- request:
-    method: get
-    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/fee-types/?scenario=INVALID_DATATYPE
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/json
-      User-Agent:
-      - laa-fee-calculator-client/2.0.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 400
-      message: Bad Request
-    headers:
-      Date:
-      - Tue, 06 Feb 2024 10:08:23 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '48'
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept, origin, Cookie
-      Allow:
-      - GET, HEAD, OPTIONS
-      Cache-Control:
-      - public, max-age=7200
-      X-Frame-Options:
-      - DENY
-      X-Content-Type-Options:
-      - nosniff
-      Referrer-Policy:
-      - same-origin
-      Cross-Origin-Opener-Policy:
-      - same-origin
-      Strict-Transport-Security:
-      - max-age=15724800; includeSubDomains
-    body:
-      encoding: UTF-8
-      string: '["''INVALID_DATATYPE'' is not a valid `scenario`"]'
-  recorded_at: Tue, 06 Feb 2024 10:08:23 GMT
-- request:
-    method: get
-    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/fee-types/?scenario=100
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/json
-      User-Agent:
-      - laa-fee-calculator-client/2.0.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 400
-      message: Bad Request
-    headers:
-      Date:
-      - Tue, 06 Feb 2024 10:08:23 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '35'
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept, origin, Cookie
-      Allow:
-      - GET, HEAD, OPTIONS
-      Cache-Control:
-      - public, max-age=7200
-      X-Frame-Options:
-      - DENY
-      X-Content-Type-Options:
-      - nosniff
-      Referrer-Policy:
-      - same-origin
-      Cross-Origin-Opener-Policy:
-      - same-origin
-      Strict-Transport-Security:
-      - max-age=15724800; includeSubDomains
-    body:
-      encoding: UTF-8
-      string: '["''100'' is not a valid `scenario`"]'
-  recorded_at: Tue, 06 Feb 2024 10:08:23 GMT
-- request:
-    method: get
-    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/units/1000/
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/json
-      User-Agent:
-      - laa-fee-calculator-client/2.0.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      Date:
-      - Tue, 06 Feb 2024 10:08:23 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '23'
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept, origin, Cookie
-      Allow:
-      - GET, HEAD, OPTIONS
-      Cache-Control:
-      - public, max-age=7200
-      X-Frame-Options:
-      - DENY
-      X-Content-Type-Options:
-      - nosniff
-      Referrer-Policy:
-      - same-origin
-      Cross-Origin-Opener-Policy:
-      - same-origin
-      Strict-Transport-Security:
-      - max-age=15724800; includeSubDomains
-    body:
-      encoding: UTF-8
-      string: '{"detail":"Not found."}'
-  recorded_at: Tue, 06 Feb 2024 10:08:23 GMT
-- request:
-    method: get
-    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/units/?scenario=INVALID_DATATYPE
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/json
-      User-Agent:
-      - laa-fee-calculator-client/2.0.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 400
-      message: Bad Request
-    headers:
-      Date:
-      - Tue, 06 Feb 2024 10:08:23 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '48'
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept, origin, Cookie
-      Allow:
-      - GET, HEAD, OPTIONS
-      Cache-Control:
-      - public, max-age=7200
-      X-Frame-Options:
-      - DENY
-      X-Content-Type-Options:
-      - nosniff
-      Referrer-Policy:
-      - same-origin
-      Cross-Origin-Opener-Policy:
-      - same-origin
-      Strict-Transport-Security:
-      - max-age=15724800; includeSubDomains
-    body:
-      encoding: UTF-8
-      string: '["''INVALID_DATATYPE'' is not a valid `scenario`"]'
-  recorded_at: Tue, 06 Feb 2024 10:08:23 GMT
-- request:
-    method: get
-    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/units/?scenario=100
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/json
-      User-Agent:
-      - laa-fee-calculator-client/2.0.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 400
-      message: Bad Request
-    headers:
-      Date:
-      - Tue, 06 Feb 2024 10:08:23 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '35'
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept, origin, Cookie
-      Allow:
-      - GET, HEAD, OPTIONS
-      Cache-Control:
-      - public, max-age=7200
-      X-Frame-Options:
-      - DENY
-      X-Content-Type-Options:
-      - nosniff
-      Referrer-Policy:
-      - same-origin
-      Cross-Origin-Opener-Policy:
-      - same-origin
-      Strict-Transport-Security:
-      - max-age=15724800; includeSubDomains
-    body:
-      encoding: UTF-8
-      string: '["''100'' is not a valid `scenario`"]'
-  recorded_at: Tue, 06 Feb 2024 10:08:23 GMT
-- request:
-    method: get
-    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/modifier-types/1000/
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/json
-      User-Agent:
-      - laa-fee-calculator-client/2.0.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      Date:
-      - Tue, 06 Feb 2024 10:08:23 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '23'
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept, origin, Cookie
-      Allow:
-      - GET, HEAD, OPTIONS
-      Cache-Control:
-      - public, max-age=7200
-      X-Frame-Options:
-      - DENY
-      X-Content-Type-Options:
-      - nosniff
-      Referrer-Policy:
-      - same-origin
-      Cross-Origin-Opener-Policy:
-      - same-origin
-      Strict-Transport-Security:
-      - max-age=15724800; includeSubDomains
-    body:
-      encoding: UTF-8
-      string: '{"detail":"Not found."}'
-  recorded_at: Tue, 06 Feb 2024 10:08:23 GMT
-- request:
-    method: get
-    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/modifier-types/?scenario=INVALID_DATATYPE
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/json
-      User-Agent:
-      - laa-fee-calculator-client/2.0.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 400
-      message: Bad Request
-    headers:
-      Date:
-      - Tue, 06 Feb 2024 10:08:23 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '48'
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept, origin, Cookie
-      Allow:
-      - GET, HEAD, OPTIONS
-      Cache-Control:
-      - public, max-age=7200
-      X-Frame-Options:
-      - DENY
-      X-Content-Type-Options:
-      - nosniff
-      Referrer-Policy:
-      - same-origin
-      Cross-Origin-Opener-Policy:
-      - same-origin
-      Strict-Transport-Security:
-      - max-age=15724800; includeSubDomains
-    body:
-      encoding: UTF-8
-      string: '["''INVALID_DATATYPE'' is not a valid `scenario`"]'
-  recorded_at: Tue, 06 Feb 2024 10:08:23 GMT
+  recorded_at: Wed, 12 Mar 2025 17:04:37 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/modifier-types/?scenario=100
@@ -537,7 +537,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Tue, 06 Feb 2024 10:08:23 GMT
+      - Wed, 12 Mar 2025 17:04:37 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -559,58 +559,11 @@ http_interactions:
       Cross-Origin-Opener-Policy:
       - same-origin
       Strict-Transport-Security:
-      - max-age=15724800; includeSubDomains
+      - max-age=31536000; includeSubDomains
     body:
       encoding: UTF-8
       string: '["''100'' is not a valid `scenario`"]'
-  recorded_at: Tue, 06 Feb 2024 10:08:23 GMT
-- request:
-    method: get
-    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/?case_date=2018-01-01&type=AGFS
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/json
-      User-Agent:
-      - laa-fee-calculator-client/2.0.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Tue, 06 Feb 2024 10:08:23 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '192'
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept, origin, Cookie
-      Allow:
-      - GET, HEAD, OPTIONS
-      Cache-Control:
-      - public, max-age=7200
-      X-Frame-Options:
-      - DENY
-      X-Content-Type-Options:
-      - nosniff
-      Referrer-Policy:
-      - same-origin
-      Cross-Origin-Opener-Policy:
-      - same-origin
-      Strict-Transport-Security:
-      - max-age=15724800; includeSubDomains
-    body:
-      encoding: UTF-8
-      string: '{"count":1,"next":null,"previous":null,"results":[{"id":1,"start_date":"2012-04-01","end_date":"2018-03-31","earliest_main_hearing_date":null,"type":"AGFS","description":"AGFS
-        Fee Scheme 9"}]}'
-  recorded_at: Tue, 06 Feb 2024 10:08:23 GMT
+  recorded_at: Wed, 12 Mar 2025 17:04:37 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/calculate/?advocate_type=JRALONE&day=1&number_of_cases=1&number_of_defendants=1&offence_class=E&scenario=5
@@ -630,7 +583,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Tue, 06 Feb 2024 10:08:23 GMT
+      - Wed, 12 Mar 2025 17:04:37 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -652,11 +605,11 @@ http_interactions:
       Cross-Origin-Opener-Policy:
       - same-origin
       Strict-Transport-Security:
-      - max-age=15724800; includeSubDomains
+      - max-age=31536000; includeSubDomains
     body:
       encoding: UTF-8
       string: '["`fee_type_code` is a required field"]'
-  recorded_at: Tue, 06 Feb 2024 10:08:23 GMT
+  recorded_at: Wed, 12 Mar 2025 17:04:37 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/calculate/?advocate_type=JRALONE&day=1&fee_type_code&number_of_cases=1&number_of_defendants=1&offence_class=E&scenario=5
@@ -676,7 +629,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Tue, 06 Feb 2024 10:08:23 GMT
+      - Wed, 12 Mar 2025 17:04:37 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -698,11 +651,11 @@ http_interactions:
       Cross-Origin-Opener-Policy:
       - same-origin
       Strict-Transport-Security:
-      - max-age=15724800; includeSubDomains
+      - max-age=31536000; includeSubDomains
     body:
       encoding: UTF-8
       string: '["`fee_type_code` is a required field"]'
-  recorded_at: Tue, 06 Feb 2024 10:08:23 GMT
+  recorded_at: Wed, 12 Mar 2025 17:04:37 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/calculate/?advocate_type=JRALONE&day=1&fee_type_code=AGFS_APPEAL_CON&number_of_cases=1&number_of_defendants=1&offence_class=E&scenario
@@ -722,7 +675,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Tue, 06 Feb 2024 10:08:23 GMT
+      - Wed, 12 Mar 2025 17:04:37 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -744,11 +697,11 @@ http_interactions:
       Cross-Origin-Opener-Policy:
       - same-origin
       Strict-Transport-Security:
-      - max-age=15724800; includeSubDomains
+      - max-age=31536000; includeSubDomains
     body:
       encoding: UTF-8
       string: '["`scenario` is a required field"]'
-  recorded_at: Tue, 06 Feb 2024 10:08:23 GMT
+  recorded_at: Wed, 12 Mar 2025 17:04:37 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/calculate/?advocate_type=JRALONE&day=1&fee_type_code=AGFS_APPEAL_CON&number_of_cases=1&number_of_defendants=1&offence_class&scenario=5
@@ -768,7 +721,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 06 Feb 2024 10:08:23 GMT
+      - Wed, 12 Mar 2025 17:04:37 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -790,11 +743,11 @@ http_interactions:
       Cross-Origin-Opener-Policy:
       - same-origin
       Strict-Transport-Security:
-      - max-age=15724800; includeSubDomains
+      - max-age=31536000; includeSubDomains
     body:
       encoding: UTF-8
       string: '{"amount":130.0}'
-  recorded_at: Tue, 06 Feb 2024 10:08:23 GMT
+  recorded_at: Wed, 12 Mar 2025 17:04:38 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/calculate/?advocate_type&day=1&fee_type_code=AGFS_APPEAL_CON&number_of_cases=1&number_of_defendants=1&offence_class=E&scenario=5
@@ -814,7 +767,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 06 Feb 2024 10:08:23 GMT
+      - Wed, 12 Mar 2025 17:04:38 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -836,11 +789,11 @@ http_interactions:
       Cross-Origin-Opener-Policy:
       - same-origin
       Strict-Transport-Security:
-      - max-age=15724800; includeSubDomains
+      - max-age=31536000; includeSubDomains
     body:
       encoding: UTF-8
       string: '{"amount":0.0}'
-  recorded_at: Tue, 06 Feb 2024 10:08:23 GMT
+  recorded_at: Wed, 12 Mar 2025 17:04:38 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/calculate/?advocate_type=JRALONE&day=1&fee_type_code=AGFS_APPEAL_CON&number_of_cases=1&number_of_defendants=1&offence_class=E&scenario=100
@@ -860,7 +813,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Tue, 06 Feb 2024 10:08:23 GMT
+      - Wed, 12 Mar 2025 17:04:38 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -882,11 +835,11 @@ http_interactions:
       Cross-Origin-Opener-Policy:
       - same-origin
       Strict-Transport-Security:
-      - max-age=15724800; includeSubDomains
+      - max-age=31536000; includeSubDomains
     body:
       encoding: UTF-8
       string: '["''100'' is not a valid `scenario`"]'
-  recorded_at: Tue, 06 Feb 2024 10:08:23 GMT
+  recorded_at: Wed, 12 Mar 2025 17:04:38 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/calculate/?advocate_type=JRALONE&day=1&fee_type_code=INVALID_FEE_TYPE_CODE&number_of_cases=1&number_of_defendants=1&offence_class=E&scenario=5
@@ -906,7 +859,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Tue, 06 Feb 2024 10:08:23 GMT
+      - Wed, 12 Mar 2025 17:04:38 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -928,11 +881,11 @@ http_interactions:
       Cross-Origin-Opener-Policy:
       - same-origin
       Strict-Transport-Security:
-      - max-age=15724800; includeSubDomains
+      - max-age=31536000; includeSubDomains
     body:
       encoding: UTF-8
       string: '["''INVALID_FEE_TYPE_CODE'' is not a valid `fee_type_code`"]'
-  recorded_at: Tue, 06 Feb 2024 10:08:23 GMT
+  recorded_at: Wed, 12 Mar 2025 17:04:38 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/calculate/?advocate_type=JRALONE&day=1&fee_type_code=AGFS_APPEAL_CON&number_of_cases=1&number_of_defendants=1&offence_class=INVALID_OFFENCE_CLASS&scenario=5
@@ -952,7 +905,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Tue, 06 Feb 2024 10:08:24 GMT
+      - Wed, 12 Mar 2025 17:04:38 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -974,11 +927,11 @@ http_interactions:
       Cross-Origin-Opener-Policy:
       - same-origin
       Strict-Transport-Security:
-      - max-age=15724800; includeSubDomains
+      - max-age=31536000; includeSubDomains
     body:
       encoding: UTF-8
       string: '["''INVALID_OFFENCE_CLASS'' is not a valid `offence_class`"]'
-  recorded_at: Tue, 06 Feb 2024 10:08:24 GMT
+  recorded_at: Wed, 12 Mar 2025 17:04:38 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/calculate/?advocate_type=INVALID_ADVOCATE_TYPE&day=1&fee_type_code=AGFS_APPEAL_CON&number_of_cases=1&number_of_defendants=1&offence_class=E&scenario=5
@@ -998,7 +951,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Tue, 06 Feb 2024 10:08:24 GMT
+      - Wed, 12 Mar 2025 17:04:39 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -1020,11 +973,58 @@ http_interactions:
       Cross-Origin-Opener-Policy:
       - same-origin
       Strict-Transport-Security:
-      - max-age=15724800; includeSubDomains
+      - max-age=31536000; includeSubDomains
     body:
       encoding: UTF-8
       string: '["''INVALID_ADVOCATE_TYPE'' is not a valid `advocate_type`"]'
-  recorded_at: Tue, 06 Feb 2024 10:08:24 GMT
+  recorded_at: Wed, 12 Mar 2025 17:04:39 GMT
+- request:
+    method: get
+    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/?case_date=2018-01-01&type=AGFS
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/2.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 12 Mar 2025 17:04:39 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '192'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept, origin, Cookie
+      Allow:
+      - GET, HEAD, OPTIONS
+      Cache-Control:
+      - public, max-age=7200
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - same-origin
+      Cross-Origin-Opener-Policy:
+      - same-origin
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: '{"count":1,"next":null,"previous":null,"results":[{"id":1,"start_date":"2012-04-01","end_date":"2018-03-31","earliest_main_hearing_date":null,"type":"AGFS","description":"AGFS
+        Fee Scheme 9"}]}'
+  recorded_at: Wed, 12 Mar 2025 17:04:39 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/calculate/?advocate_type=JRALONE&day=1&defendant=2&fee_type_code=AGFS_APPEAL_CON&fixed=2&halfday=2&hour=2&not_a_real_param=rubbish&number_of_cases=1&number_of_defendants=1&offence_class=E&scenario=5
@@ -1044,7 +1044,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 06 Feb 2024 10:08:24 GMT
+      - Wed, 12 Mar 2025 17:04:39 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -1066,9 +1066,9 @@ http_interactions:
       Cross-Origin-Opener-Policy:
       - same-origin
       Strict-Transport-Security:
-      - max-age=15724800; includeSubDomains
+      - max-age=31536000; includeSubDomains
     body:
       encoding: UTF-8
       string: '{"amount":130.0}'
-  recorded_at: Tue, 06 Feb 2024 10:08:24 GMT
+  recorded_at: Wed, 12 Mar 2025 17:04:39 GMT
 recorded_with: VCR 6.2.0

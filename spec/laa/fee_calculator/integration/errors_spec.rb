@@ -7,7 +7,7 @@ RSpec.shared_examples 'has manyable errors' do |association|
     it 'raises ResourceNotFound for not found, 404, with JSON response body from API' do
       expect do
         fee_scheme.send(association.to_sym, id: 1000)
-      end.to raise_client_error(described_class::ResourceNotFound, /detail not found/i)
+      end.to raise_client_error(described_class::ResourceNotFound, /detail No .* matches the given query./i)
     end
   end
 
@@ -47,7 +47,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
         it 'raises ResourceNotFound for not found - 404' do
           expect do
             client.fee_schemes(id: 100)
-          end.to raise_client_error(described_class::ResourceNotFound, /detail not found/i)
+          end.to raise_client_error(described_class::ResourceNotFound, /detail No Scheme matches the given query./i)
         end
       end
     end
