@@ -45,7 +45,8 @@ RSpec.describe LAA::FeeCalculator, :vcr do
         end
 
         specify 'raises ResourceNotFound when no matching objects' do
-          expect { fee_scheme.units(id: 1001) }.to raise_error(described_class::ResourceNotFound, /detail No Unit matches the given query./i)
+          expect { fee_scheme.units(id: 1001) }
+            .to raise_error(described_class::ResourceNotFound, /detail No Unit matches the given query./i)
         end
 
         # TODO: check whether advocate_type has any impact on units returned
