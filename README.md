@@ -192,7 +192,7 @@ Bug reports and pull requests are welcome on GitHub at [ministryofjustice/laa-fe
 
 5. PR the change, code-review, merge.
 
-6. Pull master and run rake task below to publish. Note, you will need a [rubygems](https://rubygems.org/) account with gem owner privileges and have configured your `~/.gem/credentials` in order for this task to complete successfully.
+6. Pull main and run rake task below to publish. Note, you will need a [rubygems](https://rubygems.org/) account with gem owner privileges and have configured your `~/.gem/credentials` in order for this task to complete successfully.
 
 ```bash
 $ rake release
