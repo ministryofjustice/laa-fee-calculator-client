@@ -2,101 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/json
-      User-Agent:
-      - laa-fee-calculator-client/2.0.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Tue, 06 Feb 2024 10:07:20 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '140'
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept, origin, Cookie
-      Allow:
-      - GET, HEAD, OPTIONS
-      Cache-Control:
-      - public, max-age=7200
-      X-Frame-Options:
-      - DENY
-      X-Content-Type-Options:
-      - nosniff
-      Referrer-Policy:
-      - same-origin
-      Cross-Origin-Opener-Policy:
-      - same-origin
-      Strict-Transport-Security:
-      - max-age=15724800; includeSubDomains
-    body:
-      encoding: UTF-8
-      string: '{"id":1,"start_date":"2012-04-01","end_date":"2018-03-31","earliest_main_hearing_date":null,"type":"AGFS","description":"AGFS
-        Fee Scheme 9"}'
-  recorded_at: Tue, 06 Feb 2024 10:07:20 GMT
-- request:
-    method: get
-    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/units/
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/json
-      User-Agent:
-      - laa-fee-calculator-client/2.0.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Tue, 06 Feb 2024 10:07:20 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '272'
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept, origin, Cookie
-      Allow:
-      - GET, HEAD, OPTIONS
-      Cache-Control:
-      - public, max-age=7200
-      X-Frame-Options:
-      - DENY
-      X-Content-Type-Options:
-      - nosniff
-      Referrer-Policy:
-      - same-origin
-      Cross-Origin-Opener-Policy:
-      - same-origin
-      Strict-Transport-Security:
-      - max-age=15724800; includeSubDomains
-    body:
-      encoding: UTF-8
-      string: '{"count":6,"next":null,"previous":null,"results":[{"id":"CASE","name":"Case"},{"id":"DAY","name":"Whole
-        Days"},{"id":"HALFDAY","name":"Half Days"},{"id":"HOUR","name":"Hours"},{"id":"PPE","name":"Pages
-        of Prosecuting Evidence"},{"id":"PW","name":"Prosecution Witnesses"}]}'
-  recorded_at: Tue, 06 Feb 2024 10:07:20 GMT
-- request:
-    method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/units/DAY/
     body:
       encoding: US-ASCII
@@ -114,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 06 Feb 2024 10:08:29 GMT
+      - Wed, 12 Mar 2025 17:05:04 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -136,11 +41,11 @@ http_interactions:
       Cross-Origin-Opener-Policy:
       - same-origin
       Strict-Transport-Security:
-      - max-age=15724800; includeSubDomains
+      - max-age=31536000; includeSubDomains
     body:
       encoding: UTF-8
       string: '{"id":"DAY","name":"Whole Days"}'
-  recorded_at: Tue, 06 Feb 2024 10:08:29 GMT
+  recorded_at: Wed, 12 Mar 2025 17:05:04 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/units/?scenario=1
@@ -160,7 +65,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 06 Feb 2024 10:08:29 GMT
+      - Wed, 12 Mar 2025 17:05:04 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -182,13 +87,13 @@ http_interactions:
       Cross-Origin-Opener-Policy:
       - same-origin
       Strict-Transport-Security:
-      - max-age=15724800; includeSubDomains
+      - max-age=31536000; includeSubDomains
     body:
       encoding: UTF-8
       string: '{"count":5,"next":null,"previous":null,"results":[{"id":"CASE","name":"Case"},{"id":"DAY","name":"Whole
         Days"},{"id":"HALFDAY","name":"Half Days"},{"id":"HOUR","name":"Hours"},{"id":"PPE","name":"Pages
         of Prosecuting Evidence"}]}'
-  recorded_at: Tue, 06 Feb 2024 10:08:29 GMT
+  recorded_at: Wed, 12 Mar 2025 17:05:04 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/units/?advocate_type=QC
@@ -208,7 +113,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 06 Feb 2024 10:08:29 GMT
+      - Wed, 12 Mar 2025 17:05:04 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -230,13 +135,13 @@ http_interactions:
       Cross-Origin-Opener-Policy:
       - same-origin
       Strict-Transport-Security:
-      - max-age=15724800; includeSubDomains
+      - max-age=31536000; includeSubDomains
     body:
       encoding: UTF-8
       string: '{"count":6,"next":null,"previous":null,"results":[{"id":"CASE","name":"Case"},{"id":"DAY","name":"Whole
         Days"},{"id":"HALFDAY","name":"Half Days"},{"id":"HOUR","name":"Hours"},{"id":"PPE","name":"Pages
         of Prosecuting Evidence"},{"id":"PW","name":"Prosecution Witnesses"}]}'
-  recorded_at: Tue, 06 Feb 2024 10:08:29 GMT
+  recorded_at: Wed, 12 Mar 2025 17:05:04 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/units/?offence_class=A
@@ -256,7 +161,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 06 Feb 2024 10:08:29 GMT
+      - Wed, 12 Mar 2025 17:05:04 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -278,13 +183,13 @@ http_interactions:
       Cross-Origin-Opener-Policy:
       - same-origin
       Strict-Transport-Security:
-      - max-age=15724800; includeSubDomains
+      - max-age=31536000; includeSubDomains
     body:
       encoding: UTF-8
       string: '{"count":6,"next":null,"previous":null,"results":[{"id":"CASE","name":"Case"},{"id":"DAY","name":"Whole
         Days"},{"id":"HALFDAY","name":"Half Days"},{"id":"HOUR","name":"Hours"},{"id":"PPE","name":"Pages
         of Prosecuting Evidence"},{"id":"PW","name":"Prosecution Witnesses"}]}'
-  recorded_at: Tue, 06 Feb 2024 10:08:29 GMT
+  recorded_at: Wed, 12 Mar 2025 17:05:04 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/units/?fee_type_code=AGFS_FEE
@@ -304,7 +209,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 06 Feb 2024 10:08:29 GMT
+      - Wed, 12 Mar 2025 17:05:04 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -326,13 +231,13 @@ http_interactions:
       Cross-Origin-Opener-Policy:
       - same-origin
       Strict-Transport-Security:
-      - max-age=15724800; includeSubDomains
+      - max-age=31536000; includeSubDomains
     body:
       encoding: UTF-8
       string: '{"count":3,"next":null,"previous":null,"results":[{"id":"DAY","name":"Whole
         Days"},{"id":"PPE","name":"Pages of Prosecuting Evidence"},{"id":"PW","name":"Prosecution
         Witnesses"}]}'
-  recorded_at: Tue, 06 Feb 2024 10:08:29 GMT
+  recorded_at: Wed, 12 Mar 2025 17:05:04 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/units/1001/
@@ -352,11 +257,11 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Tue, 06 Feb 2024 10:08:29 GMT
+      - Wed, 12 Mar 2025 17:05:04 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '23'
+      - '45'
       Connection:
       - keep-alive
       Vary:
@@ -374,11 +279,59 @@ http_interactions:
       Cross-Origin-Opener-Policy:
       - same-origin
       Strict-Transport-Security:
-      - max-age=15724800; includeSubDomains
+      - max-age=31536000; includeSubDomains
     body:
       encoding: UTF-8
-      string: '{"detail":"Not found."}'
-  recorded_at: Tue, 06 Feb 2024 10:08:29 GMT
+      string: '{"detail":"No Unit matches the given query."}'
+  recorded_at: Wed, 12 Mar 2025 17:05:04 GMT
+- request:
+    method: get
+    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/units/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/2.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 12 Mar 2025 17:05:05 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '272'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept, origin, Cookie
+      Allow:
+      - GET, HEAD, OPTIONS
+      Cache-Control:
+      - public, max-age=7200
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - same-origin
+      Cross-Origin-Opener-Policy:
+      - same-origin
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: '{"count":6,"next":null,"previous":null,"results":[{"id":"CASE","name":"Case"},{"id":"DAY","name":"Whole
+        Days"},{"id":"HALFDAY","name":"Half Days"},{"id":"HOUR","name":"Hours"},{"id":"PPE","name":"Pages
+        of Prosecuting Evidence"},{"id":"PW","name":"Prosecution Witnesses"}]}'
+  recorded_at: Wed, 12 Mar 2025 17:05:05 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/units/?fee_type_code=INVALID_FEE_TYPE_CODE&scenario=5
@@ -398,7 +351,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Tue, 06 Feb 2024 10:08:29 GMT
+      - Wed, 12 Mar 2025 17:05:05 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -420,11 +373,58 @@ http_interactions:
       Cross-Origin-Opener-Policy:
       - same-origin
       Strict-Transport-Security:
-      - max-age=15724800; includeSubDomains
+      - max-age=31536000; includeSubDomains
     body:
       encoding: UTF-8
       string: '["''INVALID_FEE_TYPE_CODE'' is not a valid `fee_type_code`"]'
-  recorded_at: Tue, 06 Feb 2024 10:08:29 GMT
+  recorded_at: Wed, 12 Mar 2025 17:05:05 GMT
+- request:
+    method: get
+    uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - laa-fee-calculator-client/2.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 12 Mar 2025 17:05:05 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '140'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept, origin, Cookie
+      Allow:
+      - GET, HEAD, OPTIONS
+      Cache-Control:
+      - public, max-age=7200
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - same-origin
+      Cross-Origin-Opener-Policy:
+      - same-origin
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: '{"id":1,"start_date":"2012-04-01","end_date":"2018-03-31","earliest_main_hearing_date":null,"type":"AGFS","description":"AGFS
+        Fee Scheme 9"}'
+  recorded_at: Wed, 12 Mar 2025 17:05:05 GMT
 - request:
     method: get
     uri: https://laa-fee-calculator.service.justice.gov.uk/api/v1/fee-schemes/1/units/?offence_class=E&scenario=5
@@ -444,7 +444,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 06 Feb 2024 10:08:29 GMT
+      - Wed, 12 Mar 2025 17:05:05 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -466,10 +466,10 @@ http_interactions:
       Cross-Origin-Opener-Policy:
       - same-origin
       Strict-Transport-Security:
-      - max-age=15724800; includeSubDomains
+      - max-age=31536000; includeSubDomains
     body:
       encoding: UTF-8
       string: '{"count":4,"next":null,"previous":null,"results":[{"id":"CASE","name":"Case"},{"id":"DAY","name":"Whole
         Days"},{"id":"HALFDAY","name":"Half Days"},{"id":"HOUR","name":"Hours"}]}'
-  recorded_at: Tue, 06 Feb 2024 10:08:29 GMT
+  recorded_at: Wed, 12 Mar 2025 17:05:05 GMT
 recorded_with: VCR 6.2.0

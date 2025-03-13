@@ -30,7 +30,7 @@ RSpec.describe LAA::FeeCalculator, :vcr do
 
         specify 'raises ResourceNotFound when no matching objects' do
           expect { fee_scheme.advocate_types(id: 'INVALID') }
-            .to raise_error(described_class::ResourceNotFound, /detail not found/i)
+            .to raise_error(described_class::ResourceNotFound, /detail No AdvocateType matches the given query./i)
         end
 
         specify 'returns empty array when no objects for scheme' do

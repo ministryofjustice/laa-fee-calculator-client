@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 06 Feb 2024 10:07:58 GMT
+      - Wed, 12 Mar 2025 17:03:37 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -41,7 +41,7 @@ http_interactions:
       Cross-Origin-Opener-Policy:
       - same-origin
       Strict-Transport-Security:
-      - max-age=15724800; includeSubDomains
+      - max-age=31536000; includeSubDomains
     body:
       encoding: UTF-8
       string: '{"count":12,"next":null,"previous":null,"results":[{"id":1,"start_date":"2012-04-01","end_date":"2018-03-31","earliest_main_hearing_date":null,"type":"AGFS","description":"AGFS
@@ -57,5 +57,5 @@ http_interactions:
         Fee Scheme 14 (2023-02 - Section 28)"},{"id":11,"start_date":"2023-04-17","end_date":"2023-11-15","earliest_main_hearing_date":null,"type":"AGFS","description":"AGFS
         Fee Scheme 15 (2023-04 - Additional Preparation Fee)"},{"id":12,"start_date":"2023-11-16","end_date":null,"earliest_main_hearing_date":null,"type":"AGFS","description":"AGFS
         Fee Scheme 16 (2023-11 - Increase section 28)"}]}'
-  recorded_at: Tue, 06 Feb 2024 10:07:58 GMT
+  recorded_at: Wed, 12 Mar 2025 17:03:37 GMT
 recorded_with: VCR 6.2.0

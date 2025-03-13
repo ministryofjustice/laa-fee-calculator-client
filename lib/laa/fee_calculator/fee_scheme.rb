@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'laa/fee_calculator/has_manyable'
+require 'ostruct'
 
 module LAA
   module FeeCalculator
