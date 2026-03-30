@@ -8,6 +8,7 @@ module LAA
     class FeeScheme < OpenStruct
       include HasManyable
       extend Forwardable
+
       def_delegators :connection, :get
 
       has_many :advocate_types

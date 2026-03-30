@@ -14,6 +14,17 @@ Add latest change log entries at top using template:
   -
 ```
 
+## Version UNRELEASED
+### Added
+  -
+### Fixed
+  -
+### Modified
+  - Remove Ruby 3.0, 3.1 and 3.2 from testing matrix
+  - Add Ruby 4.0 to testing matrix
+### Removed
+  - Remove official support for Ruby 3.2 and earlier
+
 ## Version 2.0.0
 
 ### Modified

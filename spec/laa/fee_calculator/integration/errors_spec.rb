@@ -53,9 +53,9 @@ RSpec.describe LAA::FeeCalculator, :vcr do
     end
 
     describe 'has_many associations' do
-      include_examples 'has manyable errors', :fee_types
-      include_examples 'has manyable errors', :units
-      include_examples 'has manyable errors', :modifier_types
+      it_behaves_like 'has manyable errors', :fee_types
+      it_behaves_like 'has manyable errors', :units
+      it_behaves_like 'has manyable errors', :modifier_types
     end
 
     describe '#calculate' do

@@ -4,6 +4,7 @@ module LAA
   module FeeCalculator
     class Calculator
       extend Forwardable
+
       def_delegators :connection, :get
 
       def initialize(scheme_pk, options)
