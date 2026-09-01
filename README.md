@@ -13,7 +13,7 @@ endpoints, providing a simple interface for querying data, in particular, the pr
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'laa-fee-calculator-client', '~> 1.2.0'
+gem 'laa-fee-calculator-client', '~> 2.0'
 ```
 
 And then execute:
@@ -184,7 +184,7 @@ Bug reports and pull requests are welcome on GitHub at [ministryofjustice/laa-fe
 
 1. Make required changes, run specs (rerecord vcr cassettes if necessary)
 
-2. Run `bin/ruby_version_test` to test against ruby versions (3.0+ supported at present)
+2. Run `bin/ruby_version_test` to test against supported Ruby versions (3.3+ at present)
 
 3. Update the VERSION in `lib/laa/fee_calculator/version` using [semantic versioning](https://guides.rubygems.org/patterns/#semantic-versioning).
 

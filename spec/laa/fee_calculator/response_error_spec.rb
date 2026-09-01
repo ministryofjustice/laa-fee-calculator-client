@@ -21,6 +21,6 @@ RSpec.describe LAA::FeeCalculator::ResponseError do
   it { is_expected.to be_a(LAA::FeeCalculator::ClientError) }
 
   it 'returns response body as message' do
-    expect(error.message).to match(/`case_date` should be in the format YYYY-MM-DD/)
+    expect(error.message).to include('`case_date` should be in the format YYYY-MM-DD')
   end
 end
